@@ -83,7 +83,7 @@ function App() {
                 price: ""
               },
               {
-                name: "Frango na Assado",
+                name: "Frango Assado",
                 image: "/frango.jpg",
                 details: "Frango Assado, Batata, Arroz e Salada",
                 price: ""
