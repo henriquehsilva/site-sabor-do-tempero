@@ -71,19 +71,19 @@ function App() {
             {[
               {
                 name: "Feijoada Completa",
-                image: "https://sabor-do-tempero.netlify.app/feijoada.jpg",
+                image: "/feijoada.jpg",
                 details: "Feijoada, Arroz, Couve, Farofa, Laranja e Torresmo",
                 price: ""
               },
               {
                 name: "Rabada com Agrião",
-                image: "https://sabor-do-tempero.netlify.app/rabada.jpg",
+                image: "/rabada.jpg",
                 details: "Rabada, Agrião, Arroz e Farofa",
                 price: ""
               },
               {
                 name: "Frango na Assado",
-                image: "https://sabor-do-tempero.netlify.app/frango.jpg",
+                image: "/frango.jpg",
                 details: "Frango Assado, Batata, Arroz e Salada",
                 price: ""
               }
