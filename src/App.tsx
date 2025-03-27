@@ -17,8 +17,9 @@ function App() {
         
         <nav className="relative z-10 flex items-center justify-between px-6 py-4 lg:px-12">
           <div className="flex items-center space-x-2">
-            <ChefHat size={32} className="text-gold" />
-            <span className="text-2xl font-bold text-white">Sabor do Tempero</span>
+            {/* <ChefHat size={32} className="text-gold" /> */}
+            <img src="/logo.png" alt="Sabor do Tempero" className="w-40 h-40" />
+            {/* <span className="text-2xl font-bold text-white">Sabor do Tempero</span> */}
           </div>
           {/* <div className="hidden md:flex space-x-8 text-white">
             <a href="#menu" className="hover:text-gold transition">Menu</a>
@@ -152,8 +153,9 @@ function App() {
       <footer className="bg-secondary text-white py-8 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <ChefHat size={24} className="text-gold" />
-            <span className="text-xl font-bold">Sabor do Tempero</span>
+            {/* <ChefHat size={24} className="text-gold" />
+            <span className="text-xl font-bold">Sabor do Tempero</span> */}
+            <img src="/logo_fundo_escuro.png" alt="Sabor do Tempero" className="w-20 h-20" />
           </div>
           <div className="text-sm text-accent">
             © 2025 Sabor do Tempero. Todos os direitos reservados.
