@@ -37,9 +37,15 @@ function App() {
           <p className="text-xl text-accent mb-8 max-w-2xl">
             Experimente o aconchego e o conforto da culinária caseira tradicional com nossas refeições cuidadosamente preparadas
           </p>
-          <button className="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full text-lg font-semibold transition">
-            Peça Agora
-          </button>
+          <a
+            href="https://chat.sabordotempero.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full text-lg font-semibold transition">
+              Peça Agora
+            </button>
+          </a>
         </div>
       </header>
 
