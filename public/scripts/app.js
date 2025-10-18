@@ -274,33 +274,46 @@ function configurarBotoes(flags) {
     btnOuvir.addEventListener('click', lerCardapio);
   }
 
-  // WhatsApp via <a href="...">
+  // WhatsApp via <a href="..."> com número do cliente + maps
   if (btnWhatsApp) {
     if (flags.mostrar_whatsapp && menuData?.sobre?.whatsapp) {
-      const { meta, pratos, opcoes_do_dia, sobre } = menuData;
-      const mensagem = montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre);
-      const links = buildWhatsLink(sobre.whatsapp, mensagem);
+      const numeroLoja = (menuData.sobre.whatsapp || "").replace(/\D/g, "");
 
-      // Define o href principal
-      btnWhatsApp.setAttribute('href', links.primary);
-
-      // Em alguns webviews, wa.me pode falhar. Colocamos um fallback elegante.
-      btnWhatsApp.addEventListener('click', function (e) {
-        // Tentativa 1: deixar o navegador seguir o href normal
-        // Se houver bloqueio/erro de navegação, troca para o fallback.
-        // (Não chamamos preventDefault no caminho feliz.)
-        setTimeout(() => {
-          // Heurística simples: se ainda estamos na mesma página após um pequeno tempo,
-          // troca o link para o fallback e força navegação.
-          if (document.visibilityState === 'visible') {
-            // aplica fallback
-            btnWhatsApp.setAttribute('href', links.fallback);
-            window.location.href = links.fallback;
-          }
-        }, 200);
-      }, { once: true });
-
+      // Prepara um href mínimo enquanto o usuário não clica
+      const mensagemInicial = montarMensagemBase();
+      const linksInicial = buildWaLinks(numeroLoja, mensagemInicial);
+      btnWhatsApp.setAttribute('href', linksInicial.primary);
       btnWhatsApp.style.display = 'inline-flex';
+
+      // Monta TUDO no clique (sincrônico) para evitar bloqueios
+      btnWhatsApp.addEventListener('click', async function (e) {
+        e.preventDefault();
+
+        const clienteDigits = getUserPhone();        // pede se não tiver salvo
+        const coords = await requestLocation();      // tenta pegar localização
+        const displayPhone = formatDisplayPhone(clienteDigits);
+        const mapsLink = buildMapsLink(coords);
+
+        // Mensagem final fixa + extras
+        let msg = montarMensagemBase();
+        if (clienteDigits) msg += `\n\n📱 Meu WhatsApp: ${displayPhone}`;
+        if (mapsLink) msg += `\n📍 Minha localização: ${mapsLink}`;
+
+        const { primary, fallback } = buildWaLinks(numeroLoja, msg);
+
+        // Navegação direta (melhor p/ PWA/iOS)
+        try {
+          window.location.href = primary;
+          // fallback se ainda estivermos na mesma página após 300ms
+          setTimeout(() => {
+            if (document.visibilityState === 'visible') {
+              window.location.href = fallback;
+            }
+          }, 300);
+        } catch {
+          window.location.href = fallback;
+        }
+      }, { once: false }); // pode clicar várias vezes
     } else {
       btnWhatsApp.style.display = 'none';
     }
@@ -372,6 +385,69 @@ function ensureLightboxRoot(){
     startX = null;
   });
 }
+
+// === Helpers para WhatsApp, telefone e localização ===
+function montarMensagemBase() {
+  // mensagem fixa solicitada
+  return "Olá gostaria de fazer um pedido!";
+}
+
+function getUserPhone() {
+  // tenta recuperar do storage para não pedir toda vez
+  const saved = localStorage.getItem('userPhone');
+  if (saved) return saved;
+
+  const entrada = prompt('Informe seu WhatsApp com DDD (ex: 62900000000):') || "";
+  const digits = entrada.replace(/\D/g, "");
+  if (digits) localStorage.setItem('userPhone', digits);
+  return digits;
+}
+
+function formatDisplayPhone(digits) {
+  // formata bonitinho para exibir na mensagem (BR simples)
+  if (!digits) return "";
+  const d = digits.replace(/\D/g, "");
+  if (d.length === 13 && d.startsWith('55')) { // +55 AA 9 NNNN NNNN
+    return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,5)} ${d.slice(5,9)}-${d.slice(9)}`;
+  }
+  if (d.length === 12 && d.startsWith('55')) { // +55 AA NNNN NNNN
+    return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,8)}-${d.slice(8)}`;
+  }
+  if (d.length === 11) { // AA 9 NNNN NNNN
+    return `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`;
+  }
+  if (d.length === 10) { // AA NNNN NNNN
+    return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
+  }
+  return digits; // fallback
+}
+
+function requestLocation(options = { enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 }) {
+  return new Promise((resolve) => {
+    if (!('geolocation' in navigator)) return resolve(null);
+    navigator.geolocation.getCurrentPosition(
+      pos => resolve({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+      () => resolve(null),
+      options
+    );
+  });
+}
+
+function buildMapsLink(coords) {
+  if (!coords) return "";
+  const { lat, lng } = coords;
+  return `https://maps.google.com/?q=${lat},${lng}`;
+}
+
+function buildWaLinks(phoneDigits, mensagem) {
+  const p = (phoneDigits || "").replace(/\D/g, "");
+  const t = encodeURIComponent(mensagem || "");
+  return {
+    primary: `https://wa.me/${p}?text=${t}`,
+    fallback: `https://api.whatsapp.com/send?phone=${p}&text=${t}`,
+  };
+}
+
 
 function openLightbox(images, startIndex = 0, title = ''){
   if (!images || !images.length) return;
