@@ -260,24 +260,50 @@ function configurarBotoes(flags) {
   const btnOuvir = document.getElementById('btnOuvir');
   const btnWhatsApp = document.getElementById('btnWhatsApp');
 
-  btnAtualizar.addEventListener('click', () => {
-    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({ type: 'CLEAR_CACHE' });
-    }
+  if (btnAtualizar) {
+    btnAtualizar.addEventListener('click', () => {
+      if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ type: 'CLEAR_CACHE' });
+      }
+      window.location.reload();
+    });
+  }
 
-    window.location.reload();
-  });
-
-  if (flags.mostrar_botao_ouvir && 'speechSynthesis' in window) {
+  if (btnOuvir && flags.mostrar_botao_ouvir && 'speechSynthesis' in window) {
     btnOuvir.style.display = 'inline-flex';
     btnOuvir.addEventListener('click', lerCardapio);
   }
 
-  if (flags.mostrar_whatsapp && menuData.sobre.whatsapp) {
-    btnWhatsApp.style.display = 'inline-flex';
-    btnWhatsApp.addEventListener('click', compartilharWhatsApp);
-  } else {
-    btnWhatsApp.style.display = 'none';
+  // WhatsApp via <a href="...">
+  if (btnWhatsApp) {
+    if (flags.mostrar_whatsapp && menuData?.sobre?.whatsapp) {
+      const { meta, pratos, opcoes_do_dia, sobre } = menuData;
+      const mensagem = montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre);
+      const links = buildWhatsLink(sobre.whatsapp, mensagem);
+
+      // Define o href principal
+      btnWhatsApp.setAttribute('href', links.primary);
+
+      // Em alguns webviews, wa.me pode falhar. Colocamos um fallback elegante.
+      btnWhatsApp.addEventListener('click', function (e) {
+        // Tentativa 1: deixar o navegador seguir o href normal
+        // Se houver bloqueio/erro de navegação, troca para o fallback.
+        // (Não chamamos preventDefault no caminho feliz.)
+        setTimeout(() => {
+          // Heurística simples: se ainda estamos na mesma página após um pequeno tempo,
+          // troca o link para o fallback e força navegação.
+          if (document.visibilityState === 'visible') {
+            // aplica fallback
+            btnWhatsApp.setAttribute('href', links.fallback);
+            window.location.href = links.fallback;
+          }
+        }, 200);
+      }, { once: true });
+
+      btnWhatsApp.style.display = 'inline-flex';
+    } else {
+      btnWhatsApp.style.display = 'none';
+    }
   }
 }
 
@@ -385,38 +411,30 @@ function compartilharWhatsApp() {
   if (!menuData) return;
 
   const { meta, opcoes_do_dia, pratos, sobre } = menuData;
+  const numeroWhatsApp = sobre.whatsapp?.replace(/\D/g, '');
 
-  const pratosDisponiveis = pratos.filter(p => p.disponivel).slice(0, opcoes_do_dia);
+  if (!numeroWhatsApp) {
+    alert('Número de WhatsApp não informado.');
+    return;
+  }
 
+  // Monta mensagem resumida
   let mensagem = `🍽️ *${meta.titulo_dia}*\n\n`;
+  const pratosDisponiveis = pratos.filter(p => p.disponivel).slice(0, opcoes_do_dia);
 
   pratosDisponiveis.forEach((prato, index) => {
     mensagem += `${index + 1}. *${prato.nome}*\n`;
-    if (prato.itens && prato.itens.length > 0) {
-      mensagem += `${prato.itens.join(', ')}\n`;
-    }
+    if (prato.itens?.length) mensagem += `${prato.itens.join(', ')}\n`;
     mensagem += '\n';
   });
 
-  if (sobre.endereco) {
-    mensagem += `📍 ${sobre.endereco}\n`;
-  }
+  mensagem += `📍 ${sobre.endereco}\n🕒 ${sobre.horario}\n📞 ${sobre.telefone}\n\n_Faça seu pedido pelo WhatsApp!_`;
 
-  if (sobre.horario) {
-    mensagem += `🕒 ${sobre.horario}\n`;
-  }
-
-  if (sobre.telefone) {
-    mensagem += `📞 ${sobre.telefone}\n`;
-  }
-
-  mensagem += '\n_Faça seu pedido pelo WhatsApp!_';
-
-  const numeroWhatsApp = sobre.whatsapp.replace(/\D/g, '');
   const mensagemEncoded = encodeURIComponent(mensagem);
-  const url = `https://wa.me/${numeroWhatsApp}?text=${mensagemEncoded}`;
 
-  window.open(url, '_blank');
+  // ✅ Abre o WhatsApp direto, sem ser bloqueado por popup
+  const link = `https://wa.me/${numeroWhatsApp}?text=${mensagemEncoded}`;
+  window.location.href = link;
 }
 
 function lerCardapio() {
@@ -445,6 +463,32 @@ function lerCardapio() {
   });
 
   lerTexto(texto);
+}
+
+function buildWhatsLink(numeroE164, mensagem) {
+  // Remove tudo que não é dígito
+  const phone = (numeroE164 || "").replace(/\D/g, "");
+  const text = encodeURIComponent(mensagem || "");
+  // Preferimos wa.me; fallback para api.whatsapp.com em casos raros
+  return {
+    primary: `https://wa.me/${phone}?text=${text}`,
+    fallback: `https://api.whatsapp.com/send?phone=${phone}&text=${text}`
+  };
+}
+
+function montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre) {
+  const pratosDisponiveis = pratos.filter(p => p.disponivel).slice(0, opcoes_do_dia);
+  let msg = `🍽️ *${meta.titulo_dia}*\n\n`;
+  pratosDisponiveis.forEach((prato, i) => {
+    msg += `${i + 1}. *${prato.nome}*\n`;
+    if (prato.itens?.length) msg += `${prato.itens.join(', ')}\n`;
+    msg += '\n';
+  });
+  if (sobre.endereco) msg += `📍 ${sobre.endereco}\n`;
+  if (sobre.horario) msg += `🕒 ${sobre.horario}\n`;
+  if (sobre.telefone) msg += `📞 ${sobre.telefone}\n`;
+  msg += `\n_Faça seu pedido pelo WhatsApp!_`;
+  return msg;
 }
 
 window.addEventListener('online', () => {
