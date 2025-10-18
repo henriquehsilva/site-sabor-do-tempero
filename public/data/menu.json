@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "titulo_dia": "Cardápio do Dia",
+    "data": "2025-10-18",
+    "flags": {
+      "mostrar_itens_prato": true,
+      "mostrar_sessao_sobre": true,
+      "mostrar_endereco": true,
+      "mostrar_whatsapp": true,
+      "mostrar_botao_ouvir": true,
+      "usar_grade_compacta": false
+    }
+  },
+  "opcoes_do_dia": 3,
+  "pratos": [
+    {
+      "id": "feijoada",
+      "nome": "Feijoada",
+      "imagem": "/pratos/feijoada.jpg",
+      "galeria": [
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg"
+      ],
+      "itens": [
+        "Feijão preto",
+        "Arroz branco",
+        "Torresmo",
+        "Linguiça",
+        "Banana",
+        "Farofa",
+        "Vinagrete"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "costelinha",
+      "nome": "Costelinha suína alho e óleo",
+      "imagem": "/pratos/costelinha.jpg",
+      "galeria": [
+        "/pratos/costelinha_1.jpg",
+        "/pratos/costelinha_2.jpg",
+        "/pratos/costelinha_3.jpg"
+      ],
+      "itens": [
+        "Farofa",
+        "Couve refogada",
+        "Banana frita",
+        "Mandioca"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "strogonoff",
+      "nome": "Strogonoff de Frango",
+      "imagem": "/pratos/strogonoff.jpg",
+      "galeria": [
+        "/pratos/strogonoff_1.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha",
+        "Feijão"
+      ],
+      "disponivel": true
+    }
+  ],
+  "sobre": {
+    "cozinheira": "Dona Fátima (Sabor do Tempero)",
+    "endereco": "Fauna I, Alameda das Andorinhas Qd. 23 Lt. 07, Rio Quente - GO",
+    "horario": "Seg a Sáb, 11h às 14h",
+    "telefone": "+55 64 99213-8817",
+    "whatsapp": "+5564992138817"
+  }
+}

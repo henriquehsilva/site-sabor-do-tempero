@@ -1,0 +1,29 @@
+{
+  "name": "Sabor do Tempero - Cardápio do Dia",
+  "short_name": "Sabor do Tempero",
+  "description": "Cardápio diário da cozinheira Dona Maria - Sabor do Tempero",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEF9F2",
+  "theme_color": "#C99548",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle"],
+  "screenshots": []
+}
