@@ -49,9 +49,9 @@ body {
   padding: calc(var(--espacamento-base) * 4) 0 calc(var(--espacamento-base) * 3);
   text-align: center;
   box-shadow: 0 2px 8px var(--sombra);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: static;   /* remove o sticky */
+  top: auto;
+  z-index: auto;
 }
 
 .header .container {
@@ -66,10 +66,11 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
-  color: #FEF9F2; /* texto claro sobre overlay */
+  color: var(--cor-primaria);/* texto claro sobre overlay */
 }
 .header .container::before {
-  content: "";
+  content: none;   
+  background: none;
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -131,17 +132,17 @@ h3 { font-size: var(--fs-500); }
 
 .titulo-dia {
   font-size: var(--fs-600);
-  color: var(--branco); /* contrasta no banner */
+  color: var(--cor-primaria);   /* era #fff */
+  text-shadow: none;  /* contrasta no banner */
   margin-top: 8px;
-  text-shadow: 0 2px 4px rgba(0,0,0,.25);
 }
 
 .data-dia {
   font-size: var(--fs-200);
-  color: #fff;
-  opacity: 0.85;
-  font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,.25);
+  color: var(--cor-primaria);   /* era #fff */
+  opacity: 1;                   /* sem esmaecer */
+  text-shadow: none;  
+  font-weight: 600;  
 }
 
 .main {
