@@ -125,8 +125,6 @@ h3 { font-size: var(--fs-500); }
 
 .logo {
   width: 170px; height: 170px; object-fit: cover; display: block;
-  border-radius: 50%;
-  box-shadow: 0 8px 24px var(--sombra);
 }
 
 .titulo-dia {
