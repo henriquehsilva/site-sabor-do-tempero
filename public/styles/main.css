@@ -455,3 +455,37 @@ h3 { font-size: var(--fs-500); }
 .info-taxas strong {
   color: var(--cor-primaria);
 }
+
+/* Agrupador para manter um embaixo do outro com espaçamento */
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* espaço entre os botões */
+  margin-top: 12px;
+}
+
+/* Base de botão (caso já não exista) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .05s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.btn svg { flex: 0 0 auto; }
+
+/* Já existe .btn-whatsapp com seu verde — mantemos */
+
+/* Instagram (gradiente clássico) */
+.btn-instagram {
+  color: #fff;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0 6px 14px rgba(40,90,235,.25);
+}
+
+.btn-instagram:hover { opacity: .95; transform: translateY(-1px); }
+.btn-instagram:active { transform: translateY(0); }
