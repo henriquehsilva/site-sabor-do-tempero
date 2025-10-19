@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-18",
+    "data": "2025-10-20",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,7 +11,7 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 3,
+  "opcoes_do_dia": 4,
   "pratos": [
     {
       "id": "feijoada",
@@ -31,7 +31,7 @@
         "Farofa",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -63,6 +63,39 @@
         "Arroz branco",
         "Batata palha",
         "Feijão"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_maionese",
+      "nome": "Frango assado na maionese",
+      "imagem": "/pratos/frango_maionese.jpg",
+      "galeria": [
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_2.jpg",
+        "/pratos/frango_maionese_3.jpg"
+      ],
+      "itens": [
+        "Batata rustica",
+        "Cabutia com quiabo",
+        "Espaguete   ao alho e óleo"
+      ],
+      "disponivel": true
+    },
+        {
+      "id": "carne_assada",
+      "nome": "Carne bovina assada",
+      "imagem": "/pratos/carne_assada.jpg",
+      "galeria": [
+        "/pratos/carne_assada_1.jpg",
+        "/pratos/carne_assada_2.jpg",
+        "/pratos/carne_assada_3.jpg"
+      ],
+      "itens": [
+        "Mandioca cozida ou Batata rustica",
+        "Couve e banana frita",
+        "Salada repolho com cenoura",
+        "Arroz branco ou Espaguete ao alho e óleo"
       ],
       "disponivel": true
     }
