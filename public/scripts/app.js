@@ -210,14 +210,16 @@ function renderizarSobre(sobre, flags) {
   sobreInfo.innerHTML = '';
 
   if (flags.mostrar_endereco && sobre.endereco) {
-    sobreInfo.appendChild(criarItemSobre(
+    const enderecoEl = criarItemSobre(
       'Endereço',
       sobre.endereco,
       `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
         <circle cx="12" cy="10" r="3"/>
       </svg>`
-    ));
+    );
+    enderecoEl.classList.add('sobre-left'); // <- força alinhamento à esquerda
+    sobreInfo.appendChild(enderecoEl);
   }
 
   if (flags.mostrar_endereco && sobre.horario) {

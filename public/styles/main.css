@@ -164,20 +164,6 @@ body {
   }
 }
 
-/* .header .container {
-  position: relative;
-  background-image: url("/banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: var(--radius-md);
-  padding: 24px;
-  min-height: 180px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: var(--cor-primaria);/* texto claro sobre overlay */
-} */
 .header .container::before {
   content: none;   
   background: none;
@@ -393,7 +379,7 @@ h3 { font-size: var(--fs-500); }
 /* ===== SOBRE ===== */
 .sobre {
   background-color: var(--branco);
-  padding: calc(var(--espacamento-base) * 6) 0;
+  padding: calc(var(--espacamento-base) * 2) 0;
   margin-top: calc(var(--espacamento-base) * 6);
   border-top: 4px solid var(--cor-primaria);
 }
@@ -423,6 +409,14 @@ h3 { font-size: var(--fs-500); }
   border-radius: var(--radius-sm);
   font-size: var(--fs-200);
 }
+
+.sobre-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
 .sobre-item svg { flex-shrink: 0; color: var(--cor-primaria); margin-top: 2px; }
 .sobre-label { font-weight: 800; color: var(--cor-primaria); margin-right: calc(var(--espacamento-base) * 1); }
 
