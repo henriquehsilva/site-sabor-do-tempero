@@ -320,6 +320,64 @@ function configurarBotoes(flags) {
   }
 }
 
+function configurarWhatsAnchor(anchorEl, flags) {
+  if (!anchorEl) return;
+
+  if (flags.mostrar_whatsapp && menuData?.sobre?.whatsapp) {
+    const numeroLoja = (menuData.sobre.whatsapp || "").replace(/\D/g, "");
+
+    // href mínimo visível antes do clique
+    const mensagemInicial = montarMensagemBase();
+    const linksInicial = buildWaLinks(numeroLoja, mensagemInicial);
+    anchorEl.setAttribute('href', linksInicial.primary);
+
+    // Mesmo comportamento do botão de baixo
+    anchorEl.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+      const clienteDigits = getUserPhone();        // pede se não tiver salvo
+      const coords = await requestLocation();      // tenta pegar localização
+      const displayPhone = formatDisplayPhone(clienteDigits);
+      const mapsLink = buildMapsLink(coords);
+
+      // Mensagem final
+      let msg = montarMensagemBase();
+      if (clienteDigits) msg += `\n\n📱 Meu WhatsApp: ${displayPhone}`;
+      if (mapsLink) msg += `\n📍 Minha localização: ${mapsLink}`;
+
+      const { primary, fallback } = buildWaLinks(numeroLoja, msg);
+
+      try {
+        window.location.href = primary;
+        setTimeout(() => {
+          if (document.visibilityState === 'visible') {
+            window.location.href = fallback;
+          }
+        }, 300);
+      } catch {
+        window.location.href = fallback;
+      }
+
+      // fecha o menu, se existir
+      const menu = document.getElementById('headerMenu');
+      if (menu && !menu.hidden) {
+        // se você tiver uma função closeMenu(), pode chamá-la aqui
+        menu.hidden = true;
+        const btn = document.getElementById('hamburgerBtn');
+        btn && btn.setAttribute('aria-expanded','false');
+      }
+    }, { once: false });
+  } else {
+    // Se não houver número, mantém o link invisível/inerte
+    anchorEl.setAttribute('href', '#');
+    anchorEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Número de WhatsApp não informado.');
+    }, { once: true });
+  }
+}
+
+
 // ---------- LIGHTBOX / CARROSSEL ----------
 let LB_STATE = { images: [], index: 0, title: '' };
 

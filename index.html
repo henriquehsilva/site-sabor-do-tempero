@@ -51,21 +51,10 @@
       </button>
 
       <!-- Menu -->
-      <nav class="menu-panel" id="headerMenu" hidden>
-        <a id="menuWhatsApp" class="menu-item" href="#" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M20 3.5A10 10 0 0 0 3.5 20L3 21.9l2-.5A10 10 0 1 0 20 3.5ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.4.6.6-2.3-.2-.4A8 8 0 1 1 12 20Zm4.6-5.1c-.2-.1-1.3-.6-1.5-.7s-.4-.1-.6.1-.7.7-.9.9-.3.2-.5.1a6.5 6.5 0 0 1-3-2.6c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3a2.2 2.2 0 0 0-.7 1.6c0 1 .7 2 1 2.4a10.7 10.7 0 0 0 4 3.8 4.2 4.2 0 0 0 2.4.7 2 2 0 0 0 1.3-.6 2 2 0 0 0 .4-1.2c0-.2 0-.3-.2-.4Z"/>
-          </svg>
-          Pedir pelo WhatsApp
-        </a>
-
-        <a id="menuInstagram" class="menu-item"
-          href="https://instagram.com/sabordotempero_marmitaria"
-          target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/>
-          </svg>
-          Siga no Instagram
+      <nav class="menu-panel" id="headerMenu" hidden aria-label="Ações rápidas">
+        <a id="menuWhatsApp" class="menu-item" href="#" rel="noopener">Pedir pelo WhatsApp</a>
+        <a id="menuInstagram" class="menu-item" href="https://instagram.com/sabordotempero_marmitaria" target="_blank" rel="noopener">
+          Instagram
         </a>
       </nav>
     </div>
@@ -163,19 +152,26 @@
     }
 
     (function(){
-      const btn = document.getElementById('hamburgerBtn');
+      const btn  = document.getElementById('hamburgerBtn');
       const menu = document.getElementById('headerMenu');
 
       function openMenu(){
+        if (!menu) return;
         menu.hidden = false;
-        btn.setAttribute('aria-expanded','true');
+        requestAnimationFrame(()=> menu.setAttribute('data-open','true'));
+        btn?.setAttribute('aria-expanded','true');
         document.addEventListener('click', outsideOnce, { once:true });
         document.addEventListener('keydown', escOnce, { once:true });
       }
+
       function closeMenu(){
-        menu.hidden = true;
-        btn.setAttribute('aria-expanded','false');
+        if (!menu) return;
+        menu.removeAttribute('data-open');
+        const end = ()=>{ menu.hidden = true; menu.removeEventListener('transitionend', end); };
+        menu.addEventListener('transitionend', end);
+        btn?.setAttribute('aria-expanded','false');
       }
+
       function outsideOnce(e){
         if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
         else document.addEventListener('click', outsideOnce, { once:true });
@@ -184,15 +180,25 @@
         if (e.key === 'Escape') closeMenu();
         else document.addEventListener('keydown', escOnce, { once:true });
       }
-      btn.addEventListener('click', ()=>{
-        btn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+
+      btn?.addEventListener('click', ()=>{
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeMenu() : openMenu();
       });
 
-      /* Sincroniza link do menu WhatsApp com o botão principal da página (se existir) */
-      const mainWA = document.getElementById('btnWhatsApp');
-      const menuWA = document.getElementById('menuWhatsApp');
+      /* ✅ Sincroniza o link do item do MENU com o botão de baixo */
+      const mainWA = document.getElementById('btnWhatsApp');     // botão de baixo
+      const menuWA = document.getElementById('menuWhatsApp');    // item do menu (ID único!)
       if (mainWA && menuWA){
-        const href = mainWA.getAttribute('href') || '#';
+        let href = mainWA.getAttribute('href');
+        // fallback: se o botão de baixo não tiver href, define um padrão
+        if (!href || href === '#') {
+          const phone   = '5564992138817'; // ex: 5562999999999
+          const message = encodeURIComponent('Olá, gostaria de fazer um pedido!');
+          href = `https://wa.me/${phone}?text=${message}`;
+          // opcional: também aplica no botão de baixo
+          mainWA.setAttribute('href', href);
+        }
         menuWA.setAttribute('href', href);
         menuWA.addEventListener('click', closeMenu);
       }
