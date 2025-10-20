@@ -1,3 +1,137 @@
+// =========================[ EDITADO – SUPORTE A FIREBASE ]=========================
+// Inicialização opcional do Firebase usando window.env (sem bundler)
+// Requer <script src="/env.js"></script> ANTES deste arquivo no seu HTML.
+
+function assertFirebaseEnv() {
+  const req = [
+    'VITE_FIREBASE_API_KEY',
+    'VITE_FIREBASE_AUTH_DOMAIN',
+    'VITE_FIREBASE_PROJECT_ID',
+    'VITE_FIREBASE_STORAGE_BUCKET',
+    'VITE_FIREBASE_MESSAGING_SENDER_ID',
+    'VITE_FIREBASE_APP_ID'
+  ];
+  const missing = req.filter(k => !window.env?.[k] || String(window.env[k]).trim() === '');
+  if (missing.length) {
+    throw new Error('Firebase CONFIGURATION_NOT_FOUND: faltam variáveis -> ' + missing.join(', '));
+  }
+}
+
+// Faz um “probe” no Identity Toolkit para garantir que a API key aponta para um app Web válido.
+// Evita que o SDK gere vários 400/CONFIGURATION_NOT_FOUND em sequência.
+async function probeIdentityToolkit(apiKey) {
+  try {
+    const res = await fetch(
+      'https://www.googleapis.com/identitytoolkit/v3/relyingparty/getProjectConfig?key=' + encodeURIComponent(apiKey),
+      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }
+    );
+    if (!res.ok) {
+      const txt = await res.text().catch(()=> '');
+      throw new Error(`IdentityToolkit probe falhou (${res.status}): ${txt || '---'}`);
+    }
+    return true;
+  } catch (e) {
+    console.warn('[Firebase] ProjectConfig indisponível:', e.message || e);
+    throw new Error('Firebase CONFIGURATION_NOT_FOUND: verifique API key / Auth / Authorized domains.');
+  }
+}
+
+function checkDomainAllowed() {
+  const allow = window.env?.AUTHORIZED_DOMAINS;
+  if (Array.isArray(allow) && allow.length) {
+    const host = location.hostname.toLowerCase();
+    const ok = allow.some(d => d && host.endsWith(String(d).toLowerCase()));
+    if (!ok) {
+      throw new Error(`Firebase DOMAIN_NOT_ALLOWED: '${host}' não está em AUTHORIZED_DOMAINS.`);
+    }
+  }
+}
+
+async function initFirebaseIfAvailable() {
+  try {
+    // Já inicializado?
+    if (window.__fb?.db) return window.__fb;
+
+    // window.env precisa existir (carregado por <script src="/env.js"> ANTES)
+    if (!window.env || !window.env.VITE_FIREBASE_API_KEY) {
+      console.warn('[Firebase] window.env ausente – usando apenas localStorage.');
+      return null;
+    }
+
+    // Valida variáveis e domínio (sem chamar nenhuma API com CORS)
+    assertFirebaseEnv();
+    checkDomainAllowed();
+
+    // Carrega SDKs (sem bundler, via CDN)
+    const [
+      { initializeApp },
+      { getAuth, signInAnonymously, onAuthStateChanged },
+      { getFirestore, doc, collection, onSnapshot, setDoc, deleteDoc, serverTimestamp }
+    ] = await Promise.all([
+      import('https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js'),
+      import('https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js'),
+      import('https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js')
+    ]);
+
+    const firebaseConfig = {
+      apiKey: window.env.VITE_FIREBASE_API_KEY,
+      authDomain: window.env.VITE_FIREBASE_AUTH_DOMAIN,
+      projectId: window.env.VITE_FIREBASE_PROJECT_ID,
+      storageBucket: window.env.VITE_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: window.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+      appId: window.env.VITE_FIREBASE_APP_ID
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Tenta auth anônima. Se não estiver habilitada ou domínio não autorizado,
+    // tratamos o erro e caímos para localStorage (sem travar a UI).
+    try {
+      await signInAnonymously(auth);
+    } catch (err) {
+      const code = err?.code || String(err);
+      if (code.includes('operation-not-allowed')) {
+        console.warn('[Firebase] Provider Anônimo desabilitado (Authentication > Sign-in method) – usando localStorage.');
+      } else if (code.includes('domain') || code.includes('domain-not-allowed')) {
+        console.warn('[Firebase] Domínio não autorizado (Authentication > Settings > Authorized domains) – usando localStorage.');
+      } else if (code.includes('configuration-not-found')) {
+        console.warn('[Firebase] Config inválida (app Web não criado / credenciais incorretas) – usando localStorage.');
+      } else {
+        console.warn('[Firebase] signInAnonymously falhou – usando localStorage. Motivo:', code);
+      }
+      return null;
+    }
+
+    const db = getFirestore(app);
+    let currentUid = null;
+    onAuthStateChanged(auth, (u) => { currentUid = u?.uid || null; });
+
+    window.__fb = {
+      app, auth, db,
+      doc, collection, onSnapshot, setDoc, deleteDoc, serverTimestamp,
+      get uid() { return currentUid; }
+    };
+
+    console.log('[Firebase] OK – auth anônima ativa.');
+    return window.__fb;
+
+  } catch (e) {
+    console.warn('[Firebase] Falha ao inicializar, caindo para localStorage:', e.message || e);
+    return null;
+  }
+}
+
+// Gera uma chave determinística caso não exista prato.id
+function pratoKeyFrom(prato) {
+  if (prato?.id) return String(prato.id);
+  return String(prato?.nome || 'prato')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// =============================[ SEU JSON / ESTADO ]===============================
 const SAMPLE_JSON = {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
@@ -43,9 +177,9 @@ const SAMPLE_JSON = {
 
 let menuData = null;
 
+// ===============================[ CARREGAMENTO ]=================================
 async function carregarMenu() {
   const loading = document.getElementById('loading');
-  const cardapioContainer = document.getElementById('cardapio');
   const offlineAlert = document.getElementById('offlineAlert');
 
   try {
@@ -53,14 +187,10 @@ async function carregarMenu() {
 
     const response = await fetch('/data/menu.json', {
       cache: 'no-cache',
-      headers: {
-        'Cache-Control': 'no-cache'
-      }
+      headers: { 'Cache-Control': 'no-cache' }
     });
 
-    if (!response.ok) {
-      throw new Error('Arquivo não encontrado');
-    }
+    if (!response.ok) throw new Error('Arquivo não encontrado');
 
     menuData = await response.json();
     offlineAlert.style.display = 'none';
@@ -92,24 +222,17 @@ function renderizarMenu() {
 
 function formatarData(dataStr) {
   if (!dataStr) return '';
-
   try {
     const [ano, mes, dia] = dataStr.split('-');
     const data = new Date(ano, mes - 1, dia);
-
-    const opcoes = {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    };
-
+    const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     return data.toLocaleDateString('pt-BR', opcoes);
   } catch (error) {
     return dataStr;
   }
 }
 
+// ===============================[ RENDER CARDÁPIO ]==============================
 function renderizarCardapio(pratos, opcoesQtd, flags) {
   const cardapioContainer = document.getElementById('cardapio');
   cardapioContainer.innerHTML = '';
@@ -126,6 +249,7 @@ function renderizarCardapio(pratos, opcoesQtd, flags) {
   });
 }
 
+// ===============================[ CARD DO PRATO ]================================
 function criarCardPrato(prato, flags) {
   const card = document.createElement('article');
   card.className = 'prato-card';
@@ -162,15 +286,13 @@ function criarCardPrato(prato, flags) {
       openLightbox(imagens, 0, prato.nome);
     });
 
-    // Double-tap/click na imagem: curte
+    // Double-tap/click na imagem: curtir (integra com handler do botão)
     let lastTap = 0;
     media.addEventListener('click', () => {
       const now = Date.now();
       if (now - lastTap < 350) {
-        // encontra elementos do like no card
         const likeBtn = card.querySelector('.prato-like-btn');
-        const likeCount = card.querySelector('.prato-likes-count');
-        toggleLikeCard(prato.id, likeBtn, likeCount);
+        likeBtn?.click();
       }
       lastTap = now;
     });
@@ -202,19 +324,11 @@ function criarCardPrato(prato, flags) {
   const actions = document.createElement('div');
   actions.className = 'prato-actions';
 
-  // estado inicial: se tiver contador vindo do JSON, use; senão 0 (ou um “seed” opcional)
-  const initialState = getLikeState(prato.id) || {
-    liked: false,
-    count: typeof prato.likes === 'number' ? prato.likes : 0
-  };
-  setLikeState(prato.id, initialState); // garante persistência
-
   const likeBtn = document.createElement('button');
-  likeBtn.className = `prato-like-btn${initialState.liked ? ' liked' : ''}`;
+  likeBtn.className = 'prato-like-btn';
   likeBtn.type = 'button';
   likeBtn.setAttribute('aria-label', 'Curtir este prato');
-  likeBtn.setAttribute('aria-pressed', String(initialState.liked));
-  likeBtn.dataset.id = prato.id;
+  likeBtn.setAttribute('aria-pressed', 'false');
   likeBtn.innerHTML = `
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z"
@@ -224,17 +338,99 @@ function criarCardPrato(prato, flags) {
 
   const likeCount = document.createElement('span');
   likeCount.className = 'prato-likes-count';
-  likeCount.textContent = `${initialState.count} curtidas`;
-
-  likeBtn.addEventListener('click', () => toggleLikeCard(prato.id, likeBtn, likeCount));
+  likeCount.textContent = `0 curtidas`;
 
   actions.appendChild(likeBtn);
   actions.appendChild(likeCount);
   card.appendChild(actions);
 
+  // ============= Integração Firebase + fallback localStorage =============
+  const key = pratoKeyFrom(prato);
+
+  // Fallback localStorage helpers
+  function likeStorageKey(id) { return `cardapio_like_${id}`; }
+  function getLocalLikeState(id) {
+    try { return JSON.parse(localStorage.getItem(likeStorageKey(id)) || 'null'); }
+    catch { return null; }
+  }
+  function setLocalLikeState(id, state) {
+    localStorage.setItem(likeStorageKey(id), JSON.stringify(state));
+  }
+  function applyLocalToggle(id, btnEl, countEl) {
+    const state = getLocalLikeState(id) || { liked: false, count: 0 };
+    const wasLiked = !!state.liked;
+    state.liked = !wasLiked;
+    state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
+    setLocalLikeState(id, state);
+    // UI
+    if (btnEl) {
+      btnEl.classList.toggle('liked', state.liked);
+      btnEl.setAttribute('aria-pressed', String(state.liked));
+    }
+    if (countEl) countEl.textContent = `${state.count} curtidas`;
+  }
+
+  // Tenta usar Firebase se disponível
+  (async () => {
+    const fb = await initFirebaseIfAvailable();
+    if (!fb || !fb.db) {
+      // Sem Firebase: usa somente localStorage
+      const initial = getLocalLikeState(key) || { liked: false, count: 0 };
+      if (initial.liked) {
+        likeBtn.classList.add('liked');
+        likeBtn.setAttribute('aria-pressed', 'true');
+      }
+      likeCount.textContent = `${initial.count} curtidas`;
+      likeBtn.addEventListener('click', () => applyLocalToggle(key, likeBtn, likeCount));
+      return;
+    }
+
+    const { db, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp } = fb;
+
+    // 1) Assina o contador agregado em likes/{key}
+    const likeDocRef = doc(db, 'likes', key);
+    onSnapshot(likeDocRef, (snap) => {
+      const count = snap.exists() ? (snap.data().count || 0) : 0;
+      likeCount.textContent = `${count} curtidas`;
+    });
+
+    // 2) Quando o uid estiver pronto, assina o voto do usuário e binda o clique
+    const bindWhenUid = setInterval(() => {
+      if (!window.__fb?.uid) return;
+      clearInterval(bindWhenUid);
+
+      const voteRef = doc(collection(doc(db, 'likes', key), 'votes'), window.__fb.uid);
+
+      // estado do botão (liked/unliked) em tempo real
+      onSnapshot(voteRef, (snap) => {
+        const liked = snap.exists() ? !!snap.data().liked : false;
+        likeBtn.classList.toggle('liked', liked);
+        likeBtn.setAttribute('aria-pressed', String(liked));
+      });
+
+      // clique: alterna like/unlike
+      likeBtn.onclick = async () => {
+        const likedNow = likeBtn.classList.contains('liked');
+        try {
+          if (likedNow) {
+            // descurtir => remover doc (Function decrementa)
+            await deleteDoc(voteRef);
+          } else {
+            // curtir => set liked=true (Function incrementa)
+            await setDoc(voteRef, { liked: true, ts: serverTimestamp() }, { merge: true });
+          }
+        } catch (e) {
+          console.error('Erro ao curtir via Firebase, usando fallback local:', e);
+          applyLocalToggle(key, likeBtn, likeCount);
+        }
+      };
+    }, 100);
+  })();
+
   return card;
 }
 
+// ===========================[ SOBRE / CONTROLES ]===============================
 function renderizarSobre(sobre, flags) {
   const secaoSobre = document.getElementById('secaoSobre');
   const sobreNome = document.getElementById('sobreNome');
@@ -259,7 +455,7 @@ function renderizarSobre(sobre, flags) {
         <circle cx="12" cy="10" r="3"/>
       </svg>`
     );
-    enderecoEl.classList.add('sobre-left'); // <- força alinhamento à esquerda
+    enderecoEl.classList.add('sobre-left');
     sobreInfo.appendChild(enderecoEl);
   }
 
@@ -317,37 +513,31 @@ function configurarBotoes(flags) {
     btnOuvir.addEventListener('click', lerCardapio);
   }
 
-  // WhatsApp via <a href="..."> com número do cliente + maps
   if (btnWhatsApp) {
     if (flags.mostrar_whatsapp && menuData?.sobre?.whatsapp) {
       const numeroLoja = (menuData.sobre.whatsapp || "").replace(/\D/g, "");
 
-      // Prepara um href mínimo enquanto o usuário não clica
       const mensagemInicial = montarMensagemBase();
       const linksInicial = buildWaLinks(numeroLoja, mensagemInicial);
       btnWhatsApp.setAttribute('href', linksInicial.primary);
       btnWhatsApp.style.display = 'inline-flex';
 
-      // Monta TUDO no clique (sincrônico) para evitar bloqueios
       btnWhatsApp.addEventListener('click', async function (e) {
         e.preventDefault();
 
-        const clienteDigits = getUserPhone();        // pede se não tiver salvo
-        const coords = await requestLocation();      // tenta pegar localização
+        const clienteDigits = getUserPhone();
+        const coords = await requestLocation();
         const displayPhone = formatDisplayPhone(clienteDigits);
         const mapsLink = buildMapsLink(coords);
 
-        // Mensagem final fixa + extras
         let msg = montarMensagemBase();
         if (clienteDigits) msg += `\n\n📱 Meu WhatsApp: ${displayPhone}`;
         if (mapsLink) msg += `\n📍 Minha localização: ${mapsLink}`;
 
         const { primary, fallback } = buildWaLinks(numeroLoja, msg);
 
-        // Navegação direta (melhor p/ PWA/iOS)
         try {
           window.location.href = primary;
-          // fallback se ainda estivermos na mesma página após 300ms
           setTimeout(() => {
             if (document.visibilityState === 'visible') {
               window.location.href = fallback;
@@ -356,72 +546,14 @@ function configurarBotoes(flags) {
         } catch {
           window.location.href = fallback;
         }
-      }, { once: false }); // pode clicar várias vezes
+      }, { once: false });
     } else {
       btnWhatsApp.style.display = 'none';
     }
   }
 }
 
-function configurarWhatsAnchor(anchorEl, flags) {
-  if (!anchorEl) return;
-
-  if (flags.mostrar_whatsapp && menuData?.sobre?.whatsapp) {
-    const numeroLoja = (menuData.sobre.whatsapp || "").replace(/\D/g, "");
-
-    // href mínimo visível antes do clique
-    const mensagemInicial = montarMensagemBase();
-    const linksInicial = buildWaLinks(numeroLoja, mensagemInicial);
-    anchorEl.setAttribute('href', linksInicial.primary);
-
-    // Mesmo comportamento do botão de baixo
-    anchorEl.addEventListener('click', async function (e) {
-      e.preventDefault();
-
-      const clienteDigits = getUserPhone();        // pede se não tiver salvo
-      const coords = await requestLocation();      // tenta pegar localização
-      const displayPhone = formatDisplayPhone(clienteDigits);
-      const mapsLink = buildMapsLink(coords);
-
-      // Mensagem final
-      let msg = montarMensagemBase();
-      if (clienteDigits) msg += `\n\n📱 Meu WhatsApp: ${displayPhone}`;
-      if (mapsLink) msg += `\n📍 Minha localização: ${mapsLink}`;
-
-      const { primary, fallback } = buildWaLinks(numeroLoja, msg);
-
-      try {
-        window.location.href = primary;
-        setTimeout(() => {
-          if (document.visibilityState === 'visible') {
-            window.location.href = fallback;
-          }
-        }, 300);
-      } catch {
-        window.location.href = fallback;
-      }
-
-      // fecha o menu, se existir
-      const menu = document.getElementById('headerMenu');
-      if (menu && !menu.hidden) {
-        // se você tiver uma função closeMenu(), pode chamá-la aqui
-        menu.hidden = true;
-        const btn = document.getElementById('hamburgerBtn');
-        btn && btn.setAttribute('aria-expanded','false');
-      }
-    }, { once: false });
-  } else {
-    // Se não houver número, mantém o link invisível/inerte
-    anchorEl.setAttribute('href', '#');
-    anchorEl.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Número de WhatsApp não informado.');
-    }, { once: true });
-  }
-}
-
-
-// ---------- LIGHTBOX / CARROSSEL ----------
+// ===============================[ LIGHTBOX, ETC ]===============================
 let LB_STATE = { images: [], index: 0, title: '' };
 
 function ensureLightboxRoot(){
@@ -461,13 +593,11 @@ function ensureLightboxRoot(){
   `;
   document.body.appendChild(wrap);
 
-  // Eventos básicos
   document.getElementById('lbClose').addEventListener('click', closeLightbox);
   document.getElementById('lbPrev').addEventListener('click', () => stepLightbox(-1));
   document.getElementById('lbNext').addEventListener('click', () => stepLightbox(1));
   wrap.addEventListener('click', (e) => { if (e.target === wrap) closeLightbox(); });
 
-  // Teclado
   window.addEventListener('keydown', (e) => {
     const open = document.getElementById('lbBackdrop')?.classList.contains('is-open');
     if (!open) return;
@@ -476,7 +606,6 @@ function ensureLightboxRoot(){
     if (e.key === 'ArrowLeft') stepLightbox(-1);
   });
 
-  // Gestos (toque)
   let startX = null;
   wrap.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].clientX; }, {passive:true});
   wrap.addEventListener('touchend', (e) => {
@@ -487,17 +616,11 @@ function ensureLightboxRoot(){
   });
 }
 
-// === Helpers para WhatsApp, telefone e localização ===
-function montarMensagemBase() {
-  // mensagem fixa solicitada
-  return "Olá gostaria de fazer um pedido!";
-}
+function montarMensagemBase() { return "Olá gostaria de fazer um pedido!"; }
 
 function getUserPhone() {
-  // tenta recuperar do storage para não pedir toda vez
   const saved = localStorage.getItem('userPhone');
   if (saved) return saved;
-
   const entrada = prompt('Informe seu WhatsApp com DDD (ex: 62900000000):') || "";
   const digits = entrada.replace(/\D/g, "");
   if (digits) localStorage.setItem('userPhone', digits);
@@ -505,22 +628,13 @@ function getUserPhone() {
 }
 
 function formatDisplayPhone(digits) {
-  // formata bonitinho para exibir na mensagem (BR simples)
   if (!digits) return "";
   const d = digits.replace(/\D/g, "");
-  if (d.length === 13 && d.startsWith('55')) { // +55 AA 9 NNNN NNNN
-    return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,5)} ${d.slice(5,9)}-${d.slice(9)}`;
-  }
-  if (d.length === 12 && d.startsWith('55')) { // +55 AA NNNN NNNN
-    return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,8)}-${d.slice(8)}`;
-  }
-  if (d.length === 11) { // AA 9 NNNN NNNN
-    return `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`;
-  }
-  if (d.length === 10) { // AA NNNN NNNN
-    return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
-  }
-  return digits; // fallback
+  if (d.length === 13 && d.startsWith('55')) { return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,5)} ${d.slice(5,9)}-${d.slice(9)}`; }
+  if (d.length === 12 && d.startsWith('55')) { return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,8)}-${d.slice(8)}`; }
+  if (d.length === 11) { return `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`; }
+  if (d.length === 10) { return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`; }
+  return digits;
 }
 
 function requestLocation(options = { enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 }) {
@@ -543,21 +657,15 @@ function buildMapsLink(coords) {
 function buildWaLinks(phoneDigits, mensagem) {
   const p = (phoneDigits || "").replace(/\D/g, "");
   const t = encodeURIComponent(mensagem || "");
-  return {
-    primary: `https://wa.me/${p}?text=${t}`,
-    fallback: `https://api.whatsapp.com/send?phone=${p}&text=${t}`,
-  };
+  return { primary: `https://wa.me/${p}?text=${t}`, fallback: `https://api.whatsapp.com/send?phone=${p}&text=${t}` };
 }
-
 
 function openLightbox(images, startIndex = 0, title = ''){
   if (!images || !images.length) return;
   ensureLightboxRoot();
-
   LB_STATE.images = images;
   LB_STATE.index = Math.max(0, Math.min(startIndex, images.length - 1));
   LB_STATE.title = title || 'Imagem do prato';
-
   const backdrop = document.getElementById('lbBackdrop');
   backdrop.classList.add('is-open');
   updateLightbox();
@@ -567,7 +675,6 @@ function updateLightbox(){
   const img = document.getElementById('lbImg');
   const counter = document.getElementById('lbCounter');
   const { images, index, title } = LB_STATE;
-
   img.src = images[index];
   img.alt = `${title} (${index+1}/${images.length})`;
   counter.textContent = `${index+1}/${images.length}`;
@@ -586,71 +693,45 @@ function closeLightbox(){
 
 function compartilharWhatsApp() {
   if (!menuData) return;
-
   const { meta, opcoes_do_dia, pratos, sobre } = menuData;
   const numeroWhatsApp = sobre.whatsapp?.replace(/\D/g, '');
+  if (!numeroWhatsApp) { alert('Número de WhatsApp não informado.'); return; }
 
-  if (!numeroWhatsApp) {
-    alert('Número de WhatsApp não informado.');
-    return;
-  }
-
-  // Monta mensagem resumida
   let mensagem = `🍽️ *${meta.titulo_dia}*\n\n`;
   const pratosDisponiveis = pratos.filter(p => p.disponivel).slice(0, opcoes_do_dia);
-
   pratosDisponiveis.forEach((prato, index) => {
     mensagem += `${index + 1}. *${prato.nome}*\n`;
     if (prato.itens?.length) mensagem += `${prato.itens.join(', ')}\n`;
     mensagem += '\n';
   });
-
   mensagem += `📍 ${sobre.endereco}\n🕒 ${sobre.horario}\n📞 ${sobre.telefone}\n\n_Faça seu pedido pelo WhatsApp!_`;
 
   const mensagemEncoded = encodeURIComponent(mensagem);
-
-  // ✅ Abre o WhatsApp direto, sem ser bloqueado por popup
-  const link = `https://wa.me/${numeroWhatsApp}?text=${mensagemEncoded}`;
-  window.location.href = link;
+  window.location.href = `https://wa.me/${numeroWhatsApp}?text=${mensagemEncoded}`;
 }
 
 function lerCardapio() {
-  if (!('speechSynthesis' in window)) {
-    alert('Seu navegador não suporta leitura em voz alta.');
-    return;
-  }
-
-  if (window.speechSynthesis.speaking) {
-    window.speechSynthesis.cancel();
-    return;
-  }
-
+  if (!('speechSynthesis' in window)) { alert('Seu navegador não suporta leitura em voz alta.'); return; }
+  if (window.speechSynthesis.speaking) { window.speechSynthesis.cancel(); return; }
   if (!menuData) return;
 
   const { meta, opcoes_do_dia, pratos } = menuData;
   const pratosDisponiveis = pratos.filter(p => p.disponivel).slice(0, opcoes_do_dia);
 
   let texto = `${meta.titulo_dia}. `;
-
   pratosDisponiveis.forEach((prato, index) => {
     texto += `Opção ${index + 1}: ${prato.nome}. `;
     if (prato.itens && prato.itens.length > 0) {
       texto += `Acompanha: ${prato.itens.join(', ')}. `;
     }
   });
-
   lerTexto(texto);
 }
 
 function buildWhatsLink(numeroE164, mensagem) {
-  // Remove tudo que não é dígito
   const phone = (numeroE164 || "").replace(/\D/g, "");
   const text = encodeURIComponent(mensagem || "");
-  // Preferimos wa.me; fallback para api.whatsapp.com em casos raros
-  return {
-    primary: `https://wa.me/${phone}?text=${text}`,
-    fallback: `https://api.whatsapp.com/send?phone=${phone}&text=${text}`
-  };
+  return { primary: `https://wa.me/${phone}?text=${text}`, fallback: `https://api.whatsapp.com/send?phone=${phone}&text=${text}` };
 }
 
 function montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre) {
@@ -668,14 +749,13 @@ function montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre) {
   return msg;
 }
 
-// --- helpers -----------------------------------------------------------------
+// ===============================[ UTILS GERAIS ]================================
 const $ = (sel, ctx=document) => ctx.querySelector(sel);
 const $$ = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
 
 function timeAgo(dateStr) {
-  // usa meta.data se você já injeta; fallback: hoje
   const d = dateStr ? new Date(dateStr) : new Date();
-  const diff = (Date.now() - d.getTime()) / 1000; // s
+  const diff = (Date.now() - d.getTime()) / 1000;
   const map = [
     [60, 'seg'], [3600, 'min'], [86400, 'h'], [604800, 'd'], [2629800, 'm'], [31557600, 'a']
   ];
@@ -689,189 +769,31 @@ function timeAgo(dateStr) {
   return 'agora';
 }
 
-function likeKey(id) { return `evorise_like_${id}`; }
-function getLikeState(id) {
-  try { return JSON.parse(localStorage.getItem(likeKey(id)) || 'null'); }
-  catch { return null; }
-}
-function setLikeState(id, state) {
-  localStorage.setItem(likeKey(id), JSON.stringify(state));
-}
-
-// --- feed --------------------------------------------------------------------
-async function renderFeedFromData(data) {
-  const feed = $('#feed');
-  const loading = $('#loading');
-  if (!feed) return;
-
-  // pega pratos do dia
-  const pratos = (data?.pratos || []).filter(p => p?.disponivel);
-  // identifica prato do dia (primeiro disponível ou pela flag id)
-  let pratoDoDiaId = null;
-  const explicit = pratos.find(p => p.id === 'prato_do_dia' || p.prato_do_dia === true);
-  if (explicit) pratoDoDiaId = explicit.id;
-  else if (pratos.length) pratoDoDiaId = pratos[0].id;
-
-  // limpa e mostra
-  feed.innerHTML = '';
-  loading?.setAttribute('hidden', 'hidden');
-  feed.removeAttribute('hidden');
-
-  // cria posts
-  pratos.forEach((p, idx) => {
-    const id = p.id || `prato_${idx}`;
-    const nome = p.nome || 'Prato do dia';
-    const imgSrc = p.imagem || `/assets/pratos/${id}.jpg`; // ajuste seu path
-    const legenda = p.descricao || (p.itens?.length ? `Acompanha: ${p.itens.join(', ')}` : 'Delícia do dia 😋');
-    const isDoDia = id === pratoDoDiaId;
-
-    // like state
-    const stored = getLikeState(id) || { liked: false, count: Math.floor(Math.random()*30)+3 }; // contador inicial “social”
-    const liked = stored.liked === true;
-    const likeCount = stored.count;
-
-    // template
-    const post = document.createElement('article');
-    post.className = 'post';
-    post.innerHTML = `
-      <header class="post-header">
-        <img class="post-avatar" src="/assets/icons/icon-192.png" alt="Avatar Sabor do Tempero" loading="lazy" decoding="async">
-        <div class="post-title">
-          <span class="nome">${nome}</span>
-          <span class="meta">${timeAgo(data?.meta?.data)}</span>
-        </div>
-        ${isDoDia ? '<span class="post-badge" title="Prato do dia">PRATO DO DIA</span>' : ''}
-      </header>
-
-      <div class="post-media" data-id="${id}">        
-        <div class="post-like-float" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z" fill="#e74c3c"></path>
-          </svg>
-        </div>
-      </div>
-
-      <div class="post-actions">
-        <button class="btn-icon btn-like ${liked ? 'liked' : ''}" data-id="${id}" aria-pressed="${liked}" aria-label="Curtir">
-          <svg viewBox="0 0 24 24">
-            <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z" stroke="currentColor" stroke-width="1.6"></path>
-          </svg>
-        </button>
-      </div>
-
-      <div class="likes-count" data-id="${id}">${likeCount} curtidas</div>
-
-      <div class="post-caption">
-        <span class="titulo">${nome}</span>
-        <span class="texto">${legenda}</span>
-        ${isDoDia ? ' <span class="tag">#PratoDoDia</span>' : ''}
-      </div>
-
-      <div class="post-time">${timeAgo(data?.meta?.data)}</div>
-    `;
-
-    feed.appendChild(post);
-  });
-
-  // eventos de like
-  $$('.btn-like', feed).forEach(btn => {
-    btn.addEventListener('click', () => toggleLike(btn.dataset.id, btn, feed));
-  });
-
-  // double-tap na imagem para curtir
-  $$('.post-media', feed).forEach(m => {
-    let lastTap = 0;
-    m.addEventListener('click', () => {
-      const now = Date.now();
-      if (now - lastTap < 350) {
-        showLikeBurst(m);
-        const id = m.dataset.id;
-        const btn = $(`.btn-like[data-id="${id}"]`, feed);
-        if (btn && !btn.classList.contains('liked')) {
-          toggleLike(id, btn, feed);
-        }
-      }
-      lastTap = now;
-    });
-  });
-}
-
-function toggleLike(id, btn, ctx=document) {
-  const state = getLikeState(id) || { liked: false, count: 0 };
-  const wasLiked = !!state.liked;
-  state.liked = !wasLiked;
-  state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
-  setLikeState(id, state);
-
-  // UI
-  btn.classList.toggle('liked', state.liked);
-  btn.setAttribute('aria-pressed', String(state.liked));
-  const counter = $(`.likes-count[data-id="${id}"]`, ctx);
-  if (counter) counter.textContent = `${state.count} curtidas`;
-}
-
-function showLikeBurst(mediaEl) {
-  mediaEl.classList.remove('show-like');
-  void mediaEl.offsetWidth; // restart animation
-  mediaEl.classList.add('show-like');
-}
-
-// --- bootstrap (exemplo usando SAMPLE_JSON se já existir globalmente) ---------
-document.addEventListener('DOMContentLoaded', async () => {
-  try {
-    // use o SAMPLE_JSON que você já tem no projeto
-    if (window.SAMPLE_JSON) {
-      await renderFeedFromData(window.SAMPLE_JSON);
-    } else {
-      // fallback básico (personalize conforme sua API/arquivo)
-      const data = {
-        meta: { data: new Date().toISOString() },
-        pratos: [
-          { id: 'feijoada', nome: 'Feijoada', disponivel: true, itens: ['Arroz', 'Farofa', 'Couve'], imagem: '/assets/pratos/feijoada.jpg' },
-          { id: 'parmegiana', nome: 'Parmegiana', disponivel: true, itens: ['Arroz', 'Batata'], imagem: '/assets/pratos/parmegiana.jpg' },
-        ]
-      };
-      await renderFeedFromData(data);
-    }
-  } catch (e) {
-    console.error('Falha ao renderizar feed', e);
-    const loading = document.getElementById('loading');
-    if (loading) loading.innerHTML = '<p>Não foi possível carregar o feed.</p>';
-  }
-});
-
-function likeStorageKey(id) { return `cardapio_like_${id}`; }
-
-function getLikeState(id) {
-  try { return JSON.parse(localStorage.getItem(likeStorageKey(id)) || 'null'); }
-  catch { return null; }
-}
-
-function setLikeState(id, state) {
-  localStorage.setItem(likeStorageKey(id), JSON.stringify(state));
-}
-
-function toggleLikeCard(id, btnEl, countEl) {
-  const state = getLikeState(id) || { liked: false, count: 0 };
-  const wasLiked = !!state.liked;
-  state.liked = !wasLiked;
-  state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
-  setLikeState(id, state);
-
-  // UI
-  if (btnEl) {
-    btnEl.classList.toggle('liked', state.liked);
-    btnEl.setAttribute('aria-pressed', String(state.liked));
-  }
-  if (countEl) countEl.textContent = `${state.count} curtidas`;
-}
-
+// ===============================[ ONLINE/OFFLINE ]==============================
 window.addEventListener('online', () => {
-  document.getElementById('offlineAlert').style.display = 'none';
+  const el = document.getElementById('offlineAlert');
+  if (el) el.style.display = 'none';
 });
-
 window.addEventListener('offline', () => {
-  document.getElementById('offlineAlert').style.display = 'flex';
+  const el = document.getElementById('offlineAlert');
+  if (el) el.style.display = 'flex';
 });
 
-document.addEventListener('DOMContentLoaded', carregarMenu);
+// ===============================[ BOOTSTRAP ]===================================
+document.addEventListener('DOMContentLoaded', async () => {
+  // inicializa Firebase se houver env; se não houver, segue com localStorage
+  await initFirebaseIfAvailable();
+  await carregarMenu();
+});
+
+// ===============================[ EXEMPLO ENV ]=================================
+// Crie um arquivo público "env.js" carregado antes deste script com algo assim:
+//
+// window.env = {
+//   VITE_FIREBASE_API_KEY: "AIzaSy...",
+//   VITE_FIREBASE_AUTH_DOMAIN: "seu-projeto.firebaseapp.com",
+//   VITE_FIREBASE_PROJECT_ID: "seu-projeto",
+//   VITE_FIREBASE_STORAGE_BUCKET: "seu-projeto.appspot.com",
+//   VITE_FIREBASE_MESSAGING_SENDER_ID: "1234567890",
+//   VITE_FIREBASE_APP_ID: "1:1234567890:web:abcdef0123456789"
+// };
