@@ -1,6 +1,7 @@
 // =========================[ EDITADO – SUPORTE A FIREBASE ]=========================
 // Inicialização opcional do Firebase usando window.env (sem bundler)
 // Requer <script src="/env.js"></script> ANTES deste arquivo no seu HTML.
+window.localStorage.setItem('firebase:log', 'debug');
 
 function assertFirebaseEnv() {
   const req = [
