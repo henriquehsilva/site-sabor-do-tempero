@@ -743,8 +743,7 @@ async function renderFeedFromData(data) {
         ${isDoDia ? '<span class="post-badge" title="Prato do dia">PRATO DO DIA</span>' : ''}
       </header>
 
-      <div class="post-media" data-id="${id}">
-        <img class="post-image" src="${imgSrc}" alt="${nome}" loading="lazy" decoding="async" onerror="this.src='/assets/placeholder.jpg'">
+      <div class="post-media" data-id="${id}">        
         <div class="post-like-float" aria-hidden="true">
           <svg viewBox="0 0 24 24">
             <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z" fill="#e74c3c"></path>
