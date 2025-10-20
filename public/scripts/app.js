@@ -329,12 +329,33 @@ function criarCardPrato(prato, flags) {
   // ============= Integração Firebase + fallback localStorage =============
   const key = pratoKeyFrom(prato);
 
-  // ... (helpers de localStorage iguais aos seus) ...
+  // Fallback localStorage helpers
+  function likeStorageKey(id) { return `cardapio_like_${id}`; }
+  function getLocalLikeState(id) {
+    try { return JSON.parse(localStorage.getItem(likeStorageKey(id)) || 'null'); }
+    catch { return null; }
+  }
+  function setLocalLikeState(id, state) {
+    localStorage.setItem(likeStorageKey(id), JSON.stringify(state));
+  }
+  function applyLocalToggle(id, btnEl, countEl) {
+    const state = getLocalLikeState(id) || { liked: false, count: 0 };
+    const wasLiked = !!state.liked;
+    state.liked = !wasLiked;
+    state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
+    setLocalLikeState(id, state);
+    // UI
+    if (btnEl) {
+      btnEl.classList.toggle('liked', state.liked);
+      btnEl.setAttribute('aria-pressed', String(state.liked));
+    }
+    if (countEl) countEl.textContent = `${state.count} curtidas`;
+  }
 
   (async () => {
     const fb = await initFirebaseIfAvailable();
     if (!fb || !fb.db) {
-      // Sem Firebase: só localStorage
+      // Sem Firebase: usa somente localStorage
       const initial = getLocalLikeState(key) || { liked: false, count: 0 };
       likeBtn.classList.toggle('liked', !!initial.liked);
       likeBtn.setAttribute('aria-pressed', String(!!initial.liked));
@@ -343,56 +364,64 @@ function criarCardPrato(prato, flags) {
       return;
     }
 
-    const { db, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp, getCountFromServer } = fb;
+    const {
+      db, onSnapshot, doc, collection, setDoc, deleteDoc,
+      serverTimestamp, getCountFromServer
+    } = fb;
 
-    const likeDocRef = doc(db, 'likes', key);
+    const likeDocRef   = doc(db, 'likes', key);
     const votesCollRef = collection(likeDocRef, 'votes');
 
-    // Função para buscar a contagem real de votos (quando agregado não existir/atrasar)
-    async function fetchRealCount() {
+    // Guarda última contagem “real” para reconciliar com agregado
+    let lastRealCount = 0;
+
+    // Busca contagem real no servidor (sem baixar todos os docs)
+    async function fetchRealCountAndRender() {
       try {
-        const snap = await getCountFromServer(votesCollRef);
-        const c = snap.data().count || 0;
-        likeCount.textContent = `${c} curtidas`;
-        return c;
+        const agg = await getCountFromServer(votesCollRef);
+        lastRealCount = (agg?.data()?.count) || 0;
+        // Se já existe algo na UI, preserva o maior entre o visto e o real
+        const visible = parseInt((likeCount.textContent || '0').replace(/\D/g,''), 10) || 0;
+        const finalCount = Math.max(visible, lastRealCount);
+        likeCount.textContent = `${finalCount} curtidas`;
+        return finalCount;
       } catch (err) {
         console.warn('Falha ao obter contagem real de votos:', err);
         return null;
       }
     }
 
-    // 1) Ouve o documento agregado likes/{key}. Se não tiver count, busca a contagem real.
-    onSnapshot(likeDocRef, async (snap) => {
-      if (snap.exists() && typeof snap.data().count === 'number') {
-        likeCount.textContent = `${snap.data().count} curtidas`;
-      } else {
-        // agregado ausente/sem count => computa pelos votos
-        await fetchRealCount();
-      }
+    // Primeiro: pinta a contagem real imediatamente
+    await fetchRealCountAndRender();
+
+    // 1) Assina o documento agregado likes/{key}
+    onSnapshot(likeDocRef, (snap) => {
+      const aggCount = (snap.exists() && typeof snap.data().count === 'number') ? snap.data().count : 0;
+      // Reconciliamos sempre com a última contagem real conhecida
+      const finalCount = Math.max(aggCount, lastRealCount);
+      likeCount.textContent = `${finalCount} curtidas`;
     });
 
-    // 2) Espera uid e então ouve o voto do usuário para estado do botão
+    // 2) Espera o uid e assina o voto do usuário para estado do botão
     const waitUid = setInterval(() => {
       if (!window.__fb?.uid) return;
       clearInterval(waitUid);
 
       const voteRef = doc(votesCollRef, window.__fb.uid);
 
-      // Mantém o estado do botão em tempo real
+      // Mantém estado do botão em tempo real
       onSnapshot(voteRef, (snap) => {
         const liked = snap.exists() ? !!snap.data().liked : false;
         likeBtn.classList.toggle('liked', liked);
         likeBtn.setAttribute('aria-pressed', String(liked));
       });
 
-      // Clique com UI otimista: ajusta visual imediatamente; assinatura corrige depois
+      // Clique com UI otimista + recálculo real pós-operação
       likeBtn.onclick = async () => {
         const likedNow = likeBtn.classList.contains('liked');
-        // contador visível atual
-        const visible = parseInt((likeCount.textContent || '0').replace(/\D/g, ''), 10) || 0;
+        const visible  = parseInt((likeCount.textContent || '0').replace(/\D/g,''), 10) || 0;
         // aplica delta otimista
-        const next = likedNow ? Math.max(0, visible - 1) : visible + 1;
-        likeCount.textContent = `${next} curtidas`;
+        likeCount.textContent = `${Math.max(0, visible + (likedNow ? -1 : +1))} curtidas`;
 
         try {
           if (likedNow) {
@@ -402,11 +431,12 @@ function criarCardPrato(prato, flags) {
             // curtir => gravar voto
             await setDoc(voteRef, { liked: true, ts: serverTimestamp() }, { merge: true });
           }
+          // após sucesso, força contagem real para refletir imediatamente
+          await fetchRealCountAndRender();
         } catch (e) {
-          console.error('Erro ao alternar like via Firebase, revertendo UI e usando fallback local:', e);
+          console.error('Erro ao alternar like via Firebase; revertendo e usando fallback local:', e);
           // reverte o otimista
           likeCount.textContent = `${visible} curtidas`;
-          // habilita fallback local como plano B
           applyLocalToggle(key, likeBtn, likeCount);
         }
       };
