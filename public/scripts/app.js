@@ -18,30 +18,14 @@ function assertFirebaseEnv() {
   }
 }
 
-// Faz um “probe” no Identity Toolkit para garantir que a API key aponta para um app Web válido.
-// Evita que o SDK gere vários 400/CONFIGURATION_NOT_FOUND em sequência.
-async function probeIdentityToolkit(apiKey) {
-  try {
-    const res = await fetch(
-      'https://www.googleapis.com/identitytoolkit/v3/relyingparty/getProjectConfig?key=' + encodeURIComponent(apiKey),
-      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }
-    );
-    if (!res.ok) {
-      const txt = await res.text().catch(()=> '');
-      throw new Error(`IdentityToolkit probe falhou (${res.status}): ${txt || '---'}`);
-    }
-    return true;
-  } catch (e) {
-    console.warn('[Firebase] ProjectConfig indisponível:', e.message || e);
-    throw new Error('Firebase CONFIGURATION_NOT_FOUND: verifique API key / Auth / Authorized domains.');
-  }
-}
-
 function checkDomainAllowed() {
   const allow = window.env?.AUTHORIZED_DOMAINS;
   if (Array.isArray(allow) && allow.length) {
     const host = location.hostname.toLowerCase();
-    const ok = allow.some(d => d && host.endsWith(String(d).toLowerCase()));
+    const ok = allow.some(d => {
+      const dom = String(d).toLowerCase();
+      return host === dom || host.endsWith('.' + dom);
+    });
     if (!ok) {
       throw new Error(`Firebase DOMAIN_NOT_ALLOWED: '${host}' não está em AUTHORIZED_DOMAINS.`);
     }
@@ -50,20 +34,18 @@ function checkDomainAllowed() {
 
 async function initFirebaseIfAvailable() {
   try {
-    // Já inicializado?
     if (window.__fb?.db) return window.__fb;
 
-    // window.env precisa existir (carregado por <script src="/env.js"> ANTES)
     if (!window.env || !window.env.VITE_FIREBASE_API_KEY) {
       console.warn('[Firebase] window.env ausente – usando apenas localStorage.');
       return null;
     }
 
-    // Valida variáveis e domínio (sem chamar nenhuma API com CORS)
+    // Valida variáveis e domínio (sem chamadas prévias à API do Google para evitar CORS)
     assertFirebaseEnv();
     checkDomainAllowed();
 
-    // Carrega SDKs (sem bundler, via CDN)
+    // Carrega SDKs (sem bundler, via CDN; funciona dentro de script normal)
     const [
       { initializeApp },
       { getAuth, signInAnonymously, onAuthStateChanged },
@@ -86,18 +68,17 @@ async function initFirebaseIfAvailable() {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    // Tenta auth anônima. Se não estiver habilitada ou domínio não autorizado,
-    // tratamos o erro e caímos para localStorage (sem travar a UI).
+    // Tenta auth anônima; se falhar, usa fallback localStorage
     try {
       await signInAnonymously(auth);
     } catch (err) {
       const code = err?.code || String(err);
       if (code.includes('operation-not-allowed')) {
-        console.warn('[Firebase] Provider Anônimo desabilitado (Authentication > Sign-in method) – usando localStorage.');
-      } else if (code.includes('domain') || code.includes('domain-not-allowed')) {
-        console.warn('[Firebase] Domínio não autorizado (Authentication > Settings > Authorized domains) – usando localStorage.');
+        console.warn('[Firebase] Provider Anônimo desabilitado – usando localStorage.');
+      } else if (code.includes('domain')) {
+        console.warn('[Firebase] Domínio não autorizado – usando localStorage.');
       } else if (code.includes('configuration-not-found')) {
-        console.warn('[Firebase] Config inválida (app Web não criado / credenciais incorretas) – usando localStorage.');
+        console.warn('[Firebase] Config inválida (app Web não criado/credenciais incorretas) – usando localStorage.');
       } else {
         console.warn('[Firebase] signInAnonymously falhou – usando localStorage. Motivo:', code);
       }
@@ -363,7 +344,6 @@ function criarCardPrato(prato, flags) {
     state.liked = !wasLiked;
     state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
     setLocalLikeState(id, state);
-    // UI
     if (btnEl) {
       btnEl.classList.toggle('liked', state.liked);
       btnEl.setAttribute('aria-pressed', String(state.liked));
@@ -610,7 +590,6 @@ function ensureLightboxRoot(){
   let startX = null;
   wrap.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].clientX; }, {passive:true});
   wrap.addEventListener('touchend', (e) => {
-    if (startX == null) return;
     const dx = e.changedTouches[0].clientX - startX;
     if (Math.abs(dx) > 40) stepLightbox(dx < 0 ? 1 : -1);
     startX = null;
@@ -796,5 +775,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 //   VITE_FIREBASE_PROJECT_ID: "seu-projeto",
 //   VITE_FIREBASE_STORAGE_BUCKET: "seu-projeto.appspot.com",
 //   VITE_FIREBASE_MESSAGING_SENDER_ID: "1234567890",
-//   VITE_FIREBASE_APP_ID: "1:1234567890:web:abcdef0123456789"
+//   VITE_FIREBASE_APP_ID: "1:1234567890:web:abcdef0123456789",
+//   AUTHORIZED_DOMAINS: ["localhost","127.0.0.1","seu-dominio.com"] // opcional
 // };
