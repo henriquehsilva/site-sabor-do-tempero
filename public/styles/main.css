@@ -632,3 +632,155 @@ h3 { font-size: var(--fs-500); }
   font-size: 1.125rem;
   margin-bottom: .25rem;
 }
+
+/* --- Feed estilo Instagram --- */
+.feed {
+  display: grid;
+  gap: 18px;
+  margin-top: 16px;
+}
+.post {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.06);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+}
+.post-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+}
+.post-title {
+  display: flex; flex-direction: column;
+}
+.post-title .nome {
+  font: 600 0.95rem/1 Inter, system-ui, -apple-system, sans-serif;
+}
+.post-title .meta {
+  font: 500 .78rem/1.2 Inter, system-ui, -apple-system, sans-serif;
+  color: #666;
+}
+.post-badge {
+  margin-left: auto;
+  font: 700 .7rem/1 Inter, sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg,#c99548,#a5732e);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.post-media {
+  position: relative;
+  background: #fafafa;
+}
+.post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
+}
+.post-like-float {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  pointer-events: none;
+  opacity: 0; transform: scale(.6);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.post-like-float svg {
+  width: 96px; height: 96px;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.25));
+}
+
+.post-actions {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 14px 0;
+}
+.btn-icon {
+  border: 0; background: none; padding: 6px; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.btn-icon svg { width: 28px; height: 28px; transition: transform .12s ease; }
+.btn-icon:active svg { transform: scale(.92); }
+.btn-like.liked svg path { fill: #e74c3c; }
+.btn-like:not(.liked) svg path { fill: none; stroke: currentColor; }
+
+.likes-count {
+  font: 600 .92rem/1 Inter, sans-serif;
+  padding: 8px 14px 0;
+}
+.post-caption {
+  padding: 6px 14px 12px;
+  font: 400 .95rem/1.45 Inter, system-ui, -apple-system, sans-serif;
+}
+.post-caption .titulo { font-weight: 600; margin-right: 6px; }
+.post-caption .tag { color: #c99548; font-weight: 600; }
+.post-time {
+  padding: 0 14px 12px;
+  font: 500 .78rem/1 Inter, sans-serif;
+  color: #8a8a8a;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+}
+
+/* animação do like “flutuante” */
+.post-media.show-like .post-like-float {
+  opacity: 1; transform: scale(1);
+}
+.post-media.show-like .post-like-float {
+  animation: like-pop .7s ease forwards;
+}
+@keyframes like-pop {
+  0% { opacity: 0; transform: scale(.4); }
+  20% { opacity: 1; transform: scale(1.05); }
+  60% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+/* dark mode leve (opcional) */
+@media (prefers-color-scheme: dark) {
+  .post { background: #111; border-color: rgba(255,255,255,.06); }
+  .post-title .meta, .post-time { color: #9aa0a6; }
+  .likes-count, .post-caption { color: #e8eaed; }
+}
+
+.btn-like.liked svg path { fill: #e74c3c; }
+.btn-like:not(.liked) svg path { fill: none; stroke: currentColor; }
+.likes-count { font-weight: 600; }
+
+/* --- Curtidas no card --- */
+.prato-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.prato-like-btn {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prato-like-btn svg { width: 26px; height: 26px; transition: transform .12s ease; }
+.prato-like-btn:active svg { transform: scale(.92); }
+
+/* ícone preenchido quando curtido */
+.prato-like-btn.liked svg path { fill: #e74c3c; }
+.prato-like-btn:not(.liked) svg path { fill: none; stroke: currentColor; }
+
+.prato-likes-count {
+  font: 600 .95rem/1 Inter, system-ui, -apple-system, sans-serif;
+}

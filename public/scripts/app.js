@@ -162,10 +162,17 @@ function criarCardPrato(prato, flags) {
       openLightbox(imagens, 0, prato.nome);
     });
 
-    // Clique na imagem também abre
+    // Double-tap/click na imagem: curte
+    let lastTap = 0;
     media.addEventListener('click', () => {
-      const imagens = prato.galeria && prato.galeria.length ? prato.galeria : [capa];
-      openLightbox(imagens, 0, prato.nome);
+      const now = Date.now();
+      if (now - lastTap < 350) {
+        // encontra elementos do like no card
+        const likeBtn = card.querySelector('.prato-like-btn');
+        const likeCount = card.querySelector('.prato-likes-count');
+        toggleLikeCard(prato.id, likeBtn, likeCount);
+      }
+      lastTap = now;
     });
 
     media.appendChild(zoomBtn);
@@ -190,6 +197,40 @@ function criarCardPrato(prato, flags) {
     });
     card.appendChild(lista);
   }
+
+  // --- Ações (Curtir) ---
+  const actions = document.createElement('div');
+  actions.className = 'prato-actions';
+
+  // estado inicial: se tiver contador vindo do JSON, use; senão 0 (ou um “seed” opcional)
+  const initialState = getLikeState(prato.id) || {
+    liked: false,
+    count: typeof prato.likes === 'number' ? prato.likes : 0
+  };
+  setLikeState(prato.id, initialState); // garante persistência
+
+  const likeBtn = document.createElement('button');
+  likeBtn.className = `prato-like-btn${initialState.liked ? ' liked' : ''}`;
+  likeBtn.type = 'button';
+  likeBtn.setAttribute('aria-label', 'Curtir este prato');
+  likeBtn.setAttribute('aria-pressed', String(initialState.liked));
+  likeBtn.dataset.id = prato.id;
+  likeBtn.innerHTML = `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z"
+            stroke="currentColor" stroke-width="1.6"></path>
+    </svg>
+  `;
+
+  const likeCount = document.createElement('span');
+  likeCount.className = 'prato-likes-count';
+  likeCount.textContent = `${initialState.count} curtidas`;
+
+  likeBtn.addEventListener('click', () => toggleLikeCard(prato.id, likeBtn, likeCount));
+
+  actions.appendChild(likeBtn);
+  actions.appendChild(likeCount);
+  card.appendChild(actions);
 
   return card;
 }
@@ -625,6 +666,205 @@ function montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre) {
   if (sobre.telefone) msg += `📞 ${sobre.telefone}\n`;
   msg += `\n_Faça seu pedido pelo WhatsApp!_`;
   return msg;
+}
+
+// --- helpers -----------------------------------------------------------------
+const $ = (sel, ctx=document) => ctx.querySelector(sel);
+const $$ = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
+
+function timeAgo(dateStr) {
+  // usa meta.data se você já injeta; fallback: hoje
+  const d = dateStr ? new Date(dateStr) : new Date();
+  const diff = (Date.now() - d.getTime()) / 1000; // s
+  const map = [
+    [60, 'seg'], [3600, 'min'], [86400, 'h'], [604800, 'd'], [2629800, 'm'], [31557600, 'a']
+  ];
+  for (let i = 0; i < map.length; i++) {
+    const [limit, label] = map[i];
+    if (diff < limit) {
+      const val = Math.max(1, Math.floor(diff / (limit / (i === 0 ? 60 : i === 1 ? 60 : i === 2 ? 24 : i === 3 ? 7 : i === 4 ? 12 : 1))));
+      return `há ${val} ${label}`;
+    }
+  }
+  return 'agora';
+}
+
+function likeKey(id) { return `evorise_like_${id}`; }
+function getLikeState(id) {
+  try { return JSON.parse(localStorage.getItem(likeKey(id)) || 'null'); }
+  catch { return null; }
+}
+function setLikeState(id, state) {
+  localStorage.setItem(likeKey(id), JSON.stringify(state));
+}
+
+// --- feed --------------------------------------------------------------------
+async function renderFeedFromData(data) {
+  const feed = $('#feed');
+  const loading = $('#loading');
+  if (!feed) return;
+
+  // pega pratos do dia
+  const pratos = (data?.pratos || []).filter(p => p?.disponivel);
+  // identifica prato do dia (primeiro disponível ou pela flag id)
+  let pratoDoDiaId = null;
+  const explicit = pratos.find(p => p.id === 'prato_do_dia' || p.prato_do_dia === true);
+  if (explicit) pratoDoDiaId = explicit.id;
+  else if (pratos.length) pratoDoDiaId = pratos[0].id;
+
+  // limpa e mostra
+  feed.innerHTML = '';
+  loading?.setAttribute('hidden', 'hidden');
+  feed.removeAttribute('hidden');
+
+  // cria posts
+  pratos.forEach((p, idx) => {
+    const id = p.id || `prato_${idx}`;
+    const nome = p.nome || 'Prato do dia';
+    const imgSrc = p.imagem || `/assets/pratos/${id}.jpg`; // ajuste seu path
+    const legenda = p.descricao || (p.itens?.length ? `Acompanha: ${p.itens.join(', ')}` : 'Delícia do dia 😋');
+    const isDoDia = id === pratoDoDiaId;
+
+    // like state
+    const stored = getLikeState(id) || { liked: false, count: Math.floor(Math.random()*30)+3 }; // contador inicial “social”
+    const liked = stored.liked === true;
+    const likeCount = stored.count;
+
+    // template
+    const post = document.createElement('article');
+    post.className = 'post';
+    post.innerHTML = `
+      <header class="post-header">
+        <img class="post-avatar" src="/assets/icons/icon-192.png" alt="Avatar Sabor do Tempero" loading="lazy" decoding="async">
+        <div class="post-title">
+          <span class="nome">${nome}</span>
+          <span class="meta">${timeAgo(data?.meta?.data)}</span>
+        </div>
+        ${isDoDia ? '<span class="post-badge" title="Prato do dia">PRATO DO DIA</span>' : ''}
+      </header>
+
+      <div class="post-media" data-id="${id}">
+        <img class="post-image" src="${imgSrc}" alt="${nome}" loading="lazy" decoding="async" onerror="this.src='/assets/placeholder.jpg'">
+        <div class="post-like-float" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z" fill="#e74c3c"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="post-actions">
+        <button class="btn-icon btn-like ${liked ? 'liked' : ''}" data-id="${id}" aria-pressed="${liked}" aria-label="Curtir">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.39 2 8.9 2 6.36 4.02 4.4 6.6 4.4c1.54 0 3.04.73 4 1.87 0.96-1.14 2.46-1.87 4-1.87 2.58 0 4.6 1.96 4.6 4.5 0 3.49-3.14 6.34-8.9 11.43l-1.2 1.02z" stroke="currentColor" stroke-width="1.6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="likes-count" data-id="${id}">${likeCount} curtidas</div>
+
+      <div class="post-caption">
+        <span class="titulo">${nome}</span>
+        <span class="texto">${legenda}</span>
+        ${isDoDia ? ' <span class="tag">#PratoDoDia</span>' : ''}
+      </div>
+
+      <div class="post-time">${timeAgo(data?.meta?.data)}</div>
+    `;
+
+    feed.appendChild(post);
+  });
+
+  // eventos de like
+  $$('.btn-like', feed).forEach(btn => {
+    btn.addEventListener('click', () => toggleLike(btn.dataset.id, btn, feed));
+  });
+
+  // double-tap na imagem para curtir
+  $$('.post-media', feed).forEach(m => {
+    let lastTap = 0;
+    m.addEventListener('click', () => {
+      const now = Date.now();
+      if (now - lastTap < 350) {
+        showLikeBurst(m);
+        const id = m.dataset.id;
+        const btn = $(`.btn-like[data-id="${id}"]`, feed);
+        if (btn && !btn.classList.contains('liked')) {
+          toggleLike(id, btn, feed);
+        }
+      }
+      lastTap = now;
+    });
+  });
+}
+
+function toggleLike(id, btn, ctx=document) {
+  const state = getLikeState(id) || { liked: false, count: 0 };
+  const wasLiked = !!state.liked;
+  state.liked = !wasLiked;
+  state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
+  setLikeState(id, state);
+
+  // UI
+  btn.classList.toggle('liked', state.liked);
+  btn.setAttribute('aria-pressed', String(state.liked));
+  const counter = $(`.likes-count[data-id="${id}"]`, ctx);
+  if (counter) counter.textContent = `${state.count} curtidas`;
+}
+
+function showLikeBurst(mediaEl) {
+  mediaEl.classList.remove('show-like');
+  void mediaEl.offsetWidth; // restart animation
+  mediaEl.classList.add('show-like');
+}
+
+// --- bootstrap (exemplo usando SAMPLE_JSON se já existir globalmente) ---------
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    // use o SAMPLE_JSON que você já tem no projeto
+    if (window.SAMPLE_JSON) {
+      await renderFeedFromData(window.SAMPLE_JSON);
+    } else {
+      // fallback básico (personalize conforme sua API/arquivo)
+      const data = {
+        meta: { data: new Date().toISOString() },
+        pratos: [
+          { id: 'feijoada', nome: 'Feijoada', disponivel: true, itens: ['Arroz', 'Farofa', 'Couve'], imagem: '/assets/pratos/feijoada.jpg' },
+          { id: 'parmegiana', nome: 'Parmegiana', disponivel: true, itens: ['Arroz', 'Batata'], imagem: '/assets/pratos/parmegiana.jpg' },
+        ]
+      };
+      await renderFeedFromData(data);
+    }
+  } catch (e) {
+    console.error('Falha ao renderizar feed', e);
+    const loading = document.getElementById('loading');
+    if (loading) loading.innerHTML = '<p>Não foi possível carregar o feed.</p>';
+  }
+});
+
+function likeStorageKey(id) { return `cardapio_like_${id}`; }
+
+function getLikeState(id) {
+  try { return JSON.parse(localStorage.getItem(likeStorageKey(id)) || 'null'); }
+  catch { return null; }
+}
+
+function setLikeState(id, state) {
+  localStorage.setItem(likeStorageKey(id), JSON.stringify(state));
+}
+
+function toggleLikeCard(id, btnEl, countEl) {
+  const state = getLikeState(id) || { liked: false, count: 0 };
+  const wasLiked = !!state.liked;
+  state.liked = !wasLiked;
+  state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
+  setLikeState(id, state);
+
+  // UI
+  if (btnEl) {
+    btnEl.classList.toggle('liked', state.liked);
+    btnEl.setAttribute('aria-pressed', String(state.liked));
+  }
+  if (countEl) countEl.textContent = `${state.count} curtidas`;
 }
 
 window.addEventListener('online', () => {
