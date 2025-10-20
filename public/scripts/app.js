@@ -49,7 +49,7 @@ async function initFirebaseIfAvailable() {
     const [
       { initializeApp },
       { getAuth, signInAnonymously, onAuthStateChanged },
-      { getFirestore, doc, collection, onSnapshot, setDoc, deleteDoc, serverTimestamp }
+      { getFirestore, doc, collection, onSnapshot, setDoc, deleteDoc, serverTimestamp, getCountFromServer }
     ] = await Promise.all([
       import('https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js'),
       import('https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js'),
@@ -91,7 +91,7 @@ async function initFirebaseIfAvailable() {
 
     window.__fb = {
       app, auth, db,
-      doc, collection, onSnapshot, setDoc, deleteDoc, serverTimestamp,
+      doc, collection, onSnapshot, setDoc, deleteDoc, serverTimestamp, getCountFromServer,
       get uid() { return currentUid; }
     };
 
@@ -329,79 +329,84 @@ function criarCardPrato(prato, flags) {
   // ============= Integração Firebase + fallback localStorage =============
   const key = pratoKeyFrom(prato);
 
-  // Fallback localStorage helpers
-  function likeStorageKey(id) { return `cardapio_like_${id}`; }
-  function getLocalLikeState(id) {
-    try { return JSON.parse(localStorage.getItem(likeStorageKey(id)) || 'null'); }
-    catch { return null; }
-  }
-  function setLocalLikeState(id, state) {
-    localStorage.setItem(likeStorageKey(id), JSON.stringify(state));
-  }
-  function applyLocalToggle(id, btnEl, countEl) {
-    const state = getLocalLikeState(id) || { liked: false, count: 0 };
-    const wasLiked = !!state.liked;
-    state.liked = !wasLiked;
-    state.count = Math.max(0, state.count + (state.liked ? 1 : -1));
-    setLocalLikeState(id, state);
-    if (btnEl) {
-      btnEl.classList.toggle('liked', state.liked);
-      btnEl.setAttribute('aria-pressed', String(state.liked));
-    }
-    if (countEl) countEl.textContent = `${state.count} curtidas`;
-  }
+  // ... (helpers de localStorage iguais aos seus) ...
 
-  // Tenta usar Firebase se disponível
   (async () => {
     const fb = await initFirebaseIfAvailable();
     if (!fb || !fb.db) {
-      // Sem Firebase: usa somente localStorage
+      // Sem Firebase: só localStorage
       const initial = getLocalLikeState(key) || { liked: false, count: 0 };
-      if (initial.liked) {
-        likeBtn.classList.add('liked');
-        likeBtn.setAttribute('aria-pressed', 'true');
-      }
+      likeBtn.classList.toggle('liked', !!initial.liked);
+      likeBtn.setAttribute('aria-pressed', String(!!initial.liked));
       likeCount.textContent = `${initial.count} curtidas`;
       likeBtn.addEventListener('click', () => applyLocalToggle(key, likeBtn, likeCount));
       return;
     }
 
-    const { db, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp } = fb;
+    const { db, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp, getCountFromServer } = fb;
 
-    // 1) Assina o contador agregado em likes/{key}
     const likeDocRef = doc(db, 'likes', key);
-    onSnapshot(likeDocRef, (snap) => {
-      const count = snap.exists() ? (snap.data().count || 0) : 0;
-      likeCount.textContent = `${count} curtidas`;
+    const votesCollRef = collection(likeDocRef, 'votes');
+
+    // Função para buscar a contagem real de votos (quando agregado não existir/atrasar)
+    async function fetchRealCount() {
+      try {
+        const snap = await getCountFromServer(votesCollRef);
+        const c = snap.data().count || 0;
+        likeCount.textContent = `${c} curtidas`;
+        return c;
+      } catch (err) {
+        console.warn('Falha ao obter contagem real de votos:', err);
+        return null;
+      }
+    }
+
+    // 1) Ouve o documento agregado likes/{key}. Se não tiver count, busca a contagem real.
+    onSnapshot(likeDocRef, async (snap) => {
+      if (snap.exists() && typeof snap.data().count === 'number') {
+        likeCount.textContent = `${snap.data().count} curtidas`;
+      } else {
+        // agregado ausente/sem count => computa pelos votos
+        await fetchRealCount();
+      }
     });
 
-    // 2) Quando o uid estiver pronto, assina o voto do usuário e binda o clique
-    const bindWhenUid = setInterval(() => {
+    // 2) Espera uid e então ouve o voto do usuário para estado do botão
+    const waitUid = setInterval(() => {
       if (!window.__fb?.uid) return;
-      clearInterval(bindWhenUid);
+      clearInterval(waitUid);
 
-      const voteRef = doc(collection(doc(db, 'likes', key), 'votes'), window.__fb.uid);
+      const voteRef = doc(votesCollRef, window.__fb.uid);
 
-      // estado do botão (liked/unliked) em tempo real
+      // Mantém o estado do botão em tempo real
       onSnapshot(voteRef, (snap) => {
         const liked = snap.exists() ? !!snap.data().liked : false;
         likeBtn.classList.toggle('liked', liked);
         likeBtn.setAttribute('aria-pressed', String(liked));
       });
 
-      // clique: alterna like/unlike
+      // Clique com UI otimista: ajusta visual imediatamente; assinatura corrige depois
       likeBtn.onclick = async () => {
         const likedNow = likeBtn.classList.contains('liked');
+        // contador visível atual
+        const visible = parseInt((likeCount.textContent || '0').replace(/\D/g, ''), 10) || 0;
+        // aplica delta otimista
+        const next = likedNow ? Math.max(0, visible - 1) : visible + 1;
+        likeCount.textContent = `${next} curtidas`;
+
         try {
           if (likedNow) {
-            // descurtir => remover doc (Function decrementa)
+            // descurtir => remover voto do usuário
             await deleteDoc(voteRef);
           } else {
-            // curtir => set liked=true (Function incrementa)
+            // curtir => gravar voto
             await setDoc(voteRef, { liked: true, ts: serverTimestamp() }, { merge: true });
           }
         } catch (e) {
-          console.error('Erro ao curtir via Firebase, usando fallback local:', e);
+          console.error('Erro ao alternar like via Firebase, revertendo UI e usando fallback local:', e);
+          // reverte o otimista
+          likeCount.textContent = `${visible} curtidas`;
+          // habilita fallback local como plano B
           applyLocalToggle(key, likeBtn, likeCount);
         }
       };
