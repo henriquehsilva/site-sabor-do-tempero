@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-20",
+    "data": "2025-10-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -48,7 +48,7 @@
         "Banana frita",
         "Mandioca"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "strogonoff",
@@ -80,9 +80,9 @@
         "Cabutia com quiabo",
         "Espaguete   ao alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
-        {
+    {
       "id": "carne_assada",
       "nome": "Carne bovina assada",
       "imagem": "/pratos/carne_assada.jpg",
@@ -96,6 +96,52 @@
         "Couve e banana frita",
         "Salada repolho com cenoura",
         "Arroz branco ou Espaguete ao alho e óleo"
+      ],
+      "disponivel": false
+    },
+    {
+      "id": "file_parmegiana",
+      "nome": "Filé de frango à parmegiana",
+      "imagem": "/pratos/file_parmegiana.jpg",
+      "galeria": [
+        "/pratos/file_parmegiana_1.jpg",
+        "/pratos/file_parmegiana_2.jpg",
+        "/pratos/file_parmegiana_3.jpg"
+      ],
+      "itens": [
+        "Pure gratinado",
+        "Brócolis na manteiga"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "pernil_assado",
+      "nome": "Pernil assado",
+      "imagem": "/pratos/pernil_assado.jpg",
+      "galeria": [
+        "/pratos/pernil_assado_1.jpg",
+        "/pratos/pernil_assado_2.jpg",
+        "/pratos/pernil_assado_3.jpg",
+        "/pratos/pernil_assado_4.jpg"
+      ],
+      "itens": [
+        "Quibebe",
+        "Banana frita",
+        "Farofa"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "dobradinha_calabresa",
+      "nome": "Dobradinha com calabresa",
+      "imagem": "/pratos/dobradinha_calabresa.jpg",
+      "galeria": [
+        "/pratos/dobradinha_calabresa_1.jpg",
+        "/pratos/dobradinha_calabresa_2.jpg"        
+      ],
+      "itens": [
+        "Pure gratinado",
+        "Brócolis na manteiga"
       ],
       "disponivel": true
     }
