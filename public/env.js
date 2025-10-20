@@ -6,5 +6,5 @@ window.env = {
   VITE_FIREBASE_MESSAGING_SENDER_ID: "74798494017",
   VITE_FIREBASE_APP_ID: "1:74798494017:web:f74e9ea606c820cbfeb1c0",
   VITE_MEASUREMENT_ID: "G-XYM5VV1KB4",
-  AUTHORIZED_DOMAINS: ["localhost", "127.0.0.1", "seu-dominio.com"]
+  AUTHORIZED_DOMAINS: ["localhost", "127.0.0.1", "sabordotempero.com.br"]
 };  
