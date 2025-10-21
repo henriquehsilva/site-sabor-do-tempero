@@ -838,6 +838,10 @@ function buildOrderMessage(pedido, orderId) {
   linhas.push(`📱 *WhatsApp:* ${pedido.cliente.foneDisplay || pedido.cliente.foneE164}`);
   linhas.push(`🏠 *Endereço:* ${pedido.cliente.endereco}`);
   linhas.push(`🚚 *Entrega:* ${loc}`);
+
+  const maps = pedido?.cliente?.geo?.maps;     // <-- pega o link já pronto
+  if (maps) linhas.push(`📍 *Localização no mapa:* ${maps}`);
+
   if (pedido.obs) linhas.push(`📝 *Obs.:* ${pedido.obs}`);
 
   linhas.push('');
@@ -1032,10 +1036,12 @@ function lerCardapio() {
   lerTexto(texto);
 }
 
-function buildWhatsLink(numeroE164, mensagem) {
-  const phone = (numeroE164 || "").replace(/\D/g, "");
-  const text = encodeURIComponent(mensagem || "");
-  return { primary: `https://wa.me/${phone}?text=${text}`, fallback: `https://api.whatsapp.com/send?phone=${phone}&text=${text}` };
+function buildMapsLink(coords) {
+  if (!coords) return "";
+  const lat = Number(coords.lat).toFixed(6);
+  const lng = Number(coords.lng).toFixed(6);
+  // abre a posição no Google Maps
+  return `https://www.google.com/maps?q=${lat},${lng}`;
 }
 
 function montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre) {
