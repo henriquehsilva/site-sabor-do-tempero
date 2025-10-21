@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-21",
+    "data": "2025-10-22",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -119,7 +119,7 @@
         "Pure gratinado",
         "Brócolis na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -137,11 +137,11 @@
         "Banana frita",
         "Farofa"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
-      "nome": "Dobradinha com calabresa",
+      "nome": "Dobradinha com bacon e calabresa",
       "preco": 25.0,
       "imagem": "/pratos/dobradinha_calabresa.jpg",
       "galeria": [
@@ -149,8 +149,36 @@
         "/pratos/dobradinha_calabresa_2.jpg"        
       ],
       "itens": [
-        "Pure gratinado",
-        "Brócolis na manteiga"
+        "Batata souté",
+        "Quiabo assado"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_grelhado",
+      "nome": "Filé de frango grelhado",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_grelhado.png",
+      "galeria": [
+        "/pratos/frango_grelhado.png"        
+      ],
+      "itens": [
+        "Batata souté",
+        "Quiabo assado"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "costela_mandioca",
+      "nome": "Costela com mandioca",
+      "preco": 25.0,
+      "imagem": "/pratos/costela_mandioca.png",
+      "galeria": [
+        "/pratos/costela_mandioca.png"        
+      ],
+      "itens": [
+        "Couve",
+        "Quiabo assado"
       ],
       "disponivel": true
     }
