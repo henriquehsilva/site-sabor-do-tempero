@@ -100,52 +100,51 @@
     </div>
   </main>
 
+  <!-- BOTÃO PRINCIPAL -->
   <div class="container cta-buttons">
-    <a id="btnWhatsApp" class="btn btn-whatsapp" href="#" rel="noopener">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> ... </svg>
+    <a id="btnAbrirPedido" class="btn btn-whatsapp" href="#" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><!-- ... --></svg>
       Fazer Pedido pelo Site (10% OFF)
     </a>
 
-    <!-- NOVO: botão Instagram -->
-    <a id="btnInstagram"
-      class="btn btn-instagram"
-      href="https://instagram.com/sabordotempero_marmitaria"
-      target="_blank"
-      rel="noopener"
+    <a id="btnInstagram" class="btn btn-instagram"
+      href="https://instagram.com/sabordotempero_marmitaria" target="_blank" rel="noopener"
       aria-label="Abrir Instagram do Sabor do Tempero">
-      <!-- Ícone Instagram (SVG) -->
-      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/>
-      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
       Siga no Instagram
     </a>
   </div>
 
-  <!-- MODAL DE PEDIDO COMPLETO -->
+  <!-- MODAL DE PEDIDO (MOBILE-FIRST / SCROLLÁVEL) -->
   <div id="orderModal" class="ord-modal" aria-hidden="true" role="dialog" aria-label="Finalizar pedido">
     <div class="ord-backdrop" data-close="1"></div>
-    <div class="ord-card" role="document">
+    <div class="ord-card" role="document" aria-describedby="ordDesc">
       <header class="ord-header">
         <h3 class="ord-title">Finalizar pedido</h3>
         <button class="ord-close" id="ordClose" aria-label="Fechar">✕</button>
       </header>
 
-      <form id="ordForm" class="ord-form">
-        <!-- Dados do cliente -->
+      <form id="ordForm" class="ord-form" novalidate>
+        <p id="ordDesc" class="ord-helper">Pedidos pelo site têm <b>10% de desconto</b>. Rio Quente: entrega grátis · Esplanada: taxa R$ 5,00.</p>
+
+        <!-- Seus dados -->
         <fieldset class="ord-fieldset">
           <legend>Seus dados</legend>
           <div class="ord-grid">
             <label class="ord-lab">
               Nome
-              <input required id="cliNome" name="cliNome" placeholder="Seu nome completo">
+              <input required id="cliNome" name="cliNome" placeholder="Seu nome"
+                    autocomplete="name" enterkeyhint="next">
             </label>
             <label class="ord-lab">
               WhatsApp
-              <input required id="cliFone" name="cliFone" inputmode="tel" placeholder="(62) 9 0000-0000">
+              <input required id="cliFone" name="cliFone" inputmode="tel" placeholder="(62) 9 0000-0000"
+                    autocomplete="tel" enterkeyhint="next">
             </label>
             <label class="ord-lab ord-col2">
-              Endereço (rua, número, complemento)
-              <input required id="cliEndereco" name="cliEndereco" placeholder="Rua, nº, complemento">
+              Endereço (rua, nº, complemento)
+              <input required id="cliEndereco" name="cliEndereco" placeholder="Rua, nº, complemento"
+                    autocomplete="address-line1" enterkeyhint="next">
             </label>
           </div>
         </fieldset>
@@ -165,51 +164,36 @@
           </div>
         </fieldset>
 
-        <!-- Itens do pedido -->
+        <!-- Itens -->
         <fieldset class="ord-fieldset">
-          <legend>Itens</legend>
-
-          <div id="ordItems"></div>
-
+          <legend>Itens do pedido</legend>
+          <div id="ordItems" class="ord-items"></div>
           <button type="button" class="ord-add" id="ordAddItem">+ Adicionar item</button>
         </fieldset>
 
         <!-- Observações -->
         <label class="ord-lab ord-col2">
           Observações
-          <textarea id="cliObs" rows="2" placeholder="Ex.: sem pimenta, trocar feijão por salada..."></textarea>
+          <textarea id="cliObs" rows="3" placeholder="Ex.: Sem pimenta, trocar feijão por salada..."></textarea>
         </label>
 
         <!-- Totais -->
         <div class="ord-totais">
-          <div class="ord-row">
-            <span>Subtotal</span>
-            <strong id="tSub">R$ 0,00</strong>
-          </div>
-          <div class="ord-row desc">
-            <span>Desconto do site (10%)</span>
-            <strong id="tDesc">- R$ 0,00</strong>
-          </div>
-          <div class="ord-row">
-            <span>Entrega</span>
-            <strong id="tFrete">R$ 0,00</strong>
-          </div>
-          <div class="ord-row grand">
-            <span>Total</span>
-            <strong id="tTotal">R$ 0,00</strong>
-          </div>
+          <div class="ord-row"><span>Subtotal</span> <strong id="tSub">R$ 0,00</strong></div>
+          <div class="ord-row desc"><span>Desconto do site (10%)</span> <strong id="tDesc">- R$ 0,00</strong></div>
+          <div class="ord-row"><span>Entrega</span> <strong id="tFrete">R$ 0,00</strong></div>
+          <div class="ord-row grand"><span>Total</span> <strong id="tTotal">R$ 0,00</strong></div>
         </div>
 
         <footer class="ord-footer">
           <button type="button" class="btn btn-secondary" id="ordCancel">Cancelar</button>
           <button type="submit" class="btn btn-whatsapp" id="ordSubmit">
-            Enviar no Pedido (10% OFF)
+            Enviar Pedido (10% OFF)
           </button>
         </footer>
       </form>
     </div>
   </div>
-
 
   <section class="sobre" id="secaoSobre">
     <div class="container">

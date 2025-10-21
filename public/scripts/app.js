@@ -677,7 +677,8 @@ async function handleSubmitOrder(e) {
     alert('Preencha nome, WhatsApp e endereço.');
     return;
   }
-  // persiste telefone do cliente
+
+  // guarda o Whats do cliente
   try { localStorage.setItem('userPhone', foneDigits); } catch(_) {}
 
   // coleta itens
@@ -697,11 +698,7 @@ async function handleSubmitOrder(e) {
       total: unit * qtd
     });
   });
-
-  if (!items.length) {
-    alert('Adicione pelo menos 1 item.');
-    return;
-  }
+  if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
 
   // totais
   const subtotal = items.reduce((s,i)=>s+i.total,0);
@@ -709,13 +706,22 @@ async function handleSubmitOrder(e) {
   const frete = localVal === 'esplanada' ? 5.00 : 0.00;
   const total = Math.max(0, subtotal - desconto) + frete;
 
-  // monta payload
+  // 👉 pede geolocalização (não bloqueia o fluxo se falhar)
+  const coords = await requestLocation().catch(()=>null);
+  const mapsLink = buildMapsLink(coords);
+
+  // payload
   const payload = {
-    cliente: { nome, foneE164: normalizePhoneToE164(foneDigits), foneDisplay, endereco: end, local: localVal },
-    itens: items,
-    financeiro: {
-      subtotal, desconto, frete, total, moeda: 'BRL', origem: 'site-10off'
+    cliente: {
+      nome,
+      foneE164: normalizePhoneToE164(foneDigits),
+      foneDisplay,
+      endereco: end,
+      local: localVal,
+      geo: coords ? { ...coords, maps: mapsLink } : null
     },
+    itens: items,
+    financeiro: { subtotal, desconto, frete, total, moeda: 'BRL', origem: 'site-10off' },
     obs,
     criadoEm: new Date().toISOString(),
     status: 'novo'
@@ -726,14 +732,12 @@ async function handleSubmitOrder(e) {
   try {
     const fb = await initFirebaseIfAvailable();
     if (fb && fb.db) {
-      // orders/{autoId}
       const { db, collection, doc, setDoc, serverTimestamp } = fb;
       const autoId = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
       const ref = doc(collection(db, 'orders'), autoId);
       await setDoc(ref, { ...payload, ts: serverTimestamp() }, { merge: true });
       orderId = autoId;
     } else {
-      // fallback localStorage
       const arr = JSON.parse(localStorage.getItem('orders') || '[]');
       orderId = 'local-' + (Date.now());
       arr.push({ id: orderId, ...payload });
@@ -747,25 +751,19 @@ async function handleSubmitOrder(e) {
     localStorage.setItem('orders', JSON.stringify(arr));
   }
 
-  // whatsapp
+  // WhatsApp
   const numeroLoja = (menuData?.sobre?.whatsapp || '').replace(/\D/g,'');
-  if (!numeroLoja) {
-    alert('WhatsApp da loja não configurado.');
-    return;
-  }
+  if (!numeroLoja) { alert('WhatsApp da loja não configurado.'); return; }
 
-  const resumo = buildOrderMessage(payload, orderId);
+  const resumo = buildOrderMessage(payload, orderId); // já inclui o link do Maps
   const { primary, fallback } = buildWaLinks(numeroLoja, resumo);
 
-  // fecha modal antes de ir
   toggleOrderModal(false);
 
   try {
     window.location.href = primary;
     setTimeout(() => {
-      if (document.visibilityState === 'visible') {
-        window.location.href = fallback;
-      }
+      if (document.visibilityState === 'visible') window.location.href = fallback;
     }, 350);
   } catch {
     window.location.href = fallback;

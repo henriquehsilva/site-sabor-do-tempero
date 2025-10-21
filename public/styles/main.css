@@ -852,3 +852,71 @@ h3 { font-size: var(--fs-500); }
 .ord-row.grand{font-size:1.1rem;border-top:1px solid rgba(0,0,0,.08);padding-top:.5rem}
 .ord-footer{display:flex;justify-content:flex-end;gap:.6rem;margin-top:.8rem}
 .btn.btn-secondary{background:#f3f3f3;border:1px solid rgba(0,0,0,.15);color:#222}
+
+/* ——— Modal base ——— */
+.ord-modal{position:fixed;inset:0;z-index:60;display:none;}
+.ord-modal[aria-hidden="false"]{display:block;}
+.ord-backdrop{position:absolute;inset:0;background:#0009;backdrop-filter:saturate(120%) blur(1px);}
+.ord-card{
+  position:absolute;left:50%;transform:translateX(-50%);
+  width:100%;max-width:640px;background:#fff;border-radius:24px 24px 0 0;
+  bottom:0; /* mobile: sheet bottom */
+  display:flex;flex-direction:column;max-height:92vh; /* limita altura */
+  box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+@media (min-width: 720px){
+  .ord-card{top:50%;bottom:auto;transform:translate(-50%,-50%);border-radius:20px;max-height:90vh;}
+}
+
+/* Cabeçalho e rodapé fixos; conteúdo rola */
+.ord-header, .ord-footer{flex:0 0 auto;padding:12px 16px;border-bottom:1px solid #eee;}
+.ord-footer{border-top:1px solid #eee;border-bottom:0;display:flex;gap:.75rem;justify-content:flex-end;position:sticky;bottom:0;background:#fff;}
+.ord-title{margin:0;font:600 1.125rem/1.2 "Inter",system-ui;}
+.ord-close{border:0;background:transparent;font-size:1.25rem;line-height:1;cursor:pointer}
+.ord-form{flex:1 1 auto;overflow:auto;padding:12px 16px;scroll-behavior:smooth}
+
+.ord-helper{margin:0 0 .5rem;color:#555;font-size:.95rem}
+
+/* Grid mobile-first (1 col); em telas médias vira 2 colunas */
+.ord-grid{display:grid;gap:.75rem}
+@media (min-width:640px){ .ord-grid{grid-template-columns:1fr 1fr} .ord-col2{grid-column:1/-1} }
+
+.ord-fieldset{border:1px solid #eee;border-radius:12px;padding:.75rem;margin:0 0 .75rem}
+.ord-fieldset > legend{padding:0 .25rem;font-weight:600}
+
+.ord-lab{display:flex;flex-direction:column;gap:.35rem;font-size:.95rem}
+.ord-lab input,.ord-lab select,.ord-lab textarea{
+  width:100%;border:1px solid #ddd;border-radius:10px;padding:.8rem .9rem;
+  font-size:1rem;line-height:1.2;background:#fff;outline:none;
+}
+.ord-lab input:focus,.ord-lab select:focus,.ord-lab textarea:focus{border-color:#c99548;box-shadow:0 0 0 3px rgba(201,149,72,.18)}
+
+/* Radios */
+.ord-radio-row{display:flex;gap:1rem;flex-wrap:wrap}
+.ord-radio{display:flex;align-items:center;gap:.5rem;padding:.5rem .65rem;border:1px solid #ddd;border-radius:999px}
+.ord-radio input{transform:scale(1.2)}
+.ord-radio small{opacity:.7}
+
+/* Itens */
+.ord-items{display:flex;flex-direction:column;gap:.5rem}
+.ord-item{display:grid;gap:.5rem;border:1px dashed #e5e5e5;border-radius:12px;padding:.65rem}
+.ord-item-row{display:grid;gap:.5rem}
+@media (min-width:640px){
+  .ord-item-row{grid-template-columns:2fr 1fr 1fr auto}
+}
+.ord-item-actions{display:flex;gap:.5rem;justify-content:flex-end}
+.ord-remove{background:#ffeaea;color:#b00020;border:1px solid #ffc9c9;border-radius:10px;padding:.55rem .7rem}
+
+/* Adicionar item */
+.ord-add{display:inline-flex;align-items:center;gap:.5rem;border:1px dashed #c99548;background:#fff7ea;color:#8a642a;padding:.6rem .8rem;border-radius:10px}
+
+/* Totais */
+.ord-totais{border-top:1px solid #eee;margin-top:.5rem;padding-top:.5rem}
+.ord-row{display:flex;justify-content:space-between;align-items:center;padding:.35rem 0}
+.ord-row.desc span{color:#2e7d32}
+.ord-row.grand{font-size:1.1rem;font-weight:700}
+
+/* Botões (herda seu tema) */
+.btn{padding:.8rem 1rem;border-radius:12px}
+.btn-secondary{background:#f3f3f3}
+.btn-whatsapp{background:#25d366;color:#fff}
