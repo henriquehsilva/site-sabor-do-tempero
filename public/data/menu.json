@@ -16,6 +16,7 @@
     {
       "id": "feijoada",
       "nome": "Feijoada",
+      "preco": 25.0,
       "imagem": "/pratos/feijoada.jpg",
       "galeria": [
         "/pratos/feijoada_1.jpg",
@@ -36,6 +37,7 @@
     {
       "id": "costelinha",
       "nome": "Costelinha suína alho e óleo",
+      "preco": 25.0,
       "imagem": "/pratos/costelinha.jpg",
       "galeria": [
         "/pratos/costelinha_1.jpg",
@@ -53,6 +55,7 @@
     {
       "id": "strogonoff",
       "nome": "Strogonoff de Frango",
+      "preco": 25.0,
       "imagem": "/pratos/strogonoff.jpg",
       "galeria": [
         "/pratos/strogonoff_1.jpg",
@@ -69,6 +72,7 @@
     {
       "id": "frango_maionese",
       "nome": "Frango assado na maionese",
+      "preco": 25.0,
       "imagem": "/pratos/frango_maionese.jpg",
       "galeria": [
         "/pratos/frango_maionese_1.jpg",
@@ -85,6 +89,7 @@
     {
       "id": "carne_assada",
       "nome": "Carne bovina assada",
+      "preco": 25.0,
       "imagem": "/pratos/carne_assada.jpg",
       "galeria": [
         "/pratos/carne_assada_1.jpg",
@@ -102,6 +107,7 @@
     {
       "id": "file_parmegiana",
       "nome": "Filé de frango à parmegiana",
+      "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpg",
       "galeria": [
         "/pratos/file_parmegiana_1.jpg",
@@ -117,6 +123,7 @@
     {
       "id": "pernil_assado",
       "nome": "Pernil assado",
+      "preco": 25.0,
       "imagem": "/pratos/pernil_assado.jpg",
       "galeria": [
         "/pratos/pernil_assado_1.jpg",
@@ -134,6 +141,7 @@
     {
       "id": "dobradinha_calabresa",
       "nome": "Dobradinha com calabresa",
+      "preco": 25.0,
       "imagem": "/pratos/dobradinha_calabresa.jpg",
       "galeria": [
         "/pratos/dobradinha_calabresa_1.jpg",

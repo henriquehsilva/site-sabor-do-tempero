@@ -44,6 +44,32 @@
     </div>
   </header>
 
+  <!-- AVISO CHAMATIVO de desconto -->
+  <aside class="promo-banner" role="note" aria-live="polite" id="promoBanner">
+    <div class="promo-wrap">
+      <div class="promo-text">
+        <span aria-hidden="true">🎉</span>
+        <span>
+          <strong>Promoção:</strong> pedidos feitos pelo site usando o botão de <strong>WhatsApp</strong> abaixo têm
+          <strong>10% de desconto</strong>!
+        </span>
+      </div>
+      <div style="display:flex; align-items:center; gap:.5rem;">
+        <a href="#btnWhatsApp" class="promo-link" aria-label="Ir para o botão de WhatsApp e garantir 10% de desconto">
+          <span>Quero meu desconto</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+        <button class="promo-close" id="promoClose" aria-label="Fechar aviso de promoção">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
   <main class="main">
     <div class="container">
       <h1 class="titulo-dia" id="tituloDia">Cardápio do Dia</h1>
@@ -77,7 +103,7 @@
   <div class="container cta-buttons">
     <a id="btnWhatsApp" class="btn btn-whatsapp" href="#" rel="noopener">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> ... </svg>
-      Pedir pelo WhatsApp
+      Fazer Pedido no WhatsApp (10% OFF)
     </a>
 
     <!-- NOVO: botão Instagram -->
@@ -94,6 +120,96 @@
       Siga no Instagram
     </a>
   </div>
+
+  <!-- MODAL DE PEDIDO COMPLETO -->
+  <div id="orderModal" class="ord-modal" aria-hidden="true" role="dialog" aria-label="Finalizar pedido">
+    <div class="ord-backdrop" data-close="1"></div>
+    <div class="ord-card" role="document">
+      <header class="ord-header">
+        <h3 class="ord-title">Finalizar pedido</h3>
+        <button class="ord-close" id="ordClose" aria-label="Fechar">✕</button>
+      </header>
+
+      <form id="ordForm" class="ord-form">
+        <!-- Dados do cliente -->
+        <fieldset class="ord-fieldset">
+          <legend>Seus dados</legend>
+          <div class="ord-grid">
+            <label class="ord-lab">
+              Nome
+              <input required id="cliNome" name="cliNome" placeholder="Seu nome completo">
+            </label>
+            <label class="ord-lab">
+              WhatsApp
+              <input required id="cliFone" name="cliFone" inputmode="tel" placeholder="(62) 9 0000-0000">
+            </label>
+            <label class="ord-lab ord-col2">
+              Endereço (rua, número, complemento)
+              <input required id="cliEndereco" name="cliEndereco" placeholder="Rua, nº, complemento">
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Local de entrega -->
+        <fieldset class="ord-fieldset">
+          <legend>Local de entrega</legend>
+          <div class="ord-radio-row">
+            <label class="ord-radio">
+              <input type="radio" name="cliLocal" value="rio-quente" checked>
+              <span>Rio Quente <small>(entrega grátis)</small></span>
+            </label>
+            <label class="ord-radio">
+              <input type="radio" name="cliLocal" value="esplanada">
+              <span>Esplanada <small>(taxa R$ 5,00)</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Itens do pedido -->
+        <fieldset class="ord-fieldset">
+          <legend>Itens</legend>
+
+          <div id="ordItems"></div>
+
+          <button type="button" class="ord-add" id="ordAddItem">+ Adicionar item</button>
+        </fieldset>
+
+        <!-- Observações -->
+        <label class="ord-lab ord-col2">
+          Observações
+          <textarea id="cliObs" rows="2" placeholder="Ex.: sem pimenta, trocar feijão por salada..."></textarea>
+        </label>
+
+        <!-- Totais -->
+        <div class="ord-totais">
+          <div class="ord-row">
+            <span>Subtotal</span>
+            <strong id="tSub">R$ 0,00</strong>
+          </div>
+          <div class="ord-row desc">
+            <span>Desconto do site (10%)</span>
+            <strong id="tDesc">- R$ 0,00</strong>
+          </div>
+          <div class="ord-row">
+            <span>Entrega</span>
+            <strong id="tFrete">R$ 0,00</strong>
+          </div>
+          <div class="ord-row grand">
+            <span>Total</span>
+            <strong id="tTotal">R$ 0,00</strong>
+          </div>
+        </div>
+
+        <footer class="ord-footer">
+          <button type="button" class="btn btn-secondary" id="ordCancel">Cancelar</button>
+          <button type="submit" class="btn btn-whatsapp" id="ordSubmit">
+            Enviar no WhatsApp (10% OFF)
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
 
   <section class="sobre" id="secaoSobre">
     <div class="container">

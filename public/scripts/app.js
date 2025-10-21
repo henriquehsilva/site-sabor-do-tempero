@@ -529,44 +529,282 @@ function configurarBotoes(flags) {
     btnOuvir.addEventListener('click', lerCardapio);
   }
 
+  // 👉 Botão agora abre o fluxo de pedido completo
   if (btnWhatsApp) {
     if (flags.mostrar_whatsapp && menuData?.sobre?.whatsapp) {
-      const numeroLoja = (menuData.sobre.whatsapp || "").replace(/\D/g, "");
-
-      const mensagemInicial = montarMensagemBase();
-      const linksInicial = buildWaLinks(numeroLoja, mensagemInicial);
-      btnWhatsApp.setAttribute('href', linksInicial.primary);
-      btnWhatsApp.style.display = 'inline-flex';
-
-      btnWhatsApp.addEventListener('click', async function (e) {
+      btnWhatsApp.addEventListener('click', (e) => {
         e.preventDefault();
-
-        const clienteDigits = getUserPhone();
-        const coords = await requestLocation();
-        const displayPhone = formatDisplayPhone(clienteDigits);
-        const mapsLink = buildMapsLink(coords);
-
-        let msg = montarMensagemBase();
-        if (clienteDigits) msg += `\n\n📱 Meu WhatsApp: ${displayPhone}`;
-        if (mapsLink) msg += `\n📍 Minha localização: ${mapsLink}`;
-
-        const { primary, fallback } = buildWaLinks(numeroLoja, msg);
-
-        try {
-          window.location.href = primary;
-          setTimeout(() => {
-            if (document.visibilityState === 'visible') {
-              window.location.href = fallback;
-            }
-          }, 300);
-        } catch {
-          window.location.href = fallback;
-        }
-      }, { once: false });
+        openOrderModal(); // abre o modal
+      });
+      btnWhatsApp.style.display = 'inline-flex';
     } else {
       btnWhatsApp.style.display = 'none';
     }
   }
+}
+
+// ------- Preços -------
+// Se o prato no JSON tiver campo "preco", usa ele; senão, assume 25,00
+function getDishPriceById(id) {
+  const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
+  const val = Number(prato?.preco);
+  return Number.isFinite(val) && val > 0 ? val : 25.00;
+}
+
+// ------- UI do modal -------
+function openOrderModal() {
+  const modal = document.getElementById('orderModal');
+  const closeBtn = document.getElementById('ordClose');
+  const cancelBtn = document.getElementById('ordCancel');
+  const backdrop = modal.querySelector('.ord-backdrop');
+  const form = document.getElementById('ordForm');
+  const addBtn = document.getElementById('ordAddItem');
+  const itemsBox = document.getElementById('ordItems');
+
+  // monta um item inicial
+  itemsBox.innerHTML = '';
+  addOrderItemRow(itemsBox);
+  // listeners
+  addBtn.onclick = () => addOrderItemRow(itemsBox);
+  form.oninput = updateOrderTotals;
+  form.onsubmit = handleSubmitOrder;
+  closeBtn.onclick = () => toggleOrderModal(false);
+  cancelBtn.onclick = () => toggleOrderModal(false);
+  backdrop.onclick = (e) => { if (e.target.dataset.close) toggleOrderModal(false); };
+
+  // Prefill de dados
+  try {
+    const savedPhone = localStorage.getItem('userPhone');
+    if (savedPhone) document.getElementById('cliFone').value = formatDisplayPhone(savedPhone);
+  } catch(_) {}
+
+  updateOrderTotals();
+  toggleOrderModal(true);
+}
+function toggleOrderModal(show) {
+  const modal = document.getElementById('orderModal');
+  if (!modal) return;
+  modal.classList.toggle('is-open', !!show);
+  modal.setAttribute('aria-hidden', show ? 'false' : 'true');
+}
+
+// Cria uma linha (item) com select de prato e quantidade
+function addOrderItemRow(container) {
+  const pratosDisponiveis = (menuData?.pratos || []).filter(p => p.disponivel);
+  const row = document.createElement('div');
+  row.className = 'ord-item';
+
+  const sel = document.createElement('select');
+  sel.className = 'ord-sel';
+  pratosDisponiveis.forEach(p => {
+    const opt = document.createElement('option');
+    opt.value = p.id;
+    const preco = getDishPriceById(p.id);
+    opt.textContent = `${p.nome} — R$ ${preco.toFixed(2).replace('.', ',')}`;
+    sel.appendChild(opt);
+  });
+
+  const qty = document.createElement('input');
+  qty.type = 'number';
+  qty.min = '1';
+  qty.value = '1';
+  qty.className = 'ord-qty';
+
+  const del = document.createElement('button');
+  del.type = 'button';
+  del.className = 'ord-del';
+  del.textContent = 'Remover';
+
+  // eventos
+  sel.addEventListener('change', updateOrderTotals);
+  qty.addEventListener('input', updateOrderTotals);
+  del.addEventListener('click', () => {
+    row.remove();
+    updateOrderTotals();
+  });
+
+  row.appendChild(sel);
+  row.appendChild(qty);
+  row.appendChild(del);
+  container.appendChild(row);
+}
+
+// Calcula e pinta subtotal, desconto, frete e total
+function updateOrderTotals() {
+  const itemsBox = document.getElementById('ordItems');
+  const rows = [...itemsBox.querySelectorAll('.ord-item')];
+  let subtotal = 0;
+
+  rows.forEach(r => {
+    const sel = r.querySelector('.ord-sel');
+    const qty = Number(r.querySelector('.ord-qty')?.value || 0);
+    if (!sel?.value || !Number.isFinite(qty) || qty <= 0) return;
+    const unit = getDishPriceById(sel.value);
+    subtotal += unit * qty;
+  });
+
+  // desconto 10% sobre subtotal
+  const desconto = subtotal * 0.10;
+
+  // frete: Rio Quente = 0, Esplanada = 5
+  const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
+  const frete = localVal === 'esplanada' ? 5.00 : 0.00;
+
+  const total = Math.max(0, subtotal - desconto) + frete;
+
+  // pinta
+  document.getElementById('tSub').textContent   = money(subtotal);
+  document.getElementById('tDesc').textContent  = `- ${money(desconto)}`;
+  document.getElementById('tFrete').textContent = money(frete);
+  document.getElementById('tTotal').textContent = money(total);
+}
+
+function money(n){ return `R$ ${Number(n||0).toFixed(2).replace('.', ',')}`; }
+
+// ------- Envio: grava no Firebase (se disponível) e manda pro WhatsApp -------
+async function handleSubmitOrder(e) {
+  e.preventDefault();
+  const f = e.currentTarget;
+
+  const nome = (document.getElementById('cliNome').value || '').trim();
+  const foneDisplay = (document.getElementById('cliFone').value || '').trim();
+  const foneDigits = foneDisplay.replace(/\D/g,'');
+  const end = (document.getElementById('cliEndereco').value || '').trim();
+  const obs = (document.getElementById('cliObs').value || '').trim();
+  const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
+
+  if (!nome || !foneDigits || !end) {
+    alert('Preencha nome, WhatsApp e endereço.');
+    return;
+  }
+  // persiste telefone do cliente
+  try { localStorage.setItem('userPhone', foneDigits); } catch(_) {}
+
+  // coleta itens
+  const items = [];
+  const rows = [...document.querySelectorAll('#ordItems .ord-item')];
+  rows.forEach(r => {
+    const id = r.querySelector('.ord-sel')?.value;
+    const qtd = Number(r.querySelector('.ord-qty')?.value || 0);
+    if (!id || qtd <= 0) return;
+    const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
+    const unit = getDishPriceById(id);
+    items.push({
+      id,
+      nome: prato?.nome || String(id),
+      preco: unit,
+      qtd,
+      total: unit * qtd
+    });
+  });
+
+  if (!items.length) {
+    alert('Adicione pelo menos 1 item.');
+    return;
+  }
+
+  // totais
+  const subtotal = items.reduce((s,i)=>s+i.total,0);
+  const desconto = subtotal * 0.10;
+  const frete = localVal === 'esplanada' ? 5.00 : 0.00;
+  const total = Math.max(0, subtotal - desconto) + frete;
+
+  // monta payload
+  const payload = {
+    cliente: { nome, foneE164: normalizePhoneToE164(foneDigits), foneDisplay, endereco: end, local: localVal },
+    itens: items,
+    financeiro: {
+      subtotal, desconto, frete, total, moeda: 'BRL', origem: 'site-10off'
+    },
+    obs,
+    criadoEm: new Date().toISOString(),
+    status: 'novo'
+  };
+
+  // grava
+  let orderId = null;
+  try {
+    const fb = await initFirebaseIfAvailable();
+    if (fb && fb.db) {
+      // orders/{autoId}
+      const { db, collection, doc, setDoc, serverTimestamp } = fb;
+      const autoId = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
+      const ref = doc(collection(db, 'orders'), autoId);
+      await setDoc(ref, { ...payload, ts: serverTimestamp() }, { merge: true });
+      orderId = autoId;
+    } else {
+      // fallback localStorage
+      const arr = JSON.parse(localStorage.getItem('orders') || '[]');
+      orderId = 'local-' + (Date.now());
+      arr.push({ id: orderId, ...payload });
+      localStorage.setItem('orders', JSON.stringify(arr));
+    }
+  } catch (err) {
+    console.warn('Falha ao gravar no Firebase; salvando localmente:', err);
+    const arr = JSON.parse(localStorage.getItem('orders') || '[]');
+    orderId = 'local-' + (Date.now());
+    arr.push({ id: orderId, ...payload });
+    localStorage.setItem('orders', JSON.stringify(arr));
+  }
+
+  // whatsapp
+  const numeroLoja = (menuData?.sobre?.whatsapp || '').replace(/\D/g,'');
+  if (!numeroLoja) {
+    alert('WhatsApp da loja não configurado.');
+    return;
+  }
+
+  const resumo = buildOrderMessage(payload, orderId);
+  const { primary, fallback } = buildWaLinks(numeroLoja, resumo);
+
+  // fecha modal antes de ir
+  toggleOrderModal(false);
+
+  try {
+    window.location.href = primary;
+    setTimeout(() => {
+      if (document.visibilityState === 'visible') {
+        window.location.href = fallback;
+      }
+    }, 350);
+  } catch {
+    window.location.href = fallback;
+  }
+}
+
+function normalizePhoneToE164(digits) {
+  const d = (digits||'').replace(/\D/g,'');
+  if (d.startsWith('55')) return '+'+d;    // já no país BR
+  if (d.length === 11 || d.length === 10) return '+55'+d;
+  return '+'+d;
+}
+
+function buildOrderMessage(pedido, orderId) {
+  const loc = pedido.cliente.local === 'esplanada' ? 'Esplanada (R$ 5,00)' : 'Rio Quente (Grátis)';
+  const linhas = [];
+  linhas.push(`🧾 *Novo pedido via site* ${orderId ? `(#${orderId})` : ''}`);
+  linhas.push(`👤 *Cliente:* ${pedido.cliente.nome}`);
+  linhas.push(`📱 *WhatsApp:* ${pedido.cliente.foneDisplay || pedido.cliente.foneE164}`);
+  linhas.push(`🏠 *Endereço:* ${pedido.cliente.endereco}`);
+  linhas.push(`🚚 *Entrega:* ${loc}`);
+  if (pedido.obs) linhas.push(`📝 *Obs.:* ${pedido.obs}`);
+
+  linhas.push('');
+  linhas.push('🍽️ *Itens:*');
+  pedido.itens.forEach((i, idx) => {
+    linhas.push(`${idx+1}. ${i.nome}  x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
+  });
+
+  linhas.push('');
+  linhas.push(`Subtotal: ${money(pedido.financeiro.subtotal)}`);
+  linhas.push(`Desconto do site (10%): - ${money(pedido.financeiro.desconto)}`);
+  linhas.push(`Entrega: ${money(pedido.financeiro.frete)}`);
+  linhas.push(`*Total:* ${money(pedido.financeiro.total)}`);
+
+  linhas.push('');
+  linhas.push('_Pedido com 10% de desconto realizado pelo site._');
+
+  return linhas.join('\n');
 }
 
 // ===============================[ LIGHTBOX, ETC ]===============================
