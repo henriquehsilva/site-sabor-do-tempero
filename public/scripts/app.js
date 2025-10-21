@@ -591,11 +591,15 @@ function toggleOrderModal(show) {
 // Cria uma linha (item) com select de prato e quantidade
 function addOrderItemRow(container) {
   const pratosDisponiveis = (menuData?.pratos || []).filter(p => p.disponivel);
+
   const row = document.createElement('div');
   row.className = 'ord-item';
 
+  // Select de prato (full width no mobile)
   const sel = document.createElement('select');
   sel.className = 'ord-sel';
+  sel.setAttribute('aria-label', 'Escolha o prato');
+
   pratosDisponiveis.forEach(p => {
     const opt = document.createElement('option');
     opt.value = p.id;
@@ -604,29 +608,78 @@ function addOrderItemRow(container) {
     sel.appendChild(opt);
   });
 
+  // Linha de controles: stepper + remover
+  const ctrls = document.createElement('div');
+  ctrls.className = 'ord-ctrls';
+
+  // Stepper (mobile-first)
+  const stepper = document.createElement('div');
+  stepper.className = 'ord-stepper';
+
+  const minus = document.createElement('button');
+  minus.type = 'button';
+  minus.setAttribute('aria-label', 'Diminuir quantidade');
+  minus.textContent = '−';
+
   const qty = document.createElement('input');
   qty.type = 'number';
   qty.min = '1';
-  qty.value = '0';
+  qty.value = '1';
+  qty.inputMode = 'numeric';
+  qty.pattern = '[0-9]*';
   qty.className = 'ord-qty';
+  qty.setAttribute('aria-label', 'Quantidade');
 
+  const plus = document.createElement('button');
+  plus.type = 'button';
+  plus.setAttribute('aria-label', 'Aumentar quantidade');
+  plus.textContent = '+';
+
+  stepper.appendChild(minus);
+  stepper.appendChild(qty);
+  stepper.appendChild(plus);
+
+  // Remover
   const del = document.createElement('button');
   del.type = 'button';
   del.className = 'ord-del';
+  del.setAttribute('aria-label', 'Remover item');
   del.textContent = 'Remover';
 
-  // eventos
+  ctrls.appendChild(stepper);
+  ctrls.appendChild(del);
+
+  // Eventos
+  const clampQty = () => {
+    const n = Math.max(1, Number(qty.value || 1));
+    qty.value = String(n);
+  };
+
   sel.addEventListener('change', updateOrderTotals);
-  qty.addEventListener('input', updateOrderTotals);
+  qty.addEventListener('input', () => { clampQty(); updateOrderTotals(); });
+
+  minus.addEventListener('click', () => {
+    qty.value = String(Math.max(1, Number(qty.value || 1) - 1));
+    updateOrderTotals();
+  });
+
+  plus.addEventListener('click', () => {
+    qty.value = String(Number(qty.value || 1) + 1);
+    updateOrderTotals();
+  });
+
   del.addEventListener('click', () => {
     row.remove();
     updateOrderTotals();
   });
 
+  // Monta
   row.appendChild(sel);
-  row.appendChild(qty);
-  row.appendChild(del);
+  row.appendChild(ctrls);
   container.appendChild(row);
+
+  // recalcula ao inserir
+  updateOrderTotals();
 }
 
 // Calcula e pinta subtotal, desconto, frete e total

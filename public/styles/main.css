@@ -951,3 +951,94 @@ h3 { font-size: var(--fs-500); }
 body.modal-open {
   overflow: hidden;
 }
+
+/* Lista de itens */
+.ord-items {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+/* Card do item — mobile-first */
+.ord-item {
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: .75rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "sel"
+    "ctrls";
+  gap: .5rem;
+}
+
+/* Select ocupa toda a largura no mobile */
+.ord-sel {
+  grid-area: sel;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 10px;
+  padding: .6rem .75rem;
+  font-size: 1rem;
+}
+
+/* Linha de controles (qty + remover) */
+.ord-ctrls {
+  grid-area: ctrls;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+/* Stepper: -, input, + (toques grandes) */
+.ord-stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.ord-stepper button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #f8f8f8;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.ord-qty {
+  width: 72px;
+  min-height: 44px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 10px;
+  padding: .5rem;
+  font-size: 1.1rem;
+}
+
+/* Botão remover bem acessível */
+.ord-del {
+  min-height: 44px;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,0,0,.15);
+  background: #fff5f5;
+  color: #b42318;
+  font-weight: 600;
+}
+
+/* Melhor layout em telas ≥ 640px */
+@media (min-width: 640px) {
+  .ord-item {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: "sel ctrls ctrls";
+    align-items: center;
+  }
+  .ord-ctrls { justify-content: flex-end; gap: .75rem; }
+  .ord-qty { width: 84px; }
+}
