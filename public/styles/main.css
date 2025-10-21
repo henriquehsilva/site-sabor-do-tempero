@@ -920,3 +920,34 @@ h3 { font-size: var(--fs-500); }
 .btn{padding:.8rem 1rem;border-radius:12px}
 .btn-secondary{background:#f3f3f3}
 .btn-whatsapp{background:#25d366;color:#fff}
+
+/* Banner pode ficar visível, mas abaixo do modal */
+.promo-banner {
+  position: sticky;   /* ou fixed/top:0, se preferir */
+  top: 0;
+  z-index: 10;        /* ↓ abaixo do modal */
+}
+
+/* Modal sempre por cima de tudo */
+.ord-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;      /* ↑ acima do banner */
+}
+
+/* Backdrop logo abaixo do card, mas acima da página */
+.ord-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ord-card {
+  position: relative;
+  z-index: 1;         /* acima do backdrop */
+}
+
+/* (opcional) quando o modal abrir, esconda scroll da página */
+body.modal-open {
+  overflow: hidden;
+}

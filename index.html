@@ -273,52 +273,6 @@
 
     // torna acessível no seu app.js
     window.__fb = { db, auth, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp, get uid(){return currentUid;} };
-
-    (function () {
-      const banner   = document.getElementById('promoBanner');
-      const claim    = document.getElementById('btnWhatsApp');   // link "Quero meu desconto"
-      const closeBtn = document.getElementById('promoClose');   // botão X
-      const trigger  = document.getElementById('btnAbrirPedido'); // botão que abre o modal
-
-      // Fechar com transição suave e persistir estado
-      function hideBanner() {
-        if (!banner) return;
-        banner.setAttribute('aria-hidden', 'true');
-        banner.style.transition = 'max-height .3s ease, opacity .3s ease';
-        banner.style.overflow = 'hidden';
-        banner.style.maxHeight = '0';
-        banner.style.opacity = '0';
-        // remove do fluxo após a animação
-        setTimeout(() => { banner.style.display = 'none'; }, 350);
-        try { localStorage.setItem('promoClosed', '1'); } catch (_) {}
-      }
-
-      // Se o usuário já fechou antes, não mostrar
-      try {
-        if (localStorage.getItem('promoClosed') === '1') {
-          banner.style.display = 'none';
-          banner.setAttribute('aria-hidden', 'true');
-        }
-      } catch (_) {}
-
-      // Clique em "Quero meu desconto"
-      claim?.addEventListener('click', (e) => {
-        e.preventDefault();
-        hideBanner();
-        // foca no CTA e abre o modal de pedido
-        if (trigger) {
-          trigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // dá um pequeno tempo pra rolagem antes de abrir
-          setTimeout(() => trigger.click(), 220);
-        }
-      });
-
-      // Clique no X
-      closeBtn?.addEventListener('click', (e) => {
-        e.preventDefault();
-        hideBanner();
-      });
-    })();
   </script>
 </body>
 </html>
