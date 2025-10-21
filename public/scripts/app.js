@@ -607,7 +607,7 @@ function addOrderItemRow(container) {
   const qty = document.createElement('input');
   qty.type = 'number';
   qty.min = '1';
-  qty.value = '1';
+  qty.value = '0';
   qty.className = 'ord-qty';
 
   const del = document.createElement('button');
