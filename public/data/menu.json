@@ -143,10 +143,10 @@
       "id": "dobradinha_calabresa",
       "nome": "Dobradinha com bacon e calabresa",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha_calabresa.jpg",
+      "imagem": "/pratos/dobradinha_calabresa_4.jpg",
       "galeria": [
         "/pratos/dobradinha_calabresa_1.jpg",
-        "/pratos/dobradinha_calabresa_2.jpg"        
+        "/pratos/dobradinha_calabresa_4.jpg"
       ],
       "itens": [
         "Batata souté",
