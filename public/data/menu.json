@@ -158,9 +158,9 @@
       "id": "frango_grelhado",
       "nome": "Filé de frango grelhado",
       "preco": 25.0,
-      "imagem": "/pratos/frango_grelhado.png",
+      "imagem": "/pratos/frango_grelhado.jpeg",
       "galeria": [
-        "/pratos/frango_grelhado.png"        
+        "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
         "Batata souté",
