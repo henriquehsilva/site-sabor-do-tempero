@@ -200,9 +200,10 @@
       "id": "carne_cenoura",
       "nome": "Carne com cenoura",
       "preco": 25.0,
-      "imagem": "/pratos/carne_cenoura.png",
+      "imagem": "/pratos/carne_cenoura.jpeg",
       "galeria": [
-        "/pratos/carne_cenoura.png"      
+        "/pratos/carne_cenoura.png",
+        "/pratos/carne_cenoura.jpeg"      
       ],
       "itens": [
         "Couve flor gratinada",
@@ -214,9 +215,10 @@
       "id": "costelinha_suina",
       "nome": "Costelinha suína assada",
       "preco": 25.0,
-      "imagem": "/pratos/costelinha_suina.png",
+      "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
-        "/pratos/costelinha_suina.png"     
+        "/pratos/costelinha_suina.png",
+        "/pratos/costela_mandioca.jpeg"     
       ],
       "itens": [
         "Quibebe de mandioca",
