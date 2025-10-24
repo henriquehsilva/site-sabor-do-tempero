@@ -180,7 +180,7 @@
         "Couve flor gratinada",
         "Farofa tropical"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -209,7 +209,7 @@
         "Couve flor gratinada",
         "Farofa tropical"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -224,6 +224,50 @@
         "Quibebe de mandioca",
         "Farofa tropical",
         "Salada de salpicão"
+      ],
+      "disponivel": false
+    },
+    {
+      "id": "isca_frango_empanada",
+      "nome": "Isca de frango empanada",
+      "preco": 25.0,
+      "imagem": "/pratos/isca_frango_empanada.png",
+      "galeria": [
+        "/pratos/isca_frango_empanada_1.png",
+        "/pratos/isca_frango_empanada_2.png"      
+      ],
+      "itens": [
+        "Escondidinho de frango",
+        "Abobrinha com milho"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "dobradinha",
+      "nome": "Dobradinha",
+      "preco": 25.0,
+      "imagem": "/pratos/dobradinha.png",
+      "galeria": [
+        "/pratos/dobradinha_1.png",
+        "/pratos/dobradinha_2.png"
+      ],
+      "itens": [
+        "Escondidinho de frango",
+        "Cabutia com quiabo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "costela_panela",
+      "nome": "Costela bovina de panela",
+      "preco": 25.0,
+      "imagem": "/pratos/costela_panela.png",
+      "galeria": [
+        "/pratos/costela_panela.png"
+      ],
+      "itens": [
+        "Escondidinho de frango",
+        "Quibebe de mandioca"
       ],
       "disponivel": true
     }
