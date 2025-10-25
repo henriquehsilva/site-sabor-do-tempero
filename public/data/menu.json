@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-24",
+    "data": "2025-10-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -32,7 +32,7 @@
         "Farofa",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -240,7 +240,7 @@
         "Escondidinho de frango",
         "Abobrinha com milho"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
@@ -255,7 +255,7 @@
         "Escondidinho de frango",
         "Cabutia com quiabo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
@@ -269,7 +269,7 @@
         "Escondidinho de frango",
         "Quibebe de mandioca"
       ],
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {
