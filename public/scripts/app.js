@@ -697,17 +697,17 @@ function updateOrderTotals() {
   });
 
   // desconto 10% sobre subtotal
-  const desconto = subtotal * 0.10;
+  // const desconto = subtotal * 0.10;
 
   // frete: Rio Quente = 0, Esplanada = 5
   const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
   const frete = localVal === 'esplanada' ? 5.00 : 0.00;
 
-  const total = Math.max(0, subtotal - desconto) + frete;
+  const total = Math.max(0, subtotal) + frete;
 
   // pinta
   document.getElementById('tSub').textContent   = money(subtotal);
-  document.getElementById('tDesc').textContent  = `- ${money(desconto)}`;
+  // document.getElementById('tDesc').textContent  = `- ${money(desconto)}`;
   document.getElementById('tFrete').textContent = money(frete);
   document.getElementById('tTotal').textContent = money(total);
 }
@@ -755,9 +755,9 @@ async function handleSubmitOrder(e) {
 
   // totais
   const subtotal = items.reduce((s,i)=>s+i.total,0);
-  const desconto = subtotal * 0.10;
+  // const desconto = subtotal * 0.10;
   const frete = localVal === 'esplanada' ? 5.00 : 0.00;
-  const total = Math.max(0, subtotal - desconto) + frete;
+  const total = Math.max(0, subtotal) + frete;
 
   // 👉 pede geolocalização (não bloqueia o fluxo se falhar)
   const coords = await requestLocation().catch(()=>null);
@@ -852,12 +852,12 @@ function buildOrderMessage(pedido, orderId) {
 
   linhas.push('');
   linhas.push(`Subtotal: ${money(pedido.financeiro.subtotal)}`);
-  linhas.push(`Desconto do site (10%): - ${money(pedido.financeiro.desconto)}`);
+  // linhas.push(`Desconto do site (10%): - ${money(pedido.financeiro.desconto)}`);
   linhas.push(`Entrega: ${money(pedido.financeiro.frete)}`);
   linhas.push(`*Total:* ${money(pedido.financeiro.total)}`);
 
   linhas.push('');
-  linhas.push('_Pedido com 10% de desconto realizado pelo site._');
+  // linhas.push('_Pedido com 10% de desconto realizado pelo site._');
 
   return linhas.join('\n');
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-25",
+    "data": "2025-10-27",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -32,7 +32,7 @@
         "Farofa",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -53,10 +53,25 @@
       "disponivel": false
     },
     {
+      "id": "picadinho_cenoura",
+      "nome": "Picadinho de carne com cenoura",
+      "preco": 25.0,
+      "imagem": "/pratos/picadinho_cenoura.jpg",
+      "galeria": [
+        "/pratos/picadinho_cenoura_1.jpg"
+      ],
+      "itens": [
+        "Quiabo assado",
+        "Couve refogada",
+        "Batata rustica"
+      ],
+      "disponivel": true
+    },
+    {
       "id": "strogonoff",
       "nome": "Strogonoff de Frango",
       "preco": 25.0,
-      "imagem": "/pratos/strogonoff.jpg",
+      "imagem": "/pratos/strogonoff_1.jpg",
       "galeria": [
         "/pratos/strogonoff_1.jpg",
         "/pratos/strogonoff_2.jpg",
@@ -237,10 +252,10 @@
         "/pratos/isca_frango_empanada_2.png"      
       ],
       "itens": [
-        "Escondidinho de frango",
+        "Quibe assado",
         "Abobrinha com milho"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -270,6 +285,21 @@
         "Quibebe de mandioca"
       ],
       "disponivel": false
+    },
+    {
+      "id": "pernil_recheado",
+      "nome": "Pernil recheado",
+      "preco": 25.0,
+      "imagem": "/pratos/pernil_recheado.png",
+      "galeria": [
+        "/pratos/pernil_recheado.png"
+      ],
+      "itens": [
+        "Batata rustica",
+        "Quibe assado",
+        "Couve refogada"
+      ],
+      "disponivel": true
     }
   ],
   "sobre": {
