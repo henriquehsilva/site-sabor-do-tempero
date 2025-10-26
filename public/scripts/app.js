@@ -774,7 +774,7 @@ async function handleSubmitOrder(e) {
       geo: coords ? { ...coords, maps: mapsLink } : null
     },
     itens: items,
-    financeiro: { subtotal, desconto, frete, total, moeda: 'BRL', origem: 'site-10off' },
+    financeiro: { subtotal, frete, total, moeda: 'BRL', origem: 'promo-3feijo' },
     obs,
     criadoEm: new Date().toISOString(),
     status: 'novo'
