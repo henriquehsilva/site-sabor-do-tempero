@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-27",
+    "data": "2025-10-28",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -65,7 +65,7 @@
         "Couve refogada",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "strogonoff",
@@ -192,10 +192,11 @@
         "/pratos/sobrecoxa_recheado.png"
       ],
       "itens": [
-        "Couve flor gratinada",
-        "Farofa tropical"
+        "Batata souté",
+        "Farofa tropical",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -236,11 +237,11 @@
         "/pratos/costela_mandioca.jpeg"     
       ],
       "itens": [
-        "Quibebe de mandioca",
+        "Cabutia com quiabo",
         "Farofa tropical",
-        "Salada de salpicão"
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "isca_frango_empanada",
@@ -255,22 +256,23 @@
         "Quibe assado",
         "Abobrinha com milho"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
-      "nome": "Dobradinha",
+      "nome": "Dobradinha com mocotó",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha.png",
+      "imagem": "/pratos/dobradinha_2.png",
       "galeria": [
         "/pratos/dobradinha_1.png",
         "/pratos/dobradinha_2.png"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Cabutia com quiabo"
+        "Batata souté",
+        "Farofa tropical",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
@@ -299,7 +301,7 @@
         "Quibe assado",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {
