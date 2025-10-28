@@ -187,9 +187,9 @@
       "id": "sobrecoxa_recheado",
       "nome": "Sobre coxa recheado",
       "preco": 25.0,
-      "imagem": "/pratos/sobrecoxa_recheado.png",
+      "imagem": "/pratos/sobrecoxa_recheado.jpeg",
       "galeria": [
-        "/pratos/sobrecoxa_recheado.png"
+        "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
         "Batata souté",
@@ -231,8 +231,9 @@
       "id": "costelinha_suina",
       "nome": "Costelinha suína assada",
       "preco": 25.0,
-      "imagem": "/pratos/costela_mandioca.jpeg",
+      "imagem": "/pratos/costelinha_suina.jpeg",
       "galeria": [
+        "/pratos/costelinha_suina.jpeg",
         "/pratos/costelinha_suina.png",
         "/pratos/costela_mandioca.jpeg"     
       ],
@@ -262,8 +263,9 @@
       "id": "dobradinha",
       "nome": "Dobradinha com mocotó",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha_2.png",
+      "imagem": "/pratos/dobradinha.jpeg",
       "galeria": [
+        "/pratos/dobradinha.jpeg",
         "/pratos/dobradinha_1.png",
         "/pratos/dobradinha_2.png"
       ],
