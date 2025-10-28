@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-28",
+    "data": "2025-10-29",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -87,20 +87,17 @@
     },
     {
       "id": "frango_maionese",
-      "nome": "Frango assado na maionese",
+      "nome": "Coxa de frango assado na maionese",
       "preco": 25.0,
-      "imagem": "/pratos/frango_maionese.jpg",
+      "imagem": "/pratos/frango_maionese_3.jpg",
       "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_2.jpg",
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Batata rustica",
-        "Cabutia com quiabo",
-        "Espaguete   ao alho e óleo"
+        "Couve flor gratinada",
+        "Panqueca de frango"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -121,6 +118,20 @@
       "disponivel": false
     },
     {
+      "id": "lagarto_recheado",
+      "nome": "Lagarto recheado",
+      "preco": 25.0,
+      "imagem": "/pratos/lagarto_recheado.jpg",
+      "galeria": [
+        "/pratos/lagarto_recheado.jpg"
+      ],
+      "itens": [
+        "Couve flor gratinada",
+        "Panqueca de frango"        
+      ],
+      "disponivel": true
+    },
+    {
       "id": "file_parmegiana",
       "nome": "Filé de frango à parmegiana",
       "preco": 25.0,
@@ -135,6 +146,22 @@
         "Brócolis na manteiga"
       ],
       "disponivel": false
+    },
+    {
+      "id": "panelinha_mineira",
+      "nome": "Panelinha mineira",
+      "preco": 25.0,
+      "imagem": "/pratos/panelinha_mineira.jpg",
+      "galeria": [
+        "/pratos/panelinha_mineira.jpg"
+      ],
+      "itens": [
+        "Frango em cubos",
+        "Linguiça",
+        "Ervilha",
+        "Mussarela"
+      ],
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -196,7 +223,7 @@
         "Farofa tropical",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -242,7 +269,7 @@
         "Farofa tropical",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "isca_frango_empanada",
@@ -274,7 +301,7 @@
         "Farofa tropical",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
