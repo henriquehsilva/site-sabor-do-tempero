@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-29",
+    "data": "2025-10-30",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -45,12 +45,11 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Farofa",
+        "Mandioca",
         "Couve refogada",
-        "Banana frita",
-        "Mandioca"
+        "Escondidinho de frango"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "picadinho_cenoura",
@@ -97,7 +96,7 @@
         "Couve flor gratinada",
         "Panqueca de frango"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -110,12 +109,11 @@
         "/pratos/carne_assada_3.jpg"
       ],
       "itens": [
-        "Mandioca cozida ou Batata rustica",
-        "Couve e banana frita",
-        "Salada repolho com cenoura",
-        "Arroz branco ou Espaguete ao alho e óleo"
+        "Mandioca",
+        "Escondidinho de frango",
+        "Couve"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -129,7 +127,7 @@
         "Couve flor gratinada",
         "Panqueca de frango"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_parmegiana",
@@ -161,7 +159,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -302,6 +300,21 @@
         "Banana frita"
       ],
       "disponivel": false
+    },
+    {
+      "id": "frango_milanesa",
+      "nome": "Frango a milanesa",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_milanesa.jpeg",
+      "galeria": [
+        "/pratos/frango_milanesa.jpeg"
+      ],
+      "itens": [
+        "Escondidinho de frango",
+        "Couve refogada",
+        "Banana frita"
+      ],
+      "disponivel": true
     },
     {
       "id": "costela_panela",
