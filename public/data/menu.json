@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-10-30",
+    "data": "2025-10-31",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -49,7 +49,7 @@
         "Couve refogada",
         "Escondidinho de frango"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -67,12 +67,26 @@
       "disponivel": false
     },
     {
+      "id": "contrafile_grelhado",
+      "nome": "Contrafilé grelhado",
+      "preco": 25.0,
+      "imagem": "/pratos/contrafile_grelhado.jpg",
+      "galeria": [
+        "/pratos/contrafile_grelhado.jpg"
+      ],
+      "itens": [
+        "Legumes na manteiga",
+        "Espaguete alho e óleo"
+      ],
+      "disponivel": true
+    },
+    {
       "id": "strogonoff",
       "nome": "Strogonoff de Frango",
       "preco": 25.0,
-      "imagem": "/pratos/strogonoff_1.jpg",
+      "imagem": "/pratos/strogonoff.jpg",
       "galeria": [
-        "/pratos/strogonoff_1.jpg",
+        "/pratos/strogonoff.jpg",
         "/pratos/strogonoff_2.jpg",
         "/pratos/strogonoff_3.jpg",
         "/pratos/strogonoff_4.jpg"
@@ -113,7 +127,7 @@
         "Escondidinho de frango",
         "Couve"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -183,16 +197,15 @@
       "id": "dobradinha_calabresa",
       "nome": "Dobradinha com bacon e calabresa",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha_calabresa_4.jpg",
+      "imagem": "/pratos/dobradinha_calabresa_1.jpg",
       "galeria": [
-        "/pratos/dobradinha_calabresa_1.jpg",
-        "/pratos/dobradinha_calabresa_4.jpg"
+        "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Batata souté",
-        "Quiabo assado"
+        "Milho com abobrinha",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_grelhado",
@@ -314,7 +327,7 @@
         "Couve refogada",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
