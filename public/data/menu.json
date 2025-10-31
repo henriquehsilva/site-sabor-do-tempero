@@ -72,8 +72,8 @@
       "preco": 25.0,
       "imagem": "/pratos/contrafile_grelhado_1.jpg",
       "galeria": [
-        "/pratos/contrafile_grelhado.jpg",
         "/pratos/contrafile_grelhado_1.jpg"
+        "/pratos/contrafile_grelhado.jpg"
       ],
       "itens": [
         "Legumes na manteiga",
