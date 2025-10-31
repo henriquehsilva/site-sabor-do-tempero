@@ -70,9 +70,10 @@
       "id": "contrafile_grelhado",
       "nome": "Contrafilé grelhado",
       "preco": 25.0,
-      "imagem": "/pratos/contrafile_grelhado.jpg",
+      "imagem": "/pratos/contrafile_grelhado_1.jpg",
       "galeria": [
-        "/pratos/contrafile_grelhado.jpg"
+        "/pratos/contrafile_grelhado.jpg",
+        "/pratos/contrafile_grelhado_1.jpg"
       ],
       "itens": [
         "Legumes na manteiga",
@@ -197,8 +198,9 @@
       "id": "dobradinha_calabresa",
       "nome": "Dobradinha com bacon e calabresa",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha_calabresa_1.jpg",
+      "imagem": "/pratos/dobradinha_calabresa.jpg",
       "galeria": [
+        "/pratos/dobradinha_calabresa.jpg",
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
