@@ -15,7 +15,7 @@
   "pratos": [
     {
       "id": "feijoada",
-      "nome": "Feijoada",
+      "nome": "Feijoada completa",
       "preco": 25.0,
       "imagem": "/pratos/feijoada.jpg",
       "galeria": [
@@ -29,10 +29,10 @@
         "Torresmo",
         "Linguiça",
         "Banana",
-        "Farofa",
+        "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -79,7 +79,7 @@
         "Legumes na manteiga",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "strogonoff",
@@ -172,9 +172,10 @@
         "Frango em cubos",
         "Linguiça",
         "Ervilha",
-        "Mussarela"
+        "Mussarela",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -207,7 +208,7 @@
         "Milho com abobrinha",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -266,6 +267,23 @@
         "Farofa tropical"
       ],
       "disponivel": false
+    },
+    {
+      "id": "panelinha_cerrado",
+      "nome": "Panelinha do cerrado",
+      "preco": 25.0,
+      "imagem": "/pratos/panelinha_cerrado.jpeg",
+      "galeria": [
+        "/pratos/panelinha_cerrado.jpeg"
+      ],
+      "itens": [
+        "Carne em cubos",
+        "Linguiça",
+        "Lasca de pequi",
+        "Mussarela",
+        "Vinagrete"
+      ],
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
