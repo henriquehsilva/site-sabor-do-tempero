@@ -696,20 +696,25 @@ function updateOrderTotals() {
     subtotal += unit * qty;
   });
 
-  // desconto 10% sobre subtotal
-  // const desconto = subtotal * 0.10;
+  // 10% sobre os itens
+  const desconto = subtotal * 0.10;
 
-  // frete: Rio Quente = 0, Esplanada = 5
+  // frete conforme local
   const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
   const frete = localVal === 'esplanada' ? 5.00 : 0.00;
 
-  const total = Math.max(0, subtotal) + frete;
+  // total = itens - desconto + frete
+  const total = Math.max(0, subtotal - desconto) + frete;
 
-  // pinta
-  document.getElementById('tSub').textContent   = money(subtotal);
-  // document.getElementById('tDesc').textContent  = `- ${money(desconto)}`;
-  document.getElementById('tFrete').textContent = money(frete);
-  document.getElementById('tTotal').textContent = money(total);
+  const elSub   = document.getElementById('tSub');
+  const elDesc  = document.getElementById('tDesc');
+  const elFrete = document.getElementById('tFrete');
+  const elTotal = document.getElementById('tTotal');
+
+  if (elSub)   elSub.textContent   = money(subtotal);
+  if (elDesc)  elDesc.textContent  = `- ${money(desconto)}`;
+  if (elFrete) elFrete.textContent = money(frete);
+  if (elTotal) elTotal.textContent = money(total);
 }
 
 function money(n){ return `R$ ${Number(n||0).toFixed(2).replace('.', ',')}`; }
@@ -755,9 +760,10 @@ async function handleSubmitOrder(e) {
 
   // totais
   const subtotal = items.reduce((s,i)=>s+i.total,0);
-  // const desconto = subtotal * 0.10;
-  const frete = localVal === 'esplanada' ? 5.00 : 0.00;
-  const total = Math.max(0, subtotal) + frete;
+  const desconto = subtotal * 0.10;          // 10% CERTINHO
+  const frete    = localVal === 'esplanada' ? 5.00 : 0.00;
+  const total    = Math.max(0, subtotal - desconto) + frete;
+
 
   // 👉 pede geolocalização (não bloqueia o fluxo se falhar)
   const coords = await requestLocation().catch(()=>null);
@@ -839,7 +845,7 @@ function buildOrderMessage(pedido, orderId) {
   linhas.push(`🏠 *Endereço:* ${pedido.cliente.endereco}`);
   linhas.push(`🚚 *Entrega:* ${loc}`);
 
-  const maps = pedido?.cliente?.geo?.maps;     // <-- pega o link já pronto
+  const maps = pedido?.cliente?.geo?.maps;
   if (maps) linhas.push(`📍 *Localização no mapa:* ${maps}`);
 
   if (pedido.obs) linhas.push(`📝 *Obs.:* ${pedido.obs}`);
@@ -852,12 +858,16 @@ function buildOrderMessage(pedido, orderId) {
 
   linhas.push('');
   linhas.push(`Subtotal: ${money(pedido.financeiro.subtotal)}`);
-  // linhas.push(`Desconto do site (10%): - ${money(pedido.financeiro.desconto)}`);
+
+  if (pedido.financeiro.desconto && pedido.financeiro.desconto > 0) {
+    linhas.push(`Desconto do site (10%): - ${money(pedido.financeiro.desconto)}`);
+  }
+
   linhas.push(`Entrega: ${money(pedido.financeiro.frete)}`);
   linhas.push(`*Total:* ${money(pedido.financeiro.total)}`);
 
   linhas.push('');
-  // linhas.push('_Pedido com 10% de desconto realizado pelo site._');
+  linhas.push('_Pedido com 10% de desconto realizado pelo site._');
 
   return linhas.join('\n');
 }
