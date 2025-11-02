@@ -17,8 +17,9 @@
       "id": "feijoada",
       "nome": "Feijoada completa",
       "preco": 25.0,
-      "imagem": "/pratos/feijoada.jpg",
+      "imagem": "/pratos/feijoada_4.jpg",
       "galeria": [
+        "/pratos/feijoada_4.jpg",
         "/pratos/feijoada_1.jpg",
         "/pratos/feijoada_2.jpg",
         "/pratos/feijoada_3.jpg"
