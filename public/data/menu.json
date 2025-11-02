@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-01",
+    "data": "2025-11-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -32,7 +32,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -60,11 +60,11 @@
         "/pratos/picadinho_cenoura_1.jpg"
       ],
       "itens": [
-        "Quiabo assado",
-        "Couve refogada",
-        "Batata rustica"
+        "Escondidinho de carne moida",
+        "Cabotia com linguiça",
+        "Couve"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -175,7 +175,7 @@
         "Mussarela",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -343,11 +343,11 @@
         "/pratos/frango_milanesa.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Couve refogada",
-        "Banana frita"
+        "Escondidinho de carne moida",
+        "Cabotia com linguiça",
+        "Couve"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
