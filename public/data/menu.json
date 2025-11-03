@@ -56,9 +56,10 @@
       "id": "picadinho_cenoura",
       "nome": "Picadinho de carne com cenoura",
       "preco": 25.0,
-      "imagem": "/pratos/picadinho_cenoura.jpg",
+      "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
-        "/pratos/picadinho_cenoura_1.jpg"
+        "/pratos/picadinho_cenoura_1.jpg",
+        "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
         "Escondidinho de carne moida",
@@ -275,7 +276,8 @@
       "preco": 25.0,
       "imagem": "/pratos/panelinha_cerrado.jpeg",
       "galeria": [
-        "/pratos/panelinha_cerrado.jpeg"
+        "/pratos/panelinha_cerrado.jpeg",
+        "/pratos/panelinha_cerrado_1.jpeg"
       ],
       "itens": [
         "Carne em cubos",
@@ -341,7 +343,8 @@
       "preco": 25.0,
       "imagem": "/pratos/frango_milanesa.jpeg",
       "galeria": [
-        "/pratos/frango_milanesa.jpeg"
+        "/pratos/frango_milanesa.jpeg",
+        "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
         "Escondidinho de carne moida",
