@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-03",
+    "data": "2025-11-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -66,7 +66,7 @@
         "Cabotia com linguiça",
         "Couve"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "contrafile_grelhado",
@@ -121,16 +121,13 @@
       "preco": 25.0,
       "imagem": "/pratos/carne_assada.jpg",
       "galeria": [
-        "/pratos/carne_assada_1.jpg",
-        "/pratos/carne_assada_2.jpg",
-        "/pratos/carne_assada_3.jpg"
+        "/pratos/carne_assada.jpg"
       ],
       "itens": [
-        "Mandioca",
-        "Escondidinho de frango",
-        "Couve"
+        "Quibebe com linguiça",
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -152,15 +149,13 @@
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpg",
       "galeria": [
-        "/pratos/file_parmegiana_1.jpg",
-        "/pratos/file_parmegiana_2.jpg",
-        "/pratos/file_parmegiana_3.jpg"
+        "/pratos/file_parmegiana.jpg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Brócolis na manteiga"
+        "Batata frita",
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -174,10 +169,9 @@
         "Frango em cubos",
         "Linguiça",
         "Ervilha",
-        "Mussarela",
-        "Vinagrete"
+        "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -286,7 +280,7 @@
         "Mussarela",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -351,7 +345,7 @@
         "Cabotia com linguiça",
         "Couve"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
