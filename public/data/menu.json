@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-04",
+    "data": "2025-11-05",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -127,7 +127,7 @@
         "Quibebe com linguiça",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -155,7 +155,7 @@
         "Batata frita",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -171,7 +171,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -185,11 +185,11 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Quibebe",
-        "Banana frita",
-        "Farofa"
+        "Panqueca de carne",
+        "Mandioca temperaada",
+        "Couve"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -229,11 +229,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Batata souté",
-        "Farofa tropical",
-        "Banana frita"
+        "Panqueca de carne",
+        "Chica doida",
+        "Couve"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -277,10 +277,9 @@
         "Carne em cubos",
         "Linguiça",
         "Lasca de pequi",
-        "Mussarela",
-        "Vinagrete"
+        "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
