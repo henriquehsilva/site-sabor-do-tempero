@@ -177,8 +177,9 @@
       "id": "pernil_assado",
       "nome": "Pernil assado",
       "preco": 25.0,
-      "imagem": "/pratos/pernil_assado.jpg",
+      "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
+        "/pratos/pernil_assado_5.jpg",
         "/pratos/pernil_assado_1.jpg",
         "/pratos/pernil_assado_2.jpg",
         "/pratos/pernil_assado_3.jpg",
@@ -224,8 +225,9 @@
       "id": "sobrecoxa_recheado",
       "nome": "Sobre coxa recheado",
       "preco": 25.0,
-      "imagem": "/pratos/sobrecoxa_recheado.jpeg",
+      "imagem": "/pratos/sobrecoxa_recheado_1.jpeg",
       "galeria": [
+        "/pratos/sobrecoxa_recheado_1.jpeg",
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
