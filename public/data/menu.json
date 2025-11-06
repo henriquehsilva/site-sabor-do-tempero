@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-05",
+    "data": "2025-11-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -51,6 +51,25 @@
         "Escondidinho de frango"        
       ],
       "disponivel": false
+    },
+    {
+      "id": "panelinha_goiana",
+      "nome": "Panelinha goiana",
+      "preco": 25.0,
+      "imagem": "/pratos/panelinha_goiana.jpg",
+      "galeria": [
+        "/pratos/panelinha_goiana.jpg",
+        "/pratos/panelinha_goiana_1.jpg"
+      ],
+      "itens": [
+        "Carne suina em cubos",
+        "Linguiça toscana",
+        "Bacon",
+        "Mussarela",
+        "Ervilha"
+
+      ],
+      "disponivel": true
     },
     {
       "id": "picadinho_cenoura",
@@ -103,17 +122,18 @@
     },
     {
       "id": "frango_maionese",
-      "nome": "Coxa de frango assado na maionese",
+      "nome": "Frango assado na maionese",
       "preco": 25.0,
       "imagem": "/pratos/frango_maionese_3.jpg",
       "galeria": [
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Couve flor gratinada",
-        "Panqueca de frango"        
+        "Farofa de bacon",
+        "Cabotia com linguiça",
+        "Batata rustica"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -190,7 +210,7 @@
         "Mandioca temperaada",
         "Couve"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -235,7 +255,7 @@
         "Chica doida",
         "Couve"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -261,10 +281,11 @@
         "/pratos/carne_cenoura.jpeg"      
       ],
       "itens": [
-        "Couve flor gratinada",
-        "Farofa tropical"
+        "Batata rustica",
+        "Farofa de bacon",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
