@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-06",
+    "data": "2025-11-07",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -69,7 +69,7 @@
         "Ervilha"
 
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -133,7 +133,7 @@
         "Cabotia com linguiça",
         "Batata rustica"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -145,9 +145,10 @@
       ],
       "itens": [
         "Quibebe com linguiça",
-        "Seleta de legumes"
+        "Batata souté",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -285,7 +286,7 @@
         "Farofa de bacon",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -331,10 +332,11 @@
         "/pratos/isca_frango_empanada_2.png"      
       ],
       "itens": [
-        "Quibe assado",
-        "Abobrinha com milho"
+        "Batata souté",
+        "Quibebe com linguiça",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
