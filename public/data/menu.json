@@ -326,9 +326,9 @@
       "id": "isca_frango_empanada",
       "nome": "Isca de frango empanada",
       "preco": 25.0,
-      "imagem": "/pratos/isca_frango_empanada.png",
+      "imagem": "/pratos/isca_frango_empanada.jpeg",
       "galeria": [
-        "/pratos/isca_frango_empanada.png"  
+        "/pratos/isca_frango_empanada.jpeg"  
       ],
       "itens": [
         "Batata souté",
