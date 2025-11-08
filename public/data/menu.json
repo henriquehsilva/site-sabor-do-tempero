@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-07",
+    "data": "2025-11-08",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -148,7 +148,7 @@
         "Batata souté",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -192,7 +192,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -335,7 +335,7 @@
         "Quibebe com linguiça",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
