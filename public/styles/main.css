@@ -1205,6 +1205,9 @@ body.modal-open {
 
 .promo-img.coca { animation-delay: 0s; }
 .promo-img.fanta { animation-delay: 3.5s; }
+.promo-img.guarana { animation-delay: 3.5s; }
+.promo-img.sukita { animation-delay: 3.5s; }
+.promo-img.pepsi { animation-delay: 3.5s; }
 
 @keyframes swap {
   0%,40% { opacity: 1; }
