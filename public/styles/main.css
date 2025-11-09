@@ -1193,25 +1193,33 @@ body.modal-open {
   overflow: hidden;
 }
 
+/* Todas as imagens empilhadas */
 .promo-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: swap 7s linear infinite;
   opacity: 0;
+  animation: promoFade 12s infinite ease-in-out;
 }
 
-.promo-img.coca { animation-delay: 0s; }
-.promo-img.fanta { animation-delay: 3.5s; }
-.promo-img.guarana { animation-delay: 3.5s; }
-.promo-img.sukita { animation-delay: 3.5s; }
-.promo-img.pepsi { animation-delay: 3.5s; }
+/* Duração total = 12s → cada imagem entra em 2.4s
+   Ajuste a escala se quiser mais rápido ou lento */
 
-@keyframes swap {
-  0%,40% { opacity: 1; }
-  50%,100% { opacity: 0; }
+/* Controle do tempo de entrada de cada imagem */
+.promo-img.coca    { animation-delay: 0s; }
+.promo-img.fanta   { animation-delay: 2.4s; }
+.promo-img.guarana { animation-delay: 4.8s; }
+.promo-img.pepsi   { animation-delay: 7.2s; }
+.promo-img.sukita  { animation-delay: 9.6s; }
+
+@keyframes promoFade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }   /* entra suave */
+  30%  { opacity: 1; }   /* permanece visível */
+  40%  { opacity: 0; }   /* fade out */
+  100% { opacity: 0; }   /* aguarda até próxima */
 }
 
 /* Texto + CTA */
