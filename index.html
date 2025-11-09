@@ -47,12 +47,34 @@
   <!-- AVISO CHAMATIVO de desconto -->
   <aside class="promo-banner" role="note" aria-live="polite" id="promoBanner">
     <div class="promo-wrap">
-      <div class="promo-text">
-        <span aria-hidden="true">🎉</span>
-        <span>
-           Peça pelo site, rapido e facil! Ganhe <strong>10% de desconto</strong> no seu pedido.
-        </span>
-      </div>
+      <!-- Banner Promo: Ganhe um refri -->
+      <section class="promo-banner" role="region" aria-label="Promoção: comprando pelo site ganha um refri">
+        <div class="promo-media">
+          <!-- As duas imagens ficam sobrepostas e trocam via CSS -->
+          <img
+            class="promo-img coca"
+            src="/pratos/coca.webp"
+            alt="Coca-Cola gelada"
+            loading="lazy"
+            width="640" height="640"
+            decoding="async"
+          />
+          <img
+            class="promo-img fanta"
+            src="/pratos/fanta.webp"
+            alt="Fanta laranja gelada"
+            loading="lazy"
+            width="640" height="640"
+            decoding="async"
+          />
+        </div>
+
+        <div class="promo-content">
+          <p class="promo-headline">
+            Comprando pelo site, <strong>ganha um refri!</strong> 🥤
+          </p>
+        </div>
+      </section>
       <div style="display:flex; align-items:center; gap:.5rem;">
         <a href="#" id="btnWhatsApp" href="#" rel="noopener" class="promo-link" aria-label="Ir para o botão de WhatsApp da promo">
           <span>Compre pelo site</span>
@@ -125,6 +147,11 @@
 
       <form id="ordForm" class="ord-form" novalidate>
         <!-- <p id="ordDesc" class="ord-helper">Pedidos pelo site têm <b>10% de desconto</b>. Rio Quente: entrega grátis · Esplanada: taxa R$ 5,00.</p> -->
+        <p id="ordDesc" class="ord-helper">
+          Promo: escolhendo pelo site você ganha <b>1 refrigerante grátis</b>
+          (Coca-Cola Zero 200ml ou Fanta 200ml).
+        </p>
+
 
         <!-- Seus dados -->
         <fieldset class="ord-fieldset">
@@ -149,8 +176,10 @@
         </fieldset>
 
         <!-- Local de entrega -->
+         
         <fieldset class="ord-fieldset">
           <legend>Local de entrega</legend>
+          <p>Rio Quente: entrega grátis · Esplanada: taxa R$ 5,00.</p>
           <div class="ord-radio-row">
             <label class="ord-radio">
               <input type="radio" name="cliLocal" value="rio-quente" checked>
@@ -167,7 +196,16 @@
         <fieldset class="ord-fieldset">
           <legend>Itens do pedido</legend>
           <div id="ordItems" class="ord-items"></div>
-          <button type="button" class="ord-add" id="ordAddItem">+ Adicionar item</button>
+          <button type="button" class="ord-add" id="ordAddItem">+ Adicionar outra marmita 🍲</button>
+        </fieldset>
+
+        <!-- Promo: escolha do refrigerante grátis -->
+        <fieldset class="ord-fieldset ord-promo-refri" id="promoRefriFS">
+          <legend>🎁 Promoção: refrigerante grátis</legend>
+          <p id="promoRefriMsg" class="ord-helper">
+            Você tem <b>0</b> refrigerante grátis (1 por marmita).
+          </p>
+          <div id="promoRefriList" class="promo-refri-list" aria-live="polite"></div>
         </fieldset>
 
         <!-- Observações -->
@@ -179,15 +217,15 @@
         <!-- Totais -->
         <div class="ord-totais">
           <div class="ord-row"><span>Subtotal</span> <strong id="tSub">R$ 0,00</strong></div>
-          <div class="ord-row desc"><span>Desconto do site (10%)</span> <strong id="tDesc">- R$ 0,00</strong></div>
+          <!-- <div class="ord-row desc"><span>Desconto do site (10%)</span> <strong id="tDesc">- R$ 0,00</strong></div> -->
           <div class="ord-row"><span>Entrega</span> <strong id="tFrete">R$ 0,00</strong></div>
           <div class="ord-row grand"><span>Total</span> <strong id="tTotal">R$ 0,00</strong></div>
         </div>
 
         <footer class="ord-footer">
           <button type="button" class="btn btn-secondary" id="ordCancel">Cancelar</button>
-          <button type="submit" class="btn btn-whatsapp" id="ordSubmit">
-            Enviar Pedido (10% OFF)
+          <button type="submit" class="btn btn-primary" style="background-color: black;color:#fff" id="ordSubmit">
+            Fazer Pedido
           </button>
         </footer>
       </form>
