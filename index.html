@@ -44,19 +44,15 @@
     </div>
   </header>
 
-  <!-- AVISO CHAMATIVO de desconto -->
-  <aside class="promo-banner" role="note" aria-live="polite" id="promoBanner">
-    <div class="promo-wrap">
-      <!-- Banner Promo: Ganhe um refri -->
-      <section class="promo-banner" role="region" aria-label="Promoção: comprando pelo site ganha um refri">
-        <div class="promo-media">
-          <!-- As duas imagens ficam sobrepostas e trocam via CSS -->
+    <aside class="promo-bar" role="note" aria-live="polite">
+      <div class="promo-bar-inner">
+        
+        <div class="promo-img-wrap">
           <img
             class="promo-img coca"
             src="/pratos/coca.webp"
             alt="Coca-Cola gelada"
             loading="lazy"
-            width="640" height="640"
             decoding="async"
           />
           <img
@@ -64,17 +60,23 @@
             src="/pratos/fanta.webp"
             alt="Fanta laranja gelada"
             loading="lazy"
-            width="640" height="640"
             decoding="async"
           />
         </div>
 
-        <div class="promo-content">
-          <p class="promo-headline">
+        <div class="promo-text-wrap">
+          <p class="promo-title">
             Comprando pelo site, <strong>ganha um refri!</strong> 🥤
           </p>
+
+          <a href="#" id="btnWhatsApp" class="promo-btn">
+            Fazer pedido pelo site
+          </a>
         </div>
-      </section>
+
+        <button class="promo-close" id="promoClose" aria-label="Fechar aviso de promoção">✕</button>
+      </div>
+    </aside>
       <div style="display:flex; align-items:center; gap:.5rem;">
         <a href="#" id="btnWhatsApp" href="#" rel="noopener" class="promo-link" aria-label="Ir para o botão de WhatsApp da promo">
           <span>Compre pelo site</span>
