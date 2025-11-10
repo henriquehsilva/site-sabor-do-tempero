@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-08",
+    "data": "2025-11-10",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -144,11 +144,11 @@
         "/pratos/carne_assada.jpg"
       ],
       "itens": [
-        "Quibebe com linguiça",
-        "Batata souté",
+        "Legumes assados",
+        "Batata frita",
         "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -229,6 +229,21 @@
       "disponivel": false
     },
     {
+      "id": "dobradinha_linguica_bacon",
+      "nome": "Dobradinha com linguiça e bacon",
+      "preco": 25.0,
+      "imagem": "/pratos/dobradinha_calabresa.jpg",
+      "galeria": [
+        "/pratos/dobradinha_calabresa.jpg",
+        "/pratos/dobradinha_calabresa_1.jpg"
+      ],
+      "itens": [
+        "Legumes assados",
+        "Batata frita"
+      ],
+      "disponivel": true
+    },
+    {
       "id": "frango_grelhado",
       "nome": "Filé de frango grelhado",
       "preco": 25.0,
@@ -303,7 +318,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
