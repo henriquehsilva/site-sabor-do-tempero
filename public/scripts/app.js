@@ -191,7 +191,7 @@ async function carregarMenu() {
 
 // ================= [PROMO-REFRIxQTY] Helpers =================
 const PROMO_BEBIDAS = {
-  'coca-zero-200': 'Coca-Cola Zero 200ml',
+  // 'coca-zero-200': 'Coca-Cola Zero 200ml',
   'fanta-200':     'Fanta 200ml',
   'guarana-200':   'Guaraná 200ml',
   'sukita-200':    'Sukita 200ml',

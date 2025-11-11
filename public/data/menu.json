@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-10",
+    "data": "2025-11-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -51,6 +51,20 @@
         "Escondidinho de frango"        
       ],
       "disponivel": false
+    },
+    {
+      "id": "peixe_assado",
+      "nome": "Peixe assado",
+      "preco": 25.0,
+      "imagem": "/pratos/peixe_assado.jpg",
+      "galeria": [
+        "/pratos/peixe_assado.jpg"
+      ],
+      "itens": [
+        "Couve flor na manteiga",
+        "Escondidinho de carne"        
+      ],
+      "disponivel": true
     },
     {
       "id": "panelinha_goiana",
@@ -115,8 +129,7 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha",
-        "Feijão"
+        "Batata palha"        
       ],
       "disponivel": true
     },
@@ -129,11 +142,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Farofa de bacon",
-        "Cabotia com linguiça",
-        "Batata rustica"        
+        "Escondidinho de carne",
+        "Couve flor na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -148,7 +160,7 @@
         "Batata frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -192,7 +204,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -241,7 +253,7 @@
         "Legumes assados",
         "Batata frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -297,11 +309,10 @@
         "/pratos/carne_cenoura.jpeg"      
       ],
       "itens": [
-        "Batata rustica",
-        "Farofa de bacon",
-        "Banana frita"
+        "Escondidinho de carne",
+        "Couve flor na manteiga"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
