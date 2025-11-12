@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-11",
+    "data": "2025-11-12",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -64,7 +64,7 @@
         "Couve flor na manteiga",
         "Escondidinho de carne"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_goiana",
@@ -145,7 +145,7 @@
         "Escondidinho de carne",
         "Couve flor na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -204,7 +204,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -300,6 +300,20 @@
       "disponivel": false
     },
     {
+      "id": "costela_mandioca",
+      "nome": "Costela bovina assada",
+      "preco": 25.0,
+      "imagem": "/pratos/costela_bovina.png",
+      "galeria": [
+        "/pratos/costela_bovina.png"        
+      ],
+      "itens": [
+        "Lasanha de frango",
+        "Batata rustica"
+      ],
+      "disponivel": true
+    },
+    {
       "id": "carne_cenoura",
       "nome": "Carne com cenoura",
       "preco": 25.0,
@@ -312,7 +326,7 @@
         "Escondidinho de carne",
         "Couve flor na manteiga"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -347,6 +361,20 @@
         "Banana frita"
       ],
       "disponivel": false
+    },
+    {
+      "id": "carne_suina",
+      "nome": "Carne suína grelhada",
+      "preco": 25.0,
+      "imagem": "/pratos/carne_suina.jpeg",
+      "galeria": [
+        "/pratos/carne_suina.jpeg"
+      ],
+      "itens": [
+        "Lasanha de frango",
+        "Batata rustica"        
+      ],
+      "disponivel": true
     },
     {
       "id": "isca_frango_empanada",
