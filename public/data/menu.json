@@ -273,8 +273,9 @@
       "id": "sobrecoxa_recheado",
       "nome": "Sobre coxa recheado",
       "preco": 25.0,
-      "imagem": "/pratos/sobrecoxa_recheado_1.jpeg",
+      "imagem": "/pratos/sobrecoxa_recheado_2.jpeg",
       "galeria": [
+        "/pratos/sobrecoxa_recheado_2.jpeg",
         "/pratos/sobrecoxa_recheado_1.jpeg",
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
