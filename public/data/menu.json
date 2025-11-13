@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-12",
+    "data": "2025-11-13",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -83,7 +83,7 @@
         "Ervilha"
 
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "picadinho_cenoura",
@@ -204,7 +204,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -279,11 +279,10 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Chica doida",
-        "Couve"
+        "Batata souté",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -303,15 +302,15 @@
       "id": "costela_mandioca",
       "nome": "Costela bovina assada",
       "preco": 25.0,
-      "imagem": "/pratos/costela_bovina.png",
+      "imagem": "/pratos/costela_bovina.jpeg",
       "galeria": [
-        "/pratos/costela_bovina.png"        
+        "/pratos/costela_bovina.jpeg"        
       ],
       "itens": [
         "Lasanha de frango",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_cenoura",
@@ -327,6 +326,22 @@
         "Couve flor na manteiga"        
       ],
       "disponivel": false
+    },
+    {
+      "id": "carne_panela",
+      "nome": "Carne de panela",
+      "preco": 25.0,
+      "imagem": "/pratos/carne_cenoura.jpeg",
+      "galeria": [
+        "/pratos/carne_cenoura.png",
+        "/pratos/carne_cenoura.jpeg"      
+      ],
+      "itens": [
+        "Panqueca de carne",
+        "Banana frita",
+        "Couve refogada"
+      ],
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -374,7 +389,7 @@
         "Lasanha de frango",
         "Batata rustica"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "isca_frango_empanada",
