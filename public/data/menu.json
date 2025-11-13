@@ -332,10 +332,10 @@
       "id": "carne_panela",
       "nome": "Carne de panela",
       "preco": 25.0,
-      "imagem": "/pratos/carne_cenoura.jpeg",
+      "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
-        "/pratos/carne_cenoura.png",
-        "/pratos/carne_cenoura.jpeg"      
+        "/pratos/carne_panela.png",
+        "/pratos/carne_panela_1.jpeg"      
       ],
       "itens": [
         "Panqueca de carne",
