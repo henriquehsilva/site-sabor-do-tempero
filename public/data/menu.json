@@ -125,6 +125,7 @@
         "/pratos/strogonoff.jpg",
         "/pratos/strogonoff_2.jpg",
         "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg",
         "/pratos/strogonoff_4.jpg"
       ],
       "itens": [
@@ -244,8 +245,9 @@
       "id": "dobradinha_linguica_bacon",
       "nome": "Dobradinha com bacon",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha_calabresa.jpg",
+      "imagem": "/pratos/dobradinha_calabresa_2.jpg",
       "galeria": [
+        "/pratos/dobradinha_calabresa_2.jpg",
         "/pratos/dobradinha_calabresa.jpg",
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
@@ -430,6 +432,7 @@
       "preco": 25.0,
       "imagem": "/pratos/frango_milanesa.jpeg",
       "galeria": [
+        "/pratos/frango_milanesa_2.jpeg",
         "/pratos/frango_milanesa.jpeg",
         "/pratos/frango_milanesa_1.jpeg"
       ],
