@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-13",
+    "data": "2025-11-14",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -83,7 +83,7 @@
         "Ervilha"
 
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -242,7 +242,7 @@
     },
     {
       "id": "dobradinha_linguica_bacon",
-      "nome": "Dobradinha com linguiça e bacon",
+      "nome": "Dobradinha com bacon",
       "preco": 25.0,
       "imagem": "/pratos/dobradinha_calabresa.jpg",
       "galeria": [
@@ -250,10 +250,10 @@
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Legumes assados",
+        "Farofa com bacon",
         "Batata frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_grelhado",
@@ -283,7 +283,7 @@
         "Batata souté",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -342,7 +342,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -434,11 +434,26 @@
         "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
-        "Escondidinho de carne moida",
-        "Cabotia com linguiça",
-        "Couve"
+        "Lasanha de frango",
+        "Batata frita"        
       ],
-      "disponivel": false
+      "disponivel": true
+    },
+    {
+      "id": "alcatra_suina",
+      "nome": "Alcatra suina",
+      "preco": 25.0,
+      "imagem": "/pratos/alcatra_suina.jpeg",
+      "galeria": [
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg"        
+      ],
+      "itens": [
+        "Mandioca",
+        "Farofa com bacon",
+        "Pure de cabotia"        
+      ],
+      "disponivel": true
     },
     {
       "id": "costela_panela",
