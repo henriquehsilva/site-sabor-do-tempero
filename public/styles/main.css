@@ -1201,13 +1201,14 @@ body.modal-open {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: promoFade 12s infinite ease-in-out;
+  animation: promoFade 6s infinite ease-in-out;
 }
 
 /* Duração total = 12s → cada imagem entra em 2.4s
    Ajuste a escala se quiser mais rápido ou lento */
 
 /* Controle do tempo de entrada de cada imagem */
+.promo-img.form    { animation-delay: 0s; }
 .promo-img.coca    { animation-delay: 0s; }
 .promo-img.fanta   { animation-delay: 2.4s; }
 .promo-img.guarana { animation-delay: 4.8s; }
