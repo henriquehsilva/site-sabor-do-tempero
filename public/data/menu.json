@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-14",
+    "data": "2025-11-15",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -132,7 +132,7 @@
         "Arroz branco",
         "Batata palha"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -189,7 +189,7 @@
         "Batata frita",
         "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -205,7 +205,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -255,7 +255,7 @@
         "Farofa com bacon",
         "Batata frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -440,7 +440,7 @@
         "Lasanha de frango",
         "Batata frita"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
@@ -456,7 +456,7 @@
         "Farofa com bacon",
         "Pure de cabotia"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
