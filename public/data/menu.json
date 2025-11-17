@@ -152,8 +152,9 @@
       "id": "carne_assada",
       "nome": "Carne bovina assada",
       "preco": 25.0,
-      "imagem": "/pratos/carne_assada.jpg",
+      "imagem": "/pratos/carne_assada_1.jpg",
       "galeria": [
+        "/pratos/carne_assada_1.jpg",
         "/pratos/carne_assada.jpg"
       ],
       "itens": [
@@ -447,10 +448,12 @@
       "id": "alcatra_suina",
       "nome": "Alcatra suina",
       "preco": 25.0,
-      "imagem": "/pratos/alcatra_suina.jpeg",
+      "imagem": "/pratos/alcatra_suina_2.jpeg",
       "galeria": [
+        "/pratos/alcatra_suina_2.jpeg",
         "/pratos/alcatra_suina.jpeg",
-        "/pratos/alcatra_suina_1.jpeg"        
+        "/pratos/alcatra_suina_1.jpeg"
+              
       ],
       "itens": [
         "Batata rustica",
