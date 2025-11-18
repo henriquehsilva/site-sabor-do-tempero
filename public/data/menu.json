@@ -119,8 +119,9 @@
       "id": "strogonoff",
       "nome": "Strogonoff de Frango",
       "preco": 25.0,
-      "imagem": "/pratos/strogonoff.jpg",
+      "imagem": "/pratos/strogonoff_preview.jpg",
       "galeria": [
+        "/pratos/strogonoff_preview.jpg",
         "/pratos/strogonoff.jpg",
         "/pratos/strogonoff_2.jpg",
         "/pratos/strogonoff_3.jpg",
@@ -276,8 +277,9 @@
       "id": "sobrecoxa_recheado",
       "nome": "Sobre coxa recheado",
       "preco": 25.0,
-      "imagem": "/pratos/sobrecoxa_recheado_2.jpeg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
       "galeria": [
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
         "/pratos/sobrecoxa_recheado_2.jpeg",
         "/pratos/sobrecoxa_recheado_1.jpeg",
         "/pratos/sobrecoxa_recheado.jpeg"
@@ -320,8 +322,9 @@
       "id": "carne_cenoura",
       "nome": "Carne com cenoura",
       "preco": 25.0,
-      "imagem": "/pratos/carne_cenoura.jpeg",
+      "imagem": "/pratos/carne_cenoura_preview.jpeg",
       "galeria": [
+        "/pratos/carne_cenoura_preview.jpeg",
         "/pratos/carne_cenoura.png",
         "/pratos/carne_cenoura.jpeg"      
       ],
@@ -414,8 +417,9 @@
       "id": "dobradinha",
       "nome": "Dobradinha com mocotó",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha.jpeg",
+      "imagem": "/pratos/dobradinha_preview.jpeg",
       "galeria": [
+        "/pratos/dobradinha_preview.jpeg",
         "/pratos/dobradinha.jpeg",
         "/pratos/dobradinha_1.png",
         "/pratos/dobradinha_2.png"
