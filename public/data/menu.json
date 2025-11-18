@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-17",
+    "data": "2025-11-18",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -95,9 +95,8 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Escondidinho de carne moida",
-        "Cabotia com linguiça",
-        "Couve"
+        "Escondidinho de frango",
+        "Brocolis na manteiga"
       ],
       "disponivel": false
     },
@@ -163,7 +162,7 @@
         "Farofa com bacon",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -207,7 +206,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -284,10 +283,10 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Batata souté",
-        "Banana frita"
+        "Escondidinho de frango",
+        "Brocolis na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -327,10 +326,10 @@
         "/pratos/carne_cenoura.jpeg"      
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Couve flor na manteiga"        
+        "Escondidinho de frango",
+        "Brócolis na manteiga"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -422,11 +421,10 @@
         "/pratos/dobradinha_2.png"
       ],
       "itens": [
-        "Batata souté",
-        "Farofa tropical",
-        "Banana frita"
+        "Escondidinho de frango",
+        "Brócolis na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_milanesa",
@@ -461,7 +459,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
