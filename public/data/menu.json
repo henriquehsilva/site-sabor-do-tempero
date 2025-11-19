@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-18",
+    "data": "2025-11-19",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -83,7 +83,7 @@
         "Ervilha"
 
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "picadinho_cenoura",
@@ -211,7 +211,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Pernil assado",
+      "nome": "Pernil assado com abacaxi",
       "preco": 25.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -222,11 +222,10 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Mandioca temperaada",
-        "Couve"
+        "Batata gratinada",
+        "Farofa de couve"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -288,7 +287,7 @@
         "Escondidinho de frango",
         "Brocolis na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -332,7 +331,7 @@
         "Escondidinho de frango",
         "Brócolis na manteiga"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -428,7 +427,7 @@
         "Escondidinho de frango",
         "Brócolis na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_milanesa",
@@ -441,10 +440,10 @@
         "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
-        "Lasanha de frango",
-        "Batata frita"        
+        "Creme de milho",
+        "Batata gratinada"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
