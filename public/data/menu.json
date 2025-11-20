@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-19",
+    "data": "2025-11-20",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -83,7 +83,7 @@
         "Ervilha"
 
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -225,7 +225,7 @@
         "Batata gratinada",
         "Farofa de couve"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -237,10 +237,10 @@
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Milho com abobrinha",
-        "Couve refogada"
+        "Banana frita",
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_linguica_bacon",
@@ -343,11 +343,10 @@
         "/pratos/carne_panela_1.jpeg"      
       ],
       "itens": [
-        "Panqueca de carne",
         "Banana frita",
-        "Couve refogada"
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -440,8 +439,8 @@
         "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
-        "Creme de milho",
-        "Batata gratinada"        
+        "Banana frita",
+        "Seleta de legumes"        
       ],
       "disponivel": true
     },
