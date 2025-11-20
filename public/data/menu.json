@@ -191,7 +191,7 @@
         "Batata frita",
         "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -442,7 +442,7 @@
         "Banana frita",
         "Seleta de legumes"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
