@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-20",
+    "data": "2025-11-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -143,10 +143,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Couve flor na manteiga"
+        "Charutinho de repolho",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -191,7 +191,7 @@
         "Batata frita",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -240,7 +240,7 @@
         "Banana frita",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_linguica_bacon",
@@ -312,10 +312,10 @@
         "/pratos/costela_bovina.jpeg"        
       ],
       "itens": [
-        "Lasanha de frango",
+        "Charutinho de repolho",
         "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_cenoura",
@@ -346,7 +346,7 @@
         "Banana frita",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -363,7 +363,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
