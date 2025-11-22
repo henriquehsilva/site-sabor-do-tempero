@@ -190,58 +190,64 @@ async function carregarMenu() {
 }
 
 // ================= [PROMO-REFRIxQTY] Helpers =================
-const PROMO_BEBIDAS = {};
+// ================= [PROMO-REFRIxQTY] Helpers =================
+const PROMO_BEBIDAS = {
+  'pepsi-200': 'Pepsi (200ml)',
+  'laranja-200': 'Refri de Laranja (200ml)',
+  'guarana-200': 'Guaraná Antarctica (200ml)',
+  'sem-refri': 'Não quero refrigerante'
+};
 
 // Cria uma linha (select) para 1 refri grátis
-// function makeRefriRow(idx, defaultVal = 'coca-zero-200') {
-//   const div = document.createElement('div');
-//   div.className = 'row';
-//   div.innerHTML = `
-//     <span class="idx">#${idx}</span>
-//     <select class="promo-refri-sel" aria-label="Refrigerante grátis #${idx}">
-//       ${Object.entries(PROMO_BEBIDAS).map(([val, label]) =>
-//         `<option value="${val}" ${val === defaultVal ? 'selected' : ''}>${label}</option>`
-//       ).join('')}
-//     </select>
-//   `;
-//   return div;
-// }
+function makeRefriRow(idx, defaultVal = 'pepsi-200') {
+  const div = document.createElement('div');
+  div.className = 'row';
+  div.innerHTML = `
+    <span class="idx">#${idx}</span>
+    <select class="promo-refri-sel" aria-label="Refrigerante grátis #${idx}">
+      ${Object.entries(PROMO_BEBIDAS).map(([val, label]) =>
+    `<option value="${val}" ${val === defaultVal ? 'selected' : ''}>${label}</option>`
+  ).join('')}
+    </select>
+  `;
+  return div;
+}
 
 /**
  * Sincroniza a UI de bebidas grátis com o total de marmitas (somatório de quantidades)
  * - Mantém o que já foi escolhido quando possível
  */
-// function syncPromoRefriUI(totalMarmitas) {
-//   const list = document.getElementById('promoRefriList');
-//   const msg  = document.getElementById('promoRefriMsg');
-//   if (!list || !msg) return;
+function syncPromoRefriUI(totalMarmitas) {
+  const list = document.getElementById('promoRefriList');
+  const msg = document.getElementById('promoRefriMsg');
+  if (!list || !msg) return;
 
-//   // Lê seleções atuais para tentar preservar
-//   const current = [...list.querySelectorAll('.promo-refri-sel')].map(s => s.value);
+  // Lê seleções atuais para tentar preservar
+  const current = [...list.querySelectorAll('.promo-refri-sel')].map(s => s.value);
 
-//   const need = Math.max(0, Number(totalMarmitas) || 0);
-//   list.innerHTML = '';
-//   for (let i = 1; i <= need; i++) {
-//     const prev = current[i-1] || 'coca-zero-200';
-//     list.appendChild(makeRefriRow(i, prev));
-//   }
+  const need = Math.max(0, Number(totalMarmitas) || 0);
+  list.innerHTML = '';
+  for (let i = 1; i <= need; i++) {
+    const prev = current[i - 1] || 'pepsi-200';
+    list.appendChild(makeRefriRow(i, prev));
+  }
 
-//   // Atualiza texto
-//   msg.innerHTML = `Você tem <b>${need}</b> refrigerante${need===1?'':'s'} grátis (1 por marmita).`;
-// }
+  // Atualiza texto
+  msg.innerHTML = `Você tem <b>${need}</b> refrigerante${need === 1 ? '' : 's'} grátis (1 por marmita).`;
+}
 
 /** Retorna array de ids de bebidas selecionadas, p.ex. ['coca-zero-200','fanta-200'] */
-// function getSelectedPromoRefriList() {
-//   return [...document.querySelectorAll('#promoRefriList .promo-refri-sel')].map(s => s.value);
-// }
+function getSelectedPromoRefriList() {
+  return [...document.querySelectorAll('#promoRefriList .promo-refri-sel')].map(s => s.value);
+}
 
-// /** Resumo agregando quantidades por bebida (útil para Whats) */
-// function groupBebidasById(ids) {
-//   const map = new Map();
-//   ids.forEach(id => map.set(id, (map.get(id)||0)+1));
-//   // retorna [{id, nome, qtd}]
-//   return [...map.entries()].map(([id, qtd]) => ({ id, nome: PROMO_BEBIDAS[id] || id, qtd }));
-// }
+/** Resumo agregando quantidades por bebida (útil para Whats) */
+function groupBebidasById(ids) {
+  const map = new Map();
+  ids.forEach(id => map.set(id, (map.get(id) || 0) + 1));
+  // retorna [{id, nome, qtd}]
+  return [...map.entries()].map(([id, qtd]) => ({ id, nome: PROMO_BEBIDAS[id] || id, qtd }));
+}
 
 
 function renderizarMenu() {
@@ -424,7 +430,7 @@ function criarCardPrato(prato, flags) {
       serverTimestamp, getCountFromServer
     } = fb;
 
-    const likeDocRef   = doc(db, 'likes', key);
+    const likeDocRef = doc(db, 'likes', key);
     const votesCollRef = collection(likeDocRef, 'votes');
 
     // Guarda última contagem “real” para reconciliar com agregado
@@ -436,7 +442,7 @@ function criarCardPrato(prato, flags) {
         const agg = await getCountFromServer(votesCollRef);
         lastRealCount = (agg?.data()?.count) || 0;
         // Se já existe algo na UI, preserva o maior entre o visto e o real
-        const visible = parseInt((likeCount.textContent || '0').replace(/\D/g,''), 10) || 0;
+        const visible = parseInt((likeCount.textContent || '0').replace(/\D/g, ''), 10) || 0;
         const finalCount = Math.max(visible, lastRealCount);
         likeCount.textContent = `${finalCount} curtidas`;
         return finalCount;
@@ -474,7 +480,7 @@ function criarCardPrato(prato, flags) {
       // Clique com UI otimista + recálculo real pós-operação
       likeBtn.onclick = async () => {
         const likedNow = likeBtn.classList.contains('liked');
-        const visible  = parseInt((likeCount.textContent || '0').replace(/\D/g,''), 10) || 0;
+        const visible = parseInt((likeCount.textContent || '0').replace(/\D/g, ''), 10) || 0;
         // aplica delta otimista
         likeCount.textContent = `${Math.max(0, visible + (likedNow ? -1 : +1))} curtidas`;
 
@@ -569,6 +575,22 @@ function configurarBotoes(flags) {
   const btnAtualizar = document.getElementById('btnAtualizar');
   const btnOuvir = document.getElementById('btnOuvir');
   const btnWhatsApp = document.getElementById('btnWhatsApp');
+  const btnFazerPedido = document.getElementById('btnFazerPedido');
+  const btnCloseFloating = document.getElementById('closeFloatingPromo');
+  const floatingPromo = document.getElementById('floatingPromo');
+
+  if (btnCloseFloating && floatingPromo) {
+    btnCloseFloating.addEventListener('click', () => {
+      floatingPromo.style.display = 'none';
+    });
+  }
+
+  if (btnFazerPedido) {
+    btnFazerPedido.addEventListener('click', (e) => {
+      e.preventDefault();
+      openOrderModal();
+    });
+  }
 
   if (btnAtualizar) {
     btnAtualizar.addEventListener('click', () => {
@@ -632,8 +654,8 @@ function openOrderModal() {
   try {
     const savedPhone = localStorage.getItem('userPhone');
     if (savedPhone) document.getElementById('cliFone').value = formatDisplayPhone(savedPhone);
-  } catch(_) {}
-  // syncPromoRefriUI(0);
+  } catch (_) { }
+  syncPromoRefriUI(0);
   updateOrderTotals();
   toggleOrderModal(true);
 }
@@ -758,7 +780,7 @@ function updateOrderTotals() {
   });
 
   // >>> NOVO: sincroniza a UI de bebidas grátis com a quantidade total de marmitas
-  // syncPromoRefriUI(totalMarmitas);
+  syncPromoRefriUI(totalMarmitas);
 
   // (restante dos seus cálculos já SEM desconto)
   const desconto = 0;
@@ -766,18 +788,18 @@ function updateOrderTotals() {
   const frete = localVal === 'esplanada' ? 5.00 : 0.00;
   const total = Math.max(0, subtotal - desconto) + frete;
 
-  const elSub   = document.getElementById('tSub');
-  const elDesc  = document.getElementById('tDesc'); // pode nem existir mais
+  const elSub = document.getElementById('tSub');
+  const elDesc = document.getElementById('tDesc'); // pode nem existir mais
   const elFrete = document.getElementById('tFrete');
   const elTotal = document.getElementById('tTotal');
 
-  if (elSub)   elSub.textContent   = money(subtotal);
-  if (elDesc) { const row = elDesc.closest('.t-row') || elDesc.parentElement; if (row) row.style.display='none'; }
+  if (elSub) elSub.textContent = money(subtotal);
+  if (elDesc) { const row = elDesc.closest('.t-row') || elDesc.parentElement; if (row) row.style.display = 'none'; }
   if (elFrete) elFrete.textContent = money(frete);
   if (elTotal) elTotal.textContent = money(total);
 }
 
-function money(n){ return `R$ ${Number(n||0).toFixed(2).replace('.', ',')}`; }
+function money(n) { return `R$ ${Number(n || 0).toFixed(2).replace('.', ',')}`; }
 
 // ------- Envio: grava no Firebase (se disponível) e manda pro WhatsApp -------
 async function handleSubmitOrder(e) {
@@ -786,7 +808,7 @@ async function handleSubmitOrder(e) {
 
   const nome = (document.getElementById('cliNome').value || '').trim();
   const foneDisplay = (document.getElementById('cliFone').value || '').trim();
-  const foneDigits = foneDisplay.replace(/\D/g,'');
+  const foneDigits = foneDisplay.replace(/\D/g, '');
   const end = (document.getElementById('cliEndereco').value || '').trim();
   const obs = (document.getElementById('cliObs').value || '').trim();
   const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
@@ -797,7 +819,7 @@ async function handleSubmitOrder(e) {
   }
 
   // guarda o Whats do cliente
-  try { localStorage.setItem('userPhone', foneDigits); } catch(_) {}
+  try { localStorage.setItem('userPhone', foneDigits); } catch (_) { }
 
   // coleta itens
   const items = [];
@@ -819,16 +841,16 @@ async function handleSubmitOrder(e) {
   if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
 
   // totais (sem desconto)
-  const subtotal = items.reduce((s,i)=>s+i.total,0);
-  const frete    = localVal === 'esplanada' ? 5.00 : 0.00;
-  const total    = Math.max(0, subtotal) + frete;
+  const subtotal = items.reduce((s, i) => s + i.total, 0);
+  const frete = localVal === 'esplanada' ? 5.00 : 0.00;
+  const total = Math.max(0, subtotal) + frete;
 
   // >>> NOVO: bebidas selecionadas (1 por marmita)
-  // const bebidasIDs = getSelectedPromoRefriList();   // ex.: ['coca-zero-200','fanta-200']
-  // const bebidasAgg = groupBebidasById(bebidasIDs);  // ex.: [{id:'coca-zero-200', nome:'Coca...', qtd:2}, ...]
+  const bebidasIDs = getSelectedPromoRefriList();   // ex.: ['coca-zero-200','fanta-200']
+  const bebidasAgg = groupBebidasById(bebidasIDs);  // ex.: [{id:'coca-zero-200', nome:'Coca...', qtd:2}, ...]
 
   // 👉 pede geolocalização (não bloqueia o fluxo se falhar)
-  const coords = await requestLocation().catch(()=>null);
+  const coords = await requestLocation().catch(() => null);
   const mapsLink = buildMapsLink(coords);
 
   // payload
@@ -843,8 +865,8 @@ async function handleSubmitOrder(e) {
     },
     itens: items,
     promocao: {
-      tipo: 'sem-promo',
-      // bebidas: bebidasAgg       // <<< lista agregada com qtd
+      tipo: 'refri-gratis',
+      bebidas: bebidasAgg       // <<< lista agregada com qtd
     },
     financeiro: { subtotal, frete, total, moeda: 'BRL', origem: 'sem-promo' },
     obs,
@@ -877,7 +899,7 @@ async function handleSubmitOrder(e) {
   }
 
   // WhatsApp
-  const numeroLoja = (menuData?.sobre?.whatsapp || '').replace(/\D/g,'');
+  const numeroLoja = (menuData?.sobre?.whatsapp || '').replace(/\D/g, '');
   if (!numeroLoja) { alert('WhatsApp da loja não configurado.'); return; }
 
   const resumo = buildOrderMessage(payload, orderId); // já inclui o link do Maps
@@ -896,10 +918,10 @@ async function handleSubmitOrder(e) {
 }
 
 function normalizePhoneToE164(digits) {
-  const d = (digits||'').replace(/\D/g,'');
-  if (d.startsWith('55')) return '+'+d;    // já no país BR
-  if (d.length === 11 || d.length === 10) return '+55'+d;
-  return '+'+d;
+  const d = (digits || '').replace(/\D/g, '');
+  if (d.startsWith('55')) return '+' + d;    // já no país BR
+  if (d.length === 11 || d.length === 10) return '+55' + d;
+  return '+' + d;
 }
 
 function buildOrderMessage(pedido, orderId) {
@@ -916,15 +938,15 @@ function buildOrderMessage(pedido, orderId) {
   if (pedido.obs) linhas.push(`📝 *Obs.:* ${pedido.obs}`);
 
   // >>> NOVO: várias bebidas
-  // if (pedido.promocao?.tipo === 'refri-gratis' && Array.isArray(pedido.promocao.bebidas) && pedido.promocao.bebidas.length) {
-  //   const bloc = pedido.promocao.bebidas.map(b => `${b.qtd}× ${b.nome}`).join(' · ');
-  //   linhas.push(`🎁 *Promo:* ${bloc}`);
-  // }
+  if (pedido.promocao?.tipo === 'refri-gratis' && Array.isArray(pedido.promocao.bebidas) && pedido.promocao.bebidas.length) {
+    const bloc = pedido.promocao.bebidas.map(b => `${b.qtd}× ${b.nome}`).join(' · ');
+    linhas.push(`🎁 *Promo:* ${bloc}`);
+  }
 
   linhas.push('');
   linhas.push('🍽️ *Itens:*');
   pedido.itens.forEach((i, idx) => {
-    linhas.push(`${idx+1}. ${i.nome}  x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
+    linhas.push(`${idx + 1}. ${i.nome}  x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
   });
 
   linhas.push('');
@@ -938,14 +960,14 @@ function buildOrderMessage(pedido, orderId) {
 // ===============================[ LIGHTBOX, ETC ]===============================
 let LB_STATE = { images: [], index: 0, title: '' };
 
-function ensureLightboxRoot(){
+function ensureLightboxRoot() {
   if (document.getElementById('lbBackdrop')) return;
   const wrap = document.createElement('div');
   wrap.className = 'lb-backdrop';
   wrap.id = 'lbBackdrop';
-  wrap.setAttribute('role','dialog');
-  wrap.setAttribute('aria-modal','true');
-  wrap.setAttribute('aria-label','Galeria de imagens do prato');
+  wrap.setAttribute('role', 'dialog');
+  wrap.setAttribute('aria-modal', 'true');
+  wrap.setAttribute('aria-label', 'Galeria de imagens do prato');
 
   wrap.innerHTML = `
     <div class="lb-content">
@@ -989,7 +1011,7 @@ function ensureLightboxRoot(){
   });
 
   let startX = null;
-  wrap.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].clientX; }, {passive:true});
+  wrap.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].clientX; }, { passive: true });
   wrap.addEventListener('touchend', (e) => {
     const dx = e.changedTouches[0].clientX - startX;
     if (Math.abs(dx) > 40) stepLightbox(dx < 0 ? 1 : -1);
@@ -1011,10 +1033,10 @@ function getUserPhone() {
 function formatDisplayPhone(digits) {
   if (!digits) return "";
   const d = digits.replace(/\D/g, "");
-  if (d.length === 13 && d.startsWith('55')) { return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,5)} ${d.slice(5,9)}-${d.slice(9)}`; }
-  if (d.length === 12 && d.startsWith('55')) { return `+${d.slice(0,2)} (${d.slice(2,4)}) ${d.slice(4,8)}-${d.slice(8)}`; }
-  if (d.length === 11) { return `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`; }
-  if (d.length === 10) { return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`; }
+  if (d.length === 13 && d.startsWith('55')) { return `+${d.slice(0, 2)} (${d.slice(2, 4)}) ${d.slice(4, 5)} ${d.slice(5, 9)}-${d.slice(9)}`; }
+  if (d.length === 12 && d.startsWith('55')) { return `+${d.slice(0, 2)} (${d.slice(2, 4)}) ${d.slice(4, 8)}-${d.slice(8)}`; }
+  if (d.length === 11) { return `(${d.slice(0, 2)}) ${d.slice(2, 3)} ${d.slice(3, 7)}-${d.slice(7)}`; }
+  if (d.length === 10) { return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`; }
   return digits;
 }
 
@@ -1041,7 +1063,7 @@ function buildWaLinks(phoneDigits, mensagem) {
   return { primary: `https://wa.me/${p}?text=${t}`, fallback: `https://api.whatsapp.com/send?phone=${p}&text=${t}` };
 }
 
-function openLightbox(images, startIndex = 0, title = ''){
+function openLightbox(images, startIndex = 0, title = '') {
   if (!images || !images.length) return;
   ensureLightboxRoot();
   LB_STATE.images = images;
@@ -1052,22 +1074,22 @@ function openLightbox(images, startIndex = 0, title = ''){
   updateLightbox();
 }
 
-function updateLightbox(){
+function updateLightbox() {
   const img = document.getElementById('lbImg');
   const counter = document.getElementById('lbCounter');
   const { images, index, title } = LB_STATE;
   img.src = images[index];
-  img.alt = `${title} (${index+1}/${images.length})`;
-  counter.textContent = `${index+1}/${images.length}`;
+  img.alt = `${title} (${index + 1}/${images.length})`;
+  counter.textContent = `${index + 1}/${images.length}`;
 }
 
-function stepLightbox(delta){
+function stepLightbox(delta) {
   const { images } = LB_STATE;
   LB_STATE.index = (LB_STATE.index + delta + images.length) % images.length;
   updateLightbox();
 }
 
-function closeLightbox(){
+function closeLightbox() {
   const backdrop = document.getElementById('lbBackdrop');
   if (backdrop) backdrop.classList.remove('is-open');
 }
@@ -1133,8 +1155,8 @@ function montarMensagemWhats(meta, pratos, opcoes_do_dia, sobre) {
 }
 
 // ===============================[ UTILS GERAIS ]================================
-const $ = (sel, ctx=document) => ctx.querySelector(sel);
-const $$ = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
+const $ = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 function timeAgo(dateStr) {
   const d = dateStr ? new Date(dateStr) : new Date();

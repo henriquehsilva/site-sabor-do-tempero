@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,23 +17,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="/styles/main.css">
 </head>
+
 <body>
   <header class="header header-video">
     <!-- Vídeo de fundo -->
     <div class="header-bg">
-      <video
-        class="header-video-el"
-        src="header.mp4"
-        poster=""
-        autoplay
-        muted
-        loop
-        playsinline
-      ></video>
+      <video class="header-video-el" src="header.mp4" poster="" autoplay muted loop playsinline></video>
       <div class="header-overlay" aria-hidden="true"></div>
     </div>
 
@@ -44,31 +40,31 @@
     </div>
   </header>
 
-    <aside class="promo-bar" role="note" aria-live="polite">
-      <div class="promo-bar-inner">
-        
-        <div class="promo-img-wrap">
-          <img class="promo-img form" src="/pratos/form.jpg" alt="Form" loading="lazy" decoding="async" />
-          <!-- <img class="promo-img coca"    src="/pratos/coca.webp"    alt="Coca-Cola gelada"     loading="lazy" decoding="async" /> -->
-          <!-- <img class="promo-img fanta"   src="/pratos/fanta.webp"   alt="Fanta laranja gelada" loading="lazy" decoding="async" /> -->
-          <!-- <img class="promo-img guarana" src="/pratos/guarana.webp" alt="Guaraná gelado"       loading="lazy" decoding="async" />
+  <aside class="promo-bar" role="note" aria-live="polite">
+    <div class="promo-bar-inner">
+
+      <div class="promo-img-wrap">
+        <img class="promo-img form" src="/pratos/form.jpg" alt="Form" loading="lazy" decoding="async" />
+        <!-- <img class="promo-img coca"    src="/pratos/coca.webp"    alt="Coca-Cola gelada"     loading="lazy" decoding="async" /> -->
+        <!-- <img class="promo-img fanta"   src="/pratos/fanta.webp"   alt="Fanta laranja gelada" loading="lazy" decoding="async" /> -->
+        <!-- <img class="promo-img guarana" src="/pratos/guarana.webp" alt="Guaraná gelado"       loading="lazy" decoding="async" />
           <img class="promo-img pepsi"   src="/pratos/pepsi.webp"   alt="Pepsi gelada"         loading="lazy" decoding="async" /> -->
-          <!-- <img class="promo-img sukita"  src="/pratos/sukita.webp"  alt="Sukita gelada"        loading="lazy" decoding="async" /> -->
-        </div>
-
-        <div class="promo-text">
-          <p class="promo-title">
-            Comprando pelo site, <strong>é rápido e fácil!</strong> 🥤
-          </p>
-
-          <a href="#" id="btnWhatsApp" class="promo-btn">
-            Fazer pedido pelo site
-          </a>
-        </div>
-
-        <button class="promo-close" id="promoClose" aria-label="Fechar aviso de promoção">✕</button>
+        <!-- <img class="promo-img sukita"  src="/pratos/sukita.webp"  alt="Sukita gelada"        loading="lazy" decoding="async" /> -->
       </div>
-    </aside>
+
+      <div class="promo-text">
+        <p class="promo-title">
+          Comprando pelo site, <strong>é rápido e fácil!</strong> 🥤
+        </p>
+
+        <a href="#" id="btnWhatsApp" class="promo-btn">
+          Fazer pedido pelo site
+        </a>
+      </div>
+
+      <button class="promo-close" id="promoClose" aria-label="Fechar aviso de promoção">✕</button>
+    </div>
+  </aside>
 
   <main class="main">
     <div class="container">
@@ -76,14 +72,15 @@
       <p class="data-dia" id="dataDia"></p>
       <p class="info-taxas">
         🍽️ Prato individual a partir de <strong>R$ 25,00</strong><br>
-        🚚 Entrega gratuita para <strong>Rio Quente</strong> e taxa de <strong>R$ 5,00</strong> para <strong>Esplanada</strong>.
+        🚚 Entrega gratuita para <strong>Rio Quente</strong> e taxa de <strong>R$ 5,00</strong> para
+        <strong>Esplanada</strong>.
       </p><br>
 
       <div id="offlineAlert" class="alert alert-warning" style="display: none;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
         Você está offline. Mostrando último cardápio salvo.
       </div>
@@ -102,10 +99,19 @@
 
   <!-- BOTÃO PRINCIPAL -->
   <div class="container cta-buttons">
-    <a id="btnInstagram" class="btn btn-instagram"
-      href="https://instagram.com/sabordotempero_marmitaria" target="_blank" rel="noopener"
-      aria-label="Abrir Instagram do Sabor do Tempero">
-      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
+    <button id="btnFazerPedido" class="btn btn-whatsapp" aria-label="Fazer pedido agora">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+      Fazer Pedido
+    </button>
+
+    <a id="btnInstagram" class="btn btn-instagram" href="https://instagram.com/sabordotempero_marmitaria"
+      target="_blank" rel="noopener" aria-label="Abrir Instagram do Sabor do Tempero">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="..." />
+      </svg>
       Siga no Instagram
     </a>
   </div>
@@ -133,24 +139,24 @@
           <div class="ord-grid">
             <label class="ord-lab">
               Nome
-              <input required id="cliNome" name="cliNome" placeholder="Seu nome"
-                    autocomplete="name" enterkeyhint="next">
+              <input required id="cliNome" name="cliNome" placeholder="Seu nome" autocomplete="name"
+                enterkeyhint="next">
             </label>
             <label class="ord-lab">
               WhatsApp
               <input required id="cliFone" name="cliFone" inputmode="tel" placeholder="(62) 9 0000-0000"
-                    autocomplete="tel" enterkeyhint="next">
+                autocomplete="tel" enterkeyhint="next">
             </label>
             <label class="ord-lab ord-col2">
               Endereço (rua, nº, complemento)
               <input required id="cliEndereco" name="cliEndereco" placeholder="Rua, nº, complemento"
-                    autocomplete="address-line1" enterkeyhint="next">
+                autocomplete="address-line1" enterkeyhint="next">
             </label>
           </div>
         </fieldset>
 
         <!-- Local de entrega -->
-         
+
         <fieldset class="ord-fieldset">
           <legend>Local de entrega</legend>
           <p>Rio Quente: entrega grátis · Esplanada: taxa R$ 5,00.</p>
@@ -174,13 +180,14 @@
         </fieldset>
 
         <!-- Promo: escolha do refrigerante grátis -->
-        <!-- <fieldset class="ord-fieldset ord-promo-refri" id="promoRefriFS">
+        <!-- Promo: escolha do refrigerante grátis -->
+        <fieldset class="ord-fieldset ord-promo-refri" id="promoRefriFS">
           <legend>🎁 Promoção: refrigerante grátis</legend>
           <p id="promoRefriMsg" class="ord-helper">
             Você tem <b>0</b> refrigerante grátis (1 por marmita).
           </p>
           <div id="promoRefriList" class="promo-refri-list" aria-live="polite"></div>
-        </fieldset> -->
+        </fieldset>
 
         <!-- Observações -->
         <label class="ord-lab ord-col2">
@@ -212,15 +219,8 @@
 
       <div class="sobre-conteudo sobre-coluna">
         <figure class="sobre-fig">
-          <img
-            src="dona_fatima.png"
-            alt="Dona Fátima, chef e fundadora do Sabor do Tempero"
-            class="sobre-foto"
-            width="320"
-            height="320"
-            loading="lazy"
-            decoding="async"
-          >
+          <img src="dona_fatima.png" alt="Dona Fátima, chef e fundadora do Sabor do Tempero" class="sobre-foto"
+            width="320" height="320" loading="lazy" decoding="async">
           <figcaption class="sr-only">Dona Fátima, chef e fundadora</figcaption>
         </figure>
 
@@ -232,15 +232,24 @@
     </div>
   </section>
 
-<footer class="footer">
-  <div class="container">
-    <p class="footer-text">
-      © 2025 Sabor do Tempero · Feito com amor 
-      <span style="color: #e25555;">❤️</span> 
-      por <a href="https://henriquesilva.dev" target="_blank" rel="noopener noreferrer">Henrique Silva Dev</a>
-    </p>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2025 Sabor do Tempero · Feito com amor
+        <span style="color: #e25555;">❤️</span>
+        por <a href="https://henriquesilva.dev" target="_blank" rel="noopener noreferrer">Henrique Silva Dev</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- BANNER FLUTUANTE -->
+  <div id="floatingPromo" class="floating-promo">
+    <div class="floating-promo-content">
+      <span class="floating-promo-icon">🎁</span>
+      <p>Fazendo o pedido pelo site, <strong>Ganhe um refri de brinde!</strong></p>
+      <button id="closeFloatingPromo" class="floating-promo-close" aria-label="Fechar">×</button>
+    </div>
   </div>
-</footer>
 
   <script src="/env.js"></script>
   <script type="module" src="/scripts/firebase-init.mjs"></script>
@@ -275,7 +284,7 @@
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
-    const db   = getFirestore(app);
+    const db = getFirestore(app);
 
     // login anônimo garantido
     await signInAnonymously(auth);
@@ -283,7 +292,8 @@
     onAuthStateChanged(auth, (u) => { currentUid = u?.uid || null; });
 
     // torna acessível no seu app.js
-    window.__fb = { db, auth, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp, get uid(){return currentUid;} };
+    window.__fb = { db, auth, onSnapshot, doc, collection, setDoc, deleteDoc, serverTimestamp, get uid() { return currentUid; } };
   </script>
 </body>
+
 </html>

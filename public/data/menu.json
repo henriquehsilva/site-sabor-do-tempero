@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-21",
+    "data": "2025-11-22",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -48,7 +48,7 @@
       "itens": [
         "Mandioca",
         "Couve refogada",
-        "Escondidinho de frango"        
+        "Escondidinho de frango"
       ],
       "disponivel": false
     },
@@ -62,7 +62,7 @@
       ],
       "itens": [
         "Couve flor na manteiga",
-        "Escondidinho de carne"        
+        "Escondidinho de carne"
       ],
       "disponivel": false
     },
@@ -81,7 +81,6 @@
         "Bacon",
         "Mussarela",
         "Ervilha"
-
       ],
       "disponivel": false
     },
@@ -130,7 +129,7 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha"        
+        "Batata palha"
       ],
       "disponivel": true
     },
@@ -146,7 +145,7 @@
         "Charutinho de repolho",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -175,7 +174,7 @@
       ],
       "itens": [
         "Couve flor gratinada",
-        "Panqueca de frango"        
+        "Panqueca de frango"
       ],
       "disponivel": false
     },
@@ -207,7 +206,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -295,7 +294,7 @@
       "preco": 25.0,
       "imagem": "/pratos/costela_mandioca.png",
       "galeria": [
-        "/pratos/costela_mandioca.png"        
+        "/pratos/costela_mandioca.png"
       ],
       "itens": [
         "Couve",
@@ -309,13 +308,13 @@
       "preco": 25.0,
       "imagem": "/pratos/costela_bovina.jpeg",
       "galeria": [
-        "/pratos/costela_bovina.jpeg"        
+        "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
         "Charutinho de repolho",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_cenoura",
@@ -325,11 +324,11 @@
       "galeria": [
         "/pratos/carne_cenoura_preview.jpeg",
         "/pratos/carne_cenoura.png",
-        "/pratos/carne_cenoura.jpeg"      
+        "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
         "Escondidinho de frango",
-        "Brócolis na manteiga"        
+        "Brócolis na manteiga"
       ],
       "disponivel": false
     },
@@ -340,7 +339,7 @@
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
         "/pratos/carne_panela.png",
-        "/pratos/carne_panela_1.jpeg"      
+        "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
         "Banana frita",
@@ -373,7 +372,7 @@
       "galeria": [
         "/pratos/costelinha_suina.jpeg",
         "/pratos/costelinha_suina.png",
-        "/pratos/costela_mandioca.jpeg"     
+        "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
         "Cabutia com quiabo",
@@ -392,7 +391,7 @@
       ],
       "itens": [
         "Lasanha de frango",
-        "Batata rustica"        
+        "Batata rustica"
       ],
       "disponivel": false
     },
@@ -402,7 +401,7 @@
       "preco": 25.0,
       "imagem": "/pratos/isca_frango_empanada.jpeg",
       "galeria": [
-        "/pratos/isca_frango_empanada.jpeg"  
+        "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
         "Batata souté",
@@ -440,7 +439,7 @@
       ],
       "itens": [
         "Banana frita",
-        "Seleta de legumes"        
+        "Seleta de legumes"
       ],
       "disponivel": false
     },
@@ -453,7 +452,6 @@
         "/pratos/alcatra_suina_2.jpeg",
         "/pratos/alcatra_suina.jpeg",
         "/pratos/alcatra_suina_1.jpeg"
-              
       ],
       "itens": [
         "Batata rustica",
