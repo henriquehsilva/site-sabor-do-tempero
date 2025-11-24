@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-22",
+    "data": "2025-11-24",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -362,7 +362,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -438,10 +438,24 @@
         "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
-        "Banana frita",
+        "Escondidinho de carne",
         "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
+    },
+    {
+      "id": "rabada_molho",
+      "nome": "Rabada ao molho",
+      "preco": 25.0,
+      "imagem": "/pratos/rabada_molho.jpeg",
+      "galeria": [
+        "/pratos/rabada_molho.jpeg"
+      ],
+      "itens": [
+        "Escondidinho de carne",
+        "Seleta de legumes"
+      ],
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
