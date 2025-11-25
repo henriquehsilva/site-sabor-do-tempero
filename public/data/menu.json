@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-24",
+    "data": "2025-11-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -61,10 +61,10 @@
         "/pratos/peixe_assado.jpg"
       ],
       "itens": [
-        "Couve flor na manteiga",
-        "Escondidinho de carne"
+        "Batata rustica",
+        "Legumes no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_goiana",
@@ -206,7 +206,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -283,10 +283,10 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Brocolis na manteiga"
+        "Panqueca de carne",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -297,10 +297,10 @@
         "/pratos/costela_mandioca.png"
       ],
       "itens": [
-        "Couve",
-        "Quibe assado"
+        "Panqueca de carne",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -441,7 +441,7 @@
         "Escondidinho de carne",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -455,7 +455,7 @@
         "Escondidinho de carne",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
