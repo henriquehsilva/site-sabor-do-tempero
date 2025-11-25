@@ -292,9 +292,9 @@
       "id": "costela_mandioca",
       "nome": "Costela com mandioca",
       "preco": 25.0,
-      "imagem": "/pratos/costela_mandioca.png",
+      "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
-        "/pratos/costela_mandioca.png"
+        "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
         "Panqueca de carne",
