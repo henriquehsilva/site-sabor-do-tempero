@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-25",
+    "data": "2025-11-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -64,7 +64,7 @@
         "Batata rustica",
         "Legumes no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_goiana",
@@ -142,10 +142,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Charutinho de repolho",
-        "Batata rustica"
+        "Batata recheada",
+        "Banana frita",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -286,7 +287,7 @@
         "Panqueca de carne",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -300,7 +301,7 @@
         "Panqueca de carne",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -362,7 +363,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -468,12 +469,11 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Batata rustica",
-        "Farofa com bacon",
+        "Mandioca cozida",        
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
