@@ -118,8 +118,9 @@
       "id": "strogonoff",
       "nome": "Strogonoff de Frango",
       "preco": 25.0,
-      "imagem": "/pratos/strogonoff_preview.jpg",
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
         "/pratos/strogonoff_preview.jpg",
         "/pratos/strogonoff.jpg",
         "/pratos/strogonoff_2.jpg",
@@ -183,8 +184,9 @@
       "id": "file_parmegiana",
       "nome": "Filé de frango à parmegiana",
       "preco": 25.0,
-      "imagem": "/pratos/file_parmegiana.jpg",
+      "imagem": "/pratos/file_parmegiana_preview.jpg",
       "galeria": [
+        "/pratos/file_parmegiana_preview.jpg",
         "/pratos/file_parmegiana.jpg"
       ],
       "itens": [
@@ -246,8 +248,9 @@
       "id": "dobradinha_linguica_bacon",
       "nome": "Dobradinha com bacon",
       "preco": 25.0,
-      "imagem": "/pratos/dobradinha_calabresa_2.jpg",
+      "imagem": "/pratos/dobradinha_calabresa_preview.jpg",
       "galeria": [
+        "/pratos/dobradinha_calabresa_preview.jpg",
         "/pratos/dobradinha_calabresa_2.jpg",
         "/pratos/dobradinha_calabresa.jpg",
         "/pratos/dobradinha_calabresa_1.jpg"
@@ -369,8 +372,9 @@
       "id": "costelinha_suina",
       "nome": "Costelinha suína assada",
       "preco": 25.0,
-      "imagem": "/pratos/costelinha_suina.jpeg",
+      "imagem": "/pratos/costelinha_suina_preview.jpeg",
       "galeria": [
+        "/pratos/costelinha_suina_preview.jpeg",
         "/pratos/costelinha_suina.jpeg",
         "/pratos/costelinha_suina.png",
         "/pratos/costela_mandioca.jpeg"
@@ -462,8 +466,9 @@
       "id": "alcatra_suina",
       "nome": "Alcatra suina",
       "preco": 25.0,
-      "imagem": "/pratos/alcatra_suina_2.jpeg",
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
+        "/pratos/alcatra_suina_preview.jpeg",
         "/pratos/alcatra_suina_2.jpeg",
         "/pratos/alcatra_suina.jpeg",
         "/pratos/alcatra_suina_1.jpeg"
