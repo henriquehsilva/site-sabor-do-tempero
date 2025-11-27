@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-26",
+    "data": "2025-11-27",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -146,7 +146,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -188,10 +188,10 @@
         "/pratos/file_parmegiana.jpg"
       ],
       "itens": [
-        "Batata frita",
+        "Pure gratinado",
         "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -253,10 +253,10 @@
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Farofa com bacon",
-        "Batata frita"
+        "Mandioca frita",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_grelhado",
@@ -363,7 +363,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -376,11 +376,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Cabutia com quiabo",
-        "Farofa tropical",
-        "Banana frita"
+        "Mandioca frita",
+        "Couve refogada",
+        "Pure gratinado"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
