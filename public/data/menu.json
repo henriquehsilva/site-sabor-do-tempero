@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-27",
+    "data": "2025-11-28",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -51,6 +51,36 @@
         "Escondidinho de frango"
       ],
       "disponivel": false
+    },
+    {
+      "id": "escalope_alcatra",
+      "nome": "Escalope de alcatra",
+      "preco": 25.0,
+      "imagem": "/pratos/escalope_alcatra.png",
+      "galeria": [
+        "/pratos/escalope_alcatra.png"
+      ],
+      "itens": [
+        "Lasanha de frango",
+        "Batata rustica",
+        "Banana frita"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "file_frango_molho_branco",
+      "nome": "File de frango ao molho branco e ervas",
+      "preco": 25.0,
+      "imagem": "/pratos/file_frango_molho_branco.png",
+      "galeria": [
+        "/pratos/file_frango_molho_branco.png"
+      ],
+      "itens": [
+        "Lasanha de frango",
+        "Batata rustica",
+        "Banana frita"
+      ],
+      "disponivel": true
     },
     {
       "id": "peixe_assado",
@@ -193,7 +223,7 @@
         "Pure gratinado",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -259,7 +289,7 @@
         "Mandioca frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -366,7 +396,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -384,7 +414,7 @@
         "Couve refogada",
         "Pure gratinado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -478,7 +508,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
