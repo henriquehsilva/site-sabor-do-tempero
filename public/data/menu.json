@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-11-28",
+    "data": "2025-11-29",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -65,7 +65,7 @@
         "Batata rustica",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -80,7 +80,7 @@
         "Batata rustica",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "peixe_assado",
@@ -239,7 +239,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -396,7 +396,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -412,9 +412,10 @@
       "itens": [
         "Mandioca frita",
         "Couve refogada",
-        "Pure gratinado"
+        "Farofa",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
