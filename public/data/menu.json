@@ -100,8 +100,9 @@
       "id": "panelinha_goiana",
       "nome": "Panelinha goiana",
       "preco": 25.0,
-      "imagem": "/pratos/panelinha_goiana.jpg",
+      "imagem": "/pratos/panelinha_goiana_preview.jpg",
       "galeria": [
+        "/pratos/panelinha_goiana_preview.jpg",
         "/pratos/panelinha_goiana.jpg",
         "/pratos/panelinha_goiana_1.jpg"
       ],
@@ -402,8 +403,9 @@
       "id": "costelinha_suina",
       "nome": "Costelinha suína assada",
       "preco": 25.0,
-      "imagem": "/pratos/costelinha_suina_preview.jpeg",
+      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
+        "/pratos/costelinha_suina_preview_1.jpeg",
         "/pratos/costelinha_suina_preview.jpeg",
         "/pratos/costelinha_suina.jpeg",
         "/pratos/costelinha_suina.png",
@@ -433,8 +435,9 @@
       "id": "isca_frango_empanada",
       "nome": "Isca de frango empanada",
       "preco": 25.0,
-      "imagem": "/pratos/isca_frango_empanada.jpeg",
+      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
+        "/pratos/isca_frango_empanada_preview.jpeg",
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
