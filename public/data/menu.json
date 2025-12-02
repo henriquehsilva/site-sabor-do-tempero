@@ -230,8 +230,9 @@
       "id": "panelinha_mineira",
       "nome": "Panelinha mineira",
       "preco": 25.0,
-      "imagem": "/pratos/panelinha_mineira.jpg",
+      "imagem": "/pratos/panelinha_mineira_preview.jpg",
       "galeria": [
+        "/pratos/panelinha_mineira_preview.jpg",
         "/pratos/panelinha_mineira.jpg"
       ],
       "itens": [
@@ -310,8 +311,9 @@
       "id": "sobrecoxa_recheado",
       "nome": "Sobre coxa recheado",
       "preco": 25.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
         "/pratos/sobrecoxa_recheado_preview.jpeg",
         "/pratos/sobrecoxa_recheado_2.jpeg",
         "/pratos/sobrecoxa_recheado_1.jpeg",
@@ -356,8 +358,9 @@
       "id": "carne_cenoura",
       "nome": "Carne com cenoura",
       "preco": 25.0,
-      "imagem": "/pratos/carne_cenoura_preview.jpeg",
+      "imagem": "/pratos/carne_cenoura_preview_1.jpeg",
       "galeria": [
+        "/pratos/carne_cenoura_preview_1.jpeg",
         "/pratos/carne_cenoura_preview.jpeg",
         "/pratos/carne_cenoura.png",
         "/pratos/carne_cenoura.jpeg"
