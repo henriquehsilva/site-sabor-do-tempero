@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-01",
+    "data": "2025-12-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -113,7 +113,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -240,7 +240,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -318,10 +318,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Batata souté"
+        "Panqueca de frango",
+        "Batata rustica",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -362,10 +363,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Brócolis na manteiga"
+        "Panqueca de frango",
+        "Batata rustica",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -415,7 +417,7 @@
         "Escondidinho de frango",
         "Legumes no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -444,7 +446,7 @@
         "Escondidinho de frango",
         "Legumes no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
