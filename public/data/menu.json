@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-02",
+    "data": "2025-12-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -221,10 +221,10 @@
         "/pratos/file_parmegiana.jpg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Seleta de legumes"
+        "Batata frita",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -241,7 +241,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -271,10 +271,10 @@
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Banana frita",
-        "Seleta de legumes"
+        "Batata frita",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_linguica_bacon",
@@ -324,7 +324,7 @@
         "Batata rustica",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -370,7 +370,7 @@
         "Batata rustica",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -510,11 +510,10 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Mandioca cozida",        
-        "Banana frita",
-        "Couve refogada"
+        "Mandioca temperada",        
+        "Macarrão com bacon alho e óleo"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
