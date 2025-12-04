@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-03",
+    "data": "2025-12-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -61,11 +61,10 @@
         "/pratos/escalope_alcatra.png"
       ],
       "itens": [
-        "Lasanha de frango",
-        "Batata rustica",
-        "Banana frita"
+        "Lasanha a bolonhesa",
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -174,11 +173,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Batata recheada",
-        "Banana frita",
-        "Couve refogada"
+        "Lasanha a bolonhesa",
+        "Pure de cabotia"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -224,7 +222,7 @@
         "Batata frita",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -241,7 +239,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -274,7 +272,7 @@
         "Batata frita",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_linguica_bacon",
@@ -513,7 +511,7 @@
         "Mandioca temperada",        
         "Macarrão com bacon alho e óleo"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
