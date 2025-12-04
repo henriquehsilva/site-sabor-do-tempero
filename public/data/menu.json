@@ -56,9 +56,9 @@
       "id": "escalope_alcatra",
       "nome": "Escalope de alcatra",
       "preco": 25.0,
-      "imagem": "/pratos/escalope_alcatra.png",
+      "imagem": "/pratos/escalope_alcatra.jpeg",
       "galeria": [
-        "/pratos/escalope_alcatra.png"
+        "/pratos/escalope_alcatra.jpeg"
       ],
       "itens": [
         "Lasanha a bolonhesa",
@@ -168,8 +168,9 @@
       "id": "frango_maionese",
       "nome": "Frango assado na maionese",
       "preco": 25.0,
-      "imagem": "/pratos/frango_maionese_3.jpg",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
+        "/pratos/frango_maionese_1.jpg",
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
