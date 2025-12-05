@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-04",
+    "data": "2025-12-05",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -64,7 +64,7 @@
         "Lasanha a bolonhesa",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -177,7 +177,7 @@
         "Lasanha a bolonhesa",
         "Pure de cabotia"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -240,7 +240,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -416,10 +416,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Legumes no vapor"
+        "Quibe assado",
+        "Farofa com bacon",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -478,10 +479,10 @@
         "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Seleta de legumes"
+        "Quibe assado",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
