@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-05",
+    "data": "2025-12-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -46,11 +46,11 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Mandioca",
+        "Farofa",
         "Couve refogada",
-        "Escondidinho de frango"
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -112,7 +112,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "picadinho_cenoura",
@@ -420,7 +420,7 @@
         "Farofa com bacon",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -482,7 +482,7 @@
         "Quibe assado",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
