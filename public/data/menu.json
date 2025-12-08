@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-06",
+    "data": "2025-12-08",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -50,7 +50,7 @@
         "Couve refogada",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -75,11 +75,11 @@
         "/pratos/file_frango_molho_branco.png"
       ],
       "itens": [
-        "Lasanha de frango",
-        "Batata rustica",
-        "Banana frita"
+        "Escondidinho de carne",
+        "Farofa com bacon",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "peixe_assado",
@@ -112,7 +112,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -381,10 +381,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Banana frita",
-        "Seleta de legumes"
+        "Escondidinho de carne",
+        "Farofa com bacon",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -401,7 +402,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
