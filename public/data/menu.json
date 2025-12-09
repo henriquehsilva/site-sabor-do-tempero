@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-08",
+    "data": "2025-12-09",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -79,7 +79,7 @@
         "Farofa com bacon",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "peixe_assado",
@@ -319,11 +319,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata rustica",
-        "Couve refogada"
+        "Panqueca de carne",
+        "Arroz branco",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -385,7 +385,7 @@
         "Farofa com bacon",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -402,7 +402,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -417,11 +417,12 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Quibe assado",
-        "Farofa com bacon",
-        "Batata rustica"
+        "Panqueca de carne",
+        "Arroz branco",
+        "Batata rustica",
+        "Tutu de feijão com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
