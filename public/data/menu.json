@@ -212,7 +212,7 @@
     },
     {
       "id": "file_parmegiana",
-      "nome": "Filé de frango à parmegiana",
+      "nome": "Filé de frango à parmegiana ou à milanesa",
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana_preview.jpg",
       "galeria": [
@@ -484,7 +484,7 @@
         "Pure gratinado",
         "Legumes no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
