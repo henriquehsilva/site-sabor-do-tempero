@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-09",
+    "data": "2025-12-10",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -61,10 +61,10 @@
         "/pratos/escalope_alcatra.jpeg"
       ],
       "itens": [
-        "Lasanha a bolonhesa",
-        "Seleta de legumes"
+        "Pure gratinado",
+        "Legumes no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -323,7 +323,7 @@
         "Arroz branco",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -422,7 +422,7 @@
         "Batata rustica",
         "Tutu de feijão com bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -481,10 +481,10 @@
         "/pratos/frango_milanesa_1.jpeg"
       ],
       "itens": [
-        "Quibe assado",
-        "Batata rustica"
+        "Pure gratinado",
+        "Legumes no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
