@@ -220,10 +220,10 @@
         "/pratos/file_parmegiana.jpg"
       ],
       "itens": [
-        "Batata frita",
-        "Legumes na manteiga"
+        "Pure gratinado",
+        "Legumes no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
