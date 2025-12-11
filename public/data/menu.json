@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-10",
+    "data": "2025-12-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -64,7 +64,7 @@
         "Pure gratinado",
         "Legumes no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -223,7 +223,7 @@
         "Pure gratinado",
         "Legumes no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -365,11 +365,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata rustica",
-        "Couve refogada"
+        "Polenta gratinada",
+        "Batata souté",
+        "Pure de cabotia"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -417,12 +417,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Arroz branco",
-        "Batata rustica",
-        "Tutu de feijão com bacon"
+        "Pure de cabotia",
+        "Batata souté",
+        "Polenta gratinada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -499,6 +498,21 @@
         "Seleta de legumes"
       ],
       "disponivel": false
+    },
+    {
+      "id": "frango_curry",
+      "nome": "Frango ao molho curry",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_curry.jpeg",
+      "galeria": [
+        "/pratos/frango_curry.jpeg"
+      ],
+      "itens": [
+        "Polenta gratinada",
+        "Batata souté",
+        "Pure de cabotia"
+      ],
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
