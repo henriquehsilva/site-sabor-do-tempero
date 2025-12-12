@@ -162,7 +162,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -174,10 +174,12 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Lasanha a bolonhesa",
-        "Pure de cabotia"
+        "Panqueca de frango",
+        "Banana frita",
+        "Mandioca frita",
+        "Tutu de feijão com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -348,10 +350,12 @@
         "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
-        "Charutinho de repolho",
-        "Batata rustica"
+        "Panqueca de frango",
+        "Banana frita",
+        "Mandioca frita",
+        "Tutu de feijão com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_cenoura",
@@ -369,7 +373,7 @@
         "Batata souté",
         "Pure de cabotia"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -402,7 +406,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -421,7 +425,7 @@
         "Batata souté",
         "Polenta gratinada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -512,7 +516,7 @@
         "Batata souté",
         "Pure de cabotia"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
