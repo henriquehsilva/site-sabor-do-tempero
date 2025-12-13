@@ -189,66 +189,6 @@ async function carregarMenu() {
   }
 }
 
-// ================= [PROMO-REFRIxQTY] Helpers =================
-// ================= [PROMO-REFRIxQTY] Helpers =================
-const PROMO_BEBIDAS = {
-  'pepsi-200': 'Pepsi (200ml)',
-  'laranja-200': 'Refri de Laranja (200ml)',
-  'guarana-200': 'Guaraná Antarctica (200ml)',
-  'sem-refri': 'Não quero refrigerante'
-};
-
-// Cria uma linha (select) para 1 refri grátis
-function makeRefriRow(idx, defaultVal = 'pepsi-200') {
-  const div = document.createElement('div');
-  div.className = 'row';
-  div.innerHTML = `
-    <span class="idx">#${idx}</span>
-    <select class="promo-refri-sel" aria-label="Refrigerante grátis #${idx}">
-      ${Object.entries(PROMO_BEBIDAS).map(([val, label]) =>
-    `<option value="${val}" ${val === defaultVal ? 'selected' : ''}>${label}</option>`
-  ).join('')}
-    </select>
-  `;
-  return div;
-}
-
-/**
- * Sincroniza a UI de bebidas grátis com o total de marmitas (somatório de quantidades)
- * - Mantém o que já foi escolhido quando possível
- */
-function syncPromoRefriUI(totalMarmitas) {
-  const list = document.getElementById('promoRefriList');
-  const msg = document.getElementById('promoRefriMsg');
-  if (!list || !msg) return;
-
-  // Lê seleções atuais para tentar preservar
-  const current = [...list.querySelectorAll('.promo-refri-sel')].map(s => s.value);
-
-  const need = Math.max(0, Number(totalMarmitas) || 0);
-  list.innerHTML = '';
-  for (let i = 1; i <= need; i++) {
-    const prev = current[i - 1] || 'pepsi-200';
-    list.appendChild(makeRefriRow(i, prev));
-  }
-
-  // Atualiza texto
-  msg.innerHTML = `Você tem <b>${need}</b> refrigerante${need === 1 ? '' : 's'} grátis (1 por marmita).`;
-}
-
-/** Retorna array de ids de bebidas selecionadas, p.ex. ['coca-zero-200','fanta-200'] */
-function getSelectedPromoRefriList() {
-  return [...document.querySelectorAll('#promoRefriList .promo-refri-sel')].map(s => s.value);
-}
-
-/** Resumo agregando quantidades por bebida (útil para Whats) */
-function groupBebidasById(ids) {
-  const map = new Map();
-  ids.forEach(id => map.set(id, (map.get(id) || 0) + 1));
-  // retorna [{id, nome, qtd}]
-  return [...map.entries()].map(([id, qtd]) => ({ id, nome: PROMO_BEBIDAS[id] || id, qtd }));
-}
-
 
 function renderizarMenu() {
   if (!menuData) return;
@@ -612,7 +552,7 @@ function configurarBotoes(flags) {
       btnWhatsApp.addEventListener('click', (e) => {
         e.preventDefault();
         openOrderModal(); // abre o modal
-        // renderPromoRefri(form);
+
       });
       btnWhatsApp.style.display = 'inline-flex';
     } else {
@@ -655,7 +595,7 @@ function openOrderModal() {
     const savedPhone = localStorage.getItem('userPhone');
     if (savedPhone) document.getElementById('cliFone').value = formatDisplayPhone(savedPhone);
   } catch (_) { }
-  syncPromoRefriUI(0);
+
   updateOrderTotals();
   toggleOrderModal(true);
 }
@@ -779,9 +719,6 @@ function updateOrderTotals() {
     totalMarmitas += qty; // <<< soma quantidade
   });
 
-  // >>> NOVO: sincroniza a UI de bebidas grátis com a quantidade total de marmitas
-  syncPromoRefriUI(totalMarmitas);
-
   // (restante dos seus cálculos já SEM desconto)
   const desconto = 0;
   const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
@@ -845,10 +782,6 @@ async function handleSubmitOrder(e) {
   const frete = localVal === 'esplanada' ? 5.00 : 0.00;
   const total = Math.max(0, subtotal) + frete;
 
-  // >>> NOVO: bebidas selecionadas (1 por marmita)
-  const bebidasIDs = getSelectedPromoRefriList();   // ex.: ['coca-zero-200','fanta-200']
-  const bebidasAgg = groupBebidasById(bebidasIDs);  // ex.: [{id:'coca-zero-200', nome:'Coca...', qtd:2}, ...]
-
   // 👉 pede geolocalização (não bloqueia o fluxo se falhar)
   const coords = await requestLocation().catch(() => null);
   const mapsLink = buildMapsLink(coords);
@@ -864,10 +797,6 @@ async function handleSubmitOrder(e) {
       geo: coords ? { ...coords, maps: mapsLink } : null
     },
     itens: items,
-    promocao: {
-      tipo: 'refri-gratis',
-      bebidas: bebidasAgg       // <<< lista agregada com qtd
-    },
     financeiro: { subtotal, frete, total, moeda: 'BRL', origem: 'sem-promo' },
     obs,
     criadoEm: new Date().toISOString(),
@@ -936,12 +865,6 @@ function buildOrderMessage(pedido, orderId) {
   const maps = pedido?.cliente?.geo?.maps;
   if (maps) linhas.push(`📍 *Localização no mapa:* ${maps}`);
   if (pedido.obs) linhas.push(`📝 *Obs.:* ${pedido.obs}`);
-
-  // >>> NOVO: várias bebidas
-  if (pedido.promocao?.tipo === 'refri-gratis' && Array.isArray(pedido.promocao.bebidas) && pedido.promocao.bebidas.length) {
-    const bloc = pedido.promocao.bebidas.map(b => `${b.qtd}× ${b.nome}`).join(' · ');
-    linhas.push(`🎁 *Promo:* ${bloc}`);
-  }
 
   linhas.push('');
   linhas.push('🍽️ *Itens:*');

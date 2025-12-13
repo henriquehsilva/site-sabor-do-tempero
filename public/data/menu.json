@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-11",
+    "data": "2025-12-13",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -162,7 +162,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -179,7 +179,7 @@
         "Mandioca frita",
         "Tutu de feijão com bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -355,7 +355,7 @@
         "Mandioca frita",
         "Tutu de feijão com bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_cenoura",
@@ -406,7 +406,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -421,11 +421,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Pure de cabotia",
-        "Batata souté",
-        "Polenta gratinada"
+        "Couve refogada",
+        "Farofa",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",

@@ -754,20 +754,6 @@ a {
   background: #FFFBEB;
 }
 
-.promo-refri-list .row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.promo-refri-sel {
-  flex: 1;
-  padding: 0.5rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid #D1D5DB;
-}
-
 .ord-totais {
   background: #FFFBEB;
   padding: 1.5rem;
