@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-13",
+    "data": "2025-12-15",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -223,9 +223,9 @@
       ],
       "itens": [
         "Pure gratinado",
-        "Legumes no vapor"
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -369,11 +369,10 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Polenta gratinada",
-        "Batata souté",
-        "Pure de cabotia"
+        "Pure gratinado",
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -406,7 +405,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -425,7 +424,7 @@
         "Farofa",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
