@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-15",
+    "data": "2025-12-16",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -225,7 +225,7 @@
         "Pure gratinado",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -242,7 +242,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -372,7 +372,7 @@
         "Pure gratinado",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -405,7 +405,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -420,11 +420,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Couve refogada",
-        "Farofa",
-        "Banana frita"
+        "Creme de milho",
+        "Batata rustica"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -450,10 +449,10 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Legumes no vapor"
+        "Creme de milho",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
