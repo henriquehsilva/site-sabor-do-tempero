@@ -984,3 +984,27 @@ a {
     max-width: none;
   }
 }
+
+/* ===== SODA SELECTION ===== */
+.ord-sodas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.ord-soda-item {
+  background: #f9fafb;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  box-shadow: var(--sombra-sm);
+}
+
+.ord-soda-sel {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem;
+  font-size: var(--fs-sm);
+  background-color: #fff;
+}

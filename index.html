@@ -44,21 +44,22 @@
     <div class="promo-bar-inner">
 
       <div class="promo-img-wrap">
-        <img class="promo-img form" src="/pratos/form.jpg" alt="Form" loading="lazy" decoding="async" />
+        <!-- <img class="promo-img form" src="/pratos/form.jpg" alt="Form" loading="lazy" decoding="async" /> -->
         <!-- <img class="promo-img coca"    src="/pratos/coca.webp"    alt="Coca-Cola gelada"     loading="lazy" decoding="async" /> -->
         <!-- <img class="promo-img fanta"   src="/pratos/fanta.webp"   alt="Fanta laranja gelada" loading="lazy" decoding="async" /> -->
-        <!-- <img class="promo-img guarana" src="/pratos/guarana.webp" alt="Guaraná gelado"       loading="lazy" decoding="async" />
-          <img class="promo-img pepsi"   src="/pratos/pepsi.webp"   alt="Pepsi gelada"         loading="lazy" decoding="async" /> -->
-        <!-- <img class="promo-img sukita"  src="/pratos/sukita.webp"  alt="Sukita gelada"        loading="lazy" decoding="async" /> -->
+        <img class="promo-img guarana" src="/pratos/guarana.webp" alt="Guaraná gelado" loading="lazy"
+          decoding="async" />
+        <img class="promo-img pepsi" src="/pratos/pepsi.webp" alt="Pepsi gelada" loading="lazy" decoding="async" />
+        <img class="promo-img sukita" src="/pratos/sukita.webp" alt="Sukita gelada" loading="lazy" decoding="async" />
       </div>
 
       <div class="promo-text">
         <p class="promo-title">
-          Comprando pelo site, <strong>é rápido e fácil!</strong> 🥤
+          GANHE UM <strong>REFRIGERANTE 200ML</strong> POR MARMITA! 🥤
         </p>
 
         <a href="#" id="btnWhatsApp" class="promo-btn">
-          Fazer pedido pelo site
+          Fazer pedido com Refrigerante Grátis
         </a>
       </div>
 
@@ -176,6 +177,12 @@
           <legend>Itens do pedido</legend>
           <div id="ordItems" class="ord-items"></div>
           <button type="button" class="ord-add" id="ordAddItem">+ Adicionar outra marmita 🍲</button>
+        </fieldset>
+
+        <!-- REFRIGERANTES (Dinâmico) -->
+        <fieldset class="ord-fieldset" id="sodaFieldset" style="display:none;">
+          <legend>Refrigerantes Grátis (1 por marmita)</legend>
+          <div class="ord-sodas-grid" id="ordSodas"></div>
         </fieldset>
 
 
