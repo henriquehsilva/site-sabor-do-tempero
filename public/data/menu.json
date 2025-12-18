@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-17",
+    "data": "2025-12-18",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -174,12 +174,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Panqueca de frango",
+        "Escondidinho de frango",        
         "Banana frita",
-        "Mandioca frita",
-        "Tutu de feijão com bacon"
+        "Couve refogada"    
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -324,7 +323,7 @@
         "Legumes salteados na manteiga",
         "Lasanha de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -352,7 +351,7 @@
         "Legumes salteados na manteiga",
         "Lasanha de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -382,10 +381,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Seleta de legumes"
+        "Escondidinho de frango",        
+        "Banana frita",
+        "Couve refogada"    
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -541,10 +541,11 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Mandioca temperada",        
-        "Macarrão com bacon alho e óleo"        
+        "Escondidinho de frango",        
+        "Mandioca cozida",
+        "Couve refogada"    
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
