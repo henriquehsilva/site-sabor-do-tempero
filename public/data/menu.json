@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-18",
+    "data": "2025-12-19",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -61,10 +61,10 @@
         "/pratos/escalope_alcatra.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Legumes no vapor"
+        "Batata frita",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -178,7 +178,7 @@
         "Banana frita",
         "Couve refogada"    
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -221,10 +221,10 @@
         "/pratos/file_parmegiana.jpg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Seleta de legumes"
+        "Batata frita",
+        "Legugumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -385,7 +385,7 @@
         "Banana frita",
         "Couve refogada"    
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -418,7 +418,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -545,7 +545,7 @@
         "Mandioca cozida",
         "Couve refogada"    
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
