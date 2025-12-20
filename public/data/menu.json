@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-19",
+    "data": "2025-12-20",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -29,11 +29,11 @@
         "Arroz branco",
         "Torresmo",
         "Linguiça",
-        "Banana",
+        "Banana frita",
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -64,7 +64,7 @@
         "Batata frita",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -223,7 +223,7 @@
         "Batata frita",
         "Legugumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -380,11 +380,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",        
+        "Farofa",        
         "Banana frita",
         "Couve refogada"    
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -417,7 +417,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
