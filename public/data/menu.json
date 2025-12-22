@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-20",
+    "data": "2025-12-22",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -322,7 +322,7 @@
         "Legumes salteados na manteiga",
         "Lasanha de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -350,7 +350,7 @@
         "Legumes salteados na manteiga",
         "Lasanha de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -384,7 +384,7 @@
         "Banana frita",
         "Couve refogada"    
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
