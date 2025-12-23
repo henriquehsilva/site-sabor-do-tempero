@@ -1050,12 +1050,6 @@ function requestLocation(options = { enableHighAccuracy: true, timeout: 8000, ma
   });
 }
 
-function buildMapsLink(coords) {
-  if (!coords) return "";
-  const { lat, lng } = coords;
-  return `https://maps.google.com/?q=${lat},${lng}`;
-}
-
 function buildWaLinks(phoneDigits, mensagem) {
   const p = (phoneDigits || "").replace(/\D/g, "");
   const t = encodeURIComponent(mensagem || "");
