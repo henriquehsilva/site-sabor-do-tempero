@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-22",
+    "data": "2025-12-23",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -220,10 +220,10 @@
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Batata frita",
-        "Legugumes na manteiga"
+        "Espaguete alho e óleo",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel":  true 
     },
     {
       "id": "panelinha_mineira",
@@ -255,10 +255,10 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Batata gratinada",
-        "Farofa de couve"
+        "Espaguete alho e óleo",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true 
     },
     {
       "id": "dobradinha_calabresa",
@@ -322,7 +322,7 @@
         "Legumes salteados na manteiga",
         "Lasanha de frango"
       ],
-      "disponivel": true
+      "disponivel":  false 
     },
     {
       "id": "costela_mandioca",
@@ -350,7 +350,7 @@
         "Legumes salteados na manteiga",
         "Lasanha de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
