@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-23",
+    "data": "2025-12-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -223,7 +223,7 @@
         "Espaguete alho e óleo",
         "Batata rustica"
       ],
-      "disponivel":  true 
+      "disponivel": false 
     },
     {
       "id": "panelinha_mineira",
@@ -258,7 +258,7 @@
         "Espaguete alho e óleo",
         "Batata rustica"
       ],
-      "disponivel": true 
+      "disponivel": false 
     },
     {
       "id": "dobradinha_calabresa",
@@ -347,10 +347,10 @@
         "/pratos/carne_molho_madeira.jpeg"
       ],
       "itens": [
-        "Legumes salteados na manteiga",
-        "Lasanha de frango"
+        "Panqueca de frango",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel":  true 
     },
     {
       "id": "costela_mandioca",
@@ -432,10 +432,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Creme de milho",
+        "Panqueca de frango",
         "Batata rustica"        
       ],
-      "disponivel": false
+      "disponivel": true 
     },
     {
       "id": "carne_suina",
