@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true 
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -51,7 +51,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true 
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -320,10 +320,10 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Legumes salteados na manteiga",
-        "Lasanha de frango"
+        "Escondidinho de frango",
+        "Seleta de legumes"
       ],
-      "disponivel":  false 
+      "disponivel": true 
     },
     {
       "id": "costela_mandioca",
@@ -348,10 +348,10 @@
         "/pratos/carne_molho_madeira.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata souté"
+        "Escondidinho de frango",
+        "Seleta de legumes"
       ],
-      "disponivel":  false 
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
