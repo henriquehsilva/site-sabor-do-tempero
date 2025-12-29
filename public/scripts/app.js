@@ -156,7 +156,7 @@ const SAMPLE_JSON = {
     "whatsapp": "+5562900000000"
   }
 };
-const SODA_OPTIONS = ["Sukita", "Pepsi", "Soda", "Guaraná"];
+const SODA_OPTIONS = ["Pepsi", "Soda", "Guaraná"];
 
 let menuData = null;
 
@@ -787,7 +787,7 @@ function renderSodaSelectors(qtd) {
     if (i < currentValues.length && currentValues[i]) {
       sel.value = currentValues[i];
     } else {
-      // Default: Sukita ou o primeiro
+      // Default: primeira opção disponível
       sel.value = SODA_OPTIONS[0];
     }
 
