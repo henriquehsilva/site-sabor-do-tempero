@@ -156,7 +156,7 @@ const SAMPLE_JSON = {
     "whatsapp": "+5562900000000"
   }
 };
-const SODA_OPTIONS = ["Pepsi", "Soda", "Guaraná"];
+const SODA_OPTIONS = ["Pepsi", "Guaraná"];
 
 let menuData = null;
 
