@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-27",
+    "data": "2025-12-30",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -323,7 +323,7 @@
         "Escondidinho de frango",
         "Seleta de legumes"
       ],
-      "disponivel": true 
+      "disponivel": false 
     },
     {
       "id": "costela_mandioca",
@@ -351,7 +351,7 @@
         "Escondidinho de frango",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -433,10 +433,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata rustica"        
+        "Pure gratinado",
+        "Espaguete alho e óleo"        
       ],
-      "disponivel": false 
+      "disponivel": true 
     },
     {
       "id": "carne_suina",
@@ -486,19 +486,17 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango a milanesa",
+      "nome": "Frango a parmegiana",
       "preco": 25.0,
-      "imagem": "/pratos/frango_milanesa_2.jpeg",
+      "imagem": "/pratos/file_parmegiana_preview.jpg",
       "galeria": [
-        "/pratos/frango_milanesa_2.jpeg",
-        "/pratos/frango_milanesa.jpeg",
-        "/pratos/frango_milanesa_1.jpeg"
+        "/pratos/file_parmegiana_preview.jpg"
       ],
       "itens": [
         "Pure gratinado",
-        "Legumes no vapor"
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
