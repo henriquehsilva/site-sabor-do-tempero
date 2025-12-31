@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-30",
+    "data": "2025-12-31",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -175,11 +175,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Escondidinho de frango",        
-        "Banana frita",
-        "Couve refogada"    
+       "lasanha de frango",
+       "batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -241,7 +240,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -381,11 +380,10 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Farofa",        
-        "Banana frita",
-        "Couve refogada"    
+        "Lasanha de frango",        
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -436,7 +434,7 @@
         "Pure gratinado",
         "Espaguete alho e óleo"        
       ],
-      "disponivel": true 
+      "disponivel": false 
     },
     {
       "id": "carne_suina",
@@ -496,7 +494,7 @@
         "Pure gratinado",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
