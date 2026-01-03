@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2025-12-31",
+    "data": "2026-01-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -178,7 +178,7 @@
        "lasanha de frango",
        "batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -383,7 +383,7 @@
         "Lasanha de frango",        
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -431,10 +431,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Espaguete alho e óleo"        
+        "Banana frita",
+        "Couve refogada",
+        "Farofa"
       ],
-      "disponivel": false 
+      "disponivel": true 
     },
     {
       "id": "carne_suina",
