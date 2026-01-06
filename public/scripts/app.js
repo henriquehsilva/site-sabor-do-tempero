@@ -156,7 +156,6 @@ const SAMPLE_JSON = {
     "whatsapp": "+5562900000000"
   }
 };
-const SODA_OPTIONS = ["Pepsi", "Guaraná"];
 
 let menuData = null;
 
@@ -517,15 +516,6 @@ function configurarBotoes(flags) {
   const btnOuvir = document.getElementById('btnOuvir');
   const btnWhatsApp = document.getElementById('btnWhatsApp');
   const btnFazerPedido = document.getElementById('btnFazerPedido');
-  const btnCloseFloating = document.getElementById('closeFloatingPromo');
-  const floatingPromo = document.getElementById('floatingPromo');
-
-  if (btnCloseFloating && floatingPromo) {
-    btnCloseFloating.addEventListener('click', () => {
-      floatingPromo.style.display = 'none';
-    });
-  }
-
   if (btnFazerPedido) {
     btnFazerPedido.addEventListener('click', (e) => {
       e.preventDefault();
@@ -707,17 +697,12 @@ function updateOrderTotals() {
   const rows = [...itemsBox.querySelectorAll('.ord-item')];
   let subtotal = 0;
 
-  // >>> NOVO: somatório de marmitas
-  let totalMarmitas = 0;
-
   rows.forEach(r => {
     const sel = r.querySelector('.ord-sel');
     const qty = Number(r.querySelector('.ord-qty')?.value || 0);
     if (!sel?.value || !Number.isFinite(qty) || qty <= 0) return;
     const unit = getDishPriceById(sel.value);
     subtotal += unit * qty;
-
-    totalMarmitas += qty; // <<< soma quantidade
   });
 
   // (restante dos seus cálculos já SEM desconto)
@@ -736,65 +721,6 @@ function updateOrderTotals() {
   if (elFrete) elFrete.textContent = money(frete);
   if (elTotal) elTotal.textContent = money(total);
 
-  renderSodaSelectors(totalMarmitas);
-}
-
-function renderSodaSelectors(qtd) {
-  const container = document.getElementById('ordSodas');
-  const fieldset = document.getElementById('sodaFieldset');
-  if (!container || !fieldset) return;
-
-  if (qtd <= 0) {
-    fieldset.style.display = 'none';
-    container.innerHTML = '';
-    return;
-  }
-
-  fieldset.style.display = 'block';
-
-  // Preserva seleções atuais
-  const currentSelects = [...container.querySelectorAll('select')];
-  const currentValues = currentSelects.map(s => s.value);
-
-  container.innerHTML = '';
-
-  for (let i = 0; i < qtd; i++) {
-    const div = document.createElement('div');
-    div.className = 'ord-soda-item';
-
-    const label = document.createElement('label');
-    label.textContent = `Bebida da marmita #${i + 1}`;
-    label.style.fontSize = '0.85rem';
-    label.style.display = 'block';
-    label.style.marginBottom = '4px';
-
-    const sel = document.createElement('select');
-    sel.className = 'ord-soda-sel';
-    sel.style.width = '100%';
-
-    // Opção padrão
-    // sel.innerHTML = '<option value="">Escolha...</option>'; 
-    // Pode ser melhor já vir selecionado algo ou vazio? Vamos deixar a primeira opção como disabled selected.
-
-    SODA_OPTIONS.forEach(opt => {
-      const o = document.createElement('option');
-      o.value = opt;
-      o.textContent = opt;
-      sel.appendChild(o);
-    });
-
-    // Tenta restaurar valor
-    if (i < currentValues.length && currentValues[i]) {
-      sel.value = currentValues[i];
-    } else {
-      // Default: primeira opção disponível
-      sel.value = SODA_OPTIONS[0];
-    }
-
-    div.appendChild(label);
-    div.appendChild(sel);
-    container.appendChild(div);
-  }
 }
 
 function money(n) { return `R$ ${Number(n || 0).toFixed(2).replace('.', ',')}`; }
@@ -837,21 +763,6 @@ async function handleSubmitOrder(e) {
     });
   });
   if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
-
-  // Coleta refrigerantes
-  const sodaSelects = [...document.querySelectorAll('.ord-soda-sel')];
-  sodaSelects.forEach((sel, i) => {
-    const sabor = sel.value;
-    if (sabor) {
-      items.push({
-        id: 'soda-' + i,
-        nome: `(Grátis) ${sabor} 200ml`,
-        preco: 0,
-        qtd: 1,
-        total: 0
-      });
-    }
-  });
 
   // totais (sem desconto)
   const subtotal = items.reduce((s, i) => s + i.total, 0);

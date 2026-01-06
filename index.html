@@ -40,32 +40,6 @@
     </div>
   </header>
 
-  <aside class="promo-bar" role="note" aria-live="polite">
-    <div class="promo-bar-inner">
-
-      <div class="promo-img-wrap">
-        <!-- <img class="promo-img form" src="/pratos/form.jpg" alt="Form" loading="lazy" decoding="async" /> -->
-        <!-- <img class="promo-img coca"    src="/pratos/coca.webp"    alt="Coca-Cola gelada"     loading="lazy" decoding="async" /> -->
-        <!-- <img class="promo-img fanta"   src="/pratos/fanta.webp"   alt="Fanta laranja gelada" loading="lazy" decoding="async" /> -->
-        <img class="promo-img guarana" src="/pratos/guarana.webp" alt="Guaraná gelado" loading="lazy"
-          decoding="async" />
-        <img class="promo-img pepsi" src="/pratos/pepsi.webp" alt="Pepsi gelada" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="promo-text">
-        <p class="promo-title">
-          GANHE UM <strong>REFRIGERANTE 200ML</strong> POR MARMITA! 🥤
-        </p>
-
-        <a href="#" id="btnWhatsApp" class="promo-btn">
-          Fazer pedido com Refrigerante Grátis
-        </a>
-      </div>
-
-      <button class="promo-close" id="promoClose" aria-label="Fechar aviso de promoção">✕</button>
-    </div>
-  </aside>
-
   <main class="main">
     <div class="container">
       <h1 class="titulo-dia" id="tituloDia">Cardápio do Dia</h1>
@@ -178,14 +152,6 @@
           <button type="button" class="ord-add" id="ordAddItem">+ Adicionar outra marmita 🍲</button>
         </fieldset>
 
-        <!-- REFRIGERANTES (Dinâmico) -->
-        <fieldset class="ord-fieldset" id="sodaFieldset" style="display:none;">
-          <legend>Refrigerantes Grátis (1 por marmita)</legend>
-          <div class="ord-sodas-grid" id="ordSodas"></div>
-        </fieldset>
-
-
-
         <!-- Observações -->
         <label class="ord-lab ord-col2">
           Observações
@@ -238,15 +204,6 @@
       </p>
     </div>
   </footer>
-
-  <!-- BANNER FLUTUANTE -->
-  <div id="floatingPromo" class="floating-promo">
-    <div class="floating-promo-content">
-      <span class="floating-promo-icon">🎁</span>
-      <p>Pedido online simples e rápido!</p>
-      <button id="closeFloatingPromo" class="floating-promo-close" aria-label="Fechar">×</button>
-    </div>
-  </div>
 
   <script src="/env.js"></script>
   <script type="module" src="/scripts/firebase-init.mjs"></script>
