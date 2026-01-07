@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-06",
+    "data": "2026-01-07",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -113,7 +113,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -350,7 +350,7 @@
         "Espaguete com bacon alho e óleo",
         "Batata souté"
       ], 
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -380,10 +380,10 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Seleta de legumes"
+        "Pure gratinado",
+        "Panqueca de frango moida com catupiry"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -453,7 +453,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Isca de frango empanada",
+      "nome": "File de Peixe empanado",
       "preco": 25.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -461,10 +461,10 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Creme de milho",
-        "Batata rustica"
+        "Pure gratinado",
+        "Panqueca de frango moida com catupiry"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -495,7 +495,7 @@
         "Batata souté",
         "Espaguete com bacon alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -538,11 +538,10 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",        
-        "Mandioca cozida",
-        "Couve refogada"    
+        "Pure de batata gratinado",        
+        "Panqueca de frango moida com catupiry"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
