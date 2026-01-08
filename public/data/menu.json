@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-07",
+    "data": "2026-01-08",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -175,10 +175,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-       "lasanha de frango",
-       "batata rustica"
+       "Quibe assado",
+       "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -287,10 +287,10 @@
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Mandioca frita",
-        "Couve refogada"
+        "Quibe assado",
+        "Seleta de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_grelhado",
@@ -354,17 +354,15 @@
     },
     {
       "id": "costela_mandioca",
-      "nome": "Costela bovina assada",
+      "nome": "Costela bovina molho mandioca",
       "preco": 25.0,
       "imagem": "/pratos/costela_bovina.jpeg",
       "galeria": [
         "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Banana frita",
-        "Mandioca frita",
-        "Tutu de feijão com bacon"
+      "Quibe assado",
+      "Seleta de legumes"
       ],
       "disponivel": false
     },
@@ -383,7 +381,7 @@
         "Pure gratinado",
         "Panqueca de frango moida com catupiry"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -420,7 +418,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha suína assada",
+      "nome": "Costelinha ao molho barbequiu",
       "preco": 25.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -431,11 +429,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Banana frita",
-        "Couve refogada",
-        "Farofa"
+        "Quibe assado",
+        "Seleta de legumes"
       ],
-      "disponivel": false 
+      "disponivel": true 
     },
     {
       "id": "carne_suina",
@@ -464,7 +461,7 @@
         "Pure gratinado",
         "Panqueca de frango moida com catupiry"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
@@ -541,21 +538,21 @@
         "Pure de batata gratinado",        
         "Panqueca de frango moida com catupiry"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
-      "nome": "Costela bovina de panela",
+      "nome": "Costela bovina ao molho madeira",
       "preco": 25.0,
       "imagem": "/pratos/costela_panela.png",
       "galeria": [
         "/pratos/costela_panela.png"
       ],
       "itens": [
-        "Escondidinho de frango",
+       "Seleta de legumes",
         "Quibebe de mandioca"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_recheado",
