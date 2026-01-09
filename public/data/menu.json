@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-08",
+    "data": "2026-01-09",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -178,7 +178,7 @@
        "Quibe assado",
        "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -290,7 +290,7 @@
         "Quibe assado",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -378,10 +378,10 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Panqueca de frango moida com catupiry"
+        "Lasanha de frango",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -418,7 +418,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha ao molho madeira",
+      "nome": "Costelinha suina assada",
       "preco": 25.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -429,8 +429,8 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Quibe assado",
-        "Seleta de legumes"
+        "Lasanha de frango",
+        "Batata souté"
       ],
       "disponivel": true 
     },
@@ -482,17 +482,17 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango a parmegiana",
+      "nome": "Frango a milanesa",
       "preco": 25.0,
-      "imagem": "/pratos/file_parmegiana_preview.jpg",
+      "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
-        "/pratos/file_parmegiana_preview.jpg"
+        "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
         "Batata souté",
-        "Espaguete com bacon alho e óleo"
+        "Lasanha de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -552,7 +552,7 @@
        "Seleta de legumes",
         "Quibebe de mandioca"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_recheado",
