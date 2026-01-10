@@ -181,6 +181,25 @@ a {
   color: var(--cor-primaria-dark);
 }
 
+.promo-banner {
+  background: #DCFCE7;
+  /* Verde bem suave */
+  color: #166534;
+  /* Verde escuro */
+  border: 1px solid #BBF7D0;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+  font-size: var(--fs-base);
+  box-shadow: var(--sombra-sm);
+}
+
+.promo-banner strong {
+  font-weight: 700;
+}
+
 /* ===== CARDÁPIO GRID ===== */
 .cardapio {
   display: grid;

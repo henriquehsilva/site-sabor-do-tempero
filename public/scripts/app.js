@@ -617,6 +617,27 @@ function addOrderItemRow(container) {
     sel.appendChild(opt);
   });
 
+  // Select de Refri (Promoção)
+  const selSoda = document.createElement('select');
+  selSoda.className = 'ord-sel ord-soda';
+  selSoda.style.marginTop = '0.5rem';
+  selSoda.setAttribute('aria-label', 'Escolha seu refrigerante grátis');
+
+  const sodaOpts = [
+    { val: '', text: 'Escolha seu refri grátis 🎁' },
+    { val: 'Pepsi 200ml', text: 'Pepsi 200ml' },
+    { val: 'Guaraná 200ml', text: 'Guaraná 200ml' },
+    { val: 'Soda 200ml', text: 'Soda 200ml' },
+    { val: 'Sem refri', text: 'Não quero refrigerante' }
+  ];
+
+  sodaOpts.forEach(o => {
+    const opt = document.createElement('option');
+    opt.value = o.val;
+    opt.textContent = o.text;
+    selSoda.appendChild(opt);
+  });
+
   // Linha de controles: stepper + remover
   const ctrls = document.createElement('div');
   ctrls.className = 'ord-ctrls';
@@ -684,6 +705,7 @@ function addOrderItemRow(container) {
 
   // Monta
   row.appendChild(sel);
+  row.appendChild(selSoda);
   row.appendChild(ctrls);
   container.appendChild(row);
 
@@ -754,12 +776,15 @@ async function handleSubmitOrder(e) {
     if (!id || qtd <= 0) return;
     const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
     const unit = getDishPriceById(id);
+    const soda = r.querySelector('.ord-soda')?.value || '';
+
     items.push({
       id,
       nome: prato?.nome || String(id),
       preco: unit,
       qtd,
-      total: unit * qtd
+      total: unit * qtd,
+      soda // salva o refri
     });
   });
   if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
@@ -857,6 +882,9 @@ function buildOrderMessage(pedido, orderId) {
   linhas.push('🍽️ *Itens:*');
   pedido.itens.forEach((i, idx) => {
     linhas.push(`${idx + 1}. ${i.nome}  x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
+    if (i.soda) {
+      linhas.push(`   🥤 *Refri:* ${i.soda}`);
+    }
   });
 
   linhas.push('');

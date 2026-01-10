@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-09",
+    "data": "2026-01-10",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -175,8 +175,8 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-       "Quibe assado",
-       "Seleta de legumes"
+        "Quibe assado",
+        "Seleta de legumes"
       ],
       "disponivel": false
     },
@@ -216,14 +216,14 @@
       "nome": "Filé de frango à parmejiana",
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
-      "galeria": [        
+      "galeria": [
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
         "Espaguete alho e óleo",
         "Batata rustica"
       ],
-      "disponivel": false 
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -258,7 +258,7 @@
         "Espaguete alho e óleo",
         "Batata rustica"
       ],
-      "disponivel": false 
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -322,7 +322,7 @@
         "Escondidinho de carne",
         "Seleta de legumes"
       ],
-      "disponivel": false 
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -349,7 +349,7 @@
       "itens": [
         "Espaguete com bacon alho e óleo",
         "Batata souté"
-      ], 
+      ],
       "disponivel": false
     },
     {
@@ -361,8 +361,8 @@
         "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
-      "Quibe assado",
-      "Seleta de legumes"
+        "Quibe assado",
+        "Seleta de legumes"
       ],
       "disponivel": false
     },
@@ -381,7 +381,7 @@
         "Lasanha de frango",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -432,7 +432,7 @@
         "Lasanha de frango",
         "Batata souté"
       ],
-      "disponivel": true 
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -492,7 +492,7 @@
         "Batata souté",
         "Lasanha de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -535,10 +535,11 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Pure de batata gratinado",        
-        "Panqueca de frango moida com catupiry"
+        "Banana frita",
+        "Couve refogada",
+        "Farofa"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
@@ -549,7 +550,7 @@
         "/pratos/costela_panela.png"
       ],
       "itens": [
-       "Seleta de legumes",
+        "Seleta de legumes",
         "Quibebe de mandioca"
       ],
       "disponivel": false
