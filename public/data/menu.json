@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-12",
+    "data": "2026-01-13",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -50,7 +50,7 @@
         "Batata rustica",
         "Salada de salpicão"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -112,7 +112,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -219,10 +219,10 @@
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
-        "Espaguete alho e óleo",
-        "Batata rustica"
+        "Pure gratinado",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -322,7 +322,7 @@
         "Batata rustica",
         "Salada de salpicão"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -414,7 +414,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -459,9 +459,9 @@
       ],
       "itens": [
         "Pure gratinado",
-        "Panqueca de frango moida com catupiry"
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
