@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-13",
+    "data": "2026-01-14",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -222,7 +222,7 @@
         "Pure gratinado",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -300,10 +300,11 @@
         "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
-        "Batata souté",
-        "Quibe assado"
+        "Escondidinho de frango",
+        "Espaguete alho e óleo",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "sobrecoxa_recheado",
@@ -385,7 +386,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Carne de panela",
+      "nome": "Bife de panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -393,11 +394,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Farofa com bacon",
-        "Couve refogada"
+        "Escondidinho de frango",
+        "Espaguete alho e óleo",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -414,7 +415,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -461,7 +462,7 @@
         "Pure gratinado",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
