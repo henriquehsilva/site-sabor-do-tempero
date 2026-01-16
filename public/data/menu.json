@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-14",
+    "data": "2026-01-16",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -46,11 +46,11 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Capelete ao molho catupiry",
-        "Batata rustica",
-        "Salada de salpicão"
+        "Farofa com bacon",
+        "Couve refogada",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -304,7 +304,7 @@
         "Espaguete alho e óleo",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "sobrecoxa_recheado",
@@ -398,7 +398,7 @@
         "Espaguete alho e óleo",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -415,7 +415,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
