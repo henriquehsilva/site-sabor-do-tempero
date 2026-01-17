@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-16",
+    "data": "2026-01-17",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -50,7 +50,7 @@
         "Couve refogada",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -189,12 +189,11 @@
         "/pratos/carne_assada.jpg"
       ],
       "itens": [
+        "Feijão tropeiro",
         "Batata rustica",
-        "Batata frita",
-        "Farofa com bacon",
-        "Couve refogada"
+        "Panqueca de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -286,10 +285,10 @@
         "/pratos/dobradinha_calabresa_1.jpg"
       ],
       "itens": [
-        "Quibe assado",
-        "Seleta de legumes"
+        "Farofa com bacon",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_grelhado",
@@ -415,7 +414,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -490,10 +489,11 @@
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Batata souté",
-        "Lasanha de frango"
+        "Feijão tropeiro",
+        "Batata rustica",
+        "Panqueca de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
