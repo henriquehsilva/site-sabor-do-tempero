@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-17",
+    "data": "2026-01-19",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -193,7 +193,7 @@
         "Batata rustica",
         "Panqueca de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -288,7 +288,7 @@
         "Farofa com bacon",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -318,11 +318,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Capelete ao molho catupiry",
-        "Batata rustica",
-        "Salada de salpicão"
+        "Escondidinho de frango",
+        "Banana frita",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -482,16 +482,16 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango a milanesa",
+      "nome": "Bife bovino a milanesa",
       "preco": 25.0,
       "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Feijão tropeiro",
-        "Batata rustica",
-        "Panqueca de frango"
+        "Escondidinho de frango",
+        "Banana frita",
+        "Couve refogada"
       ],
       "disponivel": true
     },
