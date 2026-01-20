@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-19",
+    "data": "2026-01-20",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -211,7 +211,7 @@
     },
     {
       "id": "file_parmegiana",
-      "nome": "Filé de frango à parmejiana",
+      "nome": "Bide  à parmejiana",
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
@@ -219,9 +219,9 @@
       ],
       "itens": [
         "Pure gratinado",
-        "Legumes na manteiga"
+        "Espaguete alho e óleo com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -322,7 +322,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -414,7 +414,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -493,7 +493,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
