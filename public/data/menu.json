@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-20",
+    "data": "2026-01-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -174,10 +174,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Quibe assado",
-        "Seleta de legumes"
+        "Panqueca de frango",
+        "Batata rustica",
+        "Farofa de banana"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -221,7 +222,7 @@
         "Pure gratinado",
         "Espaguete alho e óleo com bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -333,10 +334,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Batata souté"
+        "Panqueca de frango",
+        "Batata rustica", 
+        "Farofa de banana"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_molho_madeira",
@@ -414,7 +416,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
