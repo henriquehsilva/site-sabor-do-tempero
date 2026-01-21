@@ -338,7 +338,7 @@
         "Batata rustica", 
         "Farofa de banana"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_molho_madeira",
@@ -356,17 +356,18 @@
     },
     {
       "id": "costela_mandioca",
-      "nome": "Costela bovina molho mandioca",
+      "nome": "Costela bovina assada",
       "preco": 25.0,
       "imagem": "/pratos/costela_bovina.jpeg",
       "galeria": [
         "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
-        "Quibe assado",
-        "Seleta de legumes"
+        "Panqueca de frango",
+        "Batata rustica",
+        "Farofa de banana"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_cenoura",
