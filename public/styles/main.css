@@ -181,23 +181,34 @@ a {
   color: var(--cor-primaria-dark);
 }
 
-.promo-banner {
-  background: #DCFCE7;
-  /* Verde bem suave */
-  color: #166534;
-  /* Verde escuro */
-  border: 1px solid #BBF7D0;
-  padding: 1rem;
+.promo-banner-limited {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  color: white;
+  border: 2px solid #FF5252;
+  padding: 1.2rem;
   border-radius: var(--radius-md);
   text-align: center;
   margin: 0 auto 2rem;
   max-width: 800px;
   font-size: var(--fs-base);
-  box-shadow: var(--sombra-sm);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  font-weight: 600;
+  animation: pulse-promo 2s ease-in-out infinite;
 }
 
-.promo-banner strong {
+.promo-banner-limited strong {
   font-weight: 700;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+@keyframes pulse-promo {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
 }
 
 /* ===== CARDÁPIO GRID ===== */
