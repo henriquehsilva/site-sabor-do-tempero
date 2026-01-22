@@ -178,7 +178,7 @@
         "Batata rustica",
         "Farofa de banana"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -367,7 +367,7 @@
         "Batata rustica",
         "Farofa de banana"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_cenoura",
