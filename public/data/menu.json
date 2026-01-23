@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-01-22",
+      "data": "2026-01-23",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
