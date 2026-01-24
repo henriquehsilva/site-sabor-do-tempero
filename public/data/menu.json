@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-01-23",
+      "data": "2026-01-24",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -50,7 +50,7 @@
         "Batata souté",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -388,7 +388,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Bife de panela",
+      "nome": "Carne de panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -396,11 +396,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Espaguete alho e óleo",
-        "Vinagrete"
+        "Farofa",
+        "Banana frita",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -496,7 +496,7 @@
         "Banana frita",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
