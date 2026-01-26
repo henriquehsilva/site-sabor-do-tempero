@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-01-24",
+      "data": "2026-01-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -205,10 +205,11 @@
         "/pratos/lagarto_recheado.jpg"
       ],
       "itens": [
-        "Couve flor gratinada",
-        "Panqueca de frango"
+        "Linguiça",
+        "Escondidinho de frango",
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_parmegiana",
@@ -243,7 +244,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Pernil assado com abacaxi",
+      "nome": "Pernil na panela",
       "preco": 25.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -254,10 +255,11 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Espaguete alho e óleo",
-        "Batata rustica"
+        "Linguiça",
+        "Escondidinho de frango",
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -400,7 +402,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
