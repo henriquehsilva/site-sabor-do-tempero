@@ -390,7 +390,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Bife de panela",
+      "nome": "Carne de panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
