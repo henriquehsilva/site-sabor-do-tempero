@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-01-31",
+      "data": "2026-02-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -162,7 +162,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -190,11 +190,11 @@
         "/pratos/carne_assada.jpg"
       ],
       "itens": [
-        "Banana frita",
-        "Farofa",
-        "Couve refogada"
+        "Linguiça toscana assada",
+        "Batata souté",
+        "Rocambole de abobrinha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -327,7 +327,7 @@
         "Linguiça",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -421,7 +421,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
