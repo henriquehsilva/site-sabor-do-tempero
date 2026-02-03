@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-02",
+      "data": "2026-02-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -194,7 +194,7 @@
         "Batata souté",
         "Rocambole de abobrinha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -310,7 +310,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Frango frito alho e óleo",
+      "nome": "Sobrecoxa recheada",
       "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -321,13 +321,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Couve refogada",
+        "Espaguete com bacon alho e óleo",
         "Farofa",
-        "Banana frita",
-        "Linguiça",
-        "Vinagrete"
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -367,11 +365,11 @@
         "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata rustica",
-        "Farofa de banana"
+        "Espaguete alho e óleo",
+        "Banana frita",
+        "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_cenoura",
@@ -421,7 +419,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
