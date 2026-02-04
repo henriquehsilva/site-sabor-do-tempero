@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-03",
+      "data": "2026-02-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -162,7 +162,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -325,7 +325,7 @@
         "Farofa",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -369,7 +369,7 @@
         "Banana frita",
         "Farofa de bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_cenoura",
@@ -487,17 +487,17 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "File de frango a parmegiana",
+      "nome": "File de frango a milanesa",
       "preco": 25.0,
-      "imagem": "/pratos/file_parmegiana.jpeg",
+      "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
-        "/pratos/file_parmegiana.jpeg"
+        "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Banana frita",
-        "Legumes souté"
+        "Batata souté",
+        "Raviole de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -508,10 +508,10 @@
         "/pratos/rabada_molho.jpeg"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Seleta de legumes"
+        "Batata souté",
+        "Raviole de frango"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_curry",
