@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-04",
+      "data": "2026-02-05",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -46,11 +46,13 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Escondidinho de carne",
         "Tulipa de frango assado",
-        "Farofa de banana"
+        "Farofa de banana",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -497,7 +499,7 @@
         "Batata souté",
         "Raviole de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -511,7 +513,7 @@
         "Batata souté",
         "Raviole de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_curry",
