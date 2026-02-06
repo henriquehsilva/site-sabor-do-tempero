@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-05",
+      "data": "2026-02-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -52,7 +52,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -323,11 +323,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Espaguete com bacon alho e óleo",
-        "Farofa",
-        "Banana frita"
+        "Lasanha de frango",
+        "Batata rustica",
+        "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -360,18 +360,18 @@
     },
     {
       "id": "costela_mandioca",
-      "nome": "Costela com mandioca",
+      "nome": "Carne com mandioca",
       "preco": 25.0,
       "imagem": "/pratos/costela_bovina.jpeg",
       "galeria": [
         "/pratos/costela_bovina.jpeg"
       ],
       "itens": [
-        "Espaguete alho e óleo",
-        "Banana frita",
+        "Lasanha de frango",
+        "Batata rustica",
         "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_cenoura",
