@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-07",
+      "data": "2026-02-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -180,7 +180,7 @@
         "Banana frita",
         "Farofa"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -392,7 +392,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Carne de panela",
+      "nome": "Bife na panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -400,11 +400,13 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Isca de peixe",
-        "Batata rustica",
-        "Espaguete alho e óleo"
+        "Tulipa de frango assado",
+        "Couve refogada",
+        "Farofa",
+        "Banana frita",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
