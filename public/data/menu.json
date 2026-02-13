@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-12",
+      "data": "2026-02-13",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -51,7 +51,7 @@
         "Panqueca de frango",
         "Legumes souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -163,7 +163,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -327,7 +327,7 @@
         "Panqueca de frango",
         "Legumes souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -392,7 +392,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Bife na panela",
+      "nome": "Carne de panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -400,13 +400,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Tulipa de frango assado",
-        "Couve refogada",
-        "Farofa",
-        "Banana frita",
-        "Vinagrete"
+        "Frango frito",
+        "Pure",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
