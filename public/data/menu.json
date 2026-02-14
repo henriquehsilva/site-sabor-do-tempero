@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-13",
+      "data": "2026-02-14",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,7 +33,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -46,12 +46,13 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão Tropeiro",
-        "Panqueca de frango",
-        "Legumes souté"
+        "Frango frito",
+        "Farofa",
+        "Banana frita",
+        "Couve refogada",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -163,7 +164,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -404,7 +405,7 @@
         "Pure",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -482,10 +483,12 @@
         "/pratos/dobradinha_2.png"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Brócolis na manteiga"
+        "Farofa",
+        "Banana frita",
+        "Couve refogada",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_milanesa",
