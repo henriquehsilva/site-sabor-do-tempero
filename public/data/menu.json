@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-16",
+      "data": "2026-02-17",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -50,7 +50,7 @@
         "Legumes souté",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -162,7 +162,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -224,7 +224,7 @@
         "Legumes souté",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -392,7 +392,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Carne de panela",
+      "nome": "Bife de panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -400,11 +400,12 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Frango frito",
-        "Pure",
-        "Banana frita"
+        "Linguiça assada",
+        "Panqueca de frango",
+        "Bolinho de milho",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
