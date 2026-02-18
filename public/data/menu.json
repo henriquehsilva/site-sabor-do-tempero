@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-17",
+      "data": "2026-02-18",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -162,7 +162,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -392,7 +392,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Bife de panela",
+      "nome": "Carne de panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -400,10 +400,10 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Linguiça assada",
-        "Panqueca de frango",
-        "Bolinho de milho",
-        "Couve refogada"
+        "Lingine alho e óleo",
+        "Frango frito",
+        "Farofa de banana",
+        "Pure gratinado"
       ],
       "disponivel": true
     },
@@ -458,7 +458,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "File de Peixe empanado",
+      "nome": "Tilapia empanada",
       "preco": 25.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -466,10 +466,11 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Legumes na manteiga"
+        "Pire gratinado",
+        "Lingine alho e óleo",
+        "Farofa de banana"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
