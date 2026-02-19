@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-18",
+      "data": "2026-02-19",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -83,7 +83,7 @@
     },
     {
       "id": "peixe_assado",
-      "nome": "Peixe assado",
+      "nome": "Peixe Tambaqui Assado",
       "preco": 25.0,
       "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
@@ -91,9 +91,10 @@
       ],
       "itens": [
         "Batata rustica",
-        "Legumes no vapor"
+        "Lasanha Bolonhesa",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_goiana",
@@ -322,12 +323,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão Tropeiro",
-        "Panqueca de frango",
-        "Legumes souté"
+        "Lasanha Bolonhesa",
+        "Batata rustica",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -405,7 +405,7 @@
         "Farofa de banana",
         "Pure gratinado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -470,7 +470,7 @@
         "Lingine alho e óleo",
         "Farofa de banana"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
