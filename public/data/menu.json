@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-19",
+      "data": "2026-02-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -27,12 +27,13 @@
       "itens": [
         "Feijão preto",
         "Arroz branco",
+        "Linguiça",
         "Torresmo",
         "Banana frita",
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -94,7 +95,7 @@
         "Lasanha Bolonhesa",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_goiana",
@@ -327,7 +328,7 @@
         "Batata rustica",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -500,10 +501,12 @@
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Batata souté",
-        "Raviole de frango"
+        "Banana frita",
+        "Couve refogada",
+        "Farofa",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
