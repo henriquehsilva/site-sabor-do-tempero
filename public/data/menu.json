@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-21",
+      "data": "2026-02-23",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -47,12 +47,11 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Pure gratinado",
         "Frango frito",
-        "Legumes souté",
-        "Banana frita"
+        "Legumes gratinado",
+        "Batata frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -223,11 +222,10 @@
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Legumes souté",
-        "Banana frita"
+        "Legumes gratinado",
+        "Batata frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -507,7 +505,7 @@
         "Farofa",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
