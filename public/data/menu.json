@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-23",
+      "data": "2026-02-24",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -51,7 +51,7 @@
         "Legumes gratinado",
         "Batata frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -164,7 +164,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -225,7 +225,7 @@
         "Legumes gratinado",
         "Batata frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -392,7 +392,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Carne de panela",
+      "nome": "Carne com Mandioca Vaca atolada",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -400,12 +400,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Lingine alho e óleo",
-        "Frango frito",
-        "Farofa de banana",
-        "Pure gratinado"
+        "Batata rustica",
+        "Frango passarinho ao forno",
+        "Espaguete alho e óleo com linguiça"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
