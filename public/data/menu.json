@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-24",
+      "data": "2026-02-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -164,7 +164,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -176,11 +176,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Couve refogada",
+        "Pure gratinado",
         "Banana frita",
-        "Farofa"
+        "Farofa de cenoura"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -404,7 +404,7 @@
         "Frango passarinho ao forno",
         "Espaguete alho e óleo com linguiça"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -465,11 +465,11 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Pire gratinado",
-        "Lingine alho e óleo",
-        "Farofa de banana"
+        "Pure gratinado",
+        "Banana frita",
+        "Farofa de cenoura"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -569,18 +569,18 @@
     },
     {
       "id": "pernil_recheado",
-      "nome": "Pernil recheado",
+      "nome": "Pernil em cubos na panela",
       "preco": 25.0,
       "imagem": "/pratos/pernil_recheado.png",
       "galeria": [
         "/pratos/pernil_recheado.png"
       ],
       "itens": [
-        "Batata rustica",
-        "Quibe assado",
-        "Couve refogada"
+        "Pure gratinado",
+        "Banana frita",
+        "Farofa de cebola"
       ],
-      "disponivel": false
+      "disponivel": true
     }
   ],
   "sobre": {
