@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-25",
+      "data": "2026-02-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -180,7 +180,7 @@
         "Banana frita",
         "Farofa de cenoura"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -246,7 +246,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Pernil na panela",
+      "nome": "Bife de Pernil Grelhado",
       "preco": 25.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -257,11 +257,12 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Linguiça",
-        "Escondidinho de frango",
-        "Espaguete alho e óleo"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Lasanha de frango",
+        "Legumes souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -457,7 +458,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Tilapia empanada",
+      "nome": "Isca de frango empanado",
       "preco": 25.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -465,9 +466,10 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Banana frita",
-        "Farofa de cenoura"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Lasanha de frango",
+        "Legumes souté"
       ],
       "disponivel": true
     },
@@ -580,7 +582,7 @@
         "Banana frita",
         "Farofa de cebola"
       ],
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {
