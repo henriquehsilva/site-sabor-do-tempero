@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-26",
+      "data": "2026-02-27",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -164,7 +164,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -262,7 +262,7 @@
         "Lasanha de frango",
         "Legumes souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -305,11 +305,13 @@
         "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Espaguete alho e óleo",
-        "Vinagrete"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Pirão de peixe",
+        "Banana frita",
+        "Fritada de legumes"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "sobrecoxa_recheado",
@@ -458,7 +460,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Isca de frango empanado",
+      "nome": "File de tilapia empanado",
       "preco": 25.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -467,9 +469,10 @@
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Lasanha de frango",
-        "Legumes souté"
+        "Feijão de caldo",
+        "Pirão de peixe",
+        "Banana frita",
+        "Fritada de legumes"
       ],
       "disponivel": true
     },
