@@ -476,7 +476,7 @@
         "Banana frita",
         "Fritada de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
