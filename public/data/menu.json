@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-27",
+      "data": "2026-02-28",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -47,11 +47,13 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Frango frito",
-        "Legumes gratinado",
-        "Batata frita"
+        "Farofa",
+        "Banana",
+        "Couve refogada",
+        "Mandioca",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -164,7 +166,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -311,7 +313,7 @@
         "Banana frita",
         "Fritada de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "sobrecoxa_recheado",
@@ -424,7 +426,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
