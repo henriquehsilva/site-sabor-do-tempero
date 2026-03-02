@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-28",
+      "data": "2026-02-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -53,7 +53,7 @@
         "Mandioca",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -317,7 +317,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada",
+      "nome": "Sobrecoxa recheada com Bacon e calabresa",
       "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -328,11 +328,13 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Lasanha Bolonhesa",
-        "Batata rustica",
-        "Banana frita"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Linguiça ao alho e óleo com bacon",
+        "Pure gratinado com Mussarela",
+        "Brocolis no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -426,7 +428,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -499,19 +501,20 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "File de frango a milanesa",
+      "nome": "Contra File a milanesa",
       "preco": 25.0,
       "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Banana frita",
-        "Couve refogada",
-        "Farofa",
-        "Vinagrete"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Linguiça ao alho e óleo com bacon",
+        "Pure gratinado com Mussarela",
+        "Brocolis no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
