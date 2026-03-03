@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-02",
+      "data": "2026-02-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -38,7 +38,7 @@
     },
     {
       "id": "costelinha",
-      "nome": "Costelinha suína alho e óleo",
+      "nome": "Costelinha suína assada",
       "preco": 25.0,
       "imagem": "/pratos/costelinha.jpg",
       "galeria": [
@@ -47,13 +47,11 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Farofa",
-        "Banana",
-        "Couve refogada",
-        "Mandioca",
-        "Vinagrete"
+        "Panqueca de frango",
+        "Farofa de bacon",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -166,7 +164,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -209,11 +207,11 @@
         "/pratos/lagarto_recheado.jpg"
       ],
       "itens": [
-        "Linguiça",
-        "Escondidinho de frango",
-        "Espaguete alho e óleo"
+        "Panqueca de frango",
+        "Batata rustica",
+        "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_parmegiana",
@@ -334,7 +332,7 @@
         "Pure gratinado com Mussarela",
         "Brocolis no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -514,7 +512,7 @@
         "Pure gratinado com Mussarela",
         "Brocolis no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
