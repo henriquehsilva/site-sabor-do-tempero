@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-04",
+      "data": "2026-02-05",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -47,11 +47,12 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Farofa de bacon",
-        "Batata rustica"
+        "Linguiça de frango assada",
+        "Farofa de cenoura",
+        "Batata rustica",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -114,7 +115,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "picadinho_cenoura",
@@ -164,7 +165,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -182,7 +183,7 @@
         "Banana frita",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -398,11 +399,11 @@
         "Banana frita",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
-      "nome": "Carne com Mandioca Vaca atolada",
+      "nome": "Carne com Mandioca",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -410,11 +411,12 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Batata rustica",
-        "Frango passarinho ao forno",
-        "Espaguete alho e óleo com linguiça"
+        "Linguiça de frango assado",
+        "Farofa com cenoura",
+        "Couve refogada", 
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
