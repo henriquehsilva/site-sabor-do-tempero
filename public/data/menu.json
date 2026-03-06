@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-05",
+      "data": "2026-02-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -38,7 +38,7 @@
     },
     {
       "id": "costelinha",
-      "nome": "Costelinha suína assada",
+      "nome": "Costelinha alho e óleo",
       "preco": 25.0,
       "imagem": "/pratos/costelinha.jpg",
       "galeria": [
@@ -47,10 +47,12 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
-        "Linguiça de frango assada",
-        "Farofa de cenoura",
-        "Batata rustica",
-        "Couve refogada"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Mandioca temperada",
+        "Pure gratinado",
+        "Banana frita",
+        "Brocolis no vapor"
       ],
       "disponivel": true
     },
@@ -115,7 +117,7 @@
         "Mussarela",
         "Ervilha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_cenoura",
@@ -165,7 +167,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -195,11 +197,14 @@
         "/pratos/carne_assada.jpg"
       ],
       "itens": [
-        "Linguiça toscana assada",
-        "Batata souté",
-        "Rocambole de abobrinha"
+        "Arroz branco",
+        "Mandioca temperada",
+        "Pure gratinado",
+        "Feijão tropeiro",
+        "Banana frita",
+        "Brocolis no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -416,7 +421,7 @@
         "Couve refogada", 
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
