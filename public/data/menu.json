@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-07",
+      "data": "2026-02-09",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -167,7 +167,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -323,7 +323,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada com Bacon e calabresa",
+      "nome": "Sobrecoxa recheada",
       "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -334,13 +334,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Linguiça ao alho e óleo com bacon",
-        "Pure gratinado com Mussarela",
-        "Brocolis no vapor"
+        "Panqueca de frango",
+        "Batata souté",
+        "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -408,7 +406,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Carne com Mandioca",
+      "nome": "Bife de Panela",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -416,12 +414,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Linguiça de frango assado",
-        "Farofa com cenoura",
-        "Couve refogada", 
-        "Batata rustica"
+        "Panqueca de frango",
+        "Farofa souté",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -601,7 +598,7 @@
         "Farofa",
         "Linguiça"
       ],
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {
