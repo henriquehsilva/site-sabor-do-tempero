@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-02-09",
+      "data": "2026-03-10",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -167,7 +167,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -338,7 +338,7 @@
         "Batata souté",
         "Farofa de bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -418,7 +418,7 @@
         "Farofa souté",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -450,10 +450,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Lasanha de frango",
-        "Batata souté"
+        "Escondidinho de frango",
+        "Espaguete alho e óleo",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -508,20 +509,18 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Contra File a milanesa",
+      "nome": "Frango à parmejiana",
       "preco": 25.0,
-      "imagem": "/pratos/file_milanesa.jpeg",
+      "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Linguiça ao alho e óleo com bacon",
-        "Pure gratinado com Mussarela",
-        "Brocolis no vapor"
+        "Escondidinho de frango",
+        "Espaguete alho e óleo",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
