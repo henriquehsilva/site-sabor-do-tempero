@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-12",
+      "data": "2026-03-13",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -48,13 +48,12 @@
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Mandioca temperada",
-        "Pure gratinado",
+        "Feijão de caldo",
+        "Batata rustica",
         "Banana frita",
-        "Brocolis no vapor"
+        "Farofa com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -185,7 +184,7 @@
         "Arroz branco",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -323,7 +322,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada",
+      "nome": "Sobrecoxa recheada com bacon e calabresa",
       "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -334,11 +333,13 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata souté",
-        "Farofa de bacon"
+        "Arroz",
+        "Feijão de caldo",
+        "Banana frita",
+        "Batata rustica",
+        "Farofa com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -384,7 +385,7 @@
         "Arroz branco",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_cenoura",
