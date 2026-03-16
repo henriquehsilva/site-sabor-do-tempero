@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-14",
+      "data": "2026-03-16",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -399,11 +399,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Lasanha de frango",
-        "Mandioca frita",
-        "Banana frita"
+        "Batata três poderes",
+        "Macarrão tropical",
+        "Bolinho de arroz"     
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -508,18 +508,18 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango à parmejiana",
+      "nome": "Frango com creme de milho gratinado",
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Espaguete alho e óleo",
-        "Couve refogada"
+        "Batata três poderes",
+        "Macarrão tropical",
+        "Bolinho de arroz"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -550,7 +550,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
