@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-16",
+      "data": "2026-03-17",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -166,7 +166,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -403,7 +403,7 @@
         "Macarrão tropical",
         "Bolinho de arroz"     
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -451,11 +451,13 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Espaguete alho e óleo",
-        "Couve refogada"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Batata souté",
+        "Banana frita",
+        "Panqueca de carne"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -508,16 +510,18 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango com creme de milho gratinado",
+      "nome": "Frango a milanesa",
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Batata três poderes",
-        "Macarrão tropical",
-        "Bolinho de arroz"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Panqueca de carne",
+        "Batata souté",
+        "Banana frita"
       ],
       "disponivel": true
     },
