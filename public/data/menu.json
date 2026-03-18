@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-17",
+      "data": "2026-03-18",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -38,7 +38,7 @@
     },
     {
       "id": "costelinha",
-      "nome": "Costelinha alho e óleo",
+      "nome": "Costela bovina assada na panela",
       "preco": 25.0,
       "imagem": "/pratos/costelinha.jpg",
       "galeria": [
@@ -49,11 +49,11 @@
       "itens": [
         "Arroz branco",
         "Feijão de caldo",
-        "Batata rustica",
-        "Banana frita",
+        "Quibebe de mandioca",
+        "Legumes na manteiga",
         "Farofa com bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -178,13 +178,13 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Legumes na manteiga",
-        "linguiça de frango assada",
-        "Feijão tropeiro",
+        "Quibebe de mandioca",
+        "Feijão de caldo",
         "Arroz branco",
-        "Espaguete alho e óleo"
+        "Legumes na manteiga",
+        "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -457,7 +457,7 @@
         "Banana frita",
         "Panqueca de carne"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -523,7 +523,7 @@
         "Batata souté",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
