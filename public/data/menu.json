@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-18",
+      "data": "2026-03-19",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -53,7 +53,7 @@
         "Legumes na manteiga",
         "Farofa com bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -184,7 +184,7 @@
         "Legumes na manteiga",
         "Farofa de bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -322,7 +322,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada com bacon e calabresa",
+      "nome": "Sobrecoxa grelhada",
       "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -333,13 +333,13 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Arroz",
-        "Feijão de caldo",
+        "Arroz branco",
+        "Feijão tropeiro",
         "Banana frita",
-        "Batata rustica",
-        "Farofa com bacon"
+        "Pure gratinado",
+        "Quibe assado"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -440,7 +440,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha suina assada",
+      "nome": "Costelinha suina ao alho e oleo",
       "preco": 25.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -453,11 +453,11 @@
       "itens": [
         "Arroz branco",
         "Feijão tropeiro",
-        "Batata souté",
-        "Banana frita",
-        "Panqueca de carne"
+        "Quibe assado",
+        "Pure gratinado",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
