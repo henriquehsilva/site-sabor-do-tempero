@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-19",
+      "data": "2026-03-20",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -71,18 +71,20 @@
     },
     {
       "id": "file_frango_molho_branco",
-      "nome": "File de frango ao molho branco e ervas",
+      "nome": "File de frango grelhado",
       "preco": 25.0,
       "imagem": "/pratos/file_frango_molho_branco.png",
       "galeria": [
         "/pratos/file_frango_molho_branco.png"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Farofa com bacon",
-        "Couve refogada"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Legumes na manteiga",
+        "Espaguete com bacon alho e óleo",
+        "Farofa de cenoura"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "peixe_assado",
@@ -120,7 +122,7 @@
     },
     {
       "id": "picadinho_cenoura",
-      "nome": "Picadinho de carne com cenoura",
+      "nome": "Carne com batatas",
       "preco": 25.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
@@ -128,10 +130,12 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Escondidinho de frango",
-        "Brocolis na manteiga"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Legumes na manteiga",
+        "Espaguete com bacon alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -166,7 +170,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -339,7 +343,7 @@
         "Pure gratinado",
         "Quibe assado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -457,7 +461,7 @@
         "Pure gratinado",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
