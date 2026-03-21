@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-20",
+      "data": "2026-03-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -84,7 +84,7 @@
         "Espaguete com bacon alho e óleo",
         "Farofa de cenoura"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "peixe_assado",
@@ -135,7 +135,7 @@
         "Legumes na manteiga",
         "Espaguete com bacon alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "contrafile_grelhado",
@@ -444,7 +444,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha suina ao alho e oleo",
+      "nome": "Costelinha suina assada",
       "preco": 25.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -455,13 +455,12 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Quibe assado",
-        "Pure gratinado",
+        "Couve refogada",
+        "Farofa",
+        "Vinagrete",
         "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
