@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-21",
+      "data": "2026-03-23",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -170,7 +170,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -455,10 +455,8 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Couve refogada",
-        "Farofa",
-        "Vinagrete",
-        "Banana frita"
+        "Guarnição Francesa",
+        "Pure de batatas"
       ],
       "disponivel": true
     },
@@ -513,20 +511,17 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango a milanesa",
+      "nome": "Frango a parmegiana",
       "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Panqueca de carne",
-        "Batata souté",
-        "Banana frita"
+        "Guarnição Francesa",
+        "Pure de batatas"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
