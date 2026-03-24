@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-23",
+      "data": "2026-03-24",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -340,10 +340,9 @@
         "Arroz branco",
         "Feijão tropeiro",
         "Banana frita",
-        "Pure gratinado",
-        "Quibe assado"
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -458,7 +457,7 @@
         "Guarnição Francesa",
         "Pure de batatas"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -521,7 +520,7 @@
         "Guarnição Francesa",
         "Pure de batatas"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -574,17 +573,20 @@
     },
     {
       "id": "costela_panela",
-      "nome": "Costela bovina ao molho madeira",
+      "nome": "Costela assada na panela",
       "preco": 25.0,
       "imagem": "/pratos/costela_panela.png",
       "galeria": [
         "/pratos/costela_panela.png"
       ],
       "itens": [
-        "Seleta de legumes",
-        "Quibebe de mandioca"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Espaguete alho e óleo",
+        "Mandioca frita",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_recheado",
