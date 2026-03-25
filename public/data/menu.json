@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-24",
+      "data": "2026-03-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -326,7 +326,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa grelhada",
+      "nome": "Sobrecoxa recheada",
       "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -337,10 +337,9 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Banana frita",
-        "Espaguete alho e óleo"
+        "Panqueca de carne",
+        "Farofa de banana",
+        "Batata souté"
       ],
       "disponivel": true
     },
@@ -454,10 +453,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Guarnição Francesa",
-        "Pure de batatas"
+        "Panqueca de carne",
+        "Farofa de banana",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -586,7 +586,7 @@
         "Mandioca frita",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_recheado",
