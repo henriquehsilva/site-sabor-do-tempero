@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-25",
+      "data": "2026-03-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -341,7 +341,7 @@
         "Farofa de banana",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -457,7 +457,7 @@
         "Farofa de banana",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -510,17 +510,18 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango a parmegiana",
+      "nome": "Frango a milanesa",
       "preco": 25.0,
-      "imagem": "/pratos/file_parmegiana.jpeg",
+      "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Guarnição Francesa",
-        "Pure de batatas"
+        "Kibe assado",
+        "Pure de batatas",
+        "Milho com cenoura"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -555,7 +556,7 @@
     },
     {
       "id": "alcatra_suina",
-      "nome": "Alcatra suina",
+      "nome": "Alcatra assada",
       "preco": 25.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
@@ -565,11 +566,11 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Banana frita",
-        "Couve refogada",
-        "Farofa"
+        "Pure de batatas",
+        "Kibe assado",
+        "Milho com cenoura"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
