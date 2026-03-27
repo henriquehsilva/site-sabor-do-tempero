@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-26",
+      "data": "2026-03-27",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -409,7 +409,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Bife de Panela",
+      "nome": "Carne com mandioca",
       "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -417,11 +417,12 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Farofa souté",
-        "Batata souté"
+        "Batata três poderes",
+        "Guarnição Francesa",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -510,16 +511,17 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango a milanesa",
+      "nome": "Frango a parmegiana",
       "preco": 25.0,
-      "imagem": "/pratos/file_milanesa.jpeg",
+      "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
-        "/pratos/file_milanesa.jpeg"
+        "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
-        "Kibe assado",
-        "Pure de batatas",
-        "Milho com cenoura"
+        "Guarnição Francesa",
+        "Batata três poderes",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
       "disponivel": true
     },
@@ -570,7 +572,7 @@
         "Kibe assado",
         "Milho com cenoura"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
