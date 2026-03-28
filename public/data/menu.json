@@ -421,7 +421,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
