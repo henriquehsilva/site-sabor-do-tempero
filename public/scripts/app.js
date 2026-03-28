@@ -557,7 +557,7 @@ function configurarBotoes(flags) {
 function getDishPriceById(id) {
   const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
   const val = Number(prato?.preco);
-  return Number.isFinite(val) && val > 0 ? val : 25.00;
+  return Number.isFinite(val) && val > 0 ? val : 22.00;
 }
 
 // ------- UI do modal -------
