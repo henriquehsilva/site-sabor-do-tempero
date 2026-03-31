@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-03-28",
+      "data": "2026-03-31",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -122,7 +122,7 @@
     },
     {
       "id": "picadinho_cenoura",
-      "nome": "Carne com batatas",
+      "nome": "Picadinho de Carne Bovina",
       "preco": 22.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
@@ -130,12 +130,11 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão de caldo",
-        "Legumes na manteiga",
-        "Espaguete com bacon alho e óleo"
+        "Escondidinho de carne",
+        "Macarrão Tropical ",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -170,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -187,7 +186,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -453,11 +452,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Farofa de banana",
-        "Batata souté"
+        "Macarrão tropical",
+        "Escondidinho de carne",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
