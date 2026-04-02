@@ -457,7 +457,7 @@
         "Quibebe de mandioca",
         "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
