@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-01",
+      "data": "2026-04-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -88,18 +88,18 @@
     },
     {
       "id": "peixe_assado",
-      "nome": "Peixe Tambaqui Assado",
+      "nome": "Moqueca de Peixe",
       "preco": 23.0,
       "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
         "/pratos/peixe_assado.jpg"
       ],
       "itens": [
-        "Batata rustica",
-        "Lasanha Bolonhesa",
-        "Banana frita"
+        "Banana frita",
+        "Farofa tropical",
+        "Quibebe de mandioca"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_goiana",
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -355,7 +355,7 @@
         "Farofa de bacon",
         "Mandioca frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_molho_madeira",
@@ -453,8 +453,8 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Macarrão tropical",
-        "Escondidinho de carne",
+        "Farofa tropical",
+        "Quibebe de mandioca",
         "Banana frita"
       ],
       "disponivel": false
@@ -510,17 +510,16 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "File de frango a milanesa",
+      "nome": "Frango à parmejiana",
       "preco": 23.0,
-      "imagem": "/pratos/file_milanesa.jpeg",
+      "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
-        "/pratos/file_milanesa.jpeg"
+        "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
-        "Mandioca frita",
-        "Panqueca de carne",
-        "Farofa de bacon",
-        "Couve refogada"
+        "Banana frita",
+        "Batata frita",
+        "Linguiça alho e oleo com bacon"
       ],
       "disponivel": true
     },
