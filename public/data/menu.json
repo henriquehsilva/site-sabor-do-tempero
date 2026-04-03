@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-02",
+      "data": "2026-04-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -88,16 +88,16 @@
     },
     {
       "id": "peixe_assado",
-      "nome": "Moqueca de Peixe",
+      "nome": "Moqueca Goiana",
       "preco": 23.0,
       "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
         "/pratos/peixe_assado.jpg"
       ],
       "itens": [
-        "Banana frita",
-        "Pirão de peixe",
-        "Linguine alho e oleo"
+        "Mandioca frita",
+        "Pirão de tilapia",
+        "Guarnição Francesa"
       ],
       "disponivel": true
     },
@@ -181,12 +181,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Farofa com cebola",
-        "Couve refogada",
-        "Banana frita",
-        "Vinagrete"
+        "Pure de batata gratinado",
+        "Guarnição Francesa",
+        "Mandioca frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -408,7 +407,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Carne com mandioca",
+      "nome": "Picadinho de Carne Bovina",
       "preco": 23.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -416,12 +415,11 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Batata três poderes",
+        "Pure de batata gratinado",
         "Guarnição Francesa",
-        "Arroz branco",
-        "Feijão de caldo"
+        "Mandioca frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -457,7 +455,7 @@
         "Quibebe de mandioca",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -521,7 +519,7 @@
         "Batata frita",
         "Linguiça alho e oleo com bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
