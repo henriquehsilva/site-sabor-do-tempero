@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-03",
+      "data": "2026-04-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -78,13 +78,13 @@
         "/pratos/file_frango_molho_branco.png"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão de caldo",
-        "Legumes na manteiga",
-        "Espaguete com bacon alho e óleo",
-        "Farofa de cenoura"
+        "Linguiça Toscana Assada",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete",
+        "Farofa de cebola"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "peixe_assado",
@@ -99,7 +99,7 @@
         "Pirão de tilapia",
         "Guarnição Francesa"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_goiana",
@@ -185,7 +185,7 @@
         "Guarnição Francesa",
         "Mandioca frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -419,7 +419,7 @@
         "Guarnição Francesa",
         "Mandioca frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -564,11 +564,13 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Pure de batatas",
-        "Kibe assado",
-        "Milho com cenoura"
+        "Linguiça Toscana Assada",
+        "Couve refogada",
+        "Farofa",
+        "Banana frita",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
