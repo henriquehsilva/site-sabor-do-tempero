@@ -73,9 +73,9 @@
       "id": "file_frango_molho_branco",
       "nome": "File de frango grelhado",
       "preco": 23.0,
-      "imagem": "/pratos/file_frango_molho_branco.png",
+      "imagem": "/pratos/frango_grelhado.jpeg",
       "galeria": [
-        "/pratos/file_frango_molho_branco.png"
+        "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
         "Linguiça Toscana Assada",
