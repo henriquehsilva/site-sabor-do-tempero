@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-04",
+      "data": "2026-04-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -84,7 +84,7 @@
         "Vinagrete",
         "Farofa de cebola"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "peixe_assado",
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -323,7 +323,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada",
+      "nome": "Sobrecoxa recheada e Linguiça Assada",
       "preco": 23.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -335,10 +335,10 @@
       ],
       "itens": [
         "Panqueca de carne",
-        "Farofa de banana",
-        "Batata souté"
+        "Pure gratinado",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -570,7 +570,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
@@ -591,19 +591,18 @@
     },
     {
       "id": "pernil_recheado",
-      "nome": "Cubos de Pernil",
+      "nome": "Picadinho de Pernil",
       "preco": 23.0,
       "imagem": "/pratos/pernil_recheado.png",
       "galeria": [
         "/pratos/pernil_recheado.png"
       ],
       "itens": [
-        "Couve refogada",
-        "Banana frita",
-        "Farofa",
-        "Linguiça"
+        "Panqueca de carne",
+        "Pure gratinado",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     }
   ],
   "sobre": {
