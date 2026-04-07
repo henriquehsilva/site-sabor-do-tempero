@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-06",
+      "data": "2026-04-07",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -338,7 +338,7 @@
         "Pure gratinado",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -399,11 +399,13 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Batata três poderes",
-        "Macarrão tropical",
-        "Bolinho de arroz"     
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Batata rustica",
+        "Banana frita",
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -481,11 +483,13 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Lasanha de frango",
-        "Mandioca frita",
-        "Banana frita"
+        "Espaguete alho e óleo",
+        "Batata rustica",
+        "Banana frita",
+        "Arroz branco",
+        "Feijão tropeiro"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -602,7 +606,7 @@
         "Pure gratinado",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {

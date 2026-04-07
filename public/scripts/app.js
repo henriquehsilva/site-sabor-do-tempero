@@ -682,26 +682,10 @@ function addOrderItemRow(container) {
     updateOrderTotals();
   });
 
-  // Select de refri (grátis)
-  const selRefri = document.createElement('select');
-  selRefri.className = 'ord-sel ord-sel-refri';
-  selRefri.style.marginTop = '0.5rem';
-  selRefri.setAttribute('aria-label', 'Escolha o refri grátis');
 
-  [
-    { v: 'Guarana 200ml', t: 'Guaraná 200ml' },
-    { v: 'Sukita 200ml', t: 'Sukita 200ml' },
-    { v: 'Pepsi 200ml', t: 'Pepsi 200ml' }
-  ].forEach(r => {
-    const opt = document.createElement('option');
-    opt.value = r.v;
-    opt.textContent = `Grátis: ${r.t}`;
-    selRefri.appendChild(opt);
-  });
 
   // Monta
   row.appendChild(sel);
-  row.appendChild(selRefri);
   row.appendChild(ctrls);
   container.appendChild(row);
 
@@ -768,7 +752,7 @@ async function handleSubmitOrder(e) {
   const rows = [...document.querySelectorAll('#ordItems .ord-item')];
   rows.forEach(r => {
     const id = r.querySelector('.ord-sel')?.value;
-    const refri = r.querySelector('.ord-sel-refri')?.value;
+
     const qtd = Number(r.querySelector('.ord-qty')?.value || 0);
     if (!id || qtd <= 0) return;
     const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
@@ -777,7 +761,6 @@ async function handleSubmitOrder(e) {
     items.push({
       id,
       nome: prato?.nome || String(id),
-      refri: refri || '',
       preco: unit,
       qtd,
       total: unit * qtd
@@ -878,7 +861,7 @@ function buildOrderMessage(pedido, orderId) {
   linhas.push('🍽️ *Itens:*');
   pedido.itens.forEach((i, idx) => {
     linhas.push(`${idx + 1}. ${i.nome} x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
-    if (i.refri) linhas.push(`   🥤 Refri grátis: ${i.refri}`);
+
   });
 
   linhas.push('');
