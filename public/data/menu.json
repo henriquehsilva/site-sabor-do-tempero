@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-07",
+      "data": "2026-04-08",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -181,11 +181,12 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Pure de batata gratinado",
-        "Guarnição Francesa",
-        "Mandioca frita"
+        "Batata souté",
+        "Macarrão Forno",
+        "Quibe assado",
+        "Salada de Tomate e alface"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -405,7 +406,7 @@
         "Banana frita",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -453,11 +454,12 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Farofa tropical",
-        "Quibebe de mandioca",
-        "Banana frita"
+        "Arroz branco",
+        "Quibe assado",
+        "Macarrão Forno",
+        "Batata souté"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -489,7 +491,7 @@
         "Arroz branco",
         "Feijão tropeiro"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
