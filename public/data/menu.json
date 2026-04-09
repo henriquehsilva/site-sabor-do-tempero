@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-08",
+      "data": "2026-04-09",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -47,13 +47,13 @@
         "/pratos/costelinha_3.jpg"
       ],
       "itens": [
+        "Mandioca frita",
+        "Pure de batata gratinado",
+        "Quiabo com bacon",
         "Arroz branco",
-        "Feijão de caldo",
-        "Quibebe de mandioca",
-        "Legumes na manteiga",
-        "Farofa com bacon"
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "escalope_alcatra",
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -186,7 +186,7 @@
         "Quibe assado",
         "Salada de Tomate e alface"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -459,7 +459,7 @@
         "Macarrão Forno",
         "Batata souté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -570,13 +570,13 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Linguiça Toscana Assada",
-        "Couve refogada",
-        "Farofa",
-        "Banana frita",
-        "Vinagrete"
+        "Mandioca frita",
+        "Pure gratinado",
+        "Quiabo com bacon",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
