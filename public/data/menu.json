@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-09",
+      "data": "2026-04-10",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -53,7 +53,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -255,7 +255,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Bife de Pernil Grelhado",
+      "nome": "Bife de Pernil Acebolado",
       "preco": 23.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -267,11 +267,12 @@
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Lasanha de frango",
-        "Legumes souté"
+        "Quibebe mandioca",
+        "Farofa bacon",
+        "Couve refogada",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -523,9 +524,9 @@
       "itens": [
         "Banana frita",
         "Batata frita",
-        "Linguiça alho e oleo com bacon"
+        "Arroz branco"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -576,7 +577,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
