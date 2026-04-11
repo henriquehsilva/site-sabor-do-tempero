@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-12",
+      "data": "2026-04-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -272,7 +272,7 @@
         "Couve refogada",
         "Banana frita"
       ],
-      "disponivel": :false
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
