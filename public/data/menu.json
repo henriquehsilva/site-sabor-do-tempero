@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-10",
+      "data": "2026-04-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -272,7 +272,7 @@
         "Couve refogada",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": :false
     },
     {
       "id": "dobradinha_calabresa",
@@ -526,7 +526,7 @@
         "Batata frita",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -552,12 +552,12 @@
       ],
       "itens": [
         "Farofa de cebola",
-        "linguiça assada",
+        "linguiça toscana assada",
         "Banana frita",
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
