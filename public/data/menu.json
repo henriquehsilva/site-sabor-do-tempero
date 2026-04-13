@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-11",
+      "data": "2026-04-13",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -122,7 +122,7 @@
     },
     {
       "id": "picadinho_cenoura",
-      "nome": "Picadinho de Carne Bovina",
+      "nome": "Picadinho de Carne Suina",
       "preco": 23.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
@@ -130,11 +130,13 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Escondidinho de carne",
-        "Macarrão Tropical ",
-        "Banana frita"
+        "Feijão preto",
+        "Arroz branco",
+        "Espaguete alho e óleo",
+        "Pure gratinado",
+        "Guarnição Francesa"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -169,7 +171,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -325,7 +327,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada e Linguiça Assada",
+      "nome": "Sobrecoxa recheada",
       "preco": 23.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -336,11 +338,13 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
+        "Feijão tropeiro",
+        "Arroz branco",
+        "Espaguete alho e óleo",
         "Pure gratinado",
-        "Legumes na manteiga"
+        "Guarnição Francesa"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -557,7 +561,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
