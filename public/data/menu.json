@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-14",
+      "data": "2026-04-15",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -530,7 +530,7 @@
         "Batata frita",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -555,13 +555,13 @@
         "/pratos/frango_frito.png"
       ],
       "itens": [
-        "Farofa de cebola",
-        "linguiça toscana assada",
-        "Banana frita",
-        "Couve refogada",
-        "Vinagrete"
+        "Quibebe com calabresa",
+        "Quiabo com bacon",
+        "Macarrão Forno",
+        "Arroz branco",
+        "Feijão tropeiro"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
@@ -579,7 +579,7 @@
         "Farofa tropical",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
@@ -592,11 +592,11 @@
       "itens": [
         "Arroz branco",
         "Feijão tropeiro",
-        "Espaguete alho e óleo",
-        "Mandioca frita",
-        "Banana frita"
+        "Quibebe com calabresa",
+        "Quiabo frito com bacon",
+        "Macarrão Forno"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_recheado",
