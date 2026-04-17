@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-15",
+      "data": "2026-04-17",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -122,7 +122,7 @@
     },
     {
       "id": "picadinho_cenoura",
-      "nome": "Picadinho de Carne Suina",
+      "nome": "Picadinho de alcatra Suina",
       "preco": 23.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
@@ -130,13 +130,11 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Feijão preto",
-        "Arroz branco",
-        "Espaguete alho e óleo",
-        "Pure gratinado",
-        "Guarnição Francesa"
+        "Lasanha Bolonhesa",
+        "Batata rustica",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -338,13 +336,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Feijão tropeiro",
-        "Arroz branco",
-        "Espaguete alho e óleo",
-        "Pure gratinado",
-        "Guarnição Francesa"
+        "Lasanha Bolonhesa",
+        "Batata rustica",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -519,18 +515,18 @@
     },
     {
       "id": "frango_milanesa",
-      "nome": "Frango à parmejiana",
+      "nome": "Frango à milanesa",
       "preco": 23.0,
-      "imagem": "/pratos/file_parmegiana.jpeg",
+      "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
-        "/pratos/file_parmegiana.jpeg"
+        "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Banana frita",
+        "Banana rustica",
         "Batata frita",
-        "Arroz branco"
+        "Lasanha Bolonhesa"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -561,7 +557,7 @@
         "Arroz branco",
         "Feijão tropeiro"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
@@ -596,7 +592,7 @@
         "Quiabo frito com bacon",
         "Macarrão Forno"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_recheado",
