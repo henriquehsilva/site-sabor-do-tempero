@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-17",
+      "data": "2026-04-18",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -134,7 +134,7 @@
         "Batata rustica",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "contrafile_grelhado",
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -181,12 +181,13 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Batata souté",
-        "Macarrão Forno",
-        "Quibe assado",
-        "Salada de Tomate e alface"
+        "Farofa de cebola",
+        "Banana frita",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -340,7 +341,7 @@
         "Batata rustica",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -526,7 +527,7 @@
         "Batata frita",
         "Lasanha Bolonhesa"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
