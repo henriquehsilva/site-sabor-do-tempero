@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -187,7 +187,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -337,11 +337,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Lasanha Bolonhesa",
-        "Batata rustica",
-        "Banana frita"
+        "Pure gratinado",
+        "Banana milanesa",
+        "Farofa bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -402,13 +402,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Batata rustica",
-        "Banana frita",
-        "Espaguete alho e óleo"
+        "Banana milanesa",
+        "Pure gratinado",
+        "Farofa de bacon"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
