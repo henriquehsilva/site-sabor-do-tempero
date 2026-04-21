@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-20",
+      "data": "2026-04-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -341,7 +341,7 @@
         "Banana milanesa",
         "Farofa bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -406,7 +406,7 @@
         "Pure gratinado",
         "Farofa de bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -521,11 +521,13 @@
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Banana rustica",
-        "Batata frita",
-        "Lasanha Bolonhesa"
+        "Espaguete alho e óleo",
+        "Mandioca frita",
+        "Banana frita",
+        "Feijão tropeiro",
+        "Arroz branco"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
@@ -578,20 +580,21 @@
     },
     {
       "id": "costela_panela",
-      "nome": "Costela assada na panela",
+      "nome": "Costela bovina assada na panela",
       "preco": 23.0,
       "imagem": "/pratos/costela_panela.png",
       "galeria": [
         "/pratos/costela_panela.png"
       ],
       "itens": [
-        "Arroz branco",
+        "Linguiça Toscana Assada",
+        "Mandioca frita",
+        "Espaguete alho e óleo",
+        "Banana frita",
         "Feijão tropeiro",
-        "Quibebe com calabresa",
-        "Quiabo frito com bacon",
-        "Macarrão Forno"
+        "Arroz branco"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_recheado",
