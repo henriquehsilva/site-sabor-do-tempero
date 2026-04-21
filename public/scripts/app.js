@@ -200,7 +200,14 @@ function renderizarMenu() {
 
   renderizarCardapio(pratos, opcoes_do_dia, meta.flags);
   renderizarSobre(sobre, meta.flags);
+  renderizarHeaderMeta(sobre, meta.flags);
   configurarBotoes(meta.flags);
+}
+
+function renderizarHeaderMeta(sobre, flags) {
+  if (!sobre) return;
+  const elHorario = document.getElementById('headerHorario');
+  if (elHorario && sobre.horario) elHorario.textContent = sobre.horario;
 }
 
 function formatarData(dataStr) {
