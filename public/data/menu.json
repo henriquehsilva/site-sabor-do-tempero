@@ -232,10 +232,12 @@
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
-        "Legumes gratinado",
-        "Batata frita"
+        "Batata frita",
+        "Quibe assado",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -252,7 +254,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -527,7 +529,7 @@
         "Feijão tropeiro",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
@@ -594,7 +596,7 @@
         "Feijão tropeiro",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_recheado",
