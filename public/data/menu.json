@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -181,13 +181,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Farofa de cebola",
+        "Panqueca de frango",
         "Banana frita",
-        "Couve refogada",
-        "Banana frita",
-        "Vinagrete"
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -237,7 +235,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -254,7 +252,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -441,7 +439,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
@@ -456,12 +454,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Quibe assado",
-        "Macarrão Forno",
-        "Batata souté"
+        "Panqueca de frango",
+        "Banana frita",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
