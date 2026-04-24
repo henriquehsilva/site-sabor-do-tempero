@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-23",
+      "data": "2026-04-24",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -169,7 +169,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -185,7 +185,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -326,7 +326,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada",
+      "nome": "Sobrecoxa grelhada",
       "preco": 23.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -337,11 +337,12 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Banana milanesa",
-        "Farofa bacon"
+        "Quibebe de mandioca",
+        "Espaguete alho e óleo",
+        "Batata rustica",
+        "Farofa de cebola"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -352,12 +353,12 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Couve refogada", 
-        "Farofa de bacon",
-        "Mandioca frita"
+        "Quibebe de mandioca",
+        "Espaguete alho e óleo", 
+        "Farofa de cenoura",
+        "Batata rustica"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_molho_madeira",
@@ -439,7 +440,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
@@ -458,7 +459,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
