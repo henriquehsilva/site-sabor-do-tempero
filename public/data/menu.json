@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-24",
+      "data": "2026-04-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -309,20 +309,20 @@
     },
     {
       "id": "frango_grelhado",
-      "nome": "Filé de frango grelhado",
+      "nome": "Filé de frito ao alho e óleo",
       "preco": 23.0,
       "imagem": "/pratos/frango_grelhado.jpeg",
       "galeria": [
         "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão de caldo",
-        "Pirão de peixe",
+        "Couve refogada",
         "Banana frita",
-        "Fritada de legumes"
+        "Farofa de cebola",
+        "Linguiça",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "sobrecoxa_recheado",
@@ -342,7 +342,7 @@
         "Batata rustica",
         "Farofa de cenoura"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -358,7 +358,7 @@
         "Farofa de cenoura",
         "Batata rustica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_molho_madeira",
