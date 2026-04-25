@@ -322,7 +322,7 @@
         "Linguiça",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "sobrecoxa_recheado",
@@ -552,13 +552,13 @@
         "/pratos/frango_frito.png"
       ],
       "itens": [
-        "Quibebe com calabresa",
-        "Quiabo com bacon",
-        "Macarrão Forno",
-        "Arroz branco",
-        "Feijão tropeiro"
+        "Couve refogada",
+        "Banana frita",
+        "Farofa de cebola",
+        "Linguiça",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
