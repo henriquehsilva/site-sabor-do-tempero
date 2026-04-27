@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-25",
+      "data": "2026-04-27",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -337,12 +337,12 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Quibebe de mandioca",
-        "Espaguete alho e óleo",
-        "Batata rustica",
-        "Farofa de cenoura"
+        "Mandioca frita",
+        "Banana frita",
+        "Bolinho de arroz",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -558,7 +558,7 @@
         "Linguiça",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
@@ -598,18 +598,19 @@
     },
     {
       "id": "pernil_recheado",
-      "nome": "Picadinho de Pernil",
+      "nome": "Isca de pernil grelhado",
       "preco": 23.0,
       "imagem": "/pratos/pernil_recheado.png",
       "galeria": [
         "/pratos/pernil_recheado.png"
       ],
       "itens": [
-        "Panqueca de carne",
-        "Pure gratinado",
-        "Legumes na manteiga"
+        "Mandioca frita",
+        "Banana frita",
+        "Bolinho de arroz",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     }
   ],
   "sobre": {
