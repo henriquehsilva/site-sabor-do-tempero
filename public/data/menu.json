@@ -57,17 +57,20 @@
     },
     {
       "id": "escalope_alcatra",
-      "nome": "Escalope de alcatra",
+      "nome": "Escalope de carne bovina",
       "preco": 23.0,
       "imagem": "/pratos/escalope_alcatra.jpeg",
       "galeria": [
         "/pratos/escalope_alcatra.jpeg"
       ],
       "itens": [
-        "Batata frita",
-        "Legumes na manteiga"
+        "Pure gratinado",
+        "Brocolis na manteiga",
+        "Arroz branco",
+        "Feijão de caldo",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -169,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -231,11 +234,12 @@
       ],
       "itens": [
         "Batata frita",
-        "Quibe assado",
+        "Brocolis na manteiga",
         "Arroz branco",
-        "Feijão de caldo"
+        "Feijão de caldo",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -342,7 +346,7 @@
         "Bolinho de arroz",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -610,7 +614,7 @@
         "Bolinho de arroz",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {
