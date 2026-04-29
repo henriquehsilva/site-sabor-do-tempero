@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-28",
+      "data": "2026-04-29",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -70,7 +70,7 @@
         "Feijão de caldo",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -184,11 +184,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Banana frita",
-        "Couve refogada"
+        "Quibe assado",
+        "Espaguete alho e óleo",
+        "Mandioca temperada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -239,7 +239,7 @@
         "Feijão de caldo",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -350,19 +350,18 @@
     },
     {
       "id": "costela_mandioca",
-      "nome": "Costela bovina assada na panela",
+      "nome": "Costela bovina assada no forno",
       "preco": 23.0,
       "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Quibebe de mandioca",
+        "Quibe assado",
         "Espaguete alho e óleo", 
-        "Farofa de cenoura",
-        "Batata rustica"
+        "Mandioca temperada"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_molho_madeira",
