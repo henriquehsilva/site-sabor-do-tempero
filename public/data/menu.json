@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-29",
+      "data": "2026-04-30",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -172,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -188,7 +188,7 @@
         "Espaguete alho e óleo",
         "Mandioca temperada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -361,21 +361,24 @@
         "Espaguete alho e óleo", 
         "Mandioca temperada"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_molho_madeira",
-      "nome": "Carne ao molho madeira",
+      "nome": "Bife acebolado",
       "preco": 23.0,
       "imagem": "/pratos/carne_molho_madeira.jpeg",
       "galeria": [
         "/pratos/carne_molho_madeira.jpeg"
       ],
       "itens": [
-        "Espaguete com bacon alho e óleo",
-        "Batata souté"
+        "Pure gratinado",
+        "Panqueca de carne",
+        "Couve refogada",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -443,7 +446,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha_suina",
