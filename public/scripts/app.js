@@ -624,6 +624,28 @@ function addOrderItemRow(container) {
     sel.appendChild(opt);
   });
 
+  // Refrigerante grátis
+  const refriWrap = document.createElement('div');
+  refriWrap.className = 'ord-refri';
+
+  const refriLbl = document.createElement('span');
+  refriLbl.className = 'ord-refri-label';
+  refriLbl.textContent = '🥤 Refrigerante grátis — escolha 1';
+
+  const refriSel = document.createElement('select');
+  refriSel.className = 'ord-sel ord-refri-sel';
+  refriSel.setAttribute('aria-label', 'Refrigerante grátis');
+
+  [['', '— Escolher depois —'], ['Sukita 200ml', 'Sukita 200ml'], ['Pepsi 200ml', 'Pepsi 200ml'], ['Guaraná 200ml', 'Guaraná 200ml']].forEach(([val, label]) => {
+    const opt = document.createElement('option');
+    opt.value = val;
+    opt.textContent = label;
+    refriSel.appendChild(opt);
+  });
+
+  refriWrap.appendChild(refriLbl);
+  refriWrap.appendChild(refriSel);
+
   // Linha de controles: stepper + remover
   const ctrls = document.createElement('div');
   ctrls.className = 'ord-ctrls';
@@ -693,6 +715,7 @@ function addOrderItemRow(container) {
 
   // Monta
   row.appendChild(sel);
+  row.appendChild(refriWrap);
   row.appendChild(ctrls);
   container.appendChild(row);
 
@@ -764,13 +787,15 @@ async function handleSubmitOrder(e) {
     if (!id || qtd <= 0) return;
     const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
     const unit = getDishPriceById(id);
+    const refrigerante = r.querySelector('.ord-refri-sel')?.value || '';
 
     items.push({
       id,
       nome: prato?.nome || String(id),
       preco: unit,
       qtd,
-      total: unit * qtd
+      total: unit * qtd,
+      refrigerante
     });
   });
   if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
@@ -868,7 +893,7 @@ function buildOrderMessage(pedido, orderId) {
   linhas.push('🍽️ *Itens:*');
   pedido.itens.forEach((i, idx) => {
     linhas.push(`${idx + 1}. ${i.nome} x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
-
+    if (i.refrigerante) linhas.push(`   🥤 Refri grátis: ${i.refrigerante}`);
   });
 
   linhas.push('');

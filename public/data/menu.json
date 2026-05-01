@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-04-30",
+      "data": "2026-05-01",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -125,7 +125,7 @@
     },
     {
       "id": "picadinho_cenoura",
-      "nome": "Picadinho de alcatra Suina",
+      "nome": "Picadinho de Carne Bovina",
       "preco": 23.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
@@ -133,11 +133,12 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Lasanha Bolonhesa",
-        "Batata rustica",
-        "Banana frita"
+        "Pure gratinado",
+        "Brocolis na manteiga",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -236,10 +237,9 @@
         "Batata frita",
         "Brocolis na manteiga",
         "Arroz branco",
-        "Feijão de caldo",
-        "Vinagrete"
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -378,7 +378,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -446,7 +446,7 @@
         "Lasca de pequi",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha_suina",
