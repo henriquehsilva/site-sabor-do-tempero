@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-01",
+      "data": "2026-05-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -138,7 +138,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "contrafile_grelhado",
@@ -173,11 +173,11 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
-      "nome": "Frango assado na maionese",
+      "nome": "Frango assado com batata",
       "preco": 23.0,
       "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
@@ -185,11 +185,14 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Quibe assado",
-        "Espaguete alho e óleo",
-        "Mandioca temperada"
+        "Linguiça assada",
+        "Farofa de cebola",
+        "Banana frita",
+        "Couve refogada",
+        "Vinagrete",
+        "Arroz branco"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -239,7 +242,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
