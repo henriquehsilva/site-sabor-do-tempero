@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-02",
+      "data": "2026-05-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -173,7 +173,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -192,7 +192,7 @@
         "Vinagrete",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -263,7 +263,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Bife de Pernil Acebolado",
+      "nome": "Pernil assado",
       "preco": 23.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -275,12 +275,11 @@
       ],
       "itens": [
         "Arroz branco",
-        "Quibebe mandioca",
-        "Farofa bacon",
-        "Couve refogada",
-        "Banana frita"
+        "Feijão tropeiro",
+        "Escondidinho de carne",
+        "Espaguete com bacon alho e óleo"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -344,12 +343,12 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Mandioca frita",
-        "Banana frita",
-        "Bolinho de arroz",
-        "Couve refogada"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Escondidinho de carne",
+        "Espaguete com bacon alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
