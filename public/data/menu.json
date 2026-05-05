@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-04",
+      "data": "2026-05-05",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -238,11 +238,12 @@
       ],
       "itens": [
         "Batata frita",
-        "Guarnição Francesa",
+        "Banana frita",
         "Arroz branco",
-        "Feijão de caldo"
+        "Feijão de caldo",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -259,7 +260,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -279,7 +280,7 @@
         "Escondidinho de carne",
         "Espaguete com bacon alho e óleo"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -348,22 +349,24 @@
         "Escondidinho de carne",
         "Espaguete com bacon alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
-      "nome": "Costela bovina assada no forno",
+      "nome": "Costela bovina assada na panela",
       "preco": 23.0,
       "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Quibe assado",
-        "Espaguete alho e óleo", 
-        "Mandioca temperada"        
+        "Mandioca temperada",
+        "Couve refogada", 
+        "Banana frita",
+        "Arroz branco",
+        "Feijão de caldo"       
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_molho_madeira",
