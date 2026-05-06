@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-05",
+      "data": "2026-05-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -243,7 +243,7 @@
         "Feijão de caldo",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -260,7 +260,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -366,24 +366,22 @@
         "Arroz branco",
         "Feijão de caldo"       
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_molho_madeira",
-      "nome": "Bife acebolado",
+      "nome": "Bife de panela",
       "preco": 23.0,
       "imagem": "/pratos/carne_molho_madeira.jpeg",
       "galeria": [
         "/pratos/carne_molho_madeira.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
+        "Linguiça recheada",
         "Panqueca de carne",
-        "Couve refogada",
-        "Arroz branco",
-        "Feijão de caldo"
+        "Mandioca frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -488,7 +486,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Isca de Frango empanado",
+      "nome": "Isca de Frango",
       "preco": 23.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -496,13 +494,13 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Espaguete alho e óleo",
-        "Batata rustica",
-        "Banana frita",
+        "Panqueca de carne",
+        "Linguiça de frango assada",
+        "Mandioca frita",
         "Arroz branco",
-        "Feijão tropeiro"
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
