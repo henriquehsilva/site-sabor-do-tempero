@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-06",
+      "data": "2026-05-07",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -238,12 +238,11 @@
       ],
       "itens": [
         "Batata frita",
-        "Banana frita",
+        "Legumes salteados",
         "Arroz branco",
-        "Feijão de caldo",
-        "Couve refogada"
+        "Feijão de caldo"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -381,7 +380,7 @@
         "Panqueca de carne",
         "Mandioca frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -453,7 +452,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Ensopado de suã",
+      "nome": "Costelinha Suina",
       "preco": 23.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -464,11 +463,13 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Banana frita",
-        "Couve refogada"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Farofa de banana",
+        "Mandioca temperada",
+        "Legumes salteados"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -500,7 +501,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
