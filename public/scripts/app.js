@@ -691,8 +691,35 @@ function addOrderItemRow(container) {
 
 
 
+  // Refri grátis
+  const refriWrap = document.createElement('div');
+  refriWrap.className = 'ord-refri';
+
+  const refriLbl = document.createElement('span');
+  refriLbl.className = 'ord-refri-label';
+  refriLbl.textContent = '🥤 Refri grátis — escolha um:';
+
+  const refriSel = document.createElement('select');
+  refriSel.className = 'ord-sel ord-refri-sel';
+  refriSel.setAttribute('aria-label', 'Escolha o refrigerante grátis');
+
+  [
+    { value: 'sukita',  label: 'Sukita 200ml'  },
+    { value: 'guarana', label: 'Guaraná 200ml' },
+    { value: 'pepsi',   label: 'Pepsi 200ml'   },
+  ].forEach(({ value, label }) => {
+    const opt = document.createElement('option');
+    opt.value = value;
+    opt.textContent = label;
+    refriSel.appendChild(opt);
+  });
+
+  refriWrap.appendChild(refriLbl);
+  refriWrap.appendChild(refriSel);
+
   // Monta
   row.appendChild(sel);
+  row.appendChild(refriWrap);
   row.appendChild(ctrls);
   container.appendChild(row);
 
@@ -764,12 +791,14 @@ async function handleSubmitOrder(e) {
     if (!id || qtd <= 0) return;
     const prato = (menuData?.pratos || []).find(p => String(p.id) === String(id));
     const unit = getDishPriceById(id);
+    const refri = r.querySelector('.ord-refri-sel')?.value || '';
     items.push({
       id,
       nome: prato?.nome || String(id),
       preco: unit,
       qtd,
       total: unit * qtd,
+      refri,
     });
   });
   if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
@@ -864,9 +893,11 @@ function buildOrderMessage(pedido, orderId) {
   if (pedido.obs) linhas.push(`📝 *Obs.:* ${pedido.obs}`);
 
   linhas.push('');
+  const refriNomes = { sukita: 'Sukita', guarana: 'Guaraná', pepsi: 'Pepsi' };
   linhas.push('🍽️ *Itens:*');
   pedido.itens.forEach((i, idx) => {
-    linhas.push(`${idx + 1}. ${i.nome} x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
+    const refriStr = i.refri ? ` + 🥤 ${refriNomes[i.refri] || i.refri} 200ml (grátis)` : '';
+    linhas.push(`${idx + 1}. ${i.nome} x${i.qtd} — ${money(i.preco)}${refriStr} (linha: ${money(i.total)})`);
   });
 
   linhas.push('');
