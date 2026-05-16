@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-09",
+      "data": "2026-05-16",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -173,7 +173,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -192,7 +192,7 @@
         "Vinagrete",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -280,7 +280,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -316,20 +316,20 @@
     },
     {
       "id": "frango_grelhado",
-      "nome": "Filé de frito ao alho e óleo",
+      "nome": "Frango frito ao alho e óleo",
       "preco": 23.0,
       "imagem": "/pratos/frango_grelhado.jpeg",
       "galeria": [
         "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
-        "Couve refogada",
+        "Couve refoga",
         "Banana frita",
         "Farofa de cebola",
-        "Linguiça",
-        "Vinagrete"
+        "Linguiça assada",
+        "Mandioca frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "sobrecoxa_recheado",
