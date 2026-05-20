@@ -689,37 +689,8 @@ function addOrderItemRow(container) {
     updateOrderTotals();
   });
 
-
-
-  // Refri grátis
-  const refriWrap = document.createElement('div');
-  refriWrap.className = 'ord-refri';
-
-  const refriLbl = document.createElement('span');
-  refriLbl.className = 'ord-refri-label';
-  refriLbl.textContent = '🥤 Refri grátis — escolha um:';
-
-  const refriSel = document.createElement('select');
-  refriSel.className = 'ord-sel ord-refri-sel';
-  refriSel.setAttribute('aria-label', 'Escolha o refrigerante grátis');
-
-  [
-    { value: 'sukita',  label: 'Sukita 200ml'  },
-    { value: 'guarana', label: 'Guaraná 200ml' },
-    { value: 'pepsi',   label: 'Pepsi 200ml'   },
-  ].forEach(({ value, label }) => {
-    const opt = document.createElement('option');
-    opt.value = value;
-    opt.textContent = label;
-    refriSel.appendChild(opt);
-  });
-
-  refriWrap.appendChild(refriLbl);
-  refriWrap.appendChild(refriSel);
-
   // Monta
   row.appendChild(sel);
-  row.appendChild(refriWrap);
   row.appendChild(ctrls);
   container.appendChild(row);
 

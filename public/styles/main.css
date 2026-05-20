@@ -1099,23 +1099,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* =====================================================================
-   REFRI (refrigerante grátis no item do pedido)
-   ===================================================================== */
-.ord-refri {
-  margin-top: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.ord-refri-label {
-  font-size: var(--fs-xs);
-  font-weight: 700;
-  color: var(--cor-primaria-dark);
-  letter-spacing: 0.02em;
-}
-
-/* =====================================================================
    PROMO BANNER (optional dynamic element)
    ===================================================================== */
 .promo-banner-limited {
