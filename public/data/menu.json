@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-20",
+      "data": "2026-05-21",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -57,20 +57,19 @@
     },
     {
       "id": "escalope_alcatra",
-      "nome": "Escalope de carne bovina",
+      "nome": "Rocambole de carne moida",
       "preco": 23.0,
       "imagem": "/pratos/escalope_alcatra.jpeg",
       "galeria": [
         "/pratos/escalope_alcatra.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Brocolis na manteiga",
+        "Panqueca de frango",
+        "Batata frita",
         "Arroz branco",
-        "Feijão de caldo",
-        "Vinagrete"
+        "Feijão de tropeiro"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -173,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -189,7 +188,7 @@
         "Brocolis na manteiga",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -256,7 +255,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -275,7 +274,7 @@
         "Brocolis na manteiga",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -448,7 +447,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha Suina",
+      "nome": "Costelinha Suina assada",
       "preco": 23.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -460,12 +459,11 @@
       ],
       "itens": [
         "Arroz branco",
-        "Feijão de caldo",
-        "Farofa de banana",
-        "Mandioca temperada",
-        "Legumes salteados"
+        "Feijão tropeiro",
+        "Panqueca de frango",
+        "Mandioca cozida"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
