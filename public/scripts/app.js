@@ -624,6 +624,22 @@ function addOrderItemRow(container) {
     sel.appendChild(opt);
   });
 
+  // Select de refrigerante (opcional - promoção: 200ml grátis)
+  const refriLabel = document.createElement('label');
+  refriLabel.className = 'ord-lab';
+  refriLabel.style.marginTop = '0.5rem';
+  refriLabel.textContent = 'Refrigerante (200ml) — grátis';
+
+  const refriSel = document.createElement('select');
+  refriSel.className = 'ord-sel ord-refri-sel';
+  refriSel.setAttribute('aria-label', 'Escolha o refrigerante');
+  refriSel.innerHTML = `
+    <option value="">Nenhum</option>
+    <option value="pepsi">Pepsi 200ml</option>
+    <option value="sukita">Sukita 200ml</option>
+  `;
+  refriLabel.appendChild(refriSel);
+
   // Linha de controles: stepper + remover
   const ctrls = document.createElement('div');
   ctrls.className = 'ord-ctrls';
@@ -689,8 +705,9 @@ function addOrderItemRow(container) {
     updateOrderTotals();
   });
 
-  // Monta
+  // Monta (prato, opção de refri e controles)
   row.appendChild(sel);
+  row.appendChild(refriLabel);
   row.appendChild(ctrls);
   container.appendChild(row);
 
@@ -1105,6 +1122,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // inicializa Firebase se houver env; se não houver, segue com localStorage
   await initFirebaseIfAvailable();
   await carregarMenu();
+  // handler do botão de fechar promo
+  const promoClose = document.getElementById('promoClose');
+  if (promoClose) promoClose.addEventListener('click', () => {
+    const pb = document.getElementById('promoBanner');
+    if (pb) pb.style.display = 'none';
+  });
 });
 
 // ===============================[ EXEMPLO ENV ]=================================
