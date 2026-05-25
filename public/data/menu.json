@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-23",
+      "data": "2026-05-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -354,13 +354,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Mandioca temperada",
-        "Couve refogada", 
-        "Banana frita",
-        "Arroz branco",
-        "Feijão de caldo"       
+        "Linguini alho e óleo",
+        "Brocolis gratinado"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_molho_madeira",
@@ -463,7 +460,7 @@
         "Couve refoga",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -564,7 +561,7 @@
     },
     {
       "id": "alcatra_suina",
-      "nome": "Isca de alcatra suina",
+      "nome": "Alcatra suina assada com batata",
       "preco": 23.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
@@ -574,11 +571,11 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Mandioca temperada",
-        "Farofa de bacon",
-        "Quiabo com bacon"
+        "Frango frito",
+        "Brocolis gratinado",
+        "Linguini alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
