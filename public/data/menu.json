@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-26",
+      "data": "2026-05-27",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -172,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -255,11 +255,11 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
-      "nome": "Isca de pernil assado",
+      "nome": "Bife de pernil",
       "preco": 23.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -270,11 +270,11 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Pure de batata gratinado",
-        "Brocolis na manteiga",
-        "Espaguete alho e óleo"
+        "Mandioca frita",
+        "Banana frita",
+        "Couve refogada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -343,7 +343,7 @@
         "Arroz branco",
         "Feijão de tropeiro"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -373,7 +373,7 @@
         "Arroz branco",
         "Feijão tropeiro"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -526,7 +526,7 @@
         "Arroz branco",
         "Feijão tropeiro"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
