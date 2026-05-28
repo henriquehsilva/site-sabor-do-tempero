@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-27",
+      "data": "2026-05-28",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -172,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -255,7 +255,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -274,7 +274,7 @@
         "Banana frita",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -445,7 +445,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha Suina assada",
+      "nome": "Costelinha Suina ao alho e óleo",
       "preco": 23.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -456,12 +456,11 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Linguiça assada",
-        "Farofa de cebola",
-        "Couve refoga",
-        "Banana frita"
+        "Mandioca temperada",
+        "Farofa de bacon",
+        "Espaguete alho e óleo"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -479,7 +478,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Isca de Frango empanada",
+      "nome": "Coxinha da asa caramelizada",
       "preco": 23.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -487,11 +486,11 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Batata frita",
+        "Pure gratinado",
         "Farofa de bacon",
-        "Quiabo com bacon"
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -537,10 +536,11 @@
         "/pratos/rabada_molho.jpeg"
       ],
       "itens": [
-        "Batata souté",
-        "Raviole de frango"
+        "Pure gratinado",
+        "Farofa de bacon",
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_curry",
