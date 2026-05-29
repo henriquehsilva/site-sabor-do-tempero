@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-28",
+      "data": "2026-05-29",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -172,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -184,11 +184,11 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Pure de batata gratinado",
-        "Brocolis na manteiga",
-        "Espaguete alho e óleo"
+        "Moela acebolada",
+        "Couve refoga",
+        "Banana frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -460,7 +460,7 @@
         "Farofa de bacon",
         "Espaguete alho e óleo"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -490,7 +490,7 @@
         "Farofa de bacon",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
@@ -540,7 +540,7 @@
         "Farofa de bacon",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_curry",
