@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-05-29",
+      "data": "2026-06-01",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -188,11 +188,11 @@
         "Couve refoga",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
-      "nome": "Carne bovina assada",
+      "nome": "Isca de carne bovina acebolada",
       "preco": 23.0,
       "imagem": "/pratos/carne_assada_1.jpg",
       "galeria": [
@@ -201,13 +201,12 @@
       ],
       "itens": [
         "Arroz branco",
-        "Mandioca temperada",
-        "Pure gratinado",
-        "Feijão tropeiro",
-        "Banana frita",
-        "Brocolis no vapor"
+        "Feijão de caldo",
+        "Escondidinho de carne",
+        "Banana milanesa",
+        "Espaguete alho e óleo"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "lagarto_recheado",
@@ -259,7 +258,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Bife de pernil",
+      "nome": "Pernil assado com maçã",
       "preco": 23.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -270,11 +269,13 @@
         "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
-        "Mandioca frita",
-        "Banana frita",
-        "Couve refogada"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Escondidinho de carne",
+        "Banana milanesa",
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
