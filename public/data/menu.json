@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-01",
+      "data": "2026-06-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -206,7 +206,7 @@
         "Banana milanesa",
         "Espaguete alho e óleo"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lagarto_recheado",
@@ -233,11 +233,9 @@
       ],
       "itens": [
         "Batata frita",
-        "Legumes salteados",
-        "Arroz branco",
-        "Feijão de caldo"        
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -275,7 +273,7 @@
         "Banana milanesa",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha_calabresa",
@@ -457,11 +455,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Mandioca temperada",
-        "Farofa de bacon",
-        "Espaguete alho e óleo"        
+        "Mandioca frita",
+        "Legumes na manteiga"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
