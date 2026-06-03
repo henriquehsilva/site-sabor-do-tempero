@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-02",
+      "data": "2026-06-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -172,7 +172,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -235,7 +235,7 @@
         "Batata frita",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -252,7 +252,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -360,19 +360,19 @@
     },
     {
       "id": "carne_molho_madeira",
-      "nome": "Carne com cenoura",
+      "nome": "Bife a rolê com bacon",
       "preco": 23.0,
       "imagem": "/pratos/carne_molho_madeira.jpeg",
       "galeria": [
         "/pratos/carne_molho_madeira.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Legumes na manteiga",
         "Arroz branco",
-        "Feijão tropeiro"
+        "Feijão de caldo",
+        "Lasanha a bolonhesa",
+        "Batata frita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -458,7 +458,7 @@
         "Mandioca frita",
         "Legumes na manteiga"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -542,20 +542,19 @@
     },
     {
       "id": "frango_curry",
-      "nome": "Frango ao frito alho e óleo",
+      "nome": "Frango assado com batatas",
       "preco": 23.0,
       "imagem": "/pratos/frango_frito.png",
       "galeria": [
         "/pratos/frango_frito.png"
       ],
       "itens": [
-        "Couve refogada",
-        "Banana frita",
-        "Farofa de cebola",
-        "Linguiça",
-        "Vinagrete"
+        "Moela acebolada",
+        "Lasanha a bolonhesa",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "alcatra_suina",
