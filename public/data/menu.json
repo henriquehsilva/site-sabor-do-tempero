@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-03",
+      "data": "2026-06-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -57,19 +57,18 @@
     },
     {
       "id": "escalope_alcatra",
-      "nome": "Rocambole de carne moida",
+      "nome": "Alcatra suina assada com batata",
       "preco": 23.0,
       "imagem": "/pratos/escalope_alcatra.jpeg",
       "galeria": [
         "/pratos/escalope_alcatra.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Batata frita",
-        "Arroz branco",
-        "Feijão de tropeiro"
+        "Farofa com bacon",
+        "Seleta de legumes",
+        "Panqueca de carne"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -252,7 +251,7 @@
         "Ervilha",
         "Mussarela"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -326,7 +325,7 @@
     },
     {
       "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada com bacon e calabresa",
+      "nome": "Sobrecoxa recheada",
       "preco": 23.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
@@ -337,12 +336,11 @@
         "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Legumes na manteiga",
-        "Arroz branco",
-        "Feijão de tropeiro"
+        "Panqueca de carne",
+        "Seleta de legumes",
+        "Farofa com bacon"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -372,7 +370,7 @@
         "Lasanha a bolonhesa",
         "Batata frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -403,11 +401,11 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Banana milanesa",
-        "Pure gratinado",
-        "Farofa de bacon"
+        "Farofa de bacon",
+        "Seleta de legumes",
+        "Panqueca de carne"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -554,7 +552,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina",
