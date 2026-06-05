@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-04",
+      "data": "2026-06-05",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -68,7 +68,7 @@
         "Seleta de legumes",
         "Panqueca de carne"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -169,9 +169,10 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha"
+        "Batata palha",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -340,7 +341,7 @@
         "Seleta de legumes",
         "Farofa com bacon"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
@@ -405,7 +406,7 @@
         "Seleta de legumes",
         "Panqueca de carne"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
@@ -453,10 +454,15 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Mandioca frita",
-        "Legumes na manteiga"        
+        "Farofa com bacon",
+        "Couve refoga",
+        "Banana frita",
+        "Linguiça assada",
+        "Vinagrete",
+        "Arroz branco",
+        "Feijão de caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
