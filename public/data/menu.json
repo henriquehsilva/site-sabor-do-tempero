@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-05",
+      "data": "2026-06-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -172,7 +172,7 @@
         "Batata palha",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -225,17 +225,19 @@
     },
     {
       "id": "file_parmegiana",
-      "nome": "Frango  à parmejiana",
+      "nome": "Frango  à parmejiana ou milanesa",
       "preco": 23.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
         "Batata frita",
-        "Legumes na manteiga"
+        "Brocolis na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -410,7 +412,7 @@
     },
     {
       "id": "carne_panela",
-      "nome": "Picadinho de Carne Bovina",
+      "nome": "Carne com mandioca",
       "preco": 23.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
@@ -418,11 +420,12 @@
         "/pratos/carne_panela_1.jpeg"
       ],
       "itens": [
-        "Pure de batata gratinado",
-        "Guarnição Francesa",
-        "Mandioca frita"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Batata frita",
+        "Brocolis na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_cerrado",
@@ -462,7 +465,7 @@
         "Arroz branco",
         "Feijão de caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -562,7 +565,7 @@
     },
     {
       "id": "alcatra_suina",
-      "nome": "Alcatra suina assada com batata",
+      "nome": "Picadinho de alcatra suina",
       "preco": 23.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
@@ -572,11 +575,12 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Frango frito",
-        "Brocolis gratinado",
-        "Linguini alho e óleo"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Batata frita",
+        "Brocolis na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
