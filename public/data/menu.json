@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-06",
+      "data": "2026-06-08",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -172,7 +172,7 @@
         "Batata palha",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -237,7 +237,7 @@
         "Batata frita",
         "Brocolis na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -258,7 +258,7 @@
     },
     {
       "id": "pernil_assado",
-      "nome": "Pernil assado com maçã",
+      "nome": "Pernil na panela com batatas",
       "preco": 23.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
@@ -271,11 +271,11 @@
       "itens": [
         "Arroz branco",
         "Feijão de caldo",
-        "Escondidinho de carne",
-        "Banana milanesa",
-        "Espaguete alho e óleo"
+        "Macaronada",
+        "Pure de cabutia",
+        "Beringela a milanesa"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha_calabresa",
@@ -425,7 +425,7 @@
         "Batata frita",
         "Brocolis na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_cerrado",
@@ -483,7 +483,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Coxinha da asa caramelizada",
+      "nome": "Isca de frango empanada",
       "preco": 23.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -491,11 +491,13 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Farofa de bacon",
-        "Espaguete alho e óleo"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Macaronada",
+        "Pure de cabutia",
+        "Beringela a milanesa"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -580,7 +582,7 @@
         "Batata frita",
         "Brocolis na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",

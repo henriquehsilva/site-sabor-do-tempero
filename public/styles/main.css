@@ -1161,6 +1161,17 @@ a { color: inherit; text-decoration: none; }
 
 .promo-refri-close:hover { color: rgba(255,255,255,0.8); }
 
+.promo-arroz {
+  background: linear-gradient(135deg, #1c1409 0%, #2a1d08 100%);
+  border-color: rgba(201,149,72,0.45);
+  border-left-color: var(--cor-primaria);
+  box-shadow: 0 0 20px rgba(201,149,72,0.12), var(--sombra-md);
+}
+
+.promo-arroz .promo-refri-titulo { color: var(--cor-primaria); }
+.promo-arroz .promo-refri-desc   { color: #fde68a; }
+.promo-arroz .promo-refri-desc strong { color: #fff; }
+
 /* Seleção de refri no modal */
 .ord-fieldset-refri {
   background: #f0fdf4;
