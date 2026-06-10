@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-09",
+      "data": "2026-06-10",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -172,7 +172,7 @@
         "Batata palha",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -225,19 +225,17 @@
     },
     {
       "id": "file_parmegiana",
-      "nome": "Frango  à parmejiana ou milanesa",
+      "nome": "Frango  à parmejiana",
       "preco": 24.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
         "Batata frita",
-        "Brocolis na manteiga"
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -345,21 +343,21 @@
         "Farofa de bacon",
         "Quibe assado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_mandioca",
-      "nome": "Costela bovina assada na panela",
+      "nome": "Vaca atolada Costela bovina com mandioca",
       "preco": 24.0,
       "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Linguini alho e óleo",
-        "Brocolis gratinado"
+        "Batata frita",
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_molho_madeira",
@@ -551,7 +549,7 @@
         "Quibe assado",
         "Farofa de bacon"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_curry",
@@ -571,7 +569,7 @@
     },
     {
       "id": "alcatra_suina",
-      "nome": "Picadinho de alcatra suina",
+      "nome": "Bife de alcatra suina",
       "preco": 24.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
@@ -581,12 +579,10 @@
         "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
         "Batata frita",
-        "Brocolis na manteiga"
+        "Espaguete alho e óleo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
