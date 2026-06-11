@@ -743,7 +743,6 @@ async function handleSubmitOrder(e) {
   const end = (document.getElementById('cliEndereco').value || '').trim();
   const obs = (document.getElementById('cliObs').value || '').trim();
   const localVal = (document.querySelector('input[name="cliLocal"]:checked')?.value) || 'rio-quente';
-  const refriEscolhido = (document.querySelector('input[name="cliRefri"]:checked')?.value) || 'Guaraná';
 
   if (!nome || !foneDigits || !end) {
     alert('Preencha nome, WhatsApp e endereço.');
@@ -793,7 +792,6 @@ async function handleSubmitOrder(e) {
       geo: coords ? { ...coords, maps: mapsLink } : null
     },
     itens: items,
-    refri: refriEscolhido,
     financeiro: { subtotal, frete, total, moeda: 'BRL', origem: 'sem-promo' },
     obs,
     criadoEm: new Date().toISOString(),
@@ -868,8 +866,6 @@ function buildOrderMessage(pedido, orderId) {
   pedido.itens.forEach((i, idx) => {
     linhas.push(`${idx + 1}. ${i.nome} x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
   });
-
-  if (pedido.refri) linhas.push(`🥤 *Refrigerante grátis:* ${pedido.refri} 200ml`);
 
   linhas.push('');
   linhas.push(`Subtotal: ${money(pedido.financeiro.subtotal)}`);

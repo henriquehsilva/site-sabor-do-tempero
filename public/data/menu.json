@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-10",
+      "data": "2026-06-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -184,11 +184,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Moela acebolada",
-        "Couve refoga",
-        "Banana frita"
+        "Pure de batata gratinado",
+        "Legumes na manteiga"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -235,7 +234,7 @@
         "Batata frita",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -357,7 +356,7 @@
         "Batata frita",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_molho_madeira",
@@ -457,15 +456,10 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Farofa com bacon",
-        "Couve refoga",
-        "Banana frita",
-        "Linguiça assada",
-        "Vinagrete",
-        "Arroz branco",
-        "Feijão de caldo"
+        "Pure de batata gratinado",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
@@ -483,7 +477,7 @@
     },
     {
       "id": "isca_frango_empanada",
-      "nome": "Isca de frango empanada",
+      "nome": "Tilapia empanada",
       "preco": 24.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -491,13 +485,10 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão de caldo",
-        "Macaronada",
-        "Pure de cabutia",
-        "Beringela a milanesa"
+        "Pure de batata gratinado",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "dobradinha",
@@ -582,7 +573,7 @@
         "Batata frita",
         "Espaguete alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
