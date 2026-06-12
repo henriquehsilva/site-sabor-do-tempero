@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-11",
+      "data": "2026-06-12",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -57,7 +57,7 @@
     },
     {
       "id": "escalope_alcatra",
-      "nome": "Alcatra suina assada com batata",
+      "nome": "Alcatra suina assada",
       "preco": 24.0,
       "imagem": "/pratos/escalope_alcatra.jpeg",
       "galeria": [
@@ -65,10 +65,11 @@
       ],
       "itens": [
         "Farofa com bacon",
-        "Seleta de legumes",
-        "Panqueca de carne"        
+        "Mandioca temperada",
+        "Couve refoga",
+        "Banana frita"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "file_frango_molho_branco",
@@ -172,7 +173,7 @@
         "Batata palha",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -187,7 +188,7 @@
         "Pure de batata gratinado",
         "Legumes na manteiga"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -459,7 +460,7 @@
         "Pure de batata gratinado",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -488,7 +489,7 @@
         "Pure de batata gratinado",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "dobradinha",
