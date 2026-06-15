@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-12",
+      "data": "2026-06-15",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -69,7 +69,7 @@
         "Couve refoga",
         "Banana frita"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_molho_branco",
@@ -185,10 +185,12 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Pure de batata gratinado",
-        "Legumes na manteiga"        
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Seleta de legumes",
+        "Macaronada"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -457,10 +459,12 @@
         "/pratos/costela_mandioca.jpeg"
       ],
       "itens": [
-        "Pure de batata gratinado",
-        "Legumes na manteiga"
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Seleta de legumes",
+        "Macaronada"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_suina",
