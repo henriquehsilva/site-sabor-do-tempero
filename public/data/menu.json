@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-15",
+      "data": "2026-06-17",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -190,7 +190,7 @@
         "Seleta de legumes",
         "Macaronada"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -448,7 +448,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha Suina ao alho e óleo",
+      "nome": "Costelinha Suina assada",
       "preco": 24.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -460,9 +460,9 @@
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Seleta de legumes",
-        "Macaronada"
+        "Feijão de caldo",
+        "Quiabo com bacon",
+        "Pure gratinado"
       ],
       "disponivel": true
     },
@@ -523,12 +523,12 @@
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Panqueca de frango",
-        "Legumes na manteiga",
+        "Quiabo com bacon",
+        "Pure gratinado",
         "Arroz branco",
-        "Feijão tropeiro"        
+        "Feijão de caldo"        
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
