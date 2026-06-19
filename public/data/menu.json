@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-17",
+      "data": "2026-06-19",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costelinha",
@@ -173,7 +173,7 @@
         "Batata palha",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_maionese",
@@ -318,13 +318,15 @@
         "/pratos/frango_grelhado.jpeg"
       ],
       "itens": [
-        "Couve refoga",
+        "Arroz branco",
         "Banana frita",
+        "Feijão de caldo",
+        "Couve refoga",
         "Farofa de cebola",
         "Linguiça assada",
-        "Mandioca frita"
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "sobrecoxa_recheado",
@@ -406,11 +408,15 @@
         "/pratos/carne_cenoura.jpeg"
       ],
       "itens": [
-        "Farofa de bacon",
-        "Seleta de legumes",
-        "Panqueca de carne"
+        "Arroz branco",
+        "Feijão de caldo",
+        "Banana frita",
+        "Couve refogada",
+        "Linguiça assada",
+        "Farofa de cebola",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "carne_panela",
@@ -464,7 +470,7 @@
         "Quiabo com bacon",
         "Pure gratinado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_suina",
@@ -528,7 +534,7 @@
         "Arroz branco",
         "Feijão de caldo"        
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
