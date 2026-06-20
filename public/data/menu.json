@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-19",
+      "data": "2026-06-20",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -34,7 +34,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costelinha",
@@ -90,18 +90,19 @@
     },
     {
       "id": "peixe_assado",
-      "nome": "Moqueca Goiana",
+      "nome": "Tilapia empanada",
       "preco": 24.0,
       "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
         "/pratos/peixe_assado.jpg"
       ],
       "itens": [
-        "Mandioca frita",
-        "Pirão de tilapia",
-        "Guarnição Francesa"
+        "Arroz branco",
+        "Espaguete alho e óleo",
+        "Feijão de caldo",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_goiana",
@@ -173,7 +174,7 @@
         "Batata palha",
         "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "frango_maionese",
@@ -326,7 +327,7 @@
         "Linguiça assada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "sobrecoxa_recheado",
@@ -365,7 +366,7 @@
     },
     {
       "id": "carne_molho_madeira",
-      "nome": "Bife a rolê com bacon",
+      "nome": "Carne com mandioca vaca atolada",
       "preco": 24.0,
       "imagem": "/pratos/carne_molho_madeira.jpeg",
       "galeria": [
@@ -374,10 +375,10 @@
       "itens": [
         "Arroz branco",
         "Feijão de caldo",
-        "Lasanha a bolonhesa",
-        "Batata frita"
+        "Espaguete alho e óleo",
+        "Legumes na manteiga"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_mandioca",
@@ -416,7 +417,7 @@
         "Farofa de cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_panela",
