@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-      "data": "2026-06-20",
+    "data": "2026-08-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,8 +11,60 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "strogonoff",
+      "nome": "Estrogonoff de Frango",
+      "preco": 24.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz Branco",
+        "Batata Palha"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "isca_frango",
+      "nome": "Isca de Frango",
+      "preco": 24.0,
+      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
+      "galeria": [
+        "/pratos/isca_frango_empanada_preview.jpeg",
+        "/pratos/isca_frango_empanada.jpeg"
+      ],
+      "itens": [
+        "Arroz Branco",
+        "Feijão em Caldo",
+        "Panqueca de Frango",
+        "Batata Rústica"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "costela_panela",
+      "nome": "Costela Bovina Assada na Panela",
+      "preco": 24.0,
+      "imagem": "/pratos/costela_panela.png",
+      "galeria": [
+        "/pratos/costela_panela.png"
+      ],
+      "itens": [
+        "Arroz Branco",
+        "Feijão em Caldo",
+        "Panqueca de Frango",
+        "Batata Rústica"
+      ],
+      "disponivel": true
+    },
     {
       "id": "feijoada",
       "nome": "Feijoada completa",
@@ -67,7 +119,7 @@
         "Farofa com bacon",
         "Mandioca temperada",
         "Couve refoga",
-        "Banana frita"        
+        "Banana frita"
       ],
       "disponivel": false
     },
@@ -102,7 +154,7 @@
         "Feijão de caldo",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_goiana",
@@ -156,27 +208,6 @@
       "disponivel": false
     },
     {
-      "id": "strogonoff",
-      "nome": "Strogonoff de Frango",
-      "preco": 24.0,
-      "imagem": "/pratos/strogonoff_preview_1.jpg",
-      "galeria": [
-        "/pratos/strogonoff_preview_1.jpg",
-        "/pratos/strogonoff_preview.jpg",
-        "/pratos/strogonoff.jpg",
-        "/pratos/strogonoff_2.jpg",
-        "/pratos/strogonoff_3.jpg",
-        "/pratos/strogonoff_4.jpg",
-        "/pratos/strogonoff_4.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Batata palha",
-        "Vinagrete"
-      ],
-      "disponivel": true
-    },
-    {
       "id": "frango_maionese",
       "nome": "Frango assado na maionese",
       "preco": 24.0,
@@ -189,7 +220,7 @@
         "Arroz branco",
         "Feijão tropeiro",
         "Seleta de legumes",
-        "Macaronada"        
+        "Macaronada"
       ],
       "disponivel": false
     },
@@ -207,7 +238,7 @@
         "Feijão de caldo",
         "Escondidinho de carne",
         "Banana milanesa",
-        "Espaguete alho e óleo"        
+        "Espaguete alho e óleo"
       ],
       "disponivel": false
     },
@@ -228,7 +259,7 @@
     },
     {
       "id": "file_parmegiana",
-      "nome": "Frango  à parmejiana",
+      "nome": "Frango à parmejiana",
       "preco": 24.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
@@ -378,10 +409,10 @@
         "Espaguete alho e óleo",
         "Legumes na manteiga"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
-      "id": "costela_mandioca",
+      "id": "costela_mandioca_2",
       "nome": "Carne com mandioca",
       "preco": 24.0,
       "imagem": "/pratos/costela_bovina.jpeg",
@@ -390,7 +421,7 @@
       ],
       "itens": [
         "Legumes na manteiga",
-        "linguiça de frango assada",
+        "Linguiça de frango assada",
         "Feijão tropeiro",
         "Arroz branco",
         "Espaguete alho e óleo"
@@ -455,7 +486,7 @@
     },
     {
       "id": "costelinha_suina",
-      "nome": "Costelinha Suina assada",
+      "nome": "Costelinha Suína assada",
       "preco": 24.0,
       "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
@@ -484,21 +515,6 @@
       "itens": [
         "Lasanha de frango",
         "Batata rustica"
-      ],
-      "disponivel": false
-    },
-    {
-      "id": "isca_frango_empanada",
-      "nome": "Tilapia empanada",
-      "preco": 24.0,
-      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
-      "galeria": [
-        "/pratos/isca_frango_empanada_preview.jpeg",
-        "/pratos/isca_frango_empanada.jpeg"
-      ],
-      "itens": [
-        "Pure de batata gratinado",
-        "Legumes na manteiga"
       ],
       "disponivel": false
     },
@@ -533,7 +549,7 @@
         "Quiabo com bacon",
         "Pure gratinado",
         "Arroz branco",
-        "Feijão de caldo"        
+        "Feijão de caldo"
       ],
       "disponivel": false
     },
@@ -572,7 +588,7 @@
     },
     {
       "id": "alcatra_suina",
-      "nome": "Bife de alcatra suina",
+      "nome": "Bife de alcatra suína",
       "preco": 24.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
@@ -584,24 +600,6 @@
       "itens": [
         "Batata frita",
         "Espaguete alho e óleo"
-      ],
-      "disponivel": false
-    },
-    {
-      "id": "costela_panela",
-      "nome": "Costela bovina assada na panela",
-      "preco": 24.0,
-      "imagem": "/pratos/costela_panela.png",
-      "galeria": [
-        "/pratos/costela_panela.png"
-      ],
-      "itens": [
-        "Linguiça Toscana Assada",
-        "Mandioca frita",
-        "Espaguete alho e óleo",
-        "Banana frita",
-        "Feijão tropeiro",
-        "Arroz branco"
       ],
       "disponivel": false
     },
