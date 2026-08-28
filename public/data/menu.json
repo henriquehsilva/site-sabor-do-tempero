@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-08-26",
+    "data": "2026-08-28",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -30,7 +30,7 @@
         "Arroz Branco",
         "Batata Palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "isca_frango",
@@ -47,7 +47,7 @@
         "Panqueca de Frango",
         "Batata Rústica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
@@ -63,7 +63,7 @@
         "Panqueca de Frango",
         "Batata Rústica"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "feijoada",
@@ -177,7 +177,7 @@
     },
     {
       "id": "picadinho_cenoura",
-      "nome": "Picadinho de Carne Bovina",
+      "nome": "Picadinho de carne bovina com calabresa",
       "preco": 24.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
@@ -185,12 +185,12 @@
         "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Pure gratinado",
-        "Guarnição Francesa",
         "Arroz branco",
-        "Feijão de caldo"
+        "Tutu de feijão",
+        "Brócolis refogado com bacon",
+        "Creme de milho gratinado"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "contrafile_grelhado",
@@ -281,12 +281,16 @@
         "/pratos/panelinha_mineira.jpg"
       ],
       "itens": [
-        "Frango em cubos",
+        "Cubos de frango",
         "Linguiça",
-        "Ervilha",
-        "Mussarela"
+        "Cubos de pernil",
+        "Bacon",
+        "Ervilhas frescas",
+        "Mussarela",
+        "Tomate",
+        "Cheiro verde"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "pernil_assado",
@@ -546,12 +550,12 @@
         "/pratos/file_milanesa.jpeg"
       ],
       "itens": [
-        "Quiabo com bacon",
-        "Pure gratinado",
         "Arroz branco",
-        "Feijão de caldo"
+        "Tutu de feijão",
+        "Brócolis refogado com bacon",
+        "Creme de milho"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "rabada_molho",
