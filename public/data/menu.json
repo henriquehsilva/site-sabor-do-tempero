@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-08-28",
+    "data": "2026-08-29",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,45 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "feijoada",
+      "nome": "Feijoada completa",
+      "preco": 24.0,
+      "imagem": "/pratos/feijoada_4.jpg",
+      "galeria": [
+        "/pratos/feijoada_4.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg"
+      ],
+      "itens": [
+        "Arroz Branco",
+        "Torresmo",
+        "Couve Refogada",
+        "Farofa de Cebola",
+        "Linguiça Assada",
+        "Vinagrete"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_grelhado",
+      "nome": "Frango frito ao alho e óleo",
+      "preco": 24.0,
+      "imagem": "/pratos/frango_grelhado.jpeg",
+      "galeria": [
+        "/pratos/frango_grelhado.jpeg"
+      ],
+      "itens": [
+        "Arroz Branco",
+        "Feijão de Caldo",
+        "Couve Refogada",
+        "Linguiça Assada",
+        "Farofa de Cebola",
+        "Vinagrete"
+      ],
+      "disponivel": true
+    },
     {
       "id": "strogonoff",
       "nome": "Estrogonoff de Frango",
@@ -28,9 +67,10 @@
       ],
       "itens": [
         "Arroz Branco",
-        "Batata Palha"
+        "Batata Palha",
+        "Vinagrete"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "isca_frango",
@@ -65,29 +105,7 @@
       ],
       "disponivel": false
     },
-    {
-      "id": "feijoada",
-      "nome": "Feijoada completa",
-      "preco": 24.0,
-      "imagem": "/pratos/feijoada_4.jpg",
-      "galeria": [
-        "/pratos/feijoada_4.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg"
-      ],
-      "itens": [
-        "Feijão preto",
-        "Arroz branco",
-        "Linguiça",
-        "Torresmo",
-        "Banana frita",
-        "Farofa de cebola",
-        "Couve refogada",
-        "Vinagrete"
-      ],
-      "disponivel": false
-    },
+
     {
       "id": "costelinha",
       "nome": "Costela bovina assada na panela",
@@ -190,7 +208,7 @@
         "Brócolis refogado com bacon",
         "Creme de milho gratinado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "contrafile_grelhado",
@@ -290,7 +308,7 @@
         "Tomate",
         "Cheiro verde"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_assado",
@@ -345,25 +363,7 @@
       ],
       "disponivel": false
     },
-    {
-      "id": "frango_grelhado",
-      "nome": "Frango frito ao alho e óleo",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_grelhado.jpeg",
-      "galeria": [
-        "/pratos/frango_grelhado.jpeg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Banana frita",
-        "Feijão de caldo",
-        "Couve refoga",
-        "Farofa de cebola",
-        "Linguiça assada",
-        "Vinagrete"
-      ],
-      "disponivel": false
-    },
+
     {
       "id": "sobrecoxa_recheado",
       "nome": "Sobrecoxa recheada",
@@ -555,7 +555,7 @@
         "Brócolis refogado com bacon",
         "Creme de milho"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_molho",
