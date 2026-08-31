@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-08-29",
+    "data": "2026-08-31",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,7 +11,7 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 3,
+  "opcoes_do_dia": 4,
   "pratos": [
     {
       "id": "feijoada",
@@ -32,7 +32,7 @@
         "Linguiça Assada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_grelhado",
@@ -50,7 +50,7 @@
         "Farofa de Cebola",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "strogonoff",
@@ -66,9 +66,8 @@
         "/pratos/strogonoff_4.jpg"
       ],
       "itens": [
-        "Arroz Branco",
-        "Batata Palha",
-        "Vinagrete"
+        "Arroz branco",
+        "Batata palha"
       ],
       "disponivel": true
     },
@@ -284,10 +283,12 @@
         "/pratos/file_parmegiana.jpeg"
       ],
       "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
         "Batata frita",
-        "Espaguete alho e óleo"
+        "Brócolis no vapor"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_mineira",
@@ -622,6 +623,72 @@
         "Couve refogada"
       ],
       "disponivel": false
+    },
+    {
+      "id": "alcatra_toscana",
+      "nome": "Alcatra suína com toscana assada",
+      "preco": 24.0,
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg",
+        "/pratos/alcatra_suina_2.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Batata frita",
+        "Brócolis ao vapor"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "refrigerantes",
+      "nome": "Refrigerantes",
+      "imagem": "/pratos/coca-guarana.png",
+      "galeria": [
+        "/pratos/coca-guarana.png"
+      ],
+      "itens": [
+        "Coca-cola Zero 2L — R$ 13,00",
+        "Coca-cola 2L — R$ 13,00",
+        "Guaraná Zero 2L — R$ 10,00",
+        "Guaraná 2L — R$ 10,00"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "coca_cola_zero_2l",
+      "nome": "Coca-cola Zero 2L",
+      "preco": 13.0,
+      "itens": [],
+      "grupo": "refrigerantes",
+      "disponivel": true
+    },
+    {
+      "id": "coca_cola_2l",
+      "nome": "Coca-cola 2L",
+      "preco": 13.0,
+      "itens": [],
+      "grupo": "refrigerantes",
+      "disponivel": true
+    },
+    {
+      "id": "guarana_zero_2l",
+      "nome": "Guaraná Zero 2L",
+      "preco": 10.0,
+      "itens": [],
+      "grupo": "refrigerantes",
+      "disponivel": true
+    },
+    {
+      "id": "guarana_2l",
+      "nome": "Guaraná 2L",
+      "preco": 10.0,
+      "itens": [],
+      "grupo": "refrigerantes",
+      "disponivel": true
     }
   ],
   "sobre": {

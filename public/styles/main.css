@@ -1470,7 +1470,8 @@ a { color: inherit; text-decoration: none; }
   .hero { max-width: 780px; }
 
   .cardapio.grid-3,
-  .cardapio.grid-4 {
+  .cardapio.grid-4,
+  .cardapio.grid-7 {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
@@ -1492,5 +1493,8 @@ a { color: inherit; text-decoration: none; }
    WIDE DESKTOP — 1280px+
    ===================================================================== */
 @media (min-width: 1280px) {
-  .cardapio.grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .cardapio.grid-4,
+  .cardapio.grid-7 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

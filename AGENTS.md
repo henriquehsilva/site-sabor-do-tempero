@@ -9,7 +9,7 @@
 ## Commands
 - `npm run dev` — Vite dev server (port 5173).
 - `npm run build` / `npm run preview` — production build to `dist/` / preview.
-- `npm run lint` — ESLint, **targets `src/` only** (the unused React code).
+- `npm run lint` — ESLint, **targets `*.{ts,tsx}` only** (the unused React code in `src/`).
 - `npm run typecheck` — `tsc --noEmit -p tsconfig.app.json`, **targets `src/` only**.
 
 **`lint` and `typecheck` do NOT cover the real app in `public/`.** That code has no linting or type checking.
@@ -22,7 +22,7 @@
 - `public/scripts/sw.js` — service worker (offline caching).
 - `public/styles/main.css` — all styling (custom CSS, not Tailwind for the main site).
 - `public/data/menu.json` — daily menu content (the main update point).
-- `public/env.js` — Firebase config as `window.env` (public, non-sensitive). **Committed to repo.**
+- `public/env.js` — Firebase config as `window.env` (public, non-sensitive). **Committed to repo.** Also includes `AUTHORIZED_DOMAINS` used by auth.
 
 `src/` (App.tsx, firebase.js, main.tsx, main.js, index.css) is React/TS scaffolding that `index.html` never loads. **Do not treat it as the app unless told to migrate to it.**
 

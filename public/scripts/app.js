@@ -227,15 +227,31 @@ function renderizarCardapio(pratos, opcoesQtd, flags) {
   const cardapioContainer = document.getElementById('cardapio');
   cardapioContainer.innerHTML = '';
 
-  const pratosDisponiveis = pratos.filter(p => p.disponivel);
+  const grupos = {};
+  pratos.filter(p => p.disponivel && p.grupo).forEach(p => {
+    if (!grupos[p.grupo]) grupos[p.grupo] = [];
+    grupos[p.grupo].push(p);
+  });
+  const idsGrupos = Object.keys(grupos);
+
+  const pratosDisponiveis = pratos.filter(p => p.disponivel && !p.grupo && !idsGrupos.includes(p.id));
   const pratosExibir = pratosDisponiveis.slice(0, opcoesQtd);
 
-  const gridClass = `grid-${opcoesQtd}`;
+  const totalCards = pratosExibir.length + idsGrupos.length;
+  const gridClass = `grid-${totalCards}`;
   cardapioContainer.className = `cardapio ${gridClass}`;
 
   pratosExibir.forEach(prato => {
     const card = criarCardPrato(prato, flags);
     cardapioContainer.appendChild(card);
+  });
+
+  idsGrupos.forEach(grupo => {
+    const consolidado = pratos.find(p => p.id === grupo && !p.grupo);
+    if (consolidado) {
+      const card = criarCardPrato(consolidado, flags);
+      cardapioContainer.appendChild(card);
+    }
   });
 }
 
@@ -606,7 +622,7 @@ function toggleOrderModal(show) {
 
 // Cria uma linha (item) com select de prato e quantidade
 function addOrderItemRow(container) {
-  const pratosDisponiveis = (menuData?.pratos || []).filter(p => p.disponivel);
+  const pratosDisponiveis = (menuData?.pratos || []).filter(p => p.disponivel && p.id !== 'refrigerantes');
 
   const row = document.createElement('div');
   row.className = 'ord-item';
