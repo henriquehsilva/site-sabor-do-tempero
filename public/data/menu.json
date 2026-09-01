@@ -155,7 +155,7 @@
         "Panqueca de carne",
         "Purê gratinado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_goiana",
