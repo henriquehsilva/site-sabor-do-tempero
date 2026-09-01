@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-08-31",
+    "data": "2026-09-01",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,7 +11,7 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
     {
       "id": "feijoada",
@@ -69,7 +69,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "isca_frango",
@@ -125,22 +125,6 @@
       "disponivel": false
     },
     {
-      "id": "escalope_alcatra",
-      "nome": "Alcatra suina assada",
-      "preco": 24.0,
-      "imagem": "/pratos/escalope_alcatra.jpeg",
-      "galeria": [
-        "/pratos/escalope_alcatra.jpeg"
-      ],
-      "itens": [
-        "Farofa com bacon",
-        "Mandioca temperada",
-        "Couve refoga",
-        "Banana frita"
-      ],
-      "disponivel": false
-    },
-    {
       "id": "file_frango_molho_branco",
       "nome": "File de frango grelhado",
       "preco": 24.0,
@@ -159,7 +143,7 @@
     },
     {
       "id": "peixe_assado",
-      "nome": "Tilapia empanada",
+      "nome": "Peixe tambaqui empanado",
       "preco": 24.0,
       "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
@@ -167,11 +151,11 @@
       ],
       "itens": [
         "Arroz branco",
-        "Espaguete alho e óleo",
-        "Feijão de caldo",
-        "Legumes na manteiga"
+        "Feijão tropeiro",
+        "Panqueca de carne",
+        "Purê gratinado"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "panelinha_goiana",
@@ -236,10 +220,26 @@
       "itens": [
         "Arroz branco",
         "Feijão tropeiro",
-        "Seleta de legumes",
-        "Macaronada"
+        "Purê gratinado",
+        "Panqueca de carne"
       ],
-      "disponivel": false
+      "disponivel": true
+    },
+    {
+      "id": "escalope_alcatra",
+      "nome": "Escalope de carne bovina",
+      "preco": 24.0,
+      "imagem": "/pratos/escalope_alcatra.jpeg",
+      "galeria": [
+        "/pratos/escalope_alcatra.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Panqueca de carne",
+        "Purê gratinado"
+      ],
+      "disponivel": true
     },
     {
       "id": "carne_assada",
@@ -288,7 +288,7 @@
         "Batata frita",
         "Brócolis no vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "panelinha_mineira",
@@ -641,7 +641,7 @@
         "Batata frita",
         "Brócolis ao vapor"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "refrigerantes",
