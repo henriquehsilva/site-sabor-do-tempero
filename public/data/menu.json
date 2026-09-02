@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-01",
+    "data": "2026-09-02",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,27 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "costelinha_suina",
+      "nome": "Costelinha Suína assada",
+      "preco": 24.0,
+      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
+      "galeria": [
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina.jpeg",
+        "/pratos/costelinha_suina.png",
+        "/pratos/costela_mandioca.jpeg"
+      ],
+      "itens": [
+        "Mandioca frita",
+        "Espaguete ao alho e óleo com bacon",
+        "Arroz branco",
+        "Feijão em caldo",
+        "Brócolis gratinado"
+      ],
+      "disponivel": true
+    },
     {
       "id": "feijoada",
       "nome": "Feijoada completa",
@@ -69,11 +90,11 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "isca_frango",
-      "nome": "Isca de Frango",
+      "nome": "Isca de Frango crocante",
       "preco": 24.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
@@ -81,12 +102,13 @@
         "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
+        "Brócolis gratinado",
+        "Mandioca frita",
+        "Espaguete ao alho e óleo com bacon",
         "Arroz Branco",
-        "Feijão em Caldo",
-        "Panqueca de Frango",
-        "Batata Rústica"
+        "Feijão em caldo"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "costela_panela",
@@ -223,7 +245,7 @@
         "Purê gratinado",
         "Panqueca de carne"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "escalope_alcatra",
@@ -239,7 +261,7 @@
         "Panqueca de carne",
         "Purê gratinado"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_assada",
@@ -486,26 +508,6 @@
         "Linguiça",
         "Lasca de pequi",
         "Mussarela"
-      ],
-      "disponivel": false
-    },
-    {
-      "id": "costelinha_suina",
-      "nome": "Costelinha Suína assada",
-      "preco": 24.0,
-      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
-      "galeria": [
-        "/pratos/costelinha_suina_preview_1.jpeg",
-        "/pratos/costelinha_suina_preview.jpeg",
-        "/pratos/costelinha_suina.jpeg",
-        "/pratos/costelinha_suina.png",
-        "/pratos/costela_mandioca.jpeg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão de caldo",
-        "Quiabo com bacon",
-        "Pure gratinado"
       ],
       "disponivel": false
     },
