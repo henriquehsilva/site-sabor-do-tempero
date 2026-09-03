@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-02",
+    "data": "2026-09-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -14,68 +14,8 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "costelinha_suina",
-      "nome": "Costelinha Suína assada",
-      "preco": 24.0,
-      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
-      "galeria": [
-        "/pratos/costelinha_suina_preview_1.jpeg",
-        "/pratos/costelinha_suina_preview.jpeg",
-        "/pratos/costelinha_suina.jpeg",
-        "/pratos/costelinha_suina.png",
-        "/pratos/costela_mandioca.jpeg"
-      ],
-      "itens": [
-        "Mandioca frita",
-        "Espaguete ao alho e óleo com bacon",
-        "Arroz branco",
-        "Feijão em caldo",
-        "Brócolis gratinado"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "feijoada",
-      "nome": "Feijoada completa",
-      "preco": 24.0,
-      "imagem": "/pratos/feijoada_4.jpg",
-      "galeria": [
-        "/pratos/feijoada_4.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg"
-      ],
-      "itens": [
-        "Arroz Branco",
-        "Torresmo",
-        "Couve Refogada",
-        "Farofa de Cebola",
-        "Linguiça Assada",
-        "Vinagrete"
-      ],
-      "disponivel": false
-    },
-    {
-      "id": "frango_grelhado",
-      "nome": "Frango frito ao alho e óleo",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_grelhado.jpeg",
-      "galeria": [
-        "/pratos/frango_grelhado.jpeg"
-      ],
-      "itens": [
-        "Arroz Branco",
-        "Feijão de Caldo",
-        "Couve Refogada",
-        "Linguiça Assada",
-        "Farofa de Cebola",
-        "Vinagrete"
-      ],
-      "disponivel": false
-    },
-    {
       "id": "strogonoff",
-      "nome": "Estrogonoff de Frango",
+      "nome": "Estrogonoff de frango",
       "preco": 24.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
@@ -93,6 +33,62 @@
       "disponivel": true
     },
     {
+      "id": "picadinho_alcatra_suina",
+      "nome": "Picadinho de alcatra suína com calabresa",
+      "preco": 24.0,
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina_2.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Quibebe de mandioca",
+        "Macarronada",
+        "Farofa de bacon"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_assado_batata",
+      "nome": "Frango assado com batata",
+      "preco": 24.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
+      ],
+      "itens": [
+        "Farofa de bacon",
+        "Macarronada",
+        "Quibebe de mandioca",
+        "Arroz branco",
+        "Feijão em caldo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "strogonoff_anterior",
+      "nome": "Estrogonoff de Frango",
+      "preco": 24.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": false
+    },
+    {
       "id": "isca_frango",
       "nome": "Isca de Frango crocante",
       "preco": 24.0,
@@ -108,7 +104,7 @@
         "Arroz Branco",
         "Feijão em caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_panela",
