@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-03",
+    "data": "2026-09-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -33,39 +33,38 @@
       "disponivel": true
     },
     {
-      "id": "picadinho_alcatra_suina",
-      "nome": "Picadinho de alcatra suína com calabresa",
+      "id": "sobrecoxa_recheado",
+      "nome": "Sobrecoxa recheada",
       "preco": 24.0,
-      "imagem": "/pratos/alcatra_suina_preview.jpeg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
-        "/pratos/alcatra_suina_preview.jpeg",
-        "/pratos/alcatra_suina_2.jpeg",
-        "/pratos/alcatra_suina.jpeg",
-        "/pratos/alcatra_suina_1.jpeg"
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Quibebe de mandioca",
-        "Macarronada",
-        "Farofa de bacon"
+        "Mandioca temperada",
+        "Panqueca de frango"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_assado_batata",
-      "nome": "Frango assado com batata",
+      "id": "costela_panela",
+      "nome": "Costela bovina assada na panela",
       "preco": 24.0,
-      "imagem": "/pratos/frango_frito.png",
+      "imagem": "/pratos/costela_panela.png",
       "galeria": [
-        "/pratos/frango_frito.png"
+        "/pratos/costela_panela.png"
       ],
       "itens": [
-        "Farofa de bacon",
-        "Macarronada",
-        "Quibebe de mandioca",
         "Arroz branco",
-        "Feijão em caldo"
+        "Feijão em caldo",
+        "Mandioca temperada",
+        "Panqueca de frango"
       ],
       "disponivel": true
     },
@@ -107,7 +106,7 @@
       "disponivel": false
     },
     {
-      "id": "costela_panela",
+      "id": "costela_panela_anterior",
       "nome": "Costela Bovina Assada na Panela",
       "preco": 24.0,
       "imagem": "/pratos/costela_panela.png",
@@ -384,7 +383,7 @@
     },
 
     {
-      "id": "sobrecoxa_recheado",
+      "id": "sobrecoxa_recheado_anterior",
       "nome": "Sobrecoxa recheada",
       "preco": 24.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
