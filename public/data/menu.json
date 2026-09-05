@@ -1,7 +1,12 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-04",
+    "data": "2026-09-05",
+    "promo_refri_gratis": {
+      "ativo": true,
+      "titulo": "Refrigerante grátis 200 ml",
+      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
+    },
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +18,29 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "feijoada",
+      "nome": "Feijoada completa",
+      "preco": 24.0,
+      "imagem": "/pratos/feijoada.jpg",
+      "galeria": [
+        "/pratos/feijoada.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg",
+        "/pratos/feijoada_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Couve refogada",
+        "Torresmo",
+        "Linguiça assada",
+        "Farofa de cebola",
+        "Vinagrete",
+        "Banana frita"
+      ],
+      "disponivel": true
+    },
     {
       "id": "strogonoff",
       "nome": "Estrogonoff de frango",
@@ -28,43 +56,26 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha"
+        "Batata palha",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "sobrecoxa_recheado",
-      "nome": "Sobrecoxa recheada",
+      "id": "frango_frito",
+      "nome": "Frango frito ao alho e óleo",
       "preco": 24.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+      "imagem": "/pratos/frango_frito.png",
       "galeria": [
-        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
-        "/pratos/sobrecoxa_recheado_preview.jpeg",
-        "/pratos/sobrecoxa_recheado_2.jpeg",
-        "/pratos/sobrecoxa_recheado_1.jpeg",
-        "/pratos/sobrecoxa_recheado.jpeg"
+        "/pratos/frango_frito.png"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Mandioca temperada",
-        "Panqueca de frango"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "costela_panela",
-      "nome": "Costela bovina assada na panela",
-      "preco": 24.0,
-      "imagem": "/pratos/costela_panela.png",
-      "galeria": [
-        "/pratos/costela_panela.png"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão em caldo",
-        "Mandioca temperada",
-        "Panqueca de frango"
+        "Farofa de cebola",
+        "Couve refogada",
+        "Banana frita",
+        "Linguiça assada"
       ],
       "disponivel": true
     },
@@ -642,16 +653,15 @@
     },
     {
       "id": "refrigerantes",
-      "nome": "Refrigerantes",
-      "imagem": "/pratos/coca-guarana.png",
+      "nome": "Refrigerante grátis 200 ml",
+      "imagem": "/pratos/refri-gratis.jpeg",
       "galeria": [
-        "/pratos/coca-guarana.png"
+        "/pratos/refri-gratis.jpeg"
       ],
       "itens": [
-        "Coca-cola Zero 2L — R$ 13,00",
-        "Coca-cola 2L — R$ 13,00",
-        "Guaraná Zero 2L — R$ 10,00",
-        "Guaraná 2L — R$ 10,00"
+        "Na compra de 1 marmita",
+        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
+        "Você também pode escolher não receber o refri grátis"
       ],
       "disponivel": true
     },

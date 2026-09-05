@@ -1193,6 +1193,19 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
+.ord-refri-gratis {
+  display: grid;
+  gap: 0.4rem;
+  color: #166534;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.ord-sel-refri {
+  border-color: #86efac;
+  background-color: #f0fdf4;
+}
+
 @media (max-width: 480px) {
   .promo-refri {
     padding: 0.875rem 1rem;

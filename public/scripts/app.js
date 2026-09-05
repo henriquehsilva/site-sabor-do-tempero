@@ -640,6 +640,34 @@ function addOrderItemRow(container) {
     sel.appendChild(opt);
   });
 
+  const promo = menuData?.meta?.promo_refri_gratis;
+  let refriGratis = null;
+  let refriWrap = null;
+  if (promo?.ativo) {
+    refriWrap = document.createElement('label');
+    refriWrap.className = 'ord-refri-gratis';
+    refriWrap.textContent = 'Refrigerante grátis por marmita';
+
+    refriGratis = document.createElement('select');
+    refriGratis.className = 'ord-sel ord-sel-refri';
+    refriGratis.setAttribute('aria-label', 'Escolha o refrigerante grátis de 200 ml');
+    [
+      ['', 'Não enviar refri'],
+      ['Guaraná 200 ml', 'Guaraná 200 ml'],
+      ['Pepsi 200 ml', 'Pepsi 200 ml']
+    ].forEach(([value, label]) => {
+      const opt = document.createElement('option');
+      opt.value = value;
+      opt.textContent = label;
+      refriGratis.appendChild(opt);
+    });
+    refriWrap.appendChild(refriGratis);
+    row.appendChild(sel);
+    row.appendChild(refriWrap);
+  } else {
+    row.appendChild(sel);
+  }
+
   // Linha de controles: stepper + remover
   const ctrls = document.createElement('div');
   ctrls.className = 'ord-ctrls';
@@ -687,7 +715,19 @@ function addOrderItemRow(container) {
     qty.value = String(n);
   };
 
-  sel.addEventListener('change', updateOrderTotals);
+  const syncRefriGratis = () => {
+    if (!refriWrap || !refriGratis) return;
+    const pratoSelecionado = pratosDisponiveis.find(p => String(p.id) === String(sel.value));
+    const ehMarmita = !pratoSelecionado?.grupo;
+    refriWrap.hidden = !ehMarmita;
+    refriGratis.disabled = !ehMarmita;
+    if (!ehMarmita) refriGratis.value = '';
+  };
+
+  sel.addEventListener('change', () => {
+    syncRefriGratis();
+    updateOrderTotals();
+  });
   qty.addEventListener('input', () => { clampQty(); updateOrderTotals(); });
 
   minus.addEventListener('click', () => {
@@ -706,9 +746,9 @@ function addOrderItemRow(container) {
   });
 
   // Monta (prato e controles)
-  row.appendChild(sel);
   row.appendChild(ctrls);
   container.appendChild(row);
+  syncRefriGratis();
 
   // recalcula ao inserir
   updateOrderTotals();
@@ -784,6 +824,8 @@ async function handleSubmitOrder(e) {
       preco: unit,
       qtd,
       total: unit * qtd,
+      elegivelRefriGratis: !!menuData?.meta?.promo_refri_gratis?.ativo && !prato?.grupo,
+      refriGratis: prato?.grupo ? null : (r.querySelector('.ord-sel-refri')?.value || null),
     });
   });
   if (!items.length) { alert('Adicione pelo menos 1 item.'); return; }
@@ -881,6 +923,10 @@ function buildOrderMessage(pedido, orderId) {
   linhas.push('🍽️ *Itens:*');
   pedido.itens.forEach((i, idx) => {
     linhas.push(`${idx + 1}. ${i.nome} x${i.qtd} — ${money(i.preco)} (linha: ${money(i.total)})`);
+    if (i.elegivelRefriGratis) {
+      const escolhaRefri = i.refriGratis ? `${i.refriGratis} x${i.qtd}` : 'Não enviar refri';
+      linhas.push(`   🎁 Refri grátis (1 por marmita): ${escolhaRefri}`);
+    }
   });
 
   linhas.push('');
