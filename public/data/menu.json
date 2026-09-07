@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-05",
+    "data": "2026-09-07",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,29 +19,6 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "feijoada",
-      "nome": "Feijoada completa",
-      "preco": 24.0,
-      "imagem": "/pratos/feijoada.jpg",
-      "galeria": [
-        "/pratos/feijoada.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg",
-        "/pratos/feijoada_4.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Couve refogada",
-        "Torresmo",
-        "Linguiça assada",
-        "Farofa de cebola",
-        "Vinagrete",
-        "Banana frita"
-      ],
-      "disponivel": true
-    },
-    {
       "id": "strogonoff",
       "nome": "Estrogonoff de frango",
       "preco": 24.0,
@@ -56,26 +33,44 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha",
-        "Vinagrete"
+        "Batata palha"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_frito",
-      "nome": "Frango frito ao alho e óleo",
+      "id": "coxas_frango_toscana",
+      "nome": "Coxas de frango assadas com toscana",
       "preco": 24.0,
-      "imagem": "/pratos/frango_frito.png",
+      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
       "galeria": [
-        "/pratos/frango_frito.png"
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Farofa de cebola",
-        "Couve refogada",
-        "Banana frita",
-        "Linguiça assada"
+        "Feijão tropeiro",
+        "Macarrão de forno",
+        "Purê gratinado"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "costelinha_suina",
+      "nome": "Costelinha suína frita ao alho e óleo",
+      "preco": 24.0,
+      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
+      "galeria": [
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Macarrão de forno",
+        "Purê gratinado"
       ],
       "disponivel": true
     },
