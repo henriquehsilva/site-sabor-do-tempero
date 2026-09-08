@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-07",
+    "data": "2026-09-08",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -38,8 +38,25 @@
       "disponivel": true
     },
     {
-      "id": "coxas_frango_toscana",
-      "nome": "Coxas de frango assadas com toscana",
+      "id": "picadinho_calabresa",
+      "nome": "Picadinho de carne bovina com calabresa",
+      "preco": 24.0,
+      "imagem": "/pratos/picadinho_cenoura_1.jpg",
+      "galeria": [
+        "/pratos/picadinho_cenoura_1.jpg",
+        "/pratos/picadinho_cenoura.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Batatas rústicas",
+        "Macarrão ao alho e óleo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "coxa_empanada_linguica",
+      "nome": "Coxa de frango empanada com linguiça assada",
       "preco": 24.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
       "galeria": [
@@ -50,27 +67,10 @@
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Macarrão de forno",
-        "Purê gratinado"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "costelinha_suina",
-      "nome": "Costelinha suína frita ao alho e óleo",
-      "preco": 24.0,
-      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
-      "galeria": [
-        "/pratos/costelinha_suina_preview_1.jpeg",
-        "/pratos/costelinha_suina_preview.jpeg",
-        "/pratos/costelinha_suina.png"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão tropeiro",
-        "Macarrão de forno",
-        "Purê gratinado"
+        "Feijão em caldo",
+        "Batatas rústicas",
+        "Macarrão ao alho e óleo",
+        "Salada de beterraba"
       ],
       "disponivel": true
     },
