@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-08",
+    "data": "2026-09-09",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -20,7 +20,7 @@
   "pratos": [
     {
       "id": "strogonoff",
-      "nome": "Estrogonoff de frango",
+      "nome": "Estrogonoff de carne ou de frango",
       "preco": 24.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
@@ -38,39 +38,38 @@
       "disponivel": true
     },
     {
-      "id": "picadinho_calabresa",
-      "nome": "Picadinho de carne bovina com calabresa",
+      "id": "costelinha_suina_alho_oleo",
+      "nome": "Costelinha suína ao alho e óleo",
       "preco": 24.0,
-      "imagem": "/pratos/picadinho_cenoura_1.jpg",
+      "imagem": "/pratos/costelinha_suina_preview.jpeg",
       "galeria": [
-        "/pratos/picadinho_cenoura_1.jpg",
-        "/pratos/picadinho_cenoura.jpg"
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina.jpeg"
       ],
       "itens": [
-        "Arroz branco",
         "Feijão em caldo",
-        "Batatas rústicas",
-        "Macarrão ao alho e óleo"
+        "Arroz branco",
+        "Farofa de couve, cenoura e bacon",
+        "Mandioca frita",
+        "Macarronada"
       ],
       "disponivel": true
     },
     {
-      "id": "coxa_empanada_linguica",
-      "nome": "Coxa de frango empanada com linguiça assada",
+      "id": "frango_maionese_dia",
+      "nome": "Frango assado na maionese",
       "preco": 24.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
-        "/pratos/sobrecoxa_recheado_preview.jpeg",
-        "/pratos/sobrecoxa_recheado.jpeg",
-        "/pratos/sobrecoxa_recheado_1.jpeg",
-        "/pratos/sobrecoxa_recheado_2.jpeg"
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Batatas rústicas",
-        "Macarrão ao alho e óleo",
-        "Salada de beterraba"
+        "Farofa de couve, cenoura e bacon",
+        "Macarronada"
       ],
       "disponivel": true
     },
