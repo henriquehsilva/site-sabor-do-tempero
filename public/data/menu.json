@@ -1,12 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-09",
-    "promo_refri_gratis": {
-      "ativo": true,
-      "titulo": "Refrigerante grátis 200 ml",
-      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
-    },
+    "data": "2026-09-11",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -19,57 +14,57 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "strogonoff",
-      "nome": "Estrogonoff de carne ou de frango",
+      "id": "cupim_toscana_assada",
+      "nome": "Cubinhos de cupim com toscana assada",
       "preco": 24.0,
-      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
-        "/pratos/strogonoff_preview_1.jpg",
-        "/pratos/strogonoff_preview.jpg",
-        "/pratos/strogonoff.jpg",
-        "/pratos/strogonoff_2.jpg",
-        "/pratos/strogonoff_3.jpg",
-        "/pratos/strogonoff_4.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Batata palha"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "costelinha_suina_alho_oleo",
-      "nome": "Costelinha suína ao alho e óleo",
-      "preco": 24.0,
-      "imagem": "/pratos/costelinha_suina_preview.jpeg",
-      "galeria": [
-        "/pratos/costelinha_suina_preview.jpeg",
-        "/pratos/costelinha_suina_preview_1.jpeg",
-        "/pratos/costelinha_suina.jpeg"
-      ],
-      "itens": [
-        "Feijão em caldo",
-        "Arroz branco",
-        "Farofa de couve, cenoura e bacon",
-        "Mandioca frita",
-        "Macarronada"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "frango_maionese_dia",
-      "nome": "Frango assado na maionese",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_maionese_1.jpg",
-      "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_3.jpg"
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg",
+        "/pratos/alcatra_suina_2.jpeg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Farofa de couve, cenoura e bacon",
-        "Macarronada"
+        "Purê gratinado",
+        "Panqueca de frango"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "sobrecoxa_recheada",
+      "nome": "Sobrecoxa recheada",
+      "preco": 24.0,
+      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
+      "galeria": [
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Purê gratinado",
+        "Panqueca de frango"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "lombo_suino_recheado",
+      "nome": "Lombo suíno recheado",
+      "preco": 24.0,
+      "imagem": "/pratos/pernil_recheado.png",
+      "galeria": [
+        "/pratos/pernil_recheado.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Purê gratinado",
+        "Panqueca de frango"
       ],
       "disponivel": true
     },
@@ -647,15 +642,14 @@
     },
     {
       "id": "refrigerantes",
-      "nome": "Refrigerante grátis 200 ml",
-      "imagem": "/pratos/refri-gratis.jpeg",
+      "nome": "Refrigerantes 2 L",
+      "imagem": "/pratos/coca-guarana.png",
       "galeria": [
-        "/pratos/refri-gratis.jpeg"
+        "/pratos/coca-guarana.png"
       ],
       "itens": [
-        "Na compra de 1 marmita",
-        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
-        "Você também pode escolher não receber o refri grátis"
+        "Coca-Cola 2 L e Coca-Cola Zero 2 L — R$ 13,00",
+        "Guaraná 2 L e Guaraná Zero 2 L — R$ 10,00"
       ],
       "disponivel": true
     },
