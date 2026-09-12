@@ -1,7 +1,12 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-11",
+    "data": "2026-09-12",
+    "promo_refri_gratis": {
+      "ativo": true,
+      "titulo": "Refrigerante grátis 200 ml",
+      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
+    },
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -14,57 +19,65 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "cupim_toscana_assada",
-      "nome": "Cubinhos de cupim com toscana assada",
+      "id": "feijoada_completa",
+      "nome": "Feijoada completa",
       "preco": 24.0,
-      "imagem": "/pratos/alcatra_suina_preview.jpeg",
+      "imagem": "/pratos/feijoada.jpg",
       "galeria": [
-        "/pratos/alcatra_suina_preview.jpeg",
-        "/pratos/alcatra_suina.jpeg",
-        "/pratos/alcatra_suina_1.jpeg",
-        "/pratos/alcatra_suina_2.jpeg"
+        "/pratos/feijoada.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg",
+        "/pratos/feijoada_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Purê gratinado",
-        "Panqueca de frango"
+        "Linguiça assada",
+        "Torresmo",
+        "Farofa de cebola",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "sobrecoxa_recheada",
-      "nome": "Sobrecoxa recheada",
+      "id": "frango_assado_batatas",
+      "nome": "Frango assado com batatas",
       "preco": 24.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
-        "/pratos/sobrecoxa_recheado_preview.jpeg",
-        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
-        "/pratos/sobrecoxa_recheado.jpeg",
-        "/pratos/sobrecoxa_recheado_1.jpeg",
-        "/pratos/sobrecoxa_recheado_2.jpeg"
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Purê gratinado",
-        "Panqueca de frango"
+        "Linguiça assada",
+        "Banana frita",
+        "Farofa de cebola",
+        "Couve refogada",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "lombo_suino_recheado",
-      "nome": "Lombo suíno recheado",
+      "id": "estrogonoff_frango",
+      "nome": "Estrogonoff de frango",
       "preco": 24.0,
-      "imagem": "/pratos/pernil_recheado.png",
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
-        "/pratos/pernil_recheado.png"
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Purê gratinado",
-        "Panqueca de frango"
+        "Batata palha",
+        "Vinagrete"
       ],
       "disponivel": true
     },
@@ -642,14 +655,15 @@
     },
     {
       "id": "refrigerantes",
-      "nome": "Refrigerantes 2 L",
-      "imagem": "/pratos/coca-guarana.png",
+      "nome": "Refrigerante grátis 200 ml",
+      "imagem": "/pratos/refri-gratis.jpeg",
       "galeria": [
-        "/pratos/coca-guarana.png"
+        "/pratos/refri-gratis.jpeg"
       ],
       "itens": [
-        "Coca-Cola 2 L e Coca-Cola Zero 2 L — R$ 13,00",
-        "Guaraná 2 L e Guaraná Zero 2 L — R$ 10,00"
+        "Na compra de 1 marmita",
+        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
+        "Você também pode escolher não receber o refri grátis"
       ],
       "disponivel": true
     },
