@@ -1,9 +1,9 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-12",
+    "data": "2026-09-14",
     "promo_refri_gratis": {
-      "ativo": true,
+      "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
       "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
     },
@@ -19,31 +19,8 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "feijoada_completa",
-      "nome": "Feijoada completa",
-      "preco": 24.0,
-      "imagem": "/pratos/feijoada.jpg",
-      "galeria": [
-        "/pratos/feijoada.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg",
-        "/pratos/feijoada_4.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Linguiça assada",
-        "Torresmo",
-        "Farofa de cebola",
-        "Couve refogada",
-        "Banana frita",
-        "Vinagrete"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "frango_assado_batatas",
-      "nome": "Frango assado com batatas",
+      "id": "coxa_assada_batatas",
+      "nome": "Coxa assada com batatas",
       "preco": 24.0,
       "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
@@ -51,13 +28,10 @@
         "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
+        "Almôndegas fritas",
+        "Brócolis gratinado",
         "Arroz branco",
-        "Feijão em caldo",
-        "Linguiça assada",
-        "Banana frita",
-        "Farofa de cebola",
-        "Couve refogada",
-        "Vinagrete"
+        "Feijão tropeiro"
       ],
       "disponivel": true
     },
@@ -76,8 +50,27 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha",
-        "Vinagrete"
+        "Batata palha"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "panelinha_cerrado",
+      "nome": "Panelinha do Cerrado",
+      "preco": 24.0,
+      "imagem": "/pratos/panelinha_cerrado.jpeg",
+      "galeria": [
+        "/pratos/panelinha_cerrado.jpeg",
+        "/pratos/panelinha_cerrado_1.jpeg"
+      ],
+      "itens": [
+        "Cubos de carne",
+        "Cubos de frango",
+        "Bacon",
+        "Linguiça",
+        "Lascas de pequi",
+        "Mussarela, tomate e cheiro-verde",
+        "Arroz"
       ],
       "disponivel": true
     },
@@ -665,7 +658,7 @@
         "Escolha Guaraná 200 ml ou Pepsi 200 ml",
         "Você também pode escolher não receber o refri grátis"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "coca_cola_zero_2l",
@@ -673,7 +666,7 @@
       "preco": 13.0,
       "itens": [],
       "grupo": "refrigerantes",
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "coca_cola_2l",
@@ -681,7 +674,7 @@
       "preco": 13.0,
       "itens": [],
       "grupo": "refrigerantes",
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "guarana_zero_2l",
@@ -689,7 +682,7 @@
       "preco": 10.0,
       "itens": [],
       "grupo": "refrigerantes",
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "guarana_2l",
@@ -697,7 +690,7 @@
       "preco": 10.0,
       "itens": [],
       "grupo": "refrigerantes",
-      "disponivel": true
+      "disponivel": false
     }
   ],
   "sobre": {
