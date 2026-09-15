@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-14",
+    "data": "2026-09-15",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -18,23 +18,6 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
-    {
-      "id": "coxa_assada_batatas",
-      "nome": "Coxa assada com batatas",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_maionese_1.jpg",
-      "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_3.jpg"
-      ],
-      "itens": [
-        "Almôndegas fritas",
-        "Brócolis gratinado",
-        "Arroz branco",
-        "Feijão tropeiro"
-      ],
-      "disponivel": true
-    },
     {
       "id": "estrogonoff_frango",
       "nome": "Estrogonoff de frango",
@@ -55,22 +38,39 @@
       "disponivel": true
     },
     {
-      "id": "panelinha_cerrado",
-      "nome": "Panelinha do Cerrado",
+      "id": "picadinho_alcatra_suina_calabresa",
+      "nome": "Picadinho de alcatra suína com calabresa",
       "preco": 24.0,
-      "imagem": "/pratos/panelinha_cerrado.jpeg",
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
-        "/pratos/panelinha_cerrado.jpeg",
-        "/pratos/panelinha_cerrado_1.jpeg"
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina_2.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg"
       ],
       "itens": [
-        "Cubos de carne",
-        "Cubos de frango",
-        "Bacon",
-        "Linguiça",
-        "Lascas de pequi",
-        "Mussarela, tomate e cheiro-verde",
-        "Arroz"
+        "Arroz branco",
+        "Feijão em caldo",
+        "Panqueca de frango",
+        "Legumes sauté"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_milanesa",
+      "nome": "Frango à milanesa",
+      "preco": 24.0,
+      "imagem": "/pratos/frango_milanesa.jpeg",
+      "galeria": [
+        "/pratos/frango_milanesa.jpeg",
+        "/pratos/frango_milanesa_1.jpeg",
+        "/pratos/frango_milanesa_2.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Panqueca de frango",
+        "Legumes sauté"
       ],
       "disponivel": true
     },
@@ -546,7 +546,7 @@
       "disponivel": false
     },
     {
-      "id": "frango_milanesa",
+      "id": "frango_milanesa_anterior",
       "nome": "Frango à milanesa",
       "preco": 24.0,
       "imagem": "/pratos/file_milanesa.jpeg",
