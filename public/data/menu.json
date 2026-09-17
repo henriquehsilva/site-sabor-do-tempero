@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-16",
+    "data": "2026-09-17",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,55 +19,58 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "lombo_suino_recheado",
-      "nome": "Lombo suíno recheado",
+      "id": "estrogonoff_frango",
+      "nome": "Estrogonoff de frango",
       "preco": 24.0,
-      "imagem": "/pratos/pernil_recheado.png",
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
-        "/pratos/pernil_recheado.png"
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Espaguete ao alho e óleo",
-        "Quibe assado",
-        "Brócolis na manteiga"
+        "Batata palha"
       ],
       "disponivel": true
     },
     {
-      "id": "file_frango_grelhado",
-      "nome": "Filé de frango grelhado",
+      "id": "costelinha_suina_alho_oleo",
+      "nome": "Costelinha suína ao alho e óleo",
       "preco": 24.0,
-      "imagem": "/pratos/frango_grelhado.jpeg",
+      "imagem": "/pratos/costelinha_suina_preview.jpeg",
       "galeria": [
-        "/pratos/frango_grelhado.jpeg",
-        "/pratos/frango_grelhado.png"
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina.jpeg",
+        "/pratos/costelinha_suina.png"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Espaguete ao alho e óleo",
-        "Brócolis na manteiga",
-        "Quibe assado"
+        "Mandioca frita",
+        "Macarronada",
+        "Couve refogada"
       ],
       "disponivel": true
     },
     {
-      "id": "picadinho_carne_bacon_calabresa",
-      "nome": "Picadinho de carne bovina com bacon e calabresa",
+      "id": "frango_assado_batatas",
+      "nome": "Frango assado com batatas",
       "preco": 24.0,
-      "imagem": "/pratos/picadinho_cenoura_1.jpg",
+      "imagem": "/pratos/frango_frito.png",
       "galeria": [
-        "/pratos/picadinho_cenoura_1.jpg",
-        "/pratos/picadinho_cenoura.jpg"
+        "/pratos/frango_frito.png"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Brócolis na manteiga",
-        "Espaguete ao alho e óleo",
-        "Quibe assado"
+        "Macarronada",
+        "Couve refogada",
+        "Mandioca frita"
       ],
       "disponivel": true
     },
