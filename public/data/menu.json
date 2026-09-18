@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-17",
+    "data": "2026-09-18",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -18,6 +18,24 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "costela_bovina_molho_batatas",
+      "nome": "Costela bovina ao molho com batatas",
+      "preco": 24.0,
+      "imagem": "/pratos/costela_panela.jpeg",
+      "galeria": [
+        "/pratos/costela_panela.jpeg",
+        "/pratos/costela_panela.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Mandioca temperada",
+        "Farofa de cenoura",
+        "Macarrão primavera"
+      ],
+      "disponivel": true
+    },
     {
       "id": "estrogonoff_frango",
       "nome": "Estrogonoff de frango",
@@ -38,39 +56,23 @@
       "disponivel": true
     },
     {
-      "id": "costelinha_suina_alho_oleo",
-      "nome": "Costelinha suína ao alho e óleo",
+      "id": "frango_parmegiana_hoje",
+      "nome": "Frango à parmegiana",
       "preco": 24.0,
-      "imagem": "/pratos/costelinha_suina_preview.jpeg",
+      "imagem": "/pratos/file_parmegiana_preview.jpg",
       "galeria": [
-        "/pratos/costelinha_suina_preview.jpeg",
-        "/pratos/costelinha_suina_preview_1.jpeg",
-        "/pratos/costelinha_suina.jpeg",
-        "/pratos/costelinha_suina.png"
+        "/pratos/file_parmegiana_preview.jpg",
+        "/pratos/file_parmegiana.jpeg",
+        "/pratos/file_parmegiana.jpg",
+        "/pratos/file_parmegiana_1.jpg",
+        "/pratos/file_parmegiana_2.jpg",
+        "/pratos/file_parmegiana_3.jpg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Mandioca frita",
-        "Macarronada",
-        "Couve refogada"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "frango_assado_batatas",
-      "nome": "Frango assado com batatas",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_frito.png",
-      "galeria": [
-        "/pratos/frango_frito.png"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão em caldo",
-        "Macarronada",
-        "Couve refogada",
-        "Mandioca frita"
+        "Macarrão primavera",
+        "Batata frita"
       ],
       "disponivel": true
     },
