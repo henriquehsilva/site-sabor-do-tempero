@@ -1,9 +1,9 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-18",
+    "data": "2026-09-19",
     "promo_refri_gratis": {
-      "ativo": false,
+      "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
       "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
     },
@@ -19,60 +19,68 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "costela_bovina_molho_batatas",
-      "nome": "Costela bovina ao molho com batatas",
+      "id": "feijoada_completa",
+      "nome": "Feijoada completa",
       "preco": 24.0,
-      "imagem": "/pratos/costela_panela.jpeg",
+      "imagem": "/pratos/feijoada.jpg",
       "galeria": [
-        "/pratos/costela_panela.jpeg",
-        "/pratos/costela_panela.png"
+        "/pratos/feijoada.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg",
+        "/pratos/feijoada_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Mandioca temperada",
-        "Farofa de cenoura",
-        "Macarrão primavera"
+        "Torresmo",
+        "Linguiça assada",
+        "Farofa de cebola",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango",
-      "nome": "Estrogonoff de frango",
+      "id": "frango_assado_toscana_batatas",
+      "nome": "Frango assado com toscana e batatas",
       "preco": 24.0,
-      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
-        "/pratos/strogonoff_preview_1.jpg",
-        "/pratos/strogonoff_preview.jpg",
-        "/pratos/strogonoff.jpg",
-        "/pratos/strogonoff_2.jpg",
-        "/pratos/strogonoff_3.jpg",
-        "/pratos/strogonoff_4.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Batata palha"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "frango_parmegiana_hoje",
-      "nome": "Frango à parmegiana",
-      "preco": 24.0,
-      "imagem": "/pratos/file_parmegiana_preview.jpg",
-      "galeria": [
-        "/pratos/file_parmegiana_preview.jpg",
-        "/pratos/file_parmegiana.jpeg",
-        "/pratos/file_parmegiana.jpg",
-        "/pratos/file_parmegiana_1.jpg",
-        "/pratos/file_parmegiana_2.jpg",
-        "/pratos/file_parmegiana_3.jpg"
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_2.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Macarrão primavera",
-        "Batata frita"
+        "Farofa de cebola",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "panelinha_cerrado_hoje",
+      "nome": "Panelinha do cerrado",
+      "preco": 24.0,
+      "imagem": "/pratos/panelinha_cerrado.jpeg",
+      "galeria": [
+        "/pratos/panelinha_cerrado.jpeg",
+        "/pratos/panelinha_cerrado_1.jpeg"
+      ],
+      "itens": [
+        "Cubos de carne",
+        "Cubos de frango",
+        "Linguiça",
+        "Bacon",
+        "Lascas de pequi",
+        "Mussarela",
+        "Cheiro-verde",
+        "Tomate",
+        "Arroz",
+        "Vinagrete"
       ],
       "disponivel": true
     },
