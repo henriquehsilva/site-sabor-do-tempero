@@ -1,9 +1,9 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-19",
+    "data": "2026-09-21",
     "promo_refri_gratis": {
-      "ativo": true,
+      "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
       "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
     },
@@ -19,68 +19,59 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "feijoada_completa",
-      "nome": "Feijoada completa",
+      "id": "estrogonoff_frango_hoje",
+      "nome": "Estrogonoff de frango",
       "preco": 24.0,
-      "imagem": "/pratos/feijoada.jpg",
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
-        "/pratos/feijoada.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg",
-        "/pratos/feijoada_4.jpg"
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Torresmo",
-        "Linguiça assada",
-        "Farofa de cebola",
-        "Couve refogada",
-        "Banana frita",
-        "Vinagrete"
+        "Batata palha",
+        "Salada de beterraba em cubinhos"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_assado_toscana_batatas",
-      "nome": "Frango assado com toscana e batatas",
+      "id": "alcatra_suina_assada_batatas",
+      "nome": "Alcatra suína assada com batatas",
       "preco": 24.0,
-      "imagem": "/pratos/frango_maionese_1.jpg",
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_2.jpg",
-        "/pratos/frango_maionese_3.jpg"
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg",
+        "/pratos/alcatra_suina_2.jpeg"
+      ],
+      "itens": [
+        "Farofa de cenoura com couve",
+        "Lasanha à bolonhesa",
+        "Arroz branco",
+        "Feijão em caldo",
+        "Salada de beterraba em cubinhos"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "coxa_frango_assada_toscana",
+      "nome": "Coxa de frango assada com toscana",
+      "preco": 24.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Farofa de cebola",
-        "Couve refogada",
-        "Banana frita",
-        "Vinagrete"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "panelinha_cerrado_hoje",
-      "nome": "Panelinha do cerrado",
-      "preco": 24.0,
-      "imagem": "/pratos/panelinha_cerrado.jpeg",
-      "galeria": [
-        "/pratos/panelinha_cerrado.jpeg",
-        "/pratos/panelinha_cerrado_1.jpeg"
-      ],
-      "itens": [
-        "Cubos de carne",
-        "Cubos de frango",
-        "Linguiça",
-        "Bacon",
-        "Lascas de pequi",
-        "Mussarela",
-        "Cheiro-verde",
-        "Tomate",
-        "Arroz",
-        "Vinagrete"
+        "Farofa de cenoura com couve",
+        "Salada de beterraba em cubinhos",
+        "Lasanha à bolonhesa"
       ],
       "disponivel": true
     },
