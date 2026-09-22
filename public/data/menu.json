@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-21",
+    "data": "2026-09-22",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,6 +19,43 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
+      "id": "frango_molho_batatas_hoje",
+      "nome": "Frango ao molho com batatas",
+      "preco": 24.0,
+      "imagem": "/pratos/frango_curry.jpeg",
+      "galeria": [
+        "/pratos/frango_curry.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Polenta frita",
+        "Espaguete ao alho e óleo",
+        "Brócolis na manteiga"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "cupim_assado_hoje",
+      "nome": "Cupim assado",
+      "preco": 24.0,
+      "imagem": "/pratos/carne_assada.jpg",
+      "galeria": [
+        "/pratos/carne_assada.jpg",
+        "/pratos/carne_assada_1.jpg",
+        "/pratos/carne_assada_2.jpg",
+        "/pratos/carne_assada_3.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Polenta frita",
+        "Brócolis na manteiga"
+      ],
+      "disponivel": true
+    },
+    {
       "id": "estrogonoff_frango_hoje",
       "nome": "Estrogonoff de frango",
       "preco": 24.0,
@@ -33,45 +70,7 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha",
-        "Salada de beterraba em cubinhos"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "alcatra_suina_assada_batatas",
-      "nome": "Alcatra suína assada com batatas",
-      "preco": 24.0,
-      "imagem": "/pratos/alcatra_suina_preview.jpeg",
-      "galeria": [
-        "/pratos/alcatra_suina_preview.jpeg",
-        "/pratos/alcatra_suina.jpeg",
-        "/pratos/alcatra_suina_1.jpeg",
-        "/pratos/alcatra_suina_2.jpeg"
-      ],
-      "itens": [
-        "Farofa de cenoura com couve",
-        "Lasanha à bolonhesa",
-        "Arroz branco",
-        "Feijão em caldo",
-        "Salada de beterraba em cubinhos"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "coxa_frango_assada_toscana",
-      "nome": "Coxa de frango assada com toscana",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_frito.png",
-      "galeria": [
-        "/pratos/frango_frito.png"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão em caldo",
-        "Farofa de cenoura com couve",
-        "Salada de beterraba em cubinhos",
-        "Lasanha à bolonhesa"
+        "Batata palha"
       ],
       "disponivel": true
     },
