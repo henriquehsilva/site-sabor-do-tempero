@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-22",
+    "data": "2026-09-23",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,39 +19,19 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "frango_molho_batatas_hoje",
-      "nome": "Frango ao molho com batatas",
+      "id": "isca_frango_hoje",
+      "nome": "Isca de frango",
       "preco": 24.0,
-      "imagem": "/pratos/frango_curry.jpeg",
+      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
-        "/pratos/frango_curry.jpeg"
+        "/pratos/isca_frango_empanada_preview.jpeg",
+        "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Polenta frita",
-        "Espaguete ao alho e óleo",
-        "Brócolis na manteiga"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "cupim_assado_hoje",
-      "nome": "Cupim assado",
-      "preco": 24.0,
-      "imagem": "/pratos/carne_assada.jpg",
-      "galeria": [
-        "/pratos/carne_assada.jpg",
-        "/pratos/carne_assada_1.jpg",
-        "/pratos/carne_assada_2.jpg",
-        "/pratos/carne_assada_3.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão em caldo",
-        "Espaguete ao alho e óleo",
-        "Polenta frita",
-        "Brócolis na manteiga"
+        "Escondidinho de frango",
+        "Seleta de legumes"
       ],
       "disponivel": true
     },
@@ -71,6 +51,25 @@
       "itens": [
         "Arroz branco",
         "Batata palha"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "alcatra_suina_hoje",
+      "nome": "Bife de alcatra suína",
+      "preco": 24.0,
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina_2.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Escondidinho de frango",
+        "Seleta de legumes"
       ],
       "disponivel": true
     },
