@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-09-23",
+    "data": "2026-09-24",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -16,41 +16,44 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 3,
+  "opcoes_do_dia": 2,
   "pratos": [
     {
-      "id": "isca_frango_hoje",
-      "nome": "Isca de frango",
+      "id": "lombo_suino_recheado_hoje",
+      "nome": "Lombo suíno recheado",
       "preco": 24.0,
-      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
-        "/pratos/isca_frango_empanada_preview.jpeg",
-        "/pratos/isca_frango_empanada.jpeg"
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg",
+        "/pratos/alcatra_suina_2.jpeg"
       ],
       "itens": [
+        "Linguiça toscana assada",
+        "Farofa de bacon",
+        "Couve refogada",
+        "Mandioca temperada",
         "Arroz branco",
-        "Feijão em caldo",
-        "Escondidinho de frango",
-        "Seleta de legumes"
+        "Feijão em caldo"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_hoje",
-      "nome": "Estrogonoff de frango",
+      "id": "costela_bovina_panela_hoje",
+      "nome": "Costela bovina assada na panela",
       "preco": 24.0,
-      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "imagem": "/pratos/costela_panela.png",
       "galeria": [
-        "/pratos/strogonoff_preview_1.jpg",
-        "/pratos/strogonoff_preview.jpg",
-        "/pratos/strogonoff.jpg",
-        "/pratos/strogonoff_2.jpg",
-        "/pratos/strogonoff_3.jpg",
-        "/pratos/strogonoff_4.jpg"
+        "/pratos/costela_panela.png",
+        "/pratos/costela_panela.jpeg"
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha"
+        "Feijão em caldo",
+        "Farofa de bacon",
+        "Mandioca temperada",
+        "Couve refogada"
       ],
       "disponivel": true
     },
@@ -71,7 +74,7 @@
         "Escondidinho de frango",
         "Seleta de legumes"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "strogonoff_anterior",
