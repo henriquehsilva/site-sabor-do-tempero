@@ -37,7 +37,7 @@
         "Arroz branco",
         "Feijão em caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_bovina_panela_hoje",
@@ -55,7 +55,7 @@
         "Mandioca temperada",
         "Couve refogada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina_hoje",
