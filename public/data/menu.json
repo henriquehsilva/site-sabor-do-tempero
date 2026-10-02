@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-01",
+    "data": "2026-10-02",
     "promo_refri_gratis": {
       "ativo": false,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,53 +19,56 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "file_frango_parmegiana_2026_10_01",
-      "nome": "Filé de frango à parmegiana",
+      "id": "coxa_recheada_2026_10_02",
+      "nome": "Coxa recheada com mussarela, bacon e carne",
       "preco": 24.0,
-      "imagem": "/pratos/file_parmegiana_preview.jpg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
-        "/pratos/file_parmegiana_preview.jpg",
-        "/pratos/file_parmegiana.jpeg",
-        "/pratos/file_parmegiana.jpg",
-        "/pratos/file_parmegiana_1.jpg",
-        "/pratos/file_parmegiana_2.jpg",
-        "/pratos/file_parmegiana_3.jpg"
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Batata frita"
+        "Farofa tropical",
+        "Couve-flor à milanesa"
       ],
       "disponivel": true
     },
     {
-      "id": "bife_pernil_linguica_2026_10_01",
-      "nome": "Bife de pernil e linguiça toscana assada",
+      "id": "bife_a_cavalo_2026_10_02",
+      "nome": "Bife a cavalo com ovo frito",
       "preco": 24.0,
-      "imagem": "/pratos/pernil_recheado.png",
+      "imagem": "/pratos/contrafile_grelhado_1.jpg",
       "galeria": [
-        "/pratos/pernil_recheado.png"
+        "/pratos/contrafile_grelhado_1.jpg",
+        "/pratos/contrafile_grelhado.jpg"
       ],
       "itens": [
-        "Batata frita",
         "Arroz branco",
-        "Feijão em caldo"
+        "Feijão em caldo",
+        "Farofa tropical",
+        "Couve-flor à milanesa"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_batatas_maionese_linguica_2026_10_01",
-      "nome": "Frango assado com batatas na maionese e linguiça toscana assada",
+      "id": "picadinho_pernil_calabresa_2026_10_02",
+      "nome": "Picadinho de pernil com calabresa",
       "preco": 24.0,
-      "imagem": "/pratos/frango_maionese_1.jpg",
+      "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_3.jpg"
+        "/pratos/picadinho_cenoura_1.jpg",
+        "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
-        "Mix de legumes",
         "Arroz branco",
-        "Feijão em caldo"
+        "Feijão em caldo",
+        "Farofa tropical",
+        "Couve-flor à milanesa"
       ],
       "disponivel": true
     },
