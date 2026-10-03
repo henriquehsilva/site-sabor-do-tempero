@@ -1,9 +1,9 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-02",
+    "data": "2026-10-03",
     "promo_refri_gratis": {
-      "ativo": false,
+      "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
       "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
     },
@@ -19,39 +19,47 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "coxa_recheada_2026_10_02",
-      "nome": "Coxa recheada com mussarela, bacon e carne",
+      "id": "feijoada_completa_2026_10_03",
+      "nome": "Feijoada completa",
       "preco": 24.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+      "imagem": "/pratos/feijoada.jpg",
       "galeria": [
-        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
-        "/pratos/sobrecoxa_recheado_preview.jpeg",
-        "/pratos/sobrecoxa_recheado_2.jpeg",
-        "/pratos/sobrecoxa_recheado_1.jpeg",
-        "/pratos/sobrecoxa_recheado.jpeg"
+        "/pratos/feijoada.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg",
+        "/pratos/feijoada_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Farofa tropical",
-        "Couve-flor à milanesa"
+        "Couve",
+        "Torresmo",
+        "Banana frita",
+        "Farofa de cebola",
+        "Linguiça toscana assada",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "bife_a_cavalo_2026_10_02",
-      "nome": "Bife a cavalo com ovo frito",
+      "id": "frango_maionese_batatas_2026_10_03",
+      "nome": "Frango temperado na maionese com batatas",
       "preco": 24.0,
-      "imagem": "/pratos/contrafile_grelhado_1.jpg",
+      "imagem": "/pratos/frango_maionese.jpg",
       "galeria": [
-        "/pratos/contrafile_grelhado_1.jpg",
-        "/pratos/contrafile_grelhado.jpg"
+        "/pratos/frango_maionese.jpg",
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_2.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Farofa tropical",
-        "Couve-flor à milanesa"
+        "Couve",
+        "Linguiça toscana assada",
+        "Banana frita",
+        "Farofa de cebola",
+        "Vinagrete"
       ],
       "disponivel": true
     },
@@ -70,7 +78,7 @@
         "Farofa tropical",
         "Couve-flor à milanesa"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "lombo_suino_recheado_hoje",
@@ -704,17 +712,16 @@
     },
     {
       "id": "refrigerantes",
-      "nome": "Refrigerante grátis 200 ml",
+      "nome": "Guaraná ou Pepsi grátis — 200 ml",
       "imagem": "/pratos/refri-gratis.jpeg",
       "galeria": [
         "/pratos/refri-gratis.jpeg"
       ],
       "itens": [
-        "Na compra de 1 marmita",
-        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
-        "Você também pode escolher não receber o refri grátis"
+        "Guaraná 200 ml ou Pepsi 200 ml",
+        "Grátis na compra de 1 marmita"
       ],
-      "disponivel": false
+      "disponivel": true
     },
     {
       "id": "coca_cola_zero_2l",
