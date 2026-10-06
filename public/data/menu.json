@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-05",
+    "data": "2026-10-06",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -16,49 +16,45 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "pernil_assado_batatas_2026_10_05",
-      "nome": "Pernil assado com batatas",
+      "id": "costela_mandioca_2026_10_06",
+      "nome": "Costela com mandioca",
       "preco": 24.0,
-      "imagem": "/pratos/pernil_assado.jpg",
+      "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
-        "/pratos/pernil_assado.jpg",
-        "/pratos/pernil_assado_1.jpg",
-        "/pratos/pernil_assado_2.jpg",
-        "/pratos/pernil_assado_3.jpg",
-        "/pratos/pernil_assado_4.jpg",
-        "/pratos/pernil_assado_5.jpg"
+        "/pratos/costela_mandioca.jpeg",
+        "/pratos/costela_mandioca.png",
+        "/pratos/costela_mandioca.png.jpeg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Couve-flor gratinada",
-        "Espaguete com bacon ao alho e óleo",
-        "Linguiça toscana assada"
+        "Feijão de caldo",
+        "Lasanha à bolonhesa",
+        "Brócolis na manteiga"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_frito_alho_oleo_2026_10_05",
-      "nome": "Frango frito ao alho e óleo",
+      "id": "frango_assado_batatas_2026_10_06",
+      "nome": "Frango assado com batatas",
       "preco": 24.0,
-      "imagem": "/pratos/frango_frito.png",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
-        "/pratos/frango_frito.png"
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Linguiça toscana assada",
         "Arroz branco",
-        "Feijão tropeiro",
-        "Couve-flor gratinada",
-        "Espaguete com bacon ao alho e óleo"
+        "Feijão de caldo",
+        "Lasanha à bolonhesa",
+        "Brócolis na manteiga"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_2026_10_05",
+      "id": "estrogonoff_frango_2026_10_06",
       "nome": "Estrogonoff de frango",
       "preco": 24.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -72,6 +68,7 @@
       ],
       "itens": [
         "Arroz branco",
+        "Feijão de caldo",
         "Batata palha"
       ],
       "disponivel": true
