@@ -1,12 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-07",
-    "promo_refri_gratis": {
-      "ativo": true,
-      "titulo": "Refrigerante grátis 200 ml",
-      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
-    },
+    "data": "2026-10-08",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -16,50 +11,49 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "coxa_recheada_2026_10_07",
-      "nome": "Coxa recheada com carne, bacon e queijo",
+      "id": "frango_parmegiana_2026_10_08",
+      "nome": "Frango à parmegiana",
       "preco": 24.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+      "imagem": "/pratos/file_parmegiana_preview.jpg",
       "galeria": [
-        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
-        "/pratos/sobrecoxa_recheado_preview.jpeg",
-        "/pratos/sobrecoxa_recheado_2.jpeg",
-        "/pratos/sobrecoxa_recheado_1.jpeg",
-        "/pratos/sobrecoxa_recheado.jpeg"
+        "/pratos/file_parmegiana_preview.jpg",
+        "/pratos/file_parmegiana.jpeg",
+        "/pratos/file_parmegiana.jpg",
+        "/pratos/file_parmegiana_1.jpg",
+        "/pratos/file_parmegiana_2.jpg",
+        "/pratos/file_parmegiana_3.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Espaguete à bolonhesa",
+        "Feijão em caldo",
         "Batata frita"
       ],
       "disponivel": true
     },
     {
-      "id": "picadinho_pernil_calabresa_2026_10_07",
-      "nome": "Picadinho de pernil com calabresa",
+      "id": "costelinha_suina_assada_2026_10_08",
+      "nome": "Costelinha suína assada",
       "preco": 24.0,
-      "imagem": "/pratos/pernil_assado_5.jpg",
+      "imagem": "/pratos/costelinha_suina_preview_1.jpeg",
       "galeria": [
-        "/pratos/pernil_assado_5.jpg",
-        "/pratos/pernil_assado_1.jpg",
-        "/pratos/pernil_assado_2.jpg",
-        "/pratos/pernil_assado_3.jpg",
-        "/pratos/pernil_assado_4.jpg"
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina.jpeg",
+        "/pratos/costelinha_suina.png"
       ],
       "itens": [
+        "Mandioca temperada",
+        "Farofa de bacon com banana",
         "Arroz branco",
-        "Feijão tropeiro",
-        "Espaguete à bolonhesa",
-        "Batata frita"
+        "Feijão em caldo"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_2026_10_07",
+      "id": "estrogonoff_frango_2026_10_08",
       "nome": "Estrogonoff de frango",
       "preco": 24.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -73,8 +67,7 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha",
-        "Salada de beterraba"
+        "Batata palha"
       ],
       "disponivel": true
     },
@@ -707,19 +700,6 @@
         "Brócolis ao vapor"
       ],
       "disponivel": false
-    },
-    {
-      "id": "refrigerantes",
-      "nome": "Guaraná ou Pepsi grátis — 200 ml",
-      "imagem": "/pratos/refri-gratis.jpeg",
-      "galeria": [
-        "/pratos/refri-gratis.jpeg"
-      ],
-      "itens": [
-        "Guaraná 200 ml ou Pepsi 200 ml",
-        "Grátis na compra de 1 marmita"
-      ],
-      "disponivel": true
     },
     {
       "id": "coca_cola_zero_2l",
