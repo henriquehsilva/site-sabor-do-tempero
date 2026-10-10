@@ -1,7 +1,12 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-09",
+    "data": "2026-10-10",
+    "promo_refri_gratis": {
+      "ativo": true,
+      "titulo": "Refrigerante grátis 200 ml",
+      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
+    },
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,52 +16,55 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 3,
+  "opcoes_do_dia": 4,
   "pratos": [
     {
-      "id": "frango_assado_maionese_2026_10_09",
-      "nome": "Frango assado na maionese",
-      "preco": 24.0,
-      "imagem": "/pratos/frango_maionese_1.jpg",
+      "id": "feijoada_completa_2026_10_10",
+      "nome": "Feijoada completa",
+      "preco": 25.0,
+      "imagem": "/pratos/feijoada.jpg",
       "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_3.jpg",
-        "/pratos/frango_maionese.jpg",
-        "/pratos/frango_maionese_2.jpg"
+        "/pratos/feijoada.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg",
+        "/pratos/feijoada_4.jpg"
       ],
       "itens": [
-        "Linguiça toscana assada",
-        "Purê gratinado",
-        "Couve refogada",
-        "Espaguete ao molho sugo",
         "Arroz branco",
-        "Feijão em caldo"
+        "Couve refogada",
+        "Torresmo crocante",
+        "Banana frita",
+        "Linguiça toscana assada",
+        "Farofa de cebola",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "carne_panela_2026_10_09",
-      "nome": "Carne de panela",
-      "preco": 24.0,
-      "imagem": "/pratos/carne_panela.jpeg",
+      "id": "iscas_frango_empanadas_2026_10_10",
+      "nome": "Iscas de frango empanadas",
+      "preco": 25.0,
+      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
-        "/pratos/carne_panela.jpeg",
-        "/pratos/carne_panela_1.jpeg"
+        "/pratos/isca_frango_empanada_preview.jpeg",
+        "/pratos/isca_frango_empanada.jpeg"
       ],
       "itens": [
-        "Linguiça toscana assada",
-        "Purê gratinado",
-        "Couve refogada",
-        "Espaguete ao molho sugo",
         "Arroz branco",
-        "Feijão em caldo"
+        "Feijão em caldo",
+        "Farofa de cebola",
+        "Linguiça toscana assada",
+        "Couve refogada",
+        "Banana frita",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_2026_10_09",
+      "id": "estrogonoff_frango_2026_10_10",
       "nome": "Estrogonoff de frango",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
         "/pratos/strogonoff_preview_1.jpg",
@@ -68,14 +76,15 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha"
+        "Batata palha ou banana frita",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
       "id": "lombo_suino_recheado_hoje",
       "nome": "Lombo suíno recheado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
         "/pratos/alcatra_suina_preview.jpeg",
@@ -96,7 +105,7 @@
     {
       "id": "costela_bovina_panela_hoje",
       "nome": "Costela bovina assada na panela",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/costela_panela.png",
       "galeria": [
         "/pratos/costela_panela.png",
@@ -114,7 +123,7 @@
     {
       "id": "alcatra_suina_hoje",
       "nome": "Bife de alcatra suína",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
         "/pratos/alcatra_suina_preview.jpeg",
@@ -133,7 +142,7 @@
     {
       "id": "strogonoff_anterior",
       "nome": "Estrogonoff de Frango",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
         "/pratos/strogonoff_preview_1.jpg",
@@ -152,7 +161,7 @@
     {
       "id": "isca_frango",
       "nome": "Isca de Frango crocante",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
       "galeria": [
         "/pratos/isca_frango_empanada_preview.jpeg",
@@ -170,7 +179,7 @@
     {
       "id": "costela_panela_anterior",
       "nome": "Costela Bovina Assada na Panela",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/costela_panela.png",
       "galeria": [
         "/pratos/costela_panela.png"
@@ -187,7 +196,7 @@
     {
       "id": "costelinha",
       "nome": "Costela bovina assada na panela",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/costelinha.jpg",
       "galeria": [
         "/pratos/costelinha_1.jpg",
@@ -206,7 +215,7 @@
     {
       "id": "file_frango_molho_branco",
       "nome": "File de frango grelhado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/frango_grelhado.jpeg",
       "galeria": [
         "/pratos/frango_grelhado.jpeg"
@@ -223,7 +232,7 @@
     {
       "id": "peixe_assado",
       "nome": "Peixe tambaqui empanado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
         "/pratos/peixe_assado.jpg"
@@ -239,7 +248,7 @@
     {
       "id": "panelinha_goiana",
       "nome": "Panelinha goiana",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/panelinha_goiana_preview.jpg",
       "galeria": [
         "/pratos/panelinha_goiana_preview.jpg",
@@ -258,7 +267,7 @@
     {
       "id": "picadinho_cenoura",
       "nome": "Picadinho de carne bovina com calabresa",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
         "/pratos/picadinho_cenoura_1.jpg",
@@ -275,7 +284,7 @@
     {
       "id": "contrafile_grelhado",
       "nome": "Contrafilé grelhado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/contrafile_grelhado_1.jpg",
       "galeria": [
         "/pratos/contrafile_grelhado_1.jpg",
@@ -290,7 +299,7 @@
     {
       "id": "frango_maionese",
       "nome": "Frango assado na maionese",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
         "/pratos/frango_maionese_1.jpg",
@@ -307,7 +316,7 @@
     {
       "id": "escalope_alcatra",
       "nome": "Escalope de carne bovina",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/escalope_alcatra.jpeg",
       "galeria": [
         "/pratos/escalope_alcatra.jpeg"
@@ -323,7 +332,7 @@
     {
       "id": "carne_assada",
       "nome": "Isca de carne bovina acebolada",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/carne_assada_1.jpg",
       "galeria": [
         "/pratos/carne_assada_1.jpg",
@@ -341,7 +350,7 @@
     {
       "id": "lagarto_recheado",
       "nome": "Lagarto recheado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/lagarto_recheado.jpg",
       "galeria": [
         "/pratos/lagarto_recheado.jpg"
@@ -356,7 +365,7 @@
     {
       "id": "file_parmegiana",
       "nome": "Frango à parmejiana",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/file_parmegiana.jpeg",
       "galeria": [
         "/pratos/file_parmegiana.jpeg"
@@ -372,7 +381,7 @@
     {
       "id": "panelinha_mineira",
       "nome": "Panelinha mineira",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/panelinha_mineira_preview.jpg",
       "galeria": [
         "/pratos/panelinha_mineira_preview.jpg",
@@ -393,7 +402,7 @@
     {
       "id": "pernil_assado",
       "nome": "Pernil na panela com batatas",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
         "/pratos/pernil_assado_5.jpg",
@@ -414,7 +423,7 @@
     {
       "id": "dobradinha_calabresa",
       "nome": "Dobradinha com bacon e calabresa",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/dobradinha_calabresa.jpg",
       "galeria": [
         "/pratos/dobradinha_calabresa.jpg",
@@ -429,7 +438,7 @@
     {
       "id": "dobradinha_linguica_bacon",
       "nome": "Dobradinha com bacon",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/dobradinha_calabresa_preview.jpg",
       "galeria": [
         "/pratos/dobradinha_calabresa_preview.jpg",
@@ -447,7 +456,7 @@
     {
       "id": "sobrecoxa_recheado_anterior",
       "nome": "Sobrecoxa recheada",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
         "/pratos/sobrecoxa_recheado_preview_1.jpeg",
@@ -468,7 +477,7 @@
     {
       "id": "costela_mandioca",
       "nome": "Vaca atolada Costela bovina com mandioca",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/costela_mandioca.jpeg",
       "galeria": [
         "/pratos/costela_mandioca.jpeg"
@@ -482,7 +491,7 @@
     {
       "id": "carne_molho_madeira",
       "nome": "Carne com mandioca vaca atolada",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/carne_molho_madeira.jpeg",
       "galeria": [
         "/pratos/carne_molho_madeira.jpeg"
@@ -498,7 +507,7 @@
     {
       "id": "costela_mandioca_2",
       "nome": "Carne com mandioca",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/costela_bovina.jpeg",
       "galeria": [
         "/pratos/costela_bovina.jpeg"
@@ -515,7 +524,7 @@
     {
       "id": "carne_cenoura",
       "nome": "Carne com cenoura",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/carne_cenoura_preview_1.jpeg",
       "galeria": [
         "/pratos/carne_cenoura_preview_1.jpeg",
@@ -537,7 +546,7 @@
     {
       "id": "carne_panela",
       "nome": "Carne com mandioca",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/carne_panela.jpeg",
       "galeria": [
         "/pratos/carne_panela.png",
@@ -554,7 +563,7 @@
     {
       "id": "panelinha_cerrado",
       "nome": "Panelinha do cerrado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/panelinha_cerrado.jpeg",
       "galeria": [
         "/pratos/panelinha_cerrado.jpeg",
@@ -571,7 +580,7 @@
     {
       "id": "carne_suina",
       "nome": "Carne suína grelhada",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/carne_suina.jpeg",
       "galeria": [
         "/pratos/carne_suina.jpeg"
@@ -585,7 +594,7 @@
     {
       "id": "dobradinha",
       "nome": "Dobradinha com mocotó",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/dobradinha_preview.jpeg",
       "galeria": [
         "/pratos/dobradinha_preview.jpeg",
@@ -604,7 +613,7 @@
     {
       "id": "frango_milanesa_anterior",
       "nome": "Frango à milanesa",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/file_milanesa.jpeg",
       "galeria": [
         "/pratos/file_milanesa.jpeg"
@@ -620,7 +629,7 @@
     {
       "id": "rabada_molho",
       "nome": "Rabada a mineira",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/rabada_molho.jpeg",
       "galeria": [
         "/pratos/rabada_molho.jpeg"
@@ -637,7 +646,7 @@
     {
       "id": "frango_curry",
       "nome": "Frango assado com batatas",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/frango_frito.png",
       "galeria": [
         "/pratos/frango_frito.png"
@@ -653,7 +662,7 @@
     {
       "id": "alcatra_suina",
       "nome": "Bife de alcatra suína",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
         "/pratos/alcatra_suina_preview.jpeg",
@@ -670,7 +679,7 @@
     {
       "id": "pernil_recheado",
       "nome": "Isca de pernil grelhado",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/pernil_recheado.png",
       "galeria": [
         "/pratos/pernil_recheado.png"
@@ -686,7 +695,7 @@
     {
       "id": "alcatra_toscana",
       "nome": "Alcatra suína com toscana assada",
-      "preco": 24.0,
+      "preco": 25.0,
       "imagem": "/pratos/alcatra_suina_preview.jpeg",
       "galeria": [
         "/pratos/alcatra_suina_preview.jpeg",
@@ -701,6 +710,20 @@
         "Brócolis ao vapor"
       ],
       "disponivel": false
+    },
+    {
+      "id": "refrigerantes",
+      "nome": "Refrigerante grátis 200 ml",
+      "imagem": "/pratos/refri-gratis.jpeg",
+      "galeria": [
+        "/pratos/refri-gratis.jpeg"
+      ],
+      "itens": [
+        "Na compra de 1 marmita",
+        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
+        "Você também pode escolher não receber o refri grátis"
+      ],
+      "disponivel": true
     },
     {
       "id": "coca_cola_zero_2l",
