@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-10",
+    "data": "2026-10-12",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,50 +19,46 @@
   "opcoes_do_dia": 4,
   "pratos": [
     {
-      "id": "feijoada_completa_2026_10_10",
-      "nome": "Feijoada completa",
+      "id": "coxa_recheada_2026_10_12",
+      "nome": "Coxa recheada com carne, bacon e mussarela",
       "preco": 25.0,
-      "imagem": "/pratos/feijoada.jpg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
       "galeria": [
-        "/pratos/feijoada.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg",
-        "/pratos/feijoada_4.jpg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Couve refogada",
-        "Torresmo crocante",
-        "Banana frita",
-        "Linguiça toscana assada",
-        "Farofa de cebola",
-        "Vinagrete"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "iscas_frango_empanadas_2026_10_10",
-      "nome": "Iscas de frango empanadas",
-      "preco": 25.0,
-      "imagem": "/pratos/isca_frango_empanada_preview.jpeg",
-      "galeria": [
-        "/pratos/isca_frango_empanada_preview.jpeg",
-        "/pratos/isca_frango_empanada.jpeg"
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg"
       ],
       "itens": [
         "Arroz branco",
         "Feijão em caldo",
-        "Farofa de cebola",
-        "Linguiça toscana assada",
-        "Couve refogada",
-        "Banana frita",
-        "Vinagrete"
+        "Batata gratinada ao molho bolonhesa",
+        "Espaguete com bacon ao alho e óleo"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_2026_10_10",
+      "id": "costelinha_suina_assada_2026_10_12",
+      "nome": "Costelinha suína assada",
+      "preco": 25.0,
+      "imagem": "/pratos/costelinha_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina.jpeg",
+        "/pratos/costelinha_suina.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Batata gratinada ao molho bolonhesa",
+        "Espaguete com bacon ao alho e óleo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonoff_frango_2026_10_12",
       "nome": "Estrogonoff de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -76,8 +72,7 @@
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha ou banana frita",
-        "Vinagrete"
+        "Batata palha"
       ],
       "disponivel": true
     },
