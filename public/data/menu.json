@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-12",
+    "data": "2026-10-13",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,46 +19,47 @@
   "opcoes_do_dia": 4,
   "pratos": [
     {
-      "id": "coxa_recheada_2026_10_12",
-      "nome": "Coxa recheada com carne, bacon e mussarela",
+      "id": "frango_maionese_2026_10_13",
+      "nome": "Frango assado na maionese",
       "preco": 25.0,
-      "imagem": "/pratos/sobrecoxa_recheado_preview.jpeg",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
-        "/pratos/sobrecoxa_recheado_preview.jpeg",
-        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
-        "/pratos/sobrecoxa_recheado.jpeg",
-        "/pratos/sobrecoxa_recheado_1.jpeg",
-        "/pratos/sobrecoxa_recheado_2.jpeg"
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
+        "Almôndega frita",
+        "Linguiça toscana assada",
+        "Couve-flor e brócolis salteados na manteiga",
         "Arroz branco",
-        "Feijão em caldo",
-        "Batata gratinada ao molho bolonhesa",
-        "Espaguete com bacon ao alho e óleo"
+        "Feijão em caldo"
       ],
       "disponivel": true
     },
     {
-      "id": "costelinha_suina_assada_2026_10_12",
-      "nome": "Costelinha suína assada",
+      "id": "pernil_assado_2026_10_13",
+      "nome": "Pernil assado",
       "preco": 25.0,
-      "imagem": "/pratos/costelinha_suina_preview.jpeg",
+      "imagem": "/pratos/pernil_assado.jpg",
       "galeria": [
-        "/pratos/costelinha_suina_preview.jpeg",
-        "/pratos/costelinha_suina_preview_1.jpeg",
-        "/pratos/costelinha_suina.jpeg",
-        "/pratos/costelinha_suina.png"
+        "/pratos/pernil_assado.jpg",
+        "/pratos/pernil_assado_1.jpg",
+        "/pratos/pernil_assado_2.jpg",
+        "/pratos/pernil_assado_3.jpg",
+        "/pratos/pernil_assado_4.jpg",
+        "/pratos/pernil_assado_5.jpg"
       ],
       "itens": [
+        "Almôndega frita",
+        "Linguiça toscana assada",
+        "Couve-flor e brócolis salteados na manteiga",
         "Arroz branco",
-        "Feijão em caldo",
-        "Batata gratinada ao molho bolonhesa",
-        "Espaguete com bacon ao alho e óleo"
+        "Feijão em caldo"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_2026_10_12",
+      "id": "estrogonoff_frango_2026_10_13",
       "nome": "Estrogonoff de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
