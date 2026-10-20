@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-19",
+    "data": "2026-10-20",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,26 +19,25 @@
   "opcoes_do_dia": 4,
   "pratos": [
     {
-      "id": "costela_bovina_toscana_2026_10_19",
-      "nome": "Costela bovina assada com linguiça toscana",
+      "id": "frango_assado_batatas_2026_10_20",
+      "nome": "Frango assado com batatas",
       "preco": 25.0,
-      "imagem": "/pratos/costela_bovina.jpeg",
+      "imagem": "/pratos/frango_maionese_1.jpg",
       "galeria": [
-        "/pratos/costela_bovina.jpeg",
-        "/pratos/costela_bovina.png"
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Batata rústica",
-        "Farofa de cenoura com bacon",
-        "Macarrão ao alho e óleo",
         "Arroz branco",
-        "Feijão em caldo"
+        "Feijão tropeiro",
+        "Lasanha à bolonhesa",
+        "Couve-flor ao vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_carne_2026_10_19",
-      "nome": "Estrogonoff de frango ou carne",
+      "id": "estrogonoff_frango_2026_10_20",
+      "nome": "Estrogonoff de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
@@ -56,21 +55,18 @@
       "disponivel": true
     },
     {
-      "id": "frango_parmegiana_2026_10_19",
-      "nome": "Frango à parmegiana",
+      "id": "costelinha_tambaqui_empanada_2026_10_20",
+      "nome": "Costelinha de tambaqui empanada",
       "preco": 25.0,
-      "imagem": "/pratos/file_parmegiana_preview.jpg",
+      "imagem": "/pratos/peixe_assado.jpg",
       "galeria": [
-        "/pratos/file_parmegiana_preview.jpg",
-        "/pratos/file_parmegiana.jpg",
-        "/pratos/file_parmegiana_1.jpg",
-        "/pratos/file_parmegiana_2.jpg",
-        "/pratos/file_parmegiana_3.jpg"
+        "/pratos/peixe_assado.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Batata frita"
+        "Feijão tropeiro",
+        "Lasanha à bolonhesa",
+        "Couve-flor ao vinagrete"
       ],
       "disponivel": true
     },
