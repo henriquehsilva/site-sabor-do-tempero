@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-20",
+    "data": "2026-10-21",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,54 +19,62 @@
   "opcoes_do_dia": 4,
   "pratos": [
     {
-      "id": "frango_assado_batatas_2026_10_20",
-      "nome": "Frango assado com batatas",
+      "id": "rabada_batatas_2026_10_21",
+      "nome": "Rabada com batatas",
       "preco": 25.0,
-      "imagem": "/pratos/frango_maionese_1.jpg",
+      "imagem": "/pratos/rabada_molho.jpeg",
       "galeria": [
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_3.jpg"
+        "/pratos/rabada_molho.jpeg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Lasanha à bolonhesa",
-        "Couve-flor ao vinagrete"
+        "Feijão em caldo",
+        "Farofa de abobrinha com bacon",
+        "Quibe assado",
+        "Banana frita"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonoff_frango_2026_10_20",
-      "nome": "Estrogonoff de frango",
+      "id": "pernil_linguica_toscana_2026_10_21",
+      "nome": "Pernil assado com linguiça toscana",
       "preco": 25.0,
-      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "imagem": "/pratos/pernil_assado_5.jpg",
       "galeria": [
-        "/pratos/strogonoff_preview_1.jpg",
-        "/pratos/strogonoff_preview.jpg",
-        "/pratos/strogonoff.jpg",
-        "/pratos/strogonoff_2.jpg",
-        "/pratos/strogonoff_3.jpg",
-        "/pratos/strogonoff_4.jpg"
+        "/pratos/pernil_assado_5.jpg",
+        "/pratos/pernil_assado_1.jpg",
+        "/pratos/pernil_assado_2.jpg",
+        "/pratos/pernil_assado_3.jpg",
+        "/pratos/pernil_assado_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Batata palha"
+        "Feijão em caldo",
+        "Quibe assado",
+        "Farofa de abobrinha com bacon",
+        "Banana frita"
       ],
       "disponivel": true
     },
     {
-      "id": "costelinha_tambaqui_empanada_2026_10_20",
-      "nome": "Costelinha de tambaqui empanada",
+      "id": "coxa_recheada_carne_bacon_2026_10_21",
+      "nome": "Coxa recheada com carne e bacon",
       "preco": 25.0,
-      "imagem": "/pratos/peixe_assado.jpg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
-        "/pratos/peixe_assado.jpg"
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Lasanha à bolonhesa",
-        "Couve-flor ao vinagrete"
+        "Feijão em caldo",
+        "Farofa de abobrinha com bacon",
+        "Quibe assado",
+        "Banana frita",
+        "Salada verde"
       ],
       "disponivel": true
     },
