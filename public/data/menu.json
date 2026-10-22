@@ -2,11 +2,6 @@
   "meta": {
     "titulo_dia": "Cardápio do Dia",
     "data": "2026-10-22",
-    "promo_refri_gratis": {
-      "ativo": true,
-      "titulo": "Refrigerante grátis 200 ml",
-      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
-    },
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -821,20 +816,6 @@
         "Brócolis ao vapor"
       ],
       "disponivel": false
-    },
-    {
-      "id": "refrigerantes",
-      "nome": "Refrigerante grátis 200 ml",
-      "imagem": "/pratos/refri-gratis.jpeg",
-      "galeria": [
-        "/pratos/refri-gratis.jpeg"
-      ],
-      "itens": [
-        "Na compra de 1 marmita",
-        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
-        "Você também pode escolher não receber o refri grátis"
-      ],
-      "disponivel": true
     },
     {
       "id": "coca_cola_zero_2l",
