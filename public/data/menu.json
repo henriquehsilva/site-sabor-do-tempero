@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-21",
+    "data": "2026-10-22",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -16,8 +16,67 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "costelinha_suina_assada_2026_10_22",
+      "nome": "Costelinha suína assada",
+      "preco": 25.0,
+      "imagem": "/pratos/costelinha_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina.jpeg",
+        "/pratos/costelinha_suina.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Panqueca de frango",
+        "Linguiça toscana assada",
+        "Brócolis sauté"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "file_frango_milanesa_2026_10_22",
+      "nome": "Filé de frango à milanesa",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_milanesa.jpeg",
+      "galeria": [
+        "/pratos/frango_milanesa.jpeg",
+        "/pratos/frango_milanesa_1.jpeg",
+        "/pratos/frango_milanesa_2.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Panqueca de frango",
+        "Linguiça toscana assada",
+        "Brócolis sauté"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonoff_frango_2026_10_22",
+      "nome": "Estrogonoff de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha",
+        "Linguiça toscana assada"
+      ],
+      "disponivel": true
+    },
     {
       "id": "rabada_batatas_2026_10_21",
       "nome": "Rabada com batatas",
@@ -33,7 +92,7 @@
         "Quibe assado",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "pernil_linguica_toscana_2026_10_21",
@@ -54,7 +113,7 @@
         "Farofa de abobrinha com bacon",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "coxa_recheada_carne_bacon_2026_10_21",
@@ -76,7 +135,7 @@
         "Banana frita",
         "Salada verde"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonoff_frango_2026_10_14",
