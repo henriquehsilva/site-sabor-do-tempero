@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-22",
+    "data": "2026-10-23",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,8 +11,61 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "frango_assado_linguica_toscana_2026_10_23",
+      "nome": "Frango assado com linguiça toscana",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_maionese_1.jpg",
+      "galeria": [
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Brócolis e couve-flor gratinados",
+        "Espaguete ao alho e óleo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "carne_panela_calabresa_2026_10_23",
+      "nome": "Carne de panela com calabresa",
+      "preco": 25.0,
+      "imagem": "/pratos/carne_panela.jpeg",
+      "galeria": [
+        "/pratos/carne_panela.jpeg",
+        "/pratos/carne_panela_1.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Brócolis e couve-flor gratinados"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonoff_frango_2026_10_23",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": true
+    },
     {
       "id": "costelinha_suina_assada_2026_10_22",
       "nome": "Costelinha suína assada",
@@ -31,7 +84,7 @@
         "Linguiça toscana assada",
         "Brócolis sauté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_milanesa_2026_10_22",
@@ -50,7 +103,7 @@
         "Linguiça toscana assada",
         "Brócolis sauté"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonoff_frango_2026_10_22",
@@ -70,7 +123,7 @@
         "Batata palha",
         "Linguiça toscana assada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "rabada_batatas_2026_10_21",
