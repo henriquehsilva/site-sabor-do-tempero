@@ -1,12 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-24",
-    "promo_refri_gratis": {
-      "ativo": true,
-      "titulo": "Refrigerante grátis 200 ml",
-      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
-    },
+    "data": "2026-10-26",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -16,8 +11,62 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "costelinha_suina_assada_2026_10_26",
+      "nome": "Costelinha suína assada",
+      "preco": 25.0,
+      "imagem": "/pratos/costelinha_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/costelinha_suina_preview.jpeg",
+        "/pratos/costelinha_suina_preview_1.jpeg",
+        "/pratos/costelinha_suina.jpeg",
+        "/pratos/costelinha_suina.png"
+      ],
+      "itens": [
+        "Mandioca temperada",
+        "Lasanha à bolonhesa",
+        "Arroz branco",
+        "Feijão tropeiro"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_assado_batatas_toscana_2026_10_26",
+      "nome": "Frango assado com batatas e linguiça toscana",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Mandioca temperada",
+        "Lasanha à bolonhesa"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonofe_frango_2026_10_26",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": true
+    },
     {
       "id": "feijoada_completa_2026_10_24",
       "nome": "Feijoada completa",
@@ -38,7 +87,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "bisteca_assada_batatas_2026_10_24",
@@ -57,7 +106,7 @@
         "Couve refogada",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "file_frango_grelhado_2026_10_24",
@@ -77,7 +126,7 @@
         "Banana frita",
         "Vinagrete"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_assado_linguica_toscana_2026_10_23",
@@ -935,20 +984,6 @@
         "Brócolis ao vapor"
       ],
       "disponivel": false
-    },
-    {
-      "id": "refrigerantes",
-      "nome": "Refrigerante grátis 200 ml",
-      "imagem": "/pratos/refri-gratis.jpeg",
-      "galeria": [
-        "/pratos/refri-gratis.jpeg"
-      ],
-      "itens": [
-        "Na compra de 1 marmita",
-        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
-        "Você também pode escolher não receber o refri grátis"
-      ],
-      "disponivel": true
     },
     {
       "id": "coca_cola_zero_2l",
