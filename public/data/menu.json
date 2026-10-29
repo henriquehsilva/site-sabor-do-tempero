@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-10-28",
+    "data": "2026-10-29",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,61 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "frango_assado_batatas_linguica_toscana_2026_10_29",
+      "nome": "Frango assado com batatas e linguiça toscana",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Tutu à mineira",
+        "Panquecas de carne com requeijão",
+        "Mandioca temperada"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "pernil_assado_batatas_mapara_frito_2026_10_29",
+      "nome": "Pernil assado com batatas e mapará frito",
+      "preco": 25.0,
+      "imagem": "/pratos/pernil_assado_5.jpg",
+      "galeria": [
+        "/pratos/pernil_assado_5.jpg",
+        "/pratos/pernil_assado_1.jpg",
+        "/pratos/pernil_assado_2.jpg",
+        "/pratos/pernil_assado_3.jpg",
+        "/pratos/pernil_assado_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Tutu à mineira",
+        "Panquecas de carne com requeijão",
+        "Mandioca temperada"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonofe_carne_2026_10_29",
+      "nome": "Estrogonofe de carne",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": true
+    },
     {
       "id": "coxa_recheada_carne_mucarela_cenoura_2026_10_28",
       "nome": "Coxa recheada com carne, muçarela e cenoura",
@@ -32,7 +87,7 @@
         "Batata rústica",
         "Salada de beterraba cozida"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonofe_frango_2026_10_28",
@@ -52,7 +107,7 @@
         "Batata palha",
         "Salada de beterraba"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_bovina_linguica_toscana_2026_10_28",
@@ -70,7 +125,7 @@
         "Batata rústica",
         "Salada de beterraba cozida"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "mapara_empanado_frito_2026_10_27",
