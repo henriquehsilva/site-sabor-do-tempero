@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-02",
+    "data": "2026-11-03",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,60 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "fraldinha_assada_batatas_2026_11_03",
+      "nome": "Fraldinha assada com batatas",
+      "preco": 25.0,
+      "imagem": "/pratos/carne_assada.jpg",
+      "galeria": [
+        "/pratos/carne_assada.jpg",
+        "/pratos/carne_assada_1.jpg",
+        "/pratos/carne_assada_2.jpg",
+        "/pratos/carne_assada_3.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Mandioca frita",
+        "Farofa de cenoura"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_frito_alho_oleo_2026_11_03",
+      "nome": "Frango frito ao alho e óleo",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Farofa de cenoura",
+        "Mandioca frita",
+        "Espaguete ao alho e óleo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "peito_frango_creme_milho_gratinado_2026_11_03",
+      "nome": "Peito de frango ao creme de milho gratinado",
+      "preco": 25.0,
+      "imagem": "/pratos/file_frango_molho_branco.png",
+      "galeria": [
+        "/pratos/file_frango_molho_branco.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Mandioca frita",
+        "Farofa de cenoura",
+        "Espaguete ao alho e óleo"
+      ],
+      "disponivel": true
+    },
     {
       "id": "estrogonofe_frango_2026_11_02",
       "nome": "Estrogonofe de frango",
@@ -30,7 +84,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_bovina_assada_toscana_2026_11_02",
@@ -47,7 +101,7 @@
         "Brócolis gratinado",
         "Mandioca temperada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_assado_maionese_batatas_2026_11_02",
@@ -65,7 +119,7 @@
         "Mandioca temperada",
         "Salada de macarrão"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "feijoada_completa_2026_10_31",
