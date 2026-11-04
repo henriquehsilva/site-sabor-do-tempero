@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-03",
+    "data": "2026-11-04",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,66 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "file_frango_parmegiana_2026_11_04",
+      "nome": "Filé de frango à parmegiana",
+      "preco": 25.0,
+      "imagem": "/pratos/file_parmegiana_preview.jpg",
+      "galeria": [
+        "/pratos/file_parmegiana_preview.jpg",
+        "/pratos/file_parmegiana.jpg",
+        "/pratos/file_parmegiana_1.jpg",
+        "/pratos/file_parmegiana_2.jpg",
+        "/pratos/file_parmegiana_3.jpg"
+      ],
+      "itens": [
+        "Batata sauté",
+        "Brócolis ao alho e óleo",
+        "Farofa de carne",
+        "Arroz branco",
+        "Feijão em caldo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "coxa_frango_recheada_carne_requeijao_2026_11_04",
+      "nome": "Coxa de frango recheada com carne e requeijão",
+      "preco": 25.0,
+      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+      "galeria": [
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg"
+      ],
+      "itens": [
+        "Batata sauté",
+        "Farofa de carne",
+        "Brócolis ao alho e óleo",
+        "Arroz branco",
+        "Feijão em caldo"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "carne_bovina_panela_2026_11_04",
+      "nome": "Carne bovina na panela",
+      "preco": 25.0,
+      "imagem": "/pratos/carne_panela.jpeg",
+      "galeria": [
+        "/pratos/carne_panela.jpeg",
+        "/pratos/carne_panela_1.jpeg"
+      ],
+      "itens": [
+        "Farofa de carne",
+        "Batata sauté",
+        "Brócolis ao alho e óleo",
+        "Arroz branco",
+        "Feijão em caldo"
+      ],
+      "disponivel": true
+    },
     {
       "id": "fraldinha_assada_batatas_2026_11_03",
       "nome": "Fraldinha assada com batatas",
@@ -31,7 +91,7 @@
         "Mandioca frita",
         "Farofa de cenoura"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_frito_alho_oleo_2026_11_03",
@@ -48,7 +108,7 @@
         "Mandioca frita",
         "Espaguete ao alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "peito_frango_creme_milho_gratinado_2026_11_03",
@@ -65,7 +125,7 @@
         "Farofa de cenoura",
         "Espaguete ao alho e óleo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonofe_frango_2026_11_02",
