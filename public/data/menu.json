@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-05",
+    "data": "2026-11-06",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,58 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "estrogonofe_frango_2026_11_06",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_assado_batatas_2026_11_06",
+      "nome": "Frango assado com batatas",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Seleta de legumes"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "isca_carne_bovina_acebolada_2026_11_06",
+      "nome": "Isca de carne bovina acebolada",
+      "preco": 25.0,
+      "imagem": "/pratos/carne_assada_1.jpg",
+      "galeria": [
+        "/pratos/carne_assada_1.jpg",
+        "/pratos/carne_assada.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Seleta de legumes"
+      ],
+      "disponivel": true
+    },
     {
       "id": "costelinha_suina_assada_2026_11_05",
       "nome": "Costelinha suína assada",
@@ -30,7 +82,7 @@
         "Arroz branco",
         "Feijão preto em caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonofe_frango_2026_11_05",
@@ -49,7 +101,7 @@
         "Batata palha",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "costela_bovina_assada_batatas_2026_11_05",
@@ -66,7 +118,7 @@
         "Arroz branco",
         "Feijão preto em caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "fraldinha_assada_batatas_2026_11_03",
