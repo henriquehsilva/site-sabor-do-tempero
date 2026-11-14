@@ -198,22 +198,10 @@ function renderizarMenu() {
   document.getElementById('tituloDia').textContent = meta.titulo_dia || 'Cardápio do Dia';
   document.getElementById('dataDia').textContent = formatarData(meta.data);
 
-  renderizarPromocao(meta.promo_refri_gratis);
   renderizarCardapio(pratos, opcoes_do_dia, meta.flags);
   renderizarSobre(sobre, meta.flags);
   renderizarHeaderMeta(sobre, meta.flags);
   configurarBotoes(meta.flags);
-}
-
-function renderizarPromocao(promo) {
-  const banner = document.getElementById('promoBanner');
-  if (!banner) return;
-
-  banner.hidden = !promo?.ativo;
-  if (!promo?.ativo) return;
-
-  document.getElementById('promoTitulo').textContent = promo.titulo || 'Refrigerante grátis';
-  document.getElementById('promoDescricao').textContent = promo.descricao || '';
 }
 
 function renderizarHeaderMeta(sobre, flags) {
@@ -1175,12 +1163,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   // inicializa Firebase se houver env; se não houver, segue com localStorage
   await initFirebaseIfAvailable();
   await carregarMenu();
-
-  const promoClose = document.getElementById('promoClose');
-  promoClose?.addEventListener('click', () => {
-    const banner = document.getElementById('promoBanner');
-    if (banner) banner.hidden = true;
-  });
 });
 
 // ===============================[ EXEMPLO ENV ]=================================
