@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'sabor-do-tempero-v5';
+const CACHE_VERSION = 'sabor-do-tempero-v6';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const DYNAMIC_CACHE = `${CACHE_VERSION}-dynamic`;
 

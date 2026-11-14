@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-13",
+    "data": "2026-11-14",
     "promo_refri_gratis": {
       "ativo": true,
       "titulo": "Refrigerante grátis 200 ml",
@@ -19,57 +19,61 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "carne_bovina_assada_2026_11_13",
-      "nome": "Carne bovina assada",
+      "id": "feijoada_completa_2026_11_14",
+      "nome": "Feijoada completa",
       "preco": 25.0,
-      "imagem": "/pratos/carne_assada.jpg",
+      "imagem": "/pratos/feijoada_4.jpg",
       "galeria": [
-        "/pratos/carne_assada.jpg",
-        "/pratos/carne_assada_1.jpg",
-        "/pratos/carne_assada_2.jpg",
-        "/pratos/carne_assada_3.jpg"
+        "/pratos/feijoada_4.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Batata sauté",
+        "Torresmo crocante",
+        "Linguiça toscana assada",
         "Farofa de bacon",
-        "Macarronada"
+        "Couve refogada",
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_frito_alho_oleo_2026_11_13",
-      "nome": "Frango frito ao alho e óleo",
+      "id": "frango_assado_batata_2026_11_14",
+      "nome": "Frango assado com batata",
       "preco": 25.0,
-      "imagem": "/pratos/frango_frito.png",
+      "imagem": "/pratos/frango_maionese.jpg",
       "galeria": [
-        "/pratos/frango_frito.png"
+        "/pratos/frango_maionese.jpg",
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_2.jpg",
+        "/pratos/frango_maionese_3.jpg"
       ],
       "itens": [
-        "Arroz branco",
-        "Feijão em caldo",
+        "Linguiça toscana assada",
+        "Couve refogada",
         "Farofa de bacon",
-        "Batata sauté",
-        "Macarronada"
+        "Vinagrete"
       ],
       "disponivel": true
     },
     {
-      "id": "file_frango_grelhado_2026_11_13",
-      "nome": "Filé de frango grelhado",
+      "id": "estrogonofe_frango_2026_11_14",
+      "nome": "Estrogonofe de frango",
       "preco": 25.0,
-      "imagem": "/pratos/frango_grelhado.jpeg",
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
       "galeria": [
-        "/pratos/frango_grelhado.jpeg",
-        "/pratos/frango_grelhado.png"
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão em caldo",
-        "Farofa de bacon",
-        "Batata sauté",
-        "Macarronada"
+        "Batata palha"
       ],
       "disponivel": true
     },
