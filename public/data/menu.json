@@ -1,12 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-14",
-    "promo_refri_gratis": {
-      "ativo": true,
-      "titulo": "Refrigerante grátis 200 ml",
-      "descricao": "Na compra de 1 marmita, escolha Guaraná 200 ml ou Pepsi 200 ml."
-    },
+    "data": "2026-11-16",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -16,50 +11,28 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "feijoada_completa_2026_11_14",
-      "nome": "Feijoada completa",
+      "id": "picadinho_carne_calabresa_2026_11_16",
+      "nome": "Picadinho de carne com calabresa",
       "preco": 25.0,
-      "imagem": "/pratos/feijoada_4.jpg",
+      "imagem": "/pratos/picadinho_cenoura_1.jpg",
       "galeria": [
-        "/pratos/feijoada_4.jpg",
-        "/pratos/feijoada_1.jpg",
-        "/pratos/feijoada_2.jpg",
-        "/pratos/feijoada_3.jpg"
+        "/pratos/picadinho_cenoura_1.jpg",
+        "/pratos/picadinho_cenoura.jpg"
       ],
       "itens": [
         "Arroz branco",
-        "Torresmo crocante",
-        "Linguiça toscana assada",
-        "Farofa de bacon",
-        "Couve refogada",
-        "Vinagrete"
+        "Feijão tropeiro",
+        "Escondidinho de frango com requeijão",
+        "Linguine ao alho e óleo",
+        "Salada"
       ],
       "disponivel": true
     },
     {
-      "id": "frango_assado_batata_2026_11_14",
-      "nome": "Frango assado com batata",
-      "preco": 25.0,
-      "imagem": "/pratos/frango_maionese.jpg",
-      "galeria": [
-        "/pratos/frango_maionese.jpg",
-        "/pratos/frango_maionese_1.jpg",
-        "/pratos/frango_maionese_2.jpg",
-        "/pratos/frango_maionese_3.jpg"
-      ],
-      "itens": [
-        "Linguiça toscana assada",
-        "Couve refogada",
-        "Farofa de bacon",
-        "Vinagrete"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "estrogonofe_frango_2026_11_14",
+      "id": "estrogonofe_frango_2026_11_16",
       "nome": "Estrogonofe de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -74,6 +47,24 @@
       "itens": [
         "Arroz branco",
         "Batata palha"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_assado_toscana_2026_11_16",
+      "nome": "Frango assado com linguiça toscana",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_maionese_1.jpg",
+      "galeria": [
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Escondidinho de frango com requeijão",
+        "Linguine ao alho e óleo",
+        "Salada"
       ],
       "disponivel": true
     },
@@ -1828,20 +1819,6 @@
         "Brócolis ao vapor"
       ],
       "disponivel": false
-    },
-    {
-      "id": "refrigerantes",
-      "nome": "Refrigerante grátis 200 ml",
-      "imagem": "/pratos/refri-gratis.jpeg",
-      "galeria": [
-        "/pratos/refri-gratis.jpeg"
-      ],
-      "itens": [
-        "Na compra de 1 marmita",
-        "Escolha Guaraná 200 ml ou Pepsi 200 ml",
-        "Você também pode escolher não receber o refri grátis"
-      ],
-      "disponivel": true
     },
     {
       "id": "coca_cola_zero_2l",
