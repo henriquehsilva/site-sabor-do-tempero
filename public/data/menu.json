@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-16",
+    "data": "2026-11-17",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -14,25 +14,48 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "picadinho_carne_calabresa_2026_11_16",
-      "nome": "Picadinho de carne com calabresa",
+      "id": "coxa_frango_recheada_carne_pure_2026_11_17",
+      "nome": "Coxa de frango recheada com carne e purê",
       "preco": 25.0,
-      "imagem": "/pratos/picadinho_cenoura_1.jpg",
+      "imagem": "/pratos/sobrecoxa_recheado_preview_1.jpeg",
       "galeria": [
-        "/pratos/picadinho_cenoura_1.jpg",
-        "/pratos/picadinho_cenoura.jpg"
+        "/pratos/sobrecoxa_recheado_preview_1.jpeg",
+        "/pratos/sobrecoxa_recheado_preview.jpeg",
+        "/pratos/sobrecoxa_recheado_2.jpeg",
+        "/pratos/sobrecoxa_recheado_1.jpeg",
+        "/pratos/sobrecoxa_recheado.jpeg"
       ],
       "itens": [
         "Arroz branco",
-        "Feijão tropeiro",
-        "Escondidinho de frango com requeijão",
-        "Linguine ao alho e óleo",
-        "Salada"
+        "Feijão em caldo",
+        "Quibebe de carne",
+        "Farofa de cenoura com linguiça",
+        "Banana frita"
       ],
       "disponivel": true
     },
     {
-      "id": "estrogonofe_frango_2026_11_16",
+      "id": "alcatra_suina_assada_batatas_2026_11_17",
+      "nome": "Alcatra suína assada com batatas",
+      "preco": 25.0,
+      "imagem": "/pratos/alcatra_suina_preview.jpeg",
+      "galeria": [
+        "/pratos/alcatra_suina_preview.jpeg",
+        "/pratos/alcatra_suina.jpeg",
+        "/pratos/alcatra_suina_1.jpeg",
+        "/pratos/alcatra_suina_2.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Quibebe de carne",
+        "Farofa de linguiça com cenoura",
+        "Banana frita"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonofe_frango_2026_11_17",
       "nome": "Estrogonofe de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -51,6 +74,43 @@
       "disponivel": true
     },
     {
+      "id": "picadinho_carne_calabresa_2026_11_16",
+      "nome": "Picadinho de carne com calabresa",
+      "preco": 25.0,
+      "imagem": "/pratos/picadinho_cenoura_1.jpg",
+      "galeria": [
+        "/pratos/picadinho_cenoura_1.jpg",
+        "/pratos/picadinho_cenoura.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Escondidinho de frango com requeijão",
+        "Linguine ao alho e óleo",
+        "Salada"
+      ],
+      "disponivel": false
+    },
+    {
+      "id": "estrogonofe_frango_2026_11_16",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": false
+    },
+    {
       "id": "frango_assado_toscana_2026_11_16",
       "nome": "Frango assado com linguiça toscana",
       "preco": 25.0,
@@ -66,7 +126,7 @@
         "Linguine ao alho e óleo",
         "Salada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_assado_maionese_toscana_2026_11_12",
