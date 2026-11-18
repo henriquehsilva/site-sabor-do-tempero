@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-17",
+    "data": "2026-11-18",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -13,6 +13,62 @@
   },
   "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "lagarto_recheado_2026_11_18",
+      "nome": "Lagarto recheado",
+      "preco": 25.0,
+      "imagem": "/pratos/lagarto_recheado.jpg",
+      "galeria": [
+        "/pratos/lagarto_recheado.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Couve refogada",
+        "Mandioca temperada"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "file_frango_grelhado_2026_11_18",
+      "nome": "Filé de frango grelhado",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_grelhado.jpeg",
+      "galeria": [
+        "/pratos/frango_grelhado.jpeg",
+        "/pratos/frango_grelhado.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Espaguete ao alho e óleo",
+        "Couve refogada",
+        "Mandioca temperada"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "feijoada_2026_11_18",
+      "nome": "Feijoada",
+      "preco": 25.0,
+      "imagem": "/pratos/feijoada.jpg",
+      "galeria": [
+        "/pratos/feijoada.jpg",
+        "/pratos/feijoada_1.jpg",
+        "/pratos/feijoada_2.jpg",
+        "/pratos/feijoada_3.jpg",
+        "/pratos/feijoada_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Torresmo",
+        "Linguiça toscana assada",
+        "Farofa de cebola",
+        "Couve refogada"
+      ],
+      "disponivel": true
+    },
     {
       "id": "coxa_frango_recheada_carne_pure_2026_11_17",
       "nome": "Coxa de frango recheada com carne e purê",
@@ -32,7 +88,7 @@
         "Farofa de cenoura com linguiça",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "alcatra_suina_assada_batatas_2026_11_17",
@@ -52,7 +108,7 @@
         "Farofa de linguiça com cenoura",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonofe_frango_2026_11_17",
@@ -71,7 +127,7 @@
         "Arroz branco",
         "Batata palha"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_carne_calabresa_2026_11_16",
