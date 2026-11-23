@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-21",
+    "data": "2026-11-23",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -11,8 +11,65 @@
       "usar_grade_compacta": false
     }
   },
-  "opcoes_do_dia": 4,
+  "opcoes_do_dia": 3,
   "pratos": [
+    {
+      "id": "estrogonofe_frango_2026_11_23",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_assado_batatas_2026_11_23",
+      "nome": "Frango assado com batatas",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_frito.png",
+      "galeria": [
+        "/pratos/frango_frito.png"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Macarrão tropical",
+        "Banana frita",
+        "Mandioca frita"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "picadinho_pernil_calabresa_2026_11_23",
+      "nome": "Picadinho de pernil com calabresa",
+      "preco": 25.0,
+      "imagem": "/pratos/pernil_assado_5.jpg",
+      "galeria": [
+        "/pratos/pernil_assado_5.jpg",
+        "/pratos/pernil_assado_1.jpg",
+        "/pratos/pernil_assado_2.jpg",
+        "/pratos/pernil_assado_3.jpg",
+        "/pratos/pernil_assado_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Banana frita",
+        "Mandioca frita",
+        "Macarrão tropical",
+        "Feijão em caldo"
+      ],
+      "disponivel": true
+    },
     {
       "id": "feijoada_completa_2026_11_21",
       "nome": "Feijoada completa",
@@ -32,7 +89,7 @@
         "Couve",
         "Farofa de cebola"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "carne_bovina_batata_2026_11_21",
@@ -51,7 +108,7 @@
         "Linguiça assada",
         "Banana frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonofe_frango_2026_11_21",
@@ -70,7 +127,7 @@
         "Batata palha",
         "Arroz branco"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_frito_alho_oleo_2026_11_21",
@@ -89,7 +146,7 @@
         "Linguiça toscana assada",
         "Salada"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "frango_assado_batatas_toscana_2026_11_20",
