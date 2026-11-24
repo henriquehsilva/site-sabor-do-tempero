@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-23",
+    "data": "2026-11-24",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -14,7 +14,25 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "estrogonofe_frango_2026_11_23",
+      "id": "costela_bovina_panela_2026_11_24",
+      "nome": "Costela bovina assada na panela",
+      "preco": 25.0,
+      "imagem": "/pratos/costela_panela.png",
+      "galeria": [
+        "/pratos/costela_panela.png",
+        "/pratos/costela_panela.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Panqueca de frango",
+        "Farofa de bacon e linguiça",
+        "Batata rústica"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonofe_frango_2026_11_24",
       "nome": "Estrogonofe de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -33,6 +51,44 @@
       "disponivel": true
     },
     {
+      "id": "file_frango_milanesa_2026_11_24",
+      "nome": "Filé de frango à milanesa",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_milanesa.jpeg",
+      "galeria": [
+        "/pratos/frango_milanesa.jpeg",
+        "/pratos/frango_milanesa_1.jpeg",
+        "/pratos/frango_milanesa_2.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Batata rústica",
+        "Farofa de bacon e linguiça",
+        "Panqueca de frango"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "estrogonofe_frango_2026_11_23",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": false
+    },
+    {
       "id": "frango_assado_batatas_2026_11_23",
       "nome": "Frango assado com batatas",
       "preco": 25.0,
@@ -47,7 +103,7 @@
         "Banana frita",
         "Mandioca frita"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "picadinho_pernil_calabresa_2026_11_23",
@@ -68,7 +124,7 @@
         "Macarrão tropical",
         "Feijão em caldo"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "feijoada_completa_2026_11_21",
