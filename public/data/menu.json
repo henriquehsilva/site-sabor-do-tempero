@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_dia": "Cardápio do Dia",
-    "data": "2026-11-24",
+    "data": "2026-11-25",
     "flags": {
       "mostrar_itens_prato": true,
       "mostrar_sessao_sobre": true,
@@ -14,25 +14,7 @@
   "opcoes_do_dia": 3,
   "pratos": [
     {
-      "id": "costela_bovina_panela_2026_11_24",
-      "nome": "Costela bovina assada na panela",
-      "preco": 25.0,
-      "imagem": "/pratos/costela_panela.png",
-      "galeria": [
-        "/pratos/costela_panela.png",
-        "/pratos/costela_panela.jpeg"
-      ],
-      "itens": [
-        "Arroz branco",
-        "Feijão em caldo",
-        "Panqueca de frango",
-        "Farofa de bacon e linguiça",
-        "Batata rústica"
-      ],
-      "disponivel": true
-    },
-    {
-      "id": "estrogonofe_frango_2026_11_24",
+      "id": "estrogonofe_frango_2026_11_25",
       "nome": "Estrogonofe de frango",
       "preco": 25.0,
       "imagem": "/pratos/strogonoff_preview_1.jpg",
@@ -51,6 +33,80 @@
       "disponivel": true
     },
     {
+      "id": "pernil_calabresa_2026_11_25",
+      "nome": "Pernil com calabresa",
+      "preco": 25.0,
+      "imagem": "/pratos/pernil_assado_5.jpg",
+      "galeria": [
+        "/pratos/pernil_assado_5.jpg",
+        "/pratos/pernil_assado_1.jpg",
+        "/pratos/pernil_assado_2.jpg",
+        "/pratos/pernil_assado_3.jpg",
+        "/pratos/pernil_assado_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Mandioca temperada",
+        "Lasanha de frango"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "frango_assado_maionese_2026_11_25",
+      "nome": "Frango assado na maionese",
+      "preco": 25.0,
+      "imagem": "/pratos/frango_maionese_1.jpg",
+      "galeria": [
+        "/pratos/frango_maionese_1.jpg",
+        "/pratos/frango_maionese_3.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão tropeiro",
+        "Mandioca temperada",
+        "Lasanha de frango"
+      ],
+      "disponivel": true
+    },
+    {
+      "id": "costela_bovina_panela_2026_11_24",
+      "nome": "Costela bovina assada na panela",
+      "preco": 25.0,
+      "imagem": "/pratos/costela_panela.png",
+      "galeria": [
+        "/pratos/costela_panela.png",
+        "/pratos/costela_panela.jpeg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Feijão em caldo",
+        "Panqueca de frango",
+        "Farofa de bacon e linguiça",
+        "Batata rústica"
+      ],
+      "disponivel": false
+    },
+    {
+      "id": "estrogonofe_frango_2026_11_24",
+      "nome": "Estrogonofe de frango",
+      "preco": 25.0,
+      "imagem": "/pratos/strogonoff_preview_1.jpg",
+      "galeria": [
+        "/pratos/strogonoff_preview_1.jpg",
+        "/pratos/strogonoff_preview.jpg",
+        "/pratos/strogonoff.jpg",
+        "/pratos/strogonoff_2.jpg",
+        "/pratos/strogonoff_3.jpg",
+        "/pratos/strogonoff_4.jpg"
+      ],
+      "itens": [
+        "Arroz branco",
+        "Batata palha"
+      ],
+      "disponivel": false
+    },
+    {
       "id": "file_frango_milanesa_2026_11_24",
       "nome": "Filé de frango à milanesa",
       "preco": 25.0,
@@ -67,7 +123,7 @@
         "Farofa de bacon e linguiça",
         "Panqueca de frango"
       ],
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": "estrogonofe_frango_2026_11_23",
